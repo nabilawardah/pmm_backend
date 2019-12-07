@@ -1,0 +1,34 @@
+// Mixins
+@import './mixins/flexbox';
+@import './mixins/media-queries';
+@import './mixins/container';
+@import './mixins/debugger';
+@import './mixins/fit';
+@import './mixins/grid';
+@import './mixins/link-animation';
+@import './mixins/responsive-text';
+@import './mixins/text-crop';
+@import './mixins/text-shadow';
+@import './mixins/to-rem';
+@import './mixins/type';
+
+@function upperSize($number) {
+  @return $number * 1.618;
+}
+
+@function lowerSize($number) {
+  @return $number / 1.618;
+}
+
+@mixin clearfix {
+  &::before {
+    display: table;
+    content: '';
+  }
+
+  &::after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+}

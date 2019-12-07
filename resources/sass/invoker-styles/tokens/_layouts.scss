@@ -1,0 +1,21 @@
+$main-container-gutter: 10%;
+$fix-left-space: 15vw;
+$fix-right-space: 25vw;
+
+// NEW Grid
+$gutter: 30px;
+$container-gutter-mobile-small: 24px;
+$container-gutter-mobile: $gutter;
+$container-gutter-tablet: 50px;
+$container-gutter-desktop: 70px;
+$container-gutter-desktop-wide: 96px;
+
+// grid
+$grid-column-count: 12;
+$grid-baseline: 16px;
+
+// page dimensions
+$page-width: 1290px;
+$page-narrow: 1080px;
+$page-post: 700px;
+$page-limit: $page-width + ($container-gutter-desktop * 2);
