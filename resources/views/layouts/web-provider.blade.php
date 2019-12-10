@@ -8,15 +8,13 @@
         <link rel="shortcut icon" type="image/png" href="{{ asset('/images/h-italics--dark.png') }}"/>
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
-        <title>{{ config('app.name', 'Paragon Meaningful Movement') }}</title>
+        <title>@yield('title') - {{ config('app.name', 'Paragon Meaningful Movement') }}</title>
     </head>
-    <body>
-        <h1>Hello world!</h1>
-
-        <p>This should be going somewhere!</p>
-
+    <body class="website">
+        @yield('content')
         <script src="{{ mix('js/manifest.js') }}"></script>
         <script src="{{ mix('js/vendor.js') }}"></script>
         <script src="{{ mix('js/app.js') }}"></script>
+        @stack('scripts')
     </body>
 </html>

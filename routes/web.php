@@ -11,28 +11,33 @@
 |
 */
 
+// Web
 Route::get('/', function () {
     return view('web.home');
 });
 Route::get('/profile', function () {
-    return view('web.profile');
+    return view('web.profile.index');
+});
+Route::get('/profile/{id}', function () {
+    return view('web.profile.detail');
 });
 Route::get('/events', function () {
-    return view('web.events');
+    return view('web.events.index');
 });
-Route::get('/events/details', function () {
-    return view('web.event-details');
+Route::get('/events/{id}', function () {
+    return view('web.event.detail');
 });
 Route::get('/articles', function () {
-    return view('web.articles');
+    return view('web.articles.index');
 });
-Route::get('/articles/details', function () {
-    return view('web.articles-details');
+Route::get('/articles/{id}', function () {
+    return view('web.articles.detail');
 });
 Route::get('/gallery', function () {
-    return view('web.gallery');
+    return view('web.gallery.index');
 });
 
+// Admin
 Route::get('/admin', function () {
     return view('admin.home');
 });
