@@ -3,7 +3,7 @@
       (object)[
         'name' => 'Home',
         'to' => '/',
-        'active' => false,
+        'active' => true,
       ],
       (object)[
         'name' => 'Profile',
@@ -29,9 +29,9 @@
 @endphp
 
 <nav class="navbar">
-  <ul class="navbar-primary">
+  <ul class="navbar-primary box-inline--l">
     @foreach ($menus as $menu)
-      @component('components.web-menu', ['name' => $menu->name, 'to' => $menu->to])
+      @component('components.web-menu', ['name' => $menu->name, 'to' => $menu->to, 'active' => $menu->active])
       @endcomponent
     @endforeach
   </ul>
