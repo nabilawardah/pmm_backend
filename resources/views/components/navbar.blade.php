@@ -25,6 +25,19 @@
         'to' => '/gallery',
         'active' => false,
       ],
+];
+
+    $secondary_menus = [
+      (object)[
+        'name' => 'Sign In',
+        'to' => '/sign-in',
+        'active' => false,
+      ],
+      (object)[
+        'name' => 'Go to Admin',
+        'to' => '/admin',
+        'active' => false,
+      ],
     ]
 @endphp
 
@@ -36,8 +49,11 @@
         @endcomponent
       @endforeach
     </ul>
-    <ul class="navbar-secondary">
-      <li>Sign in</li>
+    <ul class="navbar-secondary inline--ll">
+      @foreach ($secondary_menus as $menu)
+          @component('components.web-menu', ['name' => $menu->name, 'to' => $menu->to, 'active' => $menu->active])
+        @endcomponent
+      @endforeach
     </ul>
   </div>
 </nav>

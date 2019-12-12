@@ -29,50 +29,66 @@
 .inline {
     &--xs {
         > * {
-            display: block;
-            margin-right: $space-xs;
+            &:not(:last-child) {
+                display: block;
+                margin-right: $space-xs;
+            }
         }
     }
     &--s {
         > * {
-            display: block;
-            margin-right: $space-s;
+            &:not(:last-child) {
+                display: block;
+                margin-right: $space-s;
+            }
         }
     }
     &--sm {
         > * {
-            display: block;
-            margin-right: $space-sm;
+            &:not(:last-child) {
+                display: block;
+                margin-right: $space-sm;
+            }
         }
     }
     &--m {
         > * {
-            display: block;
-            margin-right: $space-m;
+            &:not(:last-child) {
+                display: block;
+                margin-right: $space-m;
+            }
         }
     }
     &--ml {
         > * {
-            display: block;
-            margin-right: $space-ml;
+            &:not(:last-child) {
+                display: block;
+                margin-right: $space-ml;
+            }
         }
     }
     &--l {
         > * {
-            display: block;
-            margin-right: $space-l;
+            &:not(:last-child) {
+                display: block;
+                margin-right: $space-l;
+            }
         }
     }
     &--ll {
         > * {
-            display: block;
-            margin-right: $space-ll;
+            &:not(:last-child) {
+                display: block;
+                margin-right: $space-ll;
+            }
         }
     }
     &--xl {
         > * {
-            display: block;
-            margin-right: $space-xl;
+            &:not(:last-child) {
+                display: block;
+                margin-right: $space-xl;
+            }
         }
     }
 }
@@ -80,50 +96,66 @@
 .stack {
     &--xs {
         > * {
-            display: block;
-            margin-bottom: $space-xs;
+            &:not(:last-child) {
+                display: block;
+                margin-bottom: $space-xs;
+            }
         }
     }
     &--s {
         > * {
-            display: block;
-            margin-bottom: $space-s;
+            &:not(:last-child) {
+                display: block;
+                margin-bottom: $space-s;
+            }
         }
     }
     &--sm {
         > * {
-            display: block;
-            margin-bottom: $space-sm;
+            &:not(:last-child) {
+                display: block;
+                margin-bottom: $space-sm;
+            }
         }
     }
     &--m {
         > * {
-            display: block;
-            margin-bottom: $space-m;
+            &:not(:last-child) {
+                display: block;
+                margin-bottom: $space-m;
+            }
         }
     }
     &--ml {
         > * {
-            display: block;
-            margin-bottom: $space-ml;
+            &:not(:last-child) {
+                display: block;
+                margin-bottom: $space-ml;
+            }
         }
     }
     &--l {
         > * {
-            display: block;
-            margin-bottom: $space-l;
+            &:not(:last-child) {
+                display: block;
+                margin-bottom: $space-l;
+            }
         }
     }
     &--ll {
         > * {
-            display: block;
-            margin-bottom: $space-ll;
+            &:not(:last-child) {
+                display: block;
+                margin-bottom: $space-ll;
+            }
         }
     }
     &--xl {
         > * {
-            display: block;
-            margin-bottom: $space-xl;
+            &:not(:last-child) {
+                display: block;
+                margin-bottom: $space-xl;
+            }
         }
     }
 }

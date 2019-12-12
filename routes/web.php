@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/sign-in', function () {
+    return view('sign-in');
+});
+
 // Web
 Route::get('/', function () {
     return view('web.home');
