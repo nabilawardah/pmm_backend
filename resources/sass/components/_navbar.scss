@@ -1,45 +1,45 @@
 .navbar {
-    display: flex;
-    background: $light-alpha-100;
-    box-shadow: 0px 4px 12px $dark-alpha-20;
+  display: flex;
+  background: $light-alpha-100;
+  box-shadow: 0px 4px 12px $dark-alpha-20;
 }
 
 .navbar-wrapper {
-    @include container-narrow;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+  @include container-narrow;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .navbar-primary {
-    display: flex;
-    align-items: baseline;
+  display: flex;
+  align-items: baseline;
 }
 
 .navbar-secondary {
-    display: flex;
-    align-items: baseline;
+  display: flex;
+  align-items: baseline;
 }
 
 .primary-menu-wrapper {
 }
 
 .primary-menu {
-    display: block;
-    color: $dark-alpha-70;
-    font-weight: $medium;
-    font-size: 15px;
-    line-height: 24px;
-    transition: all 0.36s;
-    padding-top: $space-m;
-    padding-bottom: $space-m;
+  display: block;
+  color: $dark-alpha-70;
+  font-weight: $medium;
+  font-size: 15px;
+  line-height: 24px;
+  transition: all 0.36s;
+  padding-top: $space-m;
+  padding-bottom: $space-m;
 
-    &--active {
-        box-shadow: inset 0px -3px 0px $brand-primary-200;
-    }
+  &--active {
+    box-shadow: inset 0px -3px 0px $brand-primary-200;
+  }
 
-    &:hover {
-        box-shadow: inset 0px -3px 0px $brand-primary-200;
-        transition: all 0.28s;
-    }
+  &:hover {
+    box-shadow: inset 0px -3px 0px $brand-primary-200;
+    transition: all 0.28s;
+  }
 }

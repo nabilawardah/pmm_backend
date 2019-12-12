@@ -1,50 +1,91 @@
 @php
-    $menus = [
-      (object)[
+    $primary_menus = [
+      (object) [
         'name' => 'Home',
         'to' => '/',
         'active' => true,
       ],
-      (object)[
+      (object) [
         'name' => 'Profile',
         'to' => '/profile',
         'active' => false,
       ],
-      (object)[
+      (object) [
         'name' => 'Articles',
         'to' => '/articles',
         'active' => false,
       ],
-      (object)[
+      (object) [
         'name' => 'Events',
         'to' => '/events',
         'active' => false,
       ],
-      (object)[
+      (object) [
         'name' => 'Gallery',
         'to' => '/gallery',
         'active' => false,
       ],
 ];
 
-    $secondary_menus = [
-      (object)[
-        'name' => 'Sign In',
-        'to' => '/sign-in',
-        'active' => false,
-      ],
-      (object)[
-        'name' => 'Go to Admin',
+$admin_menus = [
+      (object) [
+        'name' => 'Home',
         'to' => '/admin',
+        'active' => true,
+      ],
+      (object) [
+        'name' => 'Users',
+        'to' => '/admin/users',
         'active' => false,
       ],
-    ]
+      (object) [
+        'name' => 'Articles',
+        'to' => '/admin/articles',
+        'active' => false,
+      ],
+      (object) [
+        'name' => 'Events',
+        'to' => '/admin/events',
+        'active' => false,
+      ],
+      (object) [
+        'name' => 'Gallery',
+        'to' => '/admin/gallery',
+        'active' => false,
+      ],
+  ];
+
+  $secondary_menus = [
+      (object) [
+          'name' => 'Sign In',
+          'to' => '/sign-in',
+          'active' => false,
+      ],
+      (object) [
+          'name' => 'Go to Admin',
+          'to' => '/admin',
+          'active' => false,
+      ],
+  ];
+
+  $admin_secondary_menus = [
+      (object) [
+          'name' => 'Sign In',
+          'to' => '/sign-in',
+          'active' => false,
+      ],
+      (object) [
+          'name' => 'Go to Website',
+          'to' => '/',
+          'active' => false,
+      ],
+  ];
 @endphp
 
 <nav class="navbar">
   <div class="navbar-wrapper">
     <ul class="navbar-primary inline--ll">
-      @foreach ($menus as $menu)
+      @foreach ($primary_menus as $menu)
         @component('components.web-menu', ['name' => $menu->name, 'to' => $menu->to, 'active' => $menu->active])
         @endcomponent
       @endforeach
