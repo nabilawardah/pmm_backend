@@ -1,0 +1,129 @@
+.box {
+    display: block;
+    &--xs {
+        padding: $space-xs;
+    }
+    &--s {
+        padding: $space-s;
+    }
+    &--sm {
+        padding: $space-sm;
+    }
+    &--m {
+        padding: $space-m;
+    }
+    &--ml {
+        padding: $space-ml;
+    }
+    &--l {
+        padding: $space-l;
+    }
+    &--ll {
+        padding: $space-ll;
+    }
+    &--xl {
+        padding: $space-xl;
+    }
+}
+
+.inline {
+    &--xs {
+        > * {
+            display: block;
+            margin-right: $space-xs;
+        }
+    }
+    &--s {
+        > * {
+            display: block;
+            margin-right: $space-s;
+        }
+    }
+    &--sm {
+        > * {
+            display: block;
+            margin-right: $space-sm;
+        }
+    }
+    &--m {
+        > * {
+            display: block;
+            margin-right: $space-m;
+        }
+    }
+    &--ml {
+        > * {
+            display: block;
+            margin-right: $space-ml;
+        }
+    }
+    &--l {
+        > * {
+            display: block;
+            margin-right: $space-l;
+        }
+    }
+    &--ll {
+        > * {
+            display: block;
+            margin-right: $space-ll;
+        }
+    }
+    &--xl {
+        > * {
+            display: block;
+            margin-right: $space-xl;
+        }
+    }
+}
+
+.stack {
+    &--xs {
+        > * {
+            display: block;
+            margin-bottom: $space-xs;
+        }
+    }
+    &--s {
+        > * {
+            display: block;
+            margin-bottom: $space-s;
+        }
+    }
+    &--sm {
+        > * {
+            display: block;
+            margin-bottom: $space-sm;
+        }
+    }
+    &--m {
+        > * {
+            display: block;
+            margin-bottom: $space-m;
+        }
+    }
+    &--ml {
+        > * {
+            display: block;
+            margin-bottom: $space-ml;
+        }
+    }
+    &--l {
+        > * {
+            display: block;
+            margin-bottom: $space-l;
+        }
+    }
+    &--ll {
+        > * {
+            display: block;
+            margin-bottom: $space-ll;
+        }
+    }
+    &--xl {
+        > * {
+            display: block;
+            margin-bottom: $space-xl;
+        }
+    }
+}

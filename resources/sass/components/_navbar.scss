@@ -1,40 +1,14 @@
-.box-inline {
-    &--sm {
-        > * {
-            display: block;
-            margin-right: $space-sm;
-        }
-    }
-    &--m {
-        > * {
-            display: block;
-            margin-right: $space-m;
-        }
-    }
-    &--ml {
-        > * {
-            display: block;
-            margin-right: $space-ml;
-        }
-    }
-    &--l {
-        > * {
-            display: block;
-            margin-right: $space-l;
-        }
-    }
-    &--xl {
-        > * {
-            display: block;
-            margin-right: $space-xl;
-        }
-    }
-}
-
 .navbar {
     display: flex;
     background: $light-alpha-100;
     box-shadow: 0px 4px 12px $dark-alpha-20;
+}
+
+.navbar-wrapper {
+    @include container-narrow;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 .navbar-primary {

@@ -1,11 +1,13 @@
-@import "./tokens/_font-stack";
+@import "./tokens/font-stack";
 
-@import "./tokens/_colors";
-@import "./tokens/_spaces";
+@import "./tokens/colors";
+@import "./tokens/spaces";
 
-@import "./tokens/_breakpoints";
-@import "./tokens/_font-weights";
-@import "./tokens/_elevation";
-@import "./tokens/_z-index";
+@import "./tokens/breakpoints";
+@import "./tokens/font-weights";
+@import "./tokens/elevation";
+@import "./tokens/line-height";
+@import "./tokens/text-size";
+@import "./tokens/z-index";
 
-@import "./tokens/_layouts";
+@import "./tokens/layouts";

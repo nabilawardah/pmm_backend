@@ -7,8 +7,8 @@
   @component('components.navbar')
   @endcomponent
 
-  <div class="container">
-    <h1>Homepage</h1>
+  <div class="container-narrow">
+    <h1 class="display2">Homepage</h1>
   </div>
 
   @component('components.footer')

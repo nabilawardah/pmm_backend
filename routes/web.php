@@ -24,14 +24,14 @@ Route::get('/profile/{id}', function () {
 Route::get('/events', function () {
     return view('web.events.index');
 });
-Route::get('/events/{id}', function () {
-    return view('web.event.detail');
-});
 Route::get('/articles', function () {
     return view('web.articles.index');
 });
 Route::get('/articles/{id}', function () {
     return view('web.articles.detail');
+});
+Route::get('/events/{id}', function () {
+    return view('web.events.detail');
 });
 Route::get('/gallery', function () {
     return view('web.gallery.index');
