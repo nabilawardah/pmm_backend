@@ -47,6 +47,5 @@
 
     </label>
   </div>
-  <Text small></Text>
   <p class="small">by <a href="https://herlambang.design" target="_blank" class="strong">herlambang.design</a></p>
 </div>
