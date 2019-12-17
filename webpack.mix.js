@@ -11,13 +11,15 @@ const mix = require("laravel-mix");
  |
  */
 
-mix.copyDirectory("resources/assets", "public")
-    .js("resources/js/app.js", "public/js")
-    .sass("resources/sass/app.scss", "public/css")
-    .extract(["jquery"])
-    .sourceMaps()
-    .browserSync("http://127.0.0.1:8000");
+mix
+  .copyDirectory("resources/assets", "public")
+  .js("resources/js/app.js", "public/js")
+  .js("resources/js/prefetch.js", "public/js")
+  .sass("resources/sass/app.scss", "public/css")
+  .extract(["jquery"])
+  .sourceMaps()
+  .browserSync("http://127.0.0.1:8000");
 
 if (mix.inProduction()) {
-    mix.version();
+  mix.version();
 }
