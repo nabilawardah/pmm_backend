@@ -9,13 +9,13 @@
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
         <title>@yield('title') - {{ config('app.name', 'Paragon Meaningful Movement') }}</title>
+        <script defer src="{{ mix('js/prefetch.js') }}"></script>
     </head>
     <body class="website">
         @yield('content')
         <script src="{{ mix('js/manifest.js') }}"></script>
         <script src="{{ mix('js/vendor.js') }}"></script>
         <script src="{{ mix('js/app.js') }}"></script>
-        <script async src="{{ mix('js/prefetch.js') }}"></script>
         @stack('scripts')
     </body>
 </html>
