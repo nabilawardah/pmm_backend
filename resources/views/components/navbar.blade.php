@@ -85,14 +85,17 @@ $admin_menus = [
 <nav class="navbar">
   <div class="navbar-wrapper">
     <ul class="navbar-primary inline--ll">
+      <li class="brand-wrapper">
+        @include('icons.h')
+      </li>
       @foreach ($primary_menus as $menu)
-        @component('components.web-menu', ['name' => $menu->name, 'to' => $menu->to, 'active' => $menu->active])
+        @component('components.menu-web', ['name' => $menu->name, 'to' => $menu->to, 'active' => $menu->active])
         @endcomponent
       @endforeach
     </ul>
     <ul class="navbar-secondary inline--ll">
       @foreach ($secondary_menus as $menu)
-          @component('components.web-menu', ['name' => $menu->name, 'to' => $menu->to, 'active' => $menu->active])
+          @component('components.menu-web', ['name' => $menu->name, 'to' => $menu->to, 'active' => $menu->active])
         @endcomponent
       @endforeach
     </ul>

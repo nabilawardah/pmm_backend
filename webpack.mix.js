@@ -17,8 +17,12 @@ mix
   .js("resources/js/prefetch.js", "public/js")
   .sass("resources/sass/app.scss", "public/css")
   .extract(["jquery"])
-  .sourceMaps()
-  .browserSync("http://127.0.0.1:8000");
+  .sourceMaps();
+
+// Browsersync
+// Change to your own proxy if you're using Laravel Valet,
+// or change to http://localhost:3000 if you're not using laravel valet
+mix.browserSync("http://pmm.dushi");
 
 if (mix.inProduction()) {
   mix.version();

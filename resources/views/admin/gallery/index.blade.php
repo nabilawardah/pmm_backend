@@ -4,7 +4,7 @@
 
 @section('content')
 
-  @component('components.navbar')
+  @component('components.navbar-admin')
   @endcomponent
 
   <div class="container-narrow">
