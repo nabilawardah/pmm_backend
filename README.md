@@ -15,14 +15,14 @@ This project built using Laravel Framework (PHP). To run it on your local develo
 
 3. Run the initial setup
 
-```
-// 1. Install all dependencies
-composer install
-npm install
+   ```
+   // 1. Install all dependencies
+   composer install
+   npm install
 
-// 2. Generate App Key
-php artisan key:generate
-```
+   // 2. Generate App Key
+   php artisan key:generate
+   ```
 
 4. Config Laravel Mix
 
