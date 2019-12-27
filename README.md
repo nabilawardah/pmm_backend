@@ -52,13 +52,3 @@ This project built using Laravel Framework (PHP). To run it on your local develo
    If you're not using laravel valet, you need to run `php artisan serve` on your terminal, and then also run `npm run hot` in another tab of your terminal.
 
 If all done correctly, your browser will open and run the PMM website automatically.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-```
-
-```
