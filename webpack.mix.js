@@ -19,7 +19,7 @@ mix
   .extract(["jquery"])
   .sourceMaps();
 
-// Browsersync
+// ADJUST with your own setup
 // Change to your own proxy if you're using Laravel Valet,
 // or change to http://localhost:3000 if you're not using laravel valet
 mix.browserSync("http://pmm.dushi");
