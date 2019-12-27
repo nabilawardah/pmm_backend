@@ -34,7 +34,7 @@ php artisan key:generate
 
    If you're not using laravel valet, adjust the proxy into `http://localhost:3000`
 
-   Check `webpack.mix.js` on the root directory for detailed instructions
+   > Check `webpack.mix.js` on the root directory for detailed instructions
 
 5. Run the app
 
@@ -46,7 +46,7 @@ php artisan key:generate
 
    If you're not using laravel valet, you need to run `php artisan serve` on your terminal, and then also run `npm run hot` in another tab of your terminal.
 
-   If all done correctly, your browser will open and run the PMM website automatically.
+If all done correctly, your browser will open and run the PMM website automatically.
 
 ## Learning Laravel
 
