@@ -26,27 +26,27 @@ php artisan key:generate
 
 4. Config Laravel Mix
 
-#### Using Laravel Valet
+   #### Using Laravel Valet
 
-If you're using laravel valet, adjust the proxy on browsersync to your own valet TLD.
+   If you're using laravel valet, adjust the proxy on browsersync to your own valet TLD.
 
-#### Not with Laravel Valet (Common Setup)
+   #### Not with Laravel Valet (Common Setup)
 
-If you're not using laravel valet, adjust the proxy into `http://localhost:3000`
+   If you're not using laravel valet, adjust the proxy into `http://localhost:3000`
 
-Check `webpack.mix.js` on the root directory for detailed instructions
+   Check `webpack.mix.js` on the root directory for detailed instructions
 
 5. Run the app
 
-#### Using Laravel Valet
+   #### Using Laravel Valet
 
-If you're using laravel valet, you just need to run single command `npm run hot` on your terminal. This command will generate all the assets (images, js, css) whenever there're changes on your files.
+   If you're using laravel valet, you just need to run single command `npm run hot` on your terminal. This command will generate all the assets (images, js, css) whenever there're changes on your files.
 
-#### Not with Laravel Valet (Common Setup)
+   #### Not with Laravel Valet (Common Setup)
 
-If you're not using laravel valet, you need to run `php artisan serve` on your terminal, and then also run `npm run hot` in another tab of your terminal.
+   If you're not using laravel valet, you need to run `php artisan serve` on your terminal, and then also run `npm run hot` in another tab of your terminal.
 
-If all done correctly, your browser will open and run the PMM website automatically.
+   If all done correctly, your browser will open and run the PMM website automatically.
 
 ## Learning Laravel
 
