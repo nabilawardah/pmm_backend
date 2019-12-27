@@ -66,3 +66,29 @@ Route::get('/admin/users/{id}', function () {
 Route::get('/admin/gallery', function () {
     return view('admin.gallery.index');
 });
+
+Route::get('/api/users', function () {
+    $users = [
+        'data' => [
+        (object) [
+            'id' => 1,
+            'name' => 'Ongki Herlambang',
+            'email' => 'ongkiherlambang@gmail.com',
+            'photo' => 'helloworld',
+            'phone' => '082377296969',
+            'divisi' => 'Kebersihan',
+            'working_area' => 'OB',
+        ],
+        (object) [
+            'id' => 2,
+            'name' => 'Khairani Ummah',
+            'email' => 'khairani@gmail.com',
+            'photo' => 'dungdung',
+            'phone' => '080989999',
+            'divisi' => 'Kebersihan',
+            'working_area' => 'OB',
+        ], ],
+    ];
+
+    return $users;
+});

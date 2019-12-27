@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://herlambang.design">
-    <img src="https://res.cloudinary.com/vasilenka/image/upload/v1577417254/covers/pmm.png" width="100%">
+    <img src="https://res.cloudinary.com/vasilenka/image/upload/v1577427376/covers/pmm.png" width="100%">
   </a>
 </p>
 
