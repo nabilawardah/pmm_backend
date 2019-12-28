@@ -7,9 +7,9 @@
   @component('components.navbar-admin')
   @endcomponent
 
-  <div class="container-narrow">
+  @component('layouts.main-content')
     <h1 class="display2">Event Edit</h1>
-  </div>
+  @endcomponent
 
   @component('components.footer')
   @endcomponent

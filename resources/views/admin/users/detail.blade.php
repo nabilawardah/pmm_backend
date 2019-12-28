@@ -7,9 +7,9 @@
   @component('components.navbar-admin')
   @endcomponent
 
-  <div class="container-narrow">
-    <h1 class="display2">User Detail</h1>
-  </div>
+  @component('layouts.main-content')
+    <h1 class="display3">User Detail</h1>
+  @endcomponent
 
   @component('components.footer')
   @endcomponent

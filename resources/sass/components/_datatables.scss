@@ -63,18 +63,24 @@ legend {
   margin-bottom: 1rem;
   background-color: transparent;
 }
-.table td,
-.table th {
-  padding: 0.75rem;
-  vertical-align: top;
-  border-top: 1px solid #dee2e6;
+.table td {
+  padding: 1rem 0.75rem;
+  vertical-align: middle;
+  border-bottom: 1px solid $dark-alpha-30;
 }
+
+.table th {
+  padding: 1rem 0.75rem;
+  vertical-align: middle;
+  border-top: none;
+}
+
 .table thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6;
+  border-bottom: 2px solid $dark-alpha-30;
 }
 .table tbody + tbody {
-  border-top: 2px solid #dee2e6;
+  border-top: 2px solid $dark-alpha-30;
 }
 .table .table {
   background-color: #fff;
@@ -84,11 +90,11 @@ legend {
   padding: 0.3rem;
 }
 .table-bordered {
-  border: 1px solid #dee2e6;
+  border: 1px solid $dark-alpha-30;
 }
 .table-bordered td,
 .table-bordered th {
-  border: 1px solid #dee2e6;
+  border: 1px solid $dark-alpha-30;
 }
 .table-bordered thead td,
 .table-bordered thead th {
@@ -222,7 +228,7 @@ legend {
 .table .thead-light th {
   color: #495057;
   background-color: #e9ecef;
-  border-color: #dee2e6;
+  border-color: $dark-alpha-30;
 }
 .table-dark {
   color: #fff;
@@ -414,17 +420,18 @@ table.dataTable thead .sorting_asc_disabled:after,
 table.dataTable thead .sorting_desc_disabled:before,
 table.dataTable thead .sorting_desc_disabled:after {
   position: absolute;
-  bottom: 0.9em;
+  bottom: 16px;
   display: block;
-  opacity: 0.3;
+  opacity: 0.2;
 }
 table.dataTable thead .sorting:before,
 table.dataTable thead .sorting_asc:before,
 table.dataTable thead .sorting_desc:before,
 table.dataTable thead .sorting_asc_disabled:before,
 table.dataTable thead .sorting_desc_disabled:before {
-  right: 1em;
+  right: 1.25em;
   content: "\2191";
+  // content: url('/icons/arrow-up.svg');
 }
 table.dataTable thead .sorting:after,
 table.dataTable thead .sorting_asc:after,
@@ -433,10 +440,12 @@ table.dataTable thead .sorting_asc_disabled:after,
 table.dataTable thead .sorting_desc_disabled:after {
   right: 0.5em;
   content: "\2193";
+  // content: url('/icons/arrow-down.svg');
 }
 table.dataTable thead .sorting_asc:before,
 table.dataTable thead .sorting_desc:after {
   opacity: 1;
+  color: $brand-primary-200;
 }
 table.dataTable thead .sorting_asc_disabled:before,
 table.dataTable thead .sorting_desc_disabled:after {
