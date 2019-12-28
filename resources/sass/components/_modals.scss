@@ -1,0 +1,77 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: $light-alpha-100;
+  z-index: $layer-top;
+  overflow-y: scroll;
+}
+
+.modal-nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  @include screen(smallPhone) {
+    padding: $space-ml;
+  }
+  @include screen(phone) {
+    padding: $space-ml;
+  }
+  @include screen(tablet) {
+    padding: $space-l $space-xl;
+  }
+  @include screen(tabletLandscape) {
+    padding: $space-l $space-xl;
+  }
+  @include screen(desktop) {
+    padding: $space-l $space-xl;
+  }
+  @include screen(desktopWide) {
+    padding: $space-l $space-xl;
+  }
+}
+
+.close-modal {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  min-height: 64px;
+  color: $dark-alpha-50;
+  border-radius: 9999px;
+  transition: all 0.36s;
+
+  &:hover {
+    background-color: $dark-alpha-20;
+    transition: all 0.28s;
+  }
+
+  & .modal-close-icon {
+    content: url("/icons/close.svg");
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+
+  & .modal-close-text {
+    display: block;
+    font-size: 15px;
+    line-height: 16px;
+    color: $dark-alpha-70;
+  }
+}
+
+.modal-wrapper {
+  padding-bottom: $space-mega-huge;
+  padding-left: $space-ml;
+  padding-right: $space-ml;
+  max-width: 768px;
+  margin: auto;
+}

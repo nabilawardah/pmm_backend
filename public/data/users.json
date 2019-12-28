@@ -4,6 +4,7 @@
       "id": 1,
       "name": "Ongki Herlambang",
       "email": "ongkiherlambang@gmail.com",
+      "role": "admin",
       "photo": "ongki.jpg",
       "phone": "082377296969",
       "divisi": "Kebersihan",
@@ -12,6 +13,7 @@
     {
       "id": 2,
       "name": "Khairani Ummah",
+      "role": "admin",
       "email": "khairani@gmail.com",
       "photo": "reni.jpg",
       "phone": "080989999",
@@ -21,6 +23,7 @@
     {
       "id": 3,
       "name": "Su'ep",
+      "role": "user",
       "email": "suep@gmail.com",
       "phone": "082377296969",
       "divisi": "Kebersihan",
@@ -29,6 +32,7 @@
     {
       "id": 4,
       "name": "Nugroho",
+      "role": "user",
       "email": "nugroho@gmail.com",
       "phone": "082377296969",
       "divisi": "Kebersihan",
@@ -37,6 +41,7 @@
     {
       "id": 5,
       "name": "Mahmud",
+      "role": "user",
       "email": "mmahmud@gmail.com",
       "phone": "082377296969",
       "divisi": "Kebersihan",
@@ -45,6 +50,7 @@
     {
       "id": 6,
       "name": "Zaenal",
+      "role": "user",
       "email": "jaenal@gmail.com",
       "phone": "082377296969",
       "divisi": "Kebersihan",
@@ -54,6 +60,7 @@
       "id": 7,
       "name": "Zulaehah",
       "email": "julaehah@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Operasional",
       "working_area": "OP"
@@ -62,6 +69,7 @@
       "id": 8,
       "name": "Zulkifli",
       "email": "julkifli@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Operasional",
       "working_area": "OP"
@@ -70,6 +78,7 @@
       "id": 9,
       "name": "Nanang",
       "email": "nanang@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Operasional",
       "working_area": "OP"
@@ -78,6 +87,7 @@
       "id": 10,
       "name": "Asep",
       "email": "asep@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Marketing",
       "working_area": "MK"
@@ -86,6 +96,7 @@
       "id": 11,
       "name": "Burhan",
       "email": "burhan@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Marketing",
       "working_area": "MK"
@@ -94,6 +105,7 @@
       "id": 12,
       "name": "Nana",
       "email": "nana@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Logistik",
       "working_area": "LG"
@@ -102,6 +114,7 @@
       "id": 13,
       "name": "Agung",
       "email": "agung@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Logistik",
       "working_area": "LG"
@@ -110,6 +123,7 @@
       "id": 14,
       "name": "Anton",
       "email": "anton@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Logistik",
       "working_area": "LG"
@@ -118,6 +132,7 @@
       "id": 15,
       "name": "Halsey",
       "email": "halsey@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Public Relation",
       "working_area": "PR"
@@ -126,6 +141,7 @@
       "id": 16,
       "name": "Taylor Swift",
       "email": "tswift@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Public Relation",
       "working_area": "PR"
@@ -134,6 +150,7 @@
       "id": 17,
       "name": "Zara Larsson",
       "email": "zara@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Public Relation",
       "working_area": "PR"
@@ -142,6 +159,7 @@
       "id": 18,
       "name": "Becky G",
       "email": "becky@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Public Relation",
       "working_area": "PR"
@@ -150,6 +168,7 @@
       "id": 19,
       "name": "Saiful",
       "email": "ipul@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Kebersihan",
       "working_area": "OB"
@@ -158,6 +177,7 @@
       "id": 20,
       "name": "Badrul",
       "email": "badrul@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Public Relation",
       "working_area": "PR"
@@ -166,6 +186,7 @@
       "id": 21,
       "name": "Geri Cokolatos",
       "email": "geri@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Konsumsi",
       "working_area": "KS"
@@ -174,6 +195,7 @@
       "id": 22,
       "name": "Biskuat Bolu",
       "email": "bolu@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Konsumsi",
       "working_area": "KS"
@@ -182,6 +204,7 @@
       "id": 23,
       "name": "Tao Kae Noi",
       "email": "taokaenoi@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Konsumsi",
       "working_area": "KS"
@@ -190,6 +213,7 @@
       "id": 24,
       "name": "Oreo Celup",
       "email": "oreo@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Konsumsi",
       "working_area": "KS"
@@ -198,6 +222,7 @@
       "id": 25,
       "name": "Masako Ayam",
       "email": "masako@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Konsumsi",
       "working_area": "KS"
@@ -206,6 +231,7 @@
       "id": 26,
       "name": "Royco Krim Sup",
       "email": "royco@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Konsumsi",
       "working_area": "KS"
@@ -214,6 +240,7 @@
       "id": 27,
       "name": "Telor Asin",
       "email": "endoggg@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Konsumsi",
       "working_area": "KS"
@@ -222,6 +249,7 @@
       "id": 28,
       "name": "Justin Timber",
       "email": "justin@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Logistik",
       "working_area": "LG"
@@ -230,6 +258,7 @@
       "id": 29,
       "name": "Timber Justin",
       "email": "timber@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Logistik",
       "working_area": "LG"
@@ -238,6 +267,7 @@
       "id": 30,
       "name": "Yogi Mangontang",
       "email": "mangontang@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Logistik",
       "working_area": "LG"
@@ -246,6 +276,7 @@
       "id": 31,
       "name": "Masbul Simba",
       "email": "masbul@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Public Relation",
       "working_area": "PR"
@@ -254,6 +285,7 @@
       "id": 32,
       "name": "Lenka",
       "email": "lenka@gmail.com",
+      "role": "user",
       "phone": "085382916648",
       "divisi": "Public Relation",
       "working_area": "PR"

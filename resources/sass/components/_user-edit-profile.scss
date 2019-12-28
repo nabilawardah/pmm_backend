@@ -1,0 +1,59 @@
+.edit-profile-wrapper {
+  display: flex;
+  @include screen(smallPhone) {
+    flex-direction: column-reverse;
+  }
+  @include screen(phone) {
+    flex-direction: column-reverse;
+  }
+  @include screen(tablet) {
+    flex-direction: row;
+  }
+  @include screen(tabletLandscape) {
+    flex-direction: row;
+  }
+  @include screen(desktop) {
+    flex-direction: row;
+  }
+  @include screen(desktopWide) {
+    flex-direction: row;
+  }
+}
+
+.edit-profile-info {
+  @include screen(smallPhone) {
+    flex: 1;
+  }
+  @include screen(phone) {
+    flex: 1;
+  }
+  @include screen(tablet) {
+    flex: 2;
+    padding-right: $space-xl;
+  }
+  @include screen(tabletLandscape) {
+    flex: 2;
+    padding-right: $space-xl;
+  }
+  @include screen(desktop) {
+    flex: 2;
+    padding-right: $space-xl;
+  }
+  @include screen(desktopWide) {
+    flex: 2;
+    padding-right: $space-xl;
+  }
+}
+
+.edit-profile-side {
+  flex: 1;
+}
+
+.edit-profile-photo {
+  width: 100%;
+  padding-bottom: 100%;
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 6px;
+}

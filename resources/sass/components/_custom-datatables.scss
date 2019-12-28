@@ -44,6 +44,31 @@
 .user-info {
   display: flex;
   align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    .user-main-info {
+      color: $brand-primary-200;
+      transition: all 0.28s;
+    }
+  }
+}
+
+.user-main-info {
+  display: flex;
+  align-items: center;
+  transition: all 0.36s;
+}
+
+.user-role {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 2px 5px;
+  border-radius: 999px;
+  background-color: $brand-primary-200;
+  color: $light-alpha-100;
+  margin-left: 4px;
 }
 
 .profile-picture {
@@ -55,6 +80,7 @@
   background-size: cover;
   background-position: center center;
   margin-right: $space-sm;
+  transition: all 0.36s;
 }
 
 .dataTables_filter {

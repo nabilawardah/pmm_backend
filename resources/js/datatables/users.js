@@ -1,4 +1,5 @@
 import generateCustomSearch from "./../helper/datatables-custom-search";
+import { generateUserProfileModal } from "./../helper/modals";
 let dt = require("datatables.net-fixedcolumns-bs4");
 
 // Custom Search Field
@@ -26,14 +27,22 @@ let usersTable = $("#users-table").DataTable({
       name: "name",
       className: "table__name",
       render: function(data, type, full, meta) {
+        let admin = full.role === "admin";
         let profilePicture = full.photo || "default.png";
+        let fullData = JSON.stringify(full);
         return `
           <div class="user-info">
+            <textarea class="hidden">${fullData}</textarea>
             <div class="profile-picture" style="background-image: url('/images/users/${profilePicture}');"></div>
-            <span class="Table__User">
-              <span class="heading4" style="display: block;">${full.name}</span>
+            <span class="user-data">
+              <div class="heading4 user-main-info">
+                ${full.name}
+                ${admin ? '<span class="user-role">admin</span>' : ""}
+              </div>
               <span class="medium" style="color: #767676;">
-                ${full.email} <span style="padding: 0px 4px;">•</span> ${full.phone}
+                ${full.email}
+                <span style="padding: 0px 4px;">•</span>
+                ${full.phone}
               </span>
             </span>
           </div>
@@ -49,4 +58,16 @@ let usersTable = $("#users-table").DataTable({
   },
   pageLength: 25,
   dom: 'ilfrt<"#tableFooter" p>'
+});
+
+// Trigger Show User Detail
+$(function() {
+  $(document).on("click", ".user-info", function() {
+    let info = JSON.parse(
+      $(this)
+        .children("textarea.hidden")
+        .val()
+    );
+    generateUserProfileModal(info);
+  });
 });

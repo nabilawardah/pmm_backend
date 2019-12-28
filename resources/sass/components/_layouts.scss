@@ -1,3 +1,14 @@
 .main-content {
   padding-top: $space-ll;
 }
+
+.lock-scroll {
+  overflow: hidden;
+}
+
+.hidden {
+  visibility: none;
+  z-index: -1;
+  width: 0;
+  height: 0;
+}

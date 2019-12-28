@@ -68,4 +68,10 @@
     color: $light-alpha-100;
     background-color: $brand-primary-200;
   }
+
+  &.stretch {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
 }
