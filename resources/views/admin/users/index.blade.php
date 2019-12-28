@@ -14,9 +14,10 @@
       <thead>
         <tr>
           <th>No</th>
-          <th>Name</th>
+          <th>Profil</th>
           <th>Email</th>
-          <th>Points</th>
+          <th>Divisi</th>
+          <th>Working Area</th>
         </tr>
       </thead>
     </table>

@@ -1,0 +1,42 @@
+.dataTables_paginate {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+}
+
+.page-item {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: $medium;
+
+  & .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 12px;
+    min-width: 48px;
+    min-height: 48px;
+    border-radius: 3px;
+  }
+
+  &.active {
+    & .page-link {
+      text-align: center;
+      padding: 4px 12px;
+      min-width: 48px;
+      border-radius: 3px;
+      border: 1px solid $brand-primary-200;
+      background-color: $brand-primary-200;
+      color: $light-alpha-100;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: $space-s;
+  }
+}

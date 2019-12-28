@@ -24,6 +24,8 @@
     "dependencies": {
         "datatables.net": "^1.10.20",
         "datatables.net-dt": "^1.10.20",
+        "datatables.net-fixedcolumns-bs4": "^3.3.0",
+        "datatables.net-fixedcolumns-dt": "^3.3.0",
         "jquery": "^3.4.1"
     }
 }

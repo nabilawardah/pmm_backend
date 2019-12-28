@@ -1,4 +1,4 @@
-let dt = require("datatables.net");
+let dt = require("datatables.net-fixedcolumns-bs4");
 
 $.ajax({
   method: "GET",
@@ -14,7 +14,10 @@ let usersTable = $("#users-table").DataTable({
 
   columns: [
     { data: "id", name: "", searchable: false },
-    { data: "name", name: "name", className: "table__name" }
+    { data: "name", name: "name", className: "table__name" },
+    { data: "email", name: "email", className: "table__name" },
+    { data: "divisi", name: "divisi", className: "table__name" },
+    { data: "working_area", name: "working_area", className: "table__name" }
   ],
   language: {
     processing:

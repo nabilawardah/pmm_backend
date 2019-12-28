@@ -1,0 +1,71 @@
+.button {
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-flex;
+  border-style: solid;
+  transition: all 0.4s;
+  font-weight: $medium;
+
+  &--small {
+    border-width: 2px;
+    font-size: 15px;
+    line-height: 16px;
+    padding: 6px 10px;
+  }
+
+  &--medium {
+    border-width: 2px;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 6px 14px;
+  }
+
+  &--large {
+    border-width: 2px;
+    font-size: 20px;
+    line-height: 32px;
+    padding: 6px 22px;
+  }
+
+  &.primary {
+    color: $light-alpha-100;
+    background-color: $brand-primary-200;
+    border-color: $brand-primary-200;
+
+    &:hover {
+      // background-color: $brand-primary-300;
+      border-color: $brand-primary-300;
+      transition: all 0.28s;
+    }
+
+    &-outline {
+      color: $brand-primary-200;
+      background-color: transparent;
+      border-color: $brand-primary-200;
+
+      &:hover {
+        color: $brand-primary-200;
+        background-color: $brand-primary-10;
+        border-color: $brand-primary-200;
+        transition: all 0.28s;
+      }
+    }
+  }
+
+  &.secondary {
+    color: $light-alpha-100;
+    background-color: $brand-secondary-100;
+    border-color: $brand-secondary-100;
+
+    &-outline {
+      color: $brand-secondary-200;
+      background-color: transparent;
+      border-color: $brand-secondary-200;
+    }
+  }
+
+  &.ghost {
+    color: $light-alpha-100;
+    background-color: $brand-primary-200;
+  }
+}
