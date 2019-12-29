@@ -35,7 +35,7 @@
   }
 }
 
-.close-modal {
+.button-close--rounded {
   cursor: pointer;
   position: relative;
   display: flex;
@@ -70,8 +70,18 @@
 
 .modal-wrapper {
   padding-bottom: $space-mega-huge;
-  padding-left: $space-ml;
-  padding-right: $space-ml;
-  max-width: 768px;
-  margin: auto;
+}
+
+.modal-action-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.modal-action-bar {
+  padding-top: $space-m;
+  padding-bottom: $space-m;
+  box-shadow: 0px -8px 20px -12px $dark-alpha-30;
+  background-color: $light-alpha-100;
 }

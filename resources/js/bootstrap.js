@@ -1,6 +1,15 @@
 window._ = require("lodash");
 window.$ = require("jquery");
 
+// Override jQuery original append method
+(function($) {
+  var origAppend = $.fn.append;
+
+  $.fn.append = function() {
+    return origAppend.apply(this, arguments).trigger("append");
+  };
+})($);
+
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the

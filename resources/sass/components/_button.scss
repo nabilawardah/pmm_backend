@@ -1,10 +1,12 @@
 .button {
-  border-radius: 3px;
+  border-radius: 4px;
   cursor: pointer;
   display: inline-flex;
   border-style: solid;
+  align-items: center;
   transition: all 0.4s;
-  font-weight: $medium;
+  font-weight: $semibold;
+  position: relative;
 
   &--small {
     border-width: 2px;
@@ -14,17 +16,33 @@
   }
 
   &--medium {
-    border-width: 2px;
-    font-size: 18px;
+    border-width: 1px;
+    font-size: 16px;
     line-height: 24px;
-    padding: 6px 14px;
+    padding: 7px 15px;
   }
 
   &--large {
-    border-width: 2px;
-    font-size: 20px;
+    border-width: 1px;
+    font-size: 18px;
     line-height: 32px;
-    padding: 6px 22px;
+    padding: 7px 23px;
+  }
+
+  &.default {
+    color: $dark-alpha-70;
+    background-color: transparent;
+    border-color: $dark-alpha-50;
+
+    &:hover {
+      background-color: $dark-alpha-20;
+      transition: all 0.28s;
+    }
+
+    // &:active,
+    // &:focus {
+    // outline: 3px solid red;
+    // }
   }
 
   &.primary {
@@ -34,7 +52,7 @@
 
     &:hover {
       // background-color: $brand-primary-300;
-      border-color: $brand-primary-300;
+      // border-color: $brand-primary-300;
       transition: all 0.28s;
     }
 
@@ -49,6 +67,12 @@
         border-color: $brand-primary-200;
         transition: all 0.28s;
       }
+    }
+
+    &:disabled {
+      background-color: $dark-hex-20;
+      color: $light-hex-100;
+      border-color: $dark-hex-20;
     }
   }
 
@@ -73,5 +97,71 @@
     width: 100%;
     text-align: center;
     justify-content: center;
+  }
+}
+
+.loading {
+  margin-left: 12px;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  color: $light-alpha-100;
+
+  & .loader {
+    animation: rotate 1.2s infinite;
+    position: relative;
+    border-radius: 9999px;
+    background: transparent;
+    box-shadow: 0px 0px 0px 9px transparent;
+    color: inherit;
+
+    width: 20px;
+    height: 20px;
+
+    &::before,
+    &::after {
+      border-radius: 50%;
+      content: "";
+      display: block;
+      background-color: $brand-primary-200;
+
+      width: 5px;
+      height: 5px;
+    }
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      top: 0;
+
+      left: calc(50% - 3px);
+      box-shadow: -7.5px 7.5px 0px 0px $brand-primary-200;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+
+      left: calc(50% - 3px);
+      box-shadow: 7.5px -7.5px 0px 0px $brand-primary-200;
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(225deg);
+  }
+  100% {
+    transform: rotate(405deg);
   }
 }

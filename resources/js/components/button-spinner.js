@@ -1,0 +1,3 @@
+export function generateButtonSpinner() {
+  return `<div class="loading"><div class="loader"></div></div>`;
+}

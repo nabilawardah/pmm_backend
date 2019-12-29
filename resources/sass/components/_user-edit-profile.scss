@@ -47,6 +47,24 @@
 
 .edit-profile-side {
   flex: 1;
+  @include screen(smallPhone) {
+    margin-bottom: $space-ll;
+  }
+  @include screen(phone) {
+    margin-bottom: $space-ll;
+  }
+  @include screen(tablet) {
+    margin-bottom: 0;
+  }
+  @include screen(tabletLandscape) {
+    margin-bottom: 0;
+  }
+  @include screen(desktop) {
+    margin-bottom: 0;
+  }
+  @include screen(desktopWide) {
+    margin-bottom: 0;
+  }
 }
 
 .edit-profile-photo {

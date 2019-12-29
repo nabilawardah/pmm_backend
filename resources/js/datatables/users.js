@@ -1,9 +1,13 @@
-import generateCustomSearch from "./../helper/datatables-custom-search";
-import { generateUserProfileModal } from "./../helper/modals";
-let dt = require("datatables.net-fixedcolumns-bs4");
+import "datatables.net-fixedcolumns-bs4";
+import axios from "axios";
 
-// Custom Search Field
+import User from "./../class/User";
+import { generateCustomSearch } from "./../components/datatable-searchbox";
+import { generateButtonSpinner } from "./../components/button-spinner";
+import { generateUserProfileDetail } from "../components/modals";
+
 $(function() {
+  // Add custom search field to page header
   generateCustomSearch("#users-table_filter");
 });
 
@@ -60,14 +64,64 @@ let usersTable = $("#users-table").DataTable({
   dom: 'ilfrt<"#tableFooter" p>'
 });
 
-// Trigger Show User Detail
 $(function() {
+  let modal = $(".modal");
+  let button = $(".save-change");
+
+  // user Data
+  let name, email, phone, division, working_area;
+  let user = {};
+
+  function getUserData() {
+    name = $("#user-fullname").val();
+    email = $("#user-email").val();
+    phone = $("#user-phone").val();
+    division = $("#user-division").val();
+    working_area = $("#user-working_area").val();
+
+    user = new User({
+      name,
+      email,
+      phone,
+      division,
+      working_area
+    });
+  }
+
+  // Trigger user detail modal
   $(document).on("click", ".user-info", function() {
     let info = JSON.parse(
       $(this)
         .children("textarea.hidden")
         .val()
     );
-    generateUserProfileModal(info);
+    generateUserProfileDetail(info, getUserData);
+  });
+
+  // Monitor user data field changes
+  $(document).on(
+    "change",
+    "#user-fullname, #user-email, #user-phone, #user-division, #user-working_area",
+    function() {
+      let data = user.set({
+        [$(this)
+          .prop("name")
+          .trim()]: $(this)
+          .val()
+          .trim()
+      });
+
+      if (data.changed) {
+        $(".save-change").prop("disabled", false);
+      } else {
+        $(".save-change").prop("disabled", true);
+      }
+    }
+  );
+
+  $(document).on("click", ".save-change", function() {
+    $(this).prop("disabled", true);
+    $(this).append(generateButtonSpinner());
+    console.log(user.get());
   });
 });

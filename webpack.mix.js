@@ -16,7 +16,7 @@ mix
   .js("resources/js/app.js", "public/js")
   .js("resources/js/prefetch.js", "public/js")
   .sass("resources/sass/app.scss", "public/css")
-  .extract(["jquery"])
+  .extract(["jquery", "axios", "datatables.net-fixedcolumns-bs4"])
   .sourceMaps();
 
 // ADJUST with your own setup

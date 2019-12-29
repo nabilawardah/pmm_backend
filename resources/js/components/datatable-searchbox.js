@@ -1,4 +1,4 @@
-export default function(field) {
+export function generateCustomSearch(field) {
   let sudoSearchField = $("#table-search-field");
   let searchField = $(`${field} > label > input`);
   let clearButton = $(`.table-search-clear`);
