@@ -16,9 +16,8 @@ export default class User {
 
   set = data => {
     this.data = Object.assign({}, { ...this.data, ...data });
-    // console.log(this.initialData);
-    // console.log(this.data);
-    // console.log(!isEqual(this.initialData, this.data));
-    return { changed: !isEqual(this.initialData, this.data), data: this.data };
+    return this.data;
   };
+
+  isChanged = () => !isEqual(this.initialData, this.data);
 }

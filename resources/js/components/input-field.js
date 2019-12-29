@@ -1,6 +1,14 @@
-export function generateInputField({ label, type, id, value, name, placeholder }) {
+export function generateInputField({
+  label,
+  type,
+  id,
+  value,
+  name,
+  placeholder,
+  disabled
+}) {
   let markup = `
-    <fieldset class="input">
+    <fieldset class="input" ${disabled ? "disabled" : ""}>
       <label class="input-label" for="${id}">${label}</label>
       <input id="${id}" class="input-field" name="${name.trim()}" type="${type}" value="${value}" placeholder="${placeholder}"/>
     </fieldset>`;

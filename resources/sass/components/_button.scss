@@ -70,9 +70,9 @@
     }
 
     &:disabled {
-      background-color: $dark-hex-20;
-      color: $light-hex-100;
-      border-color: $dark-hex-20;
+      background-color: $dark-hex-30;
+      color: $light-alpha-70;
+      border-color: $dark-hex-30;
     }
   }
 

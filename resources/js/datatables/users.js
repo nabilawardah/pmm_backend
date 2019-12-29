@@ -65,14 +65,16 @@ let usersTable = $("#users-table").DataTable({
 });
 
 $(function() {
-  let modal = $(".modal");
-  let button = $(".save-change");
+  let modal, button;
 
   // user Data
   let name, email, phone, division, working_area;
   let user = {};
 
-  function getUserData() {
+  function initiateModal() {
+    modal = $(".modal");
+    button = $(".save-change");
+
     name = $("#user-fullname").val();
     email = $("#user-email").val();
     phone = $("#user-phone").val();
@@ -86,6 +88,8 @@ $(function() {
       division,
       working_area
     });
+
+    button.prop("disabled", true);
   }
 
   // Trigger user detail modal
@@ -95,15 +99,15 @@ $(function() {
         .children("textarea.hidden")
         .val()
     );
-    generateUserProfileDetail(info, getUserData);
+    generateUserProfileDetail(info, initiateModal);
   });
 
   // Monitor user data field changes
   $(document).on(
-    "change",
+    "change, keyup",
     "#user-fullname, #user-email, #user-phone, #user-division, #user-working_area",
     function() {
-      let data = user.set({
+      user.set({
         [$(this)
           .prop("name")
           .trim()]: $(this)
@@ -111,7 +115,7 @@ $(function() {
           .trim()
       });
 
-      if (data.changed) {
+      if (user.isChanged()) {
         $(".save-change").prop("disabled", false);
       } else {
         $(".save-change").prop("disabled", true);

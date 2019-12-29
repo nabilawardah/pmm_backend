@@ -11,19 +11,9 @@
       "working_area": "OB"
     },
     {
-      "id": 2,
-      "name": "Khairani Ummah",
-      "role": "admin",
-      "email": "khairani@gmail.com",
-      "photo": "reni.jpg",
-      "phone": "080989999",
-      "divisi": "Operasional",
-      "working_area": "OP"
-    },
-    {
       "id": 3,
       "name": "Su'ep",
-      "role": "user",
+      "role": "admin",
       "email": "suep@gmail.com",
       "phone": "082377296969",
       "divisi": "Kebersihan",

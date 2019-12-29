@@ -54,7 +54,7 @@ $(function() {
 export function generateUserProfileDetail(data, callback) {
   const modalContent =
     `
-    <h1 class="heading1" style="margin-bottom: 48px;">Edit Profile</h1>
+    <h1 class="heading1" style="margin-bottom: 48px;">User Profile</h1>
     <main class="edit-profile-wrapper">
       <div class="edit-profile-info">
       ` +
