@@ -5,6 +5,7 @@ import User from "./../class/User";
 import { generateCustomSearch } from "./../components/datatable-searchbox";
 import { generateButtonSpinner } from "./../components/button-spinner";
 import { generateUserProfileDetail } from "../components/modals";
+import { addError, removeError } from "./../components/input-field";
 
 $(function() {
   // Add custom search field to page header
@@ -71,6 +72,15 @@ $(function() {
   let name, email, phone, division, working_area;
   let user = {};
 
+  function generateErrorEmail() {
+    let data = $("#user-email").val();
+    addError(
+      "error",
+      $("#user-email").parent("fieldset"),
+      `${data} is not a valid email address`
+    );
+  }
+
   function initiateModal() {
     modal = $(".modal");
     button = $(".save-change");
@@ -90,6 +100,9 @@ $(function() {
     });
 
     button.prop("disabled", true);
+    if (!user.isValidEmail()) {
+      generateErrorEmail();
+    }
   }
 
   // Trigger user detail modal
@@ -115,13 +128,30 @@ $(function() {
           .trim()
       });
 
-      if (user.isChanged()) {
+      if (user.isChanged() && user.isValidEmail()) {
         $(".save-change").prop("disabled", false);
       } else {
         $(".save-change").prop("disabled", true);
       }
     }
   );
+
+  $(document).on(
+    "change, focusout",
+    "#user-fullname, #user-email, #user-phone, #user-division, #user-working_area",
+    function() {
+      if (!user.isValidEmail()) {
+        generateErrorEmail();
+      }
+    }
+  );
+
+  $(document).on("focus", "#user-email", function() {
+    let parent = $(this).parent("fieldset");
+    if (parent.hasClass("error")) {
+      removeError(parent);
+    }
+  });
 
   $(document).on("click", ".save-change", function() {
     $(this).prop("disabled", true);

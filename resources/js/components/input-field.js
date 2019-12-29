@@ -15,3 +15,19 @@ export function generateInputField({
 
   return markup;
 }
+
+export function addError(type, parent, message) {
+  console.log("PARENT: ", parent);
+  let markup = `
+    <span class="input-hint hint--${type.trim()}">${message.trim()}</span>
+  `;
+  if (!parent.hasClass("error")) {
+    parent.addClass("error");
+    parent.append(markup);
+  }
+}
+
+export function removeError(parent) {
+  parent.removeClass("error");
+  parent.children(".hint--error").remove();
+}

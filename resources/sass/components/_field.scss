@@ -4,6 +4,18 @@
   &:not(:last-child) {
     margin-bottom: $space-ml;
   }
+
+  &.error {
+    & .input-label {
+      color: $brand-secondary-100;
+    }
+
+    & .input-field {
+      // color: $brand-secondary-100;
+      background-color: $brand-secondary-10;
+      border-color: $brand-secondary-100;
+    }
+  }
 }
 
 .input-label {
@@ -34,4 +46,15 @@
 }
 
 .input-hint {
+  display: block;
+  padding-top: $space-s;
+  font-size: $body-2;
+  line-height: 16px;
+  font-weight: $regular;
+}
+
+.hint {
+  &--error {
+    color: $brand-secondary-100;
+  }
 }
