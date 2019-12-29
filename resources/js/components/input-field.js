@@ -5,19 +5,19 @@ export function generateInputField({
   value,
   name,
   placeholder,
-  disabled
+  disabled,
+  initial
 }) {
   let markup = `
     <fieldset class="input" ${disabled ? "disabled" : ""}>
       <label class="input-label" for="${id}">${label}</label>
-      <input id="${id}" class="input-field" name="${name.trim()}" type="${type}" value="${value}" placeholder="${placeholder}"/>
+      <input id="${id}" class="input-field" name="${name.trim()}" type="${type}" value="${value}" placeholder="${placeholder}" data-initial="${initial}"/>
     </fieldset>`;
 
   return markup;
 }
 
 export function addError(type, parent, message) {
-  console.log("PARENT: ", parent);
   let markup = `
     <span class="input-hint hint--${type.trim()}">${message.trim()}</span>
   `;
@@ -28,6 +28,8 @@ export function addError(type, parent, message) {
 }
 
 export function removeError(parent) {
-  parent.removeClass("error");
-  parent.children(".hint--error").remove();
+  if (parent.hasClass("error")) {
+    parent.removeClass("error");
+    parent.children(".hint--error").remove();
+  }
 }

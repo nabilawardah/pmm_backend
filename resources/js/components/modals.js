@@ -64,6 +64,7 @@ export function generateUserProfileDetail(data, callback) {
       name: "name",
       id: "user-fullname",
       value: data.name,
+      initial: data.name,
       placeholder: "What's your name?"
     }) +
     generateInputField({
@@ -72,6 +73,7 @@ export function generateUserProfileDetail(data, callback) {
       name: "email",
       id: "user-email",
       value: data.email,
+      initial: data.email,
       placeholder: "Enter your email address"
     }) +
     generateInputField({
@@ -80,6 +82,7 @@ export function generateUserProfileDetail(data, callback) {
       name: "phone",
       id: "user-phone",
       value: data.phone,
+      initial: data.phone,
       placeholder: "Enter your phone number"
     }) +
     generateInputField({
@@ -88,6 +91,7 @@ export function generateUserProfileDetail(data, callback) {
       name: "division",
       id: "user-division",
       value: data.divisi,
+      initial: data.divisi,
       placeholder: "Enter your division"
     }) +
     generateInputField({
@@ -96,6 +100,7 @@ export function generateUserProfileDetail(data, callback) {
       name: "working_area",
       id: "user-working_area",
       value: data.working_area,
+      initial: data.working_area,
       placeholder: "Enter your working area"
     }) +
     `

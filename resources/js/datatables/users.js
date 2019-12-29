@@ -65,97 +65,102 @@ let usersTable = $("#users-table").DataTable({
   dom: 'ilfrt<"#tableFooter" p>'
 });
 
-$(function() {
-  let modal, button;
+let modal, button;
 
-  // user Data
-  let name, email, phone, division, working_area;
-  let user = {};
+// user Data
+let name, email, phone, division, working_area;
+let user = new User();
 
-  function generateErrorEmail() {
-    let data = $("#user-email").val();
-    addError(
-      "error",
-      $("#user-email").parent("fieldset"),
-      `${data} is not a valid email address`
-    );
+function generateErrorEmail() {
+  addError(
+    "error",
+    $("#user-email").parent("fieldset"),
+    `Email address is not valid.`
+  );
+}
+
+function initiateModal() {
+  modal = $(".modal");
+  button = $(".save-change");
+
+  name = $("#user-fullname");
+  email = $("#user-email");
+  phone = $("#user-phone");
+  division = $("#user-division");
+  working_area = $("#user-working_area");
+
+  user.setInitial({
+    name: name.data("initial"),
+    email: email.data("initial"),
+    phone: phone.data("initial"),
+    division: division.data("initial"),
+    working_area: working_area.data("initial")
+  });
+
+  user.set({
+    name: name.val(),
+    email: email.val(),
+    phone: phone.val(),
+    division: division.val(),
+    working_area: working_area.val()
+  });
+
+  button.prop("disabled", true);
+  if (!user.isValidEmail()) {
+    generateErrorEmail();
   }
+}
 
-  function initiateModal() {
-    modal = $(".modal");
-    button = $(".save-change");
+// Trigger user detail modal
+$(document).on("click", ".user-info", function() {
+  let info = JSON.parse(
+    $(this)
+      .children("textarea.hidden")
+      .val()
+  );
+  generateUserProfileDetail(info, initiateModal);
+});
 
-    name = $("#user-fullname").val();
-    email = $("#user-email").val();
-    phone = $("#user-phone").val();
-    division = $("#user-division").val();
-    working_area = $("#user-working_area").val();
-
-    user = new User({
-      name,
-      email,
-      phone,
-      division,
-      working_area
+// Monitor user data field changes
+$(document).on(
+  "change, keyup",
+  "#user-fullname, #user-email, #user-phone, #user-division, #user-working_area",
+  function(e) {
+    user.set({
+      [$(this)
+        .prop("name")
+        .trim()]: $(this)
+        .val()
+        .trim()
     });
 
-    button.prop("disabled", true);
+    if (user.isChanged() && user.isValidEmail()) {
+      $(".save-change").prop("disabled", false);
+    } else {
+      $(".save-change").prop("disabled", true);
+    }
+  }
+);
+
+$(document).on(
+  "change, focusout",
+  "#user-fullname, #user-email, #user-phone, #user-division, #user-working_area",
+  function(e) {
     if (!user.isValidEmail()) {
       generateErrorEmail();
     }
   }
+);
 
-  // Trigger user detail modal
-  $(document).on("click", ".user-info", function() {
-    let info = JSON.parse(
-      $(this)
-        .children("textarea.hidden")
-        .val()
-    );
-    generateUserProfileDetail(info, initiateModal);
-  });
+$(document).on("focus", "#user-email", function() {
+  let parent = $(this).parent("fieldset");
+  if (parent.hasClass("error")) {
+    removeError(parent);
+  }
+});
 
-  // Monitor user data field changes
-  $(document).on(
-    "change, keyup",
-    "#user-fullname, #user-email, #user-phone, #user-division, #user-working_area",
-    function() {
-      user.set({
-        [$(this)
-          .prop("name")
-          .trim()]: $(this)
-          .val()
-          .trim()
-      });
-
-      if (user.isChanged() && user.isValidEmail()) {
-        $(".save-change").prop("disabled", false);
-      } else {
-        $(".save-change").prop("disabled", true);
-      }
-    }
-  );
-
-  $(document).on(
-    "change, focusout",
-    "#user-fullname, #user-email, #user-phone, #user-division, #user-working_area",
-    function() {
-      if (!user.isValidEmail()) {
-        generateErrorEmail();
-      }
-    }
-  );
-
-  $(document).on("focus", "#user-email", function() {
-    let parent = $(this).parent("fieldset");
-    if (parent.hasClass("error")) {
-      removeError(parent);
-    }
-  });
-
-  $(document).on("click", ".save-change", function() {
-    $(this).prop("disabled", true);
-    $(this).append(generateButtonSpinner());
-    console.log(user.get());
-  });
+$(document).on("click", ".save-change", function() {
+  $(this).prop("disabled", true);
+  $(this).append(generateButtonSpinner());
+  console.log("sending data...", user);
 });
