@@ -8,14 +8,6 @@ let navbar = $('.main-navbar')
 let footer = $('.main-footer')
 
 export function generateBaseModal(data, previewPhoto, callback) {
-  // let action = withActionBar
-  //   ? `<div class="modal-action-wrapper">
-  //       <footer class="modal-action-bar container-post">
-  //         ${actionBar}
-  //       </footer>
-  //     </div>`
-  //   : ''
-
   let modalPreviewPhoto = `
     <div class="modal-secondary-area">
       <div class="container-post modal-secondary-wrapper">

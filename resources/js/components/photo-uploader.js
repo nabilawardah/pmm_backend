@@ -1,5 +1,6 @@
 import axios from 'axios'
-import { showSecondaryModal, hidePrimaryModal } from './modals'
+import { showSecondaryModal, hidePrimaryModal, showPrimaryModal, hideSecondaryModal } from './modals'
+import { generateToast } from './toast'
 
 export function generateImageContainer({ label, src }) {
   let photo = src || 'default.png'
@@ -38,22 +39,31 @@ export function processPhotoUploading() {
   showSecondaryModal()
 }
 
-export function saveProfilePhoto(id) {
+export function saveProfilePhoto(id, cb) {
   let input = $('.photo-upload-container')
   let data = new FormData()
   let file = input[0].files[0]
 
   data.append('photo', file, file.name)
-
-  console.log('File: ', file)
-  console.log('DATA: ', data)
-
   const config = {
     headers: { 'content-type': 'multipart/form-data' },
   }
 
   return axios
     .post(`/api/photo/${id}`, data, config)
-    .then(res => console.log('RES: ', res))
+    .then(res => {
+      if (res.status === 200) {
+        cb()
+        generateToast('success', 'Photo Saved', 'Cheers! Your profile photo has been saved successfully.')
+        // changeProfilePicture(res.data)
+      }
+    })
     .catch(err => console.log('ERR: ', err))
+}
+
+export function changeProfilePicture(name) {
+  let container = $('.edit-profile-photo')
+  container.css('background-image', `url('/images/users/${name}')`)
+  hideSecondaryModal()
+  showPrimaryModal()
 }

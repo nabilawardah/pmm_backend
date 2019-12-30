@@ -1,0 +1,30 @@
+.toast-wrapper {
+  width: 100%;
+  max-width: 100vw;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  z-index: $layer-top;
+  bottom: $space-xl;
+}
+
+.toast {
+  padding: $space-ml;
+  background-color: $light-alpha-100;
+  border-radius: 4px;
+  box-shadow: $elevation-l;
+  color: $dark-alpha-70;
+}
+
+.toast-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $space-ml;
+}
+
+.toast-close {
+  display: block;
+  width: 24px;
+  height: 24px;
+}

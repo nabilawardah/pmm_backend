@@ -18,6 +18,10 @@ let usersTable = $('#users-table').DataTable({
   serverSide: false,
   processing: true,
   ajax: '/data/users.json',
+  scrollX: true,
+  drawCallback: function(settings) {
+    console.log('Data refreshed...', settings)
+  },
 
   columns: [
     {
@@ -189,7 +193,6 @@ $(
       $(this).prop('disabled', true)
       $(this).append(generateButtonSpinner())
       let data = user.get()
-      console.log('sending data...', user.get())
       axios
         .post(`/api/profile/${data.id}`, data)
         .then(response => savedSuccess(user, response, $(this)))
@@ -198,6 +201,7 @@ $(
 
     // Choose profile photo
     $(document).on('click', '.upload-profile-picture, .try-another-photo', function(e) {
+      $('.save-photo').prop('disabled', false)
       uploadProfilePhoto($(this))
     })
     // Process selected photo and preview it on preview-container
@@ -206,8 +210,15 @@ $(
     })
     // Upload the profile-picture
     $(document).on('click', '.save-photo', function() {
+      let el = $(this)
+      el.prop('disabled', true)
+      el.append(generateButtonSpinner())
       let data = user.get()
-      saveProfilePhoto(data.id)
+      saveProfilePhoto(data.id, () => {
+        el.children('.loading').remove()
+        el.text('Photo Saved')
+      })
+      usersTable.ajax.reload()
     })
   })()
 )

@@ -22,7 +22,9 @@ class ProfilePictureController extends Controller
             $profileImage = date('YmdHis').'-'.strtolower($file->getClientOriginalName());
             $file->move($destinationPath, $profileImage);
 
-            return json_encode($file);
+            sleep(2);
+
+            return $profileImage;
         }
     }
 }
