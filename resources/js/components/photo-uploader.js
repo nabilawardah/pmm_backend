@@ -55,7 +55,7 @@ export function saveProfilePhoto(id, cb) {
       if (res.status === 200) {
         cb()
         generateToast('success', 'Photo Saved', 'Cheers! Your profile photo has been saved successfully.')
-        // changeProfilePicture(res.data)
+        changeProfilePicture(res.data)
       }
     })
     .catch(err => console.log('ERR: ', err))
