@@ -66,3 +66,5 @@ Route::get('/admin/users/{id}', function () {
 Route::get('/admin/gallery', function () {
     return view('admin.gallery.index');
 });
+
+Route::post('/api/profile/{id}', 'UserController@save');

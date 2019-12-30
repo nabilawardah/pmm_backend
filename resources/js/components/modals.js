@@ -1,7 +1,8 @@
-import { generateImageContainer } from "./image-container";
-import { generateInputField } from "./input-field";
+import { generateImageContainer } from './image-container'
+import { generateInputField } from './input-field'
+import { generateDropdown } from './dropdown'
 
-let body = $("body");
+let body = $('body')
 
 export function generateBaseModal(data, withActionBar, actionBar, callback) {
   let action = withActionBar
@@ -10,7 +11,7 @@ export function generateBaseModal(data, withActionBar, actionBar, callback) {
           ${actionBar}
         </footer>
       </div>`
-    : "";
+    : ''
 
   let modal = `<main class="modal">
       <div class="modal-main-area">
@@ -26,30 +27,30 @@ export function generateBaseModal(data, withActionBar, actionBar, callback) {
         ${action}
       </div>
     </main>
-  `;
+  `
 
-  body.bind("append", callback);
-  body.append(modal).addClass("lock-scroll");
+  body.bind('append', callback)
+  body.append(modal).addClass('lock-scroll')
 }
 
 function removeModal() {
-  let modal = $(".modal");
-  modal.remove();
-  body.removeClass("lock-scroll");
+  let modal = $('.modal')
+  modal.remove()
+  body.removeClass('lock-scroll')
 }
 
 $(function() {
-  $(document).on("click", ".close-modal", function() {
-    removeModal();
-  });
+  $(document).on('click', '.close-modal', function() {
+    removeModal()
+  })
 
-  $(document).on("keyup", function(e) {
-    let modal = $(".modal");
-    if (modal.length > 0 && e.key === "Escape") {
-      removeModal();
+  $(document).on('keyup', function(e) {
+    let modal = $('.modal')
+    if (modal.length > 0 && e.key === 'Escape') {
+      removeModal()
     }
-  });
-});
+  })
+})
 
 export function generateUserProfileDetail(data, callback) {
   const modalContent =
@@ -57,68 +58,87 @@ export function generateUserProfileDetail(data, callback) {
     <h1 class="heading1" style="margin-bottom: 48px;">User Profile</h1>
     <main class="edit-profile-wrapper">
       <div class="edit-profile-info">
+      <input type="hidden" name="id" id="user-id" value="${data.id}" />
       ` +
     generateInputField({
-      label: "Full name",
-      type: "text",
-      name: "name",
-      id: "user-fullname",
+      label: 'Full name',
+      type: 'text',
+      name: 'name',
+      id: 'user-fullname',
       value: data.name,
       initial: data.name,
-      placeholder: "What's your name?"
+      placeholder: "What's your name?",
     }) +
     generateInputField({
-      label: "Email",
-      type: "email",
-      name: "email",
-      id: "user-email",
+      label: 'Email',
+      type: 'email',
+      name: 'email',
+      id: 'user-email',
       value: data.email,
       initial: data.email,
-      placeholder: "Enter your email address"
+      placeholder: 'Enter your email address',
     }) +
     generateInputField({
-      label: "Phone number",
-      type: "text",
-      name: "phone",
-      id: "user-phone",
+      label: 'Phone number',
+      type: 'text',
+      name: 'phone',
+      id: 'user-phone',
       value: data.phone,
       initial: data.phone,
-      placeholder: "Enter your phone number"
+      placeholder: 'Enter your phone number',
     }) +
-    generateInputField({
-      label: "Divisi",
-      type: "text",
-      name: "division",
-      id: "user-division",
-      value: data.divisi,
-      initial: data.divisi,
-      placeholder: "Enter your division"
-    }) +
-    generateInputField({
-      label: "Working area",
-      type: "text",
-      name: "working_area",
-      id: "user-working_area",
-      value: data.working_area,
-      initial: data.working_area,
-      placeholder: "Enter your working area"
-    }) +
+    generateDropdown(
+      {
+        label: 'Divisi',
+        name: 'division',
+        id: 'user-division',
+        value: data.divisi,
+        initial: data.divisi,
+        placeholder: 'Select your division',
+      },
+      [
+        { name: 'Kebersihan', value: 'Kebersihan' },
+        { name: 'Operasional', value: 'Operasional' },
+        { name: 'Logistik', value: 'Logistik' },
+        { name: 'Konsumsi', value: 'Konsumsi' },
+        { name: 'Public Relation', value: 'Public Relation' },
+        { name: 'Marketing', value: 'Marketing' },
+      ]
+    ) +
+    generateDropdown(
+      {
+        label: 'Working area',
+        name: 'working_area',
+        id: 'user-working_area',
+        value: data.working_area,
+        initial: data.working_area,
+        placeholder: 'Select your working area',
+      },
+      [
+        { name: 'OB', value: 'OB' },
+        { name: 'OP', value: 'OP' },
+        { name: 'LG', value: 'LG' },
+        { name: 'KS', value: 'KS' },
+        { name: 'PR', value: 'PR' },
+        { name: 'MK', value: 'MK' },
+      ]
+    ) +
     `
     </div>
     <div class="edit-profile-side">
     ` +
     generateImageContainer({
-      label: "Profile photo",
-      src: data.photo
+      label: 'Profile photo',
+      src: data.photo,
     }) +
     `
     </div>
-    </main>`;
+    </main>`
 
   let actionBar = `
     <button class="button button--large primary save-change">Save Changes</button>
     <button class="button button--large default close-modal">Cancel</button>
-  `;
+  `
 
-  generateBaseModal(modalContent, true, actionBar, callback);
+  generateBaseModal(modalContent, true, actionBar, callback)
 }

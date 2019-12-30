@@ -1,44 +1,41 @@
-import { isEqual, transform, isObject } from "lodash";
-import validator from "validator";
+import { isEqual, transform, isObject } from 'lodash'
+import validator from 'validator'
 
 function difference(object, base) {
   function changes(object, base) {
     return transform(object, function(result, value, key) {
       if (!isEqual(value, base[key])) {
-        result[key] =
-          isObject(value) && isObject(base[key])
-            ? changes(value, base[key])
-            : value;
+        result[key] = isObject(value) && isObject(base[key]) ? changes(value, base[key]) : value
       }
-    });
+    })
   }
-  return changes(object, base);
+  return changes(object, base)
 }
 
 export default class User {
   constructor(props) {
-    this.data = { ...props };
+    this.data = { ...props }
   }
 
-  get = () => this.data;
+  get = () => this.data
 
   set = data => {
-    this.data = Object.assign({}, { ...this.data, ...data });
-    return this.data;
-  };
+    this.data = Object.assign({}, { ...this.data, ...data })
+    return this.data
+  }
 
   setInitial = incomingData => {
-    this.initialData = { ...incomingData };
-    return this.initialData;
-  };
+    this.initialData = { ...incomingData }
+    return this.initialData
+  }
 
   isChanged = () => {
-    // console.log("INIT: ", this.initialData.email);
-    // console.log(this.data.email);
-    return Object.keys(difference(this.initialData, this.data)).length;
-  };
+    // console.log('INIT: ', this.initialData)
+    // console.log(this.data)
+    return Object.keys(difference(this.initialData, this.data)).length
+  }
 
   isValidEmail = () => {
-    return validator.isEmail(this.data.email);
-  };
+    return validator.isEmail(this.data.email)
+  }
 }
