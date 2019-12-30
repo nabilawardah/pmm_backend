@@ -149,6 +149,7 @@ $(
       'change focusout',
       '#user-fullname, #user-email, #user-phone, #user-division, #user-working_area',
       function(e) {
+        console.log(e)
         if (!user.isValidEmail()) {
           generateErrorEmail()
         }

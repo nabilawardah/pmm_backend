@@ -35,6 +35,7 @@ export function generateBaseModal(data, withActionBar, actionBar, callback) {
 
 function removeModal() {
   let modal = $('.modal')
+  body.off('append')
   modal.remove()
   body.removeClass('lock-scroll')
 }

@@ -6,11 +6,6 @@
         'active' => true,
       ],
       (object) [
-        'name' => 'Users',
-        'to' => '/admin/users',
-        'active' => false,
-      ],
-      (object) [
         'name' => 'Events',
         'to' => '/admin/events',
         'active' => false,
@@ -18,6 +13,11 @@
       (object) [
         'name' => 'Gallery',
         'to' => '/admin/gallery',
+        'active' => false,
+      ],
+      (object) [
+        'name' => 'Users',
+        'to' => '/admin/users',
         'active' => false,
       ],
   ];
