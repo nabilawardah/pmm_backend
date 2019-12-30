@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+
 class ProfilePictureController extends Controller
 {
     public function index()
@@ -9,17 +11,18 @@ class ProfilePictureController extends Controller
         return 'default.png';
     }
 
-    public function save()
+    public function save(Request $request)
     {
         request()->validate([
-            'fileUpload' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-       ]);
-        if ($files = $request->file('fileUpload')) {
-            $destinationPath = 'public/images/users/'; // upload path
-            $profileImage = date('YmdHis').'.'.$files->getClientOriginalExtension();
-            $files->move($destinationPath, $profileImage);
+                'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
+           ]);
 
-            return $profileImage;
+        if ($file = $request->file('photo')) {
+            $destinationPath = 'images/users/'; // upload path
+            $profileImage = date('YmdHis').'-'.strtolower($file->getClientOriginalName());
+            $file->move($destinationPath, $profileImage);
+
+            return json_encode($file);
         }
     }
 }

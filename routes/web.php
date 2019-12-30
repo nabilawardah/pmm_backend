@@ -68,3 +68,4 @@ Route::get('/admin/gallery', function () {
 });
 
 Route::post('/api/profile/{id}', 'UserController@save');
+Route::post('/api/photo/{id}', 'ProfilePictureController@save');

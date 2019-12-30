@@ -4,7 +4,8 @@ import axios from 'axios'
 import User from './../class/User'
 import { generateCustomSearch } from './../components/datatable-searchbox'
 import { generateButtonSpinner } from './../components/button-spinner'
-import { generateUserProfileDetail } from '../components/modals'
+import { generateUserProfileDetail, hideSecondaryModal } from '../components/modals'
+import { uploadProfilePhoto, saveProfilePhoto, processPhotoUploading } from './../components/photo-uploader'
 import { addError, removeError } from './../components/input-field'
 
 $(function() {
@@ -109,6 +110,27 @@ $(
       if (!user.isValidEmail()) {
         generateErrorEmail()
       }
+
+      hideSecondaryModal()
+
+      $('body').unbind('append')
+    }
+
+    function savedSuccess(user, res, el) {
+      el.children('.loading').remove()
+      user.setInitial({ ...res.data })
+      user.set({ ...res.data })
+      updateInitialOnElement({ ...res.data })
+      usersTable.ajax.reload()
+      console.log(user)
+    }
+
+    function updateInitialOnElement({ name, email, phone, division, working_area }) {
+      nameField.attr('data-initial', name)
+      emailField.attr('data-initial', email)
+      phoneField.attr('data-initial', phone)
+      divisionField.attr('data-initial', division)
+      working_areaField.attr('data-initial', working_area)
     }
 
     // Trigger user detail modal
@@ -174,21 +196,18 @@ $(
         .catch(err => console.log('ERROR: ', err))
     })
 
-    function savedSuccess(user, res, el) {
-      el.children('.loading').remove()
-      user.setInitial({ ...res.data })
-      user.set({ ...res.data })
-      updateInitialOnElement({ ...res.data })
-      usersTable.ajax.reload()
-      console.log(user)
-    }
-
-    function updateInitialOnElement({ name, email, phone, division, working_area }) {
-      nameField.attr('data-initial', name)
-      emailField.attr('data-initial', email)
-      phoneField.attr('data-initial', phone)
-      divisionField.attr('data-initial', division)
-      working_areaField.attr('data-initial', working_area)
-    }
+    // Choose profile photo
+    $(document).on('click', '.upload-profile-picture, .try-another-photo', function(e) {
+      uploadProfilePhoto($(this))
+    })
+    // Process selected photo and preview it on preview-container
+    $(document).on('change', '.photo-upload-container', function() {
+      processPhotoUploading()
+    })
+    // Upload the profile-picture
+    $(document).on('click', '.save-photo', function() {
+      let data = user.get()
+      saveProfilePhoto(data.id)
+    })
   })()
 )

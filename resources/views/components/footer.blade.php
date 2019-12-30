@@ -1,4 +1,4 @@
-<footer class="footer-main container-narrow">
+<footer class="main-footer container-narrow">
 
   <div class="contact">
     <p>This is the footer section</p>

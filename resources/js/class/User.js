@@ -36,7 +36,6 @@ export default class User {
   }
 
   isValidEmail = () => {
-    console.log('Called...')
     return validator.isEmail(this.data.email)
   }
 }

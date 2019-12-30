@@ -1,19 +1,50 @@
-import { generateImageContainer } from './image-container'
+import { generateImageContainer } from './photo-uploader'
 import { generateInputField } from './input-field'
 import { generateDropdown } from './dropdown'
 
 let body = $('body')
+let content = $('.main-content')
+let navbar = $('.main-navbar')
+let footer = $('.main-footer')
 
-export function generateBaseModal(data, withActionBar, actionBar, callback) {
-  let action = withActionBar
-    ? `<div class="modal-action-wrapper">
-        <footer class="modal-action-bar container-post">
-          ${actionBar}
-        </footer>
-      </div>`
-    : ''
+export function generateBaseModal(data, previewPhoto, callback) {
+  // let action = withActionBar
+  //   ? `<div class="modal-action-wrapper">
+  //       <footer class="modal-action-bar container-post">
+  //         ${actionBar}
+  //       </footer>
+  //     </div>`
+  //   : ''
 
-  let modal = `<main class="modal">
+  let modalPreviewPhoto = `
+    <div class="modal-secondary-area">
+      <div class="container-post modal-secondary-wrapper">
+        <div class="modal-secondary-area">
+          <main class="modal-secondary-main-wrapper">
+            <div class="preview-photo-container" style="background-image: url('/images/users/default.png')"></div>
+          </main>
+          <div class="modal-secondary-sidebar">
+            <header class="modal-secondary-header">
+              <button type="button" class="close-secondary-modal" style="margin-bottom: 24px">
+                <div class="modal-arrow-icon">
+                  <svg style="transform: rotate(180deg);" class="arrow-right" xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 1000 1000"><path fill="currentColor" d="M694 242l249 250c12 11 12 21 1 32L694 773c-5 5-10 7-16 7s-11-2-16-7c-11-11-11-21 0-32l210-210H68c-13 0-23-10-23-23s10-23 23-23h806L662 275c-21-22 11-54 32-33z"></path></svg>
+                </div>
+                <span class="modal-arrow-text">Back</span>
+              </button>
+              <h1 class="heading2">Preview Photo</h1>
+            </header>
+            <footer class="modal-secondary-action">
+              <button class="button button--large primary save-photo stretch" style="margin-bottom: 12px">Save Photo</button>
+              <button class="button button--large default try-another-photo stretch">Try Another Photo</button>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  `
+
+  let modal = `
+    <main class="modal">
       <div class="modal-main-area">
         <nav class="modal-nav">
           <button type="button" class="close-modal button-close--rounded">
@@ -24,20 +55,27 @@ export function generateBaseModal(data, withActionBar, actionBar, callback) {
         <div class="modal-wrapper container-post">
           ${data}
         </div>
-        ${action}
       </div>
+      ${previewPhoto ? modalPreviewPhoto : ''}
+      ${previewPhoto ? '<input type="file" class="photo-upload-container" />' : ''}
     </main>
   `
 
   body.bind('append', callback)
   body.append(modal).addClass('lock-scroll')
+  content.addClass('lock-scroll')
+  navbar.addClass('lock-scroll')
+  footer.addClass('lock-scroll')
 }
 
-function removeModal() {
+export function removeModal() {
   let modal = $('.modal')
   body.off('append')
   modal.remove()
   body.removeClass('lock-scroll')
+  content.removeClass('lock-scroll')
+  navbar.removeClass('lock-scroll')
+  footer.removeClass('lock-scroll')
 }
 
 $(function() {
@@ -134,12 +172,33 @@ export function generateUserProfileDetail(data, callback) {
     }) +
     `
     </div>
-    </main>`
+    </main>
+    <div class="modal-action-wrapper">
+      <footer class="modal-action-bar container-post">
+        <button class="button button--large primary save-change">Save Changes</button>
+        <button class="button button--large default close-modal">Cancel</button>
+      </footer>
+    </div>
+    `
 
-  let actionBar = `
-    <button class="button button--large primary save-change">Save Changes</button>
-    <button class="button button--large default close-modal">Cancel</button>
-  `
+  generateBaseModal(modalContent, true, callback)
+}
 
-  generateBaseModal(modalContent, true, actionBar, callback)
+$(document).on('click', '.close-secondary-modal', function() {
+  showPrimaryModal()
+  hideSecondaryModal()
+})
+
+export function hideSecondaryModal() {
+  $('.modal-secondary-area').fadeOut(200)
+}
+export function hidePrimaryModal() {
+  $('.modal-main-area').fadeOut(200)
+}
+
+export function showSecondaryModal() {
+  $('.modal-secondary-area').fadeIn(280)
+}
+export function showPrimaryModal() {
+  $('.modal-main-area').fadeIn(280)
 }

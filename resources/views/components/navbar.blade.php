@@ -82,7 +82,7 @@ $admin_menus = [
   ];
 @endphp
 
-<nav class="navbar">
+<nav class="main-navbar navbar">
   <div class="navbar-wrapper">
     <ul class="navbar-primary inline--ll">
       <li class="brand-wrapper">
