@@ -25,7 +25,7 @@
     <table id="users-table" class="table" cellspacing="0" width="100%">
       <thead>
         <tr>
-          <th>No</th>
+          <th></th>
           <th>Profil</th>
           <th>Divisi</th>
           <th>Area</th>

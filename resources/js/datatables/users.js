@@ -20,47 +20,53 @@ let usersTable = $('#users-table').DataTable({
   ajax: '/data/users.json',
   scrollX: true,
   drawCallback: function(settings) {
-    console.log('Data refreshed...', settings)
+    console.log('Data refreshed...')
   },
+  order: [],
 
   columns: [
     {
-      data: 'id',
-      name: '',
-      searchable: false,
-      render: (data, type, full, meta) => {
-        return meta.row + 1
+      // className: 'table-user-id',
+      orderable: false,
+      sortable: false,
+      render: function() {
+        return ''
       },
     },
     {
       data: 'name',
       name: 'name',
-      className: 'table__name',
+      className: 'table-user-name',
+      orderData: [0, 1],
       render: function(data, type, full, meta) {
         let admin = full.role === 'admin'
         let profilePicture = full.photo || 'default.png'
         let fullData = JSON.stringify(full)
-        return `
-          <div class="user-info">
-            <textarea class="hidden">${fullData}</textarea>
-            <div class="profile-picture" style="background-image: url('/images/users/${profilePicture}');"></div>
-            <span class="user-data">
-              <div class="heading4 user-main-info">
-                ${full.name}
-                ${admin ? '<span class="user-role">admin</span>' : ''}
-              </div>
-              <span class="medium" style="color: #767676;">
-                ${full.email}
-                <span style="padding: 0px 4px;">•</span>
-                ${full.phone}
+        if (type === 'sort') {
+          return data
+        } else {
+          return `
+            <div class="user-info">
+              <textarea class="hidden">${fullData}</textarea>
+              <div class="profile-picture" style="background-image: url('/images/users/${profilePicture}');"></div>
+              <span class="user-data">
+                <div class="heading4 user-main-info">
+                  ${full.name} <span class="user-info-id">(<span class="id-pound">#</span>${full.id})</span>
+                  ${admin ? '<span class="user-role">admin</span>' : ''}
+                </div>
+                <span class="medium" style="color: #767676;">
+                  ${full.email}
+                  <span style="padding: 0px 4px;">•</span>
+                  ${full.phone}
+                </span>
               </span>
-            </span>
-          </div>
-        `
+            </div>
+          `
+        }
       },
     },
-    { data: 'divisi', name: 'divisi', className: 'table__name' },
-    { data: 'working_area', name: 'working_area', className: 'table__name' },
+    { data: 'divisi', name: 'divisi', className: 'table-user-divisi' },
+    { data: 'working_area', name: 'working_area', className: 'table-user-area' },
   ],
   language: {
     processing: '<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span>',
@@ -68,6 +74,17 @@ let usersTable = $('#users-table').DataTable({
   pageLength: 25,
   dom: '<"table-footer-info"  i <".separator"> l>frt<"#tableFooter.datatable-footer" p>',
 })
+
+usersTable
+  .on('order.dt search.dt', function() {
+    usersTable
+      .column(0, { search: 'applied', order: 'applied' })
+      .nodes()
+      .each(function(cell, i) {
+        cell.innerHTML = i + 1
+      })
+  })
+  .draw()
 
 $(
   (function() {
@@ -126,7 +143,6 @@ $(
       user.set({ ...res.data })
       updateInitialOnElement({ ...res.data })
       usersTable.ajax.reload()
-      console.log(user)
     }
 
     function updateInitialOnElement({ name, email, phone, division, working_area }) {

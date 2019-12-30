@@ -56,11 +56,24 @@
 
 .user-main-info {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   transition: all 0.36s;
 }
 
+.user-info-id {
+  font-size: $body-2;
+  font-weight: $regular;
+  color: $dark-alpha-50;
+  font-variant-numeric: tabular-nums;
+  margin-left: $space-xs;
+}
+
+.id-pound {
+  font-size: 75%;
+}
+
 .user-role {
+  align-self: center;
   display: block;
   font-size: 12px;
   line-height: 16px;
@@ -172,4 +185,9 @@
     width: 12px;
     text-align: center;
   }
+}
+
+// Table Columns
+.table-user-name {
+  min-width: 480px;
 }
