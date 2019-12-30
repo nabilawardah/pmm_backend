@@ -1,14 +1,14 @@
-window._ = require("lodash");
-window.$ = require("jquery");
+window._ = require('lodash')
+window.$ = require('jquery')
 
 // Override jQuery original append method
-(function($) {
-  var origAppend = $.fn.append;
+;(function($) {
+  var origAppend = $.fn.append
 
   $.fn.append = function() {
-    return origAppend.apply(this, arguments).trigger("append");
-  };
-})($);
+    return origAppend.apply(this, arguments).trigger('append')
+  }
+})($)
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -16,9 +16,9 @@ window.$ = require("jquery");
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = require("axios");
+window.axios = require('axios')
 
-window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
