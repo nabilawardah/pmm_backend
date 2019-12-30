@@ -1,6 +1,7 @@
 .input {
   display: block;
   position: relative;
+  z-index: $layer-xs;
 
   &:not(:last-child) {
     margin-bottom: $space-ml;
@@ -75,5 +76,5 @@
   color: $dark-alpha-70;
   right: 12px;
   bottom: 12px;
-  z-index: 0;
+  z-index: -1;
 }

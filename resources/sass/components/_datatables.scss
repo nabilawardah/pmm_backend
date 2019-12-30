@@ -324,8 +324,8 @@ legend {
 
 table.dataTable {
   clear: both;
-  margin-top: 6px !important;
-  margin-bottom: 6px !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
   max-width: none !important;
   border-collapse: separate !important;
   border-spacing: 0;
@@ -430,7 +430,7 @@ table.dataTable thead .sorting_desc:before,
 table.dataTable thead .sorting_asc_disabled:before,
 table.dataTable thead .sorting_desc_disabled:before {
   right: 1.25em;
-  content: "\2191";
+  content: '\2191';
   // content: url('/icons/arrow-up.svg');
 }
 table.dataTable thead .sorting:after,
@@ -439,7 +439,7 @@ table.dataTable thead .sorting_desc:after,
 table.dataTable thead .sorting_asc_disabled:after,
 table.dataTable thead .sorting_desc_disabled:after {
   right: 0.5em;
-  content: "\2193";
+  content: '\2193';
   // content: url('/icons/arrow-down.svg');
 }
 table.dataTable thead .sorting_asc:before,
@@ -520,16 +520,10 @@ div.dataTables_scrollHead table.table-bordered {
 div.table-responsive > div.dataTables_wrapper > div.row {
   margin: 0;
 }
-div.table-responsive
-  > div.dataTables_wrapper
-  > div.row
-  > div[class^="col-"]:first-child {
+div.table-responsive > div.dataTables_wrapper > div.row > div[class^='col-']:first-child {
   padding-left: 0;
 }
-div.table-responsive
-  > div.dataTables_wrapper
-  > div.row
-  > div[class^="col-"]:last-child {
+div.table-responsive > div.dataTables_wrapper > div.row > div[class^='col-']:last-child {
   padding-right: 0;
 }
 table.DTFC_Cloned tr {
