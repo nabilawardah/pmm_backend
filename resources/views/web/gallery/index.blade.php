@@ -7,9 +7,9 @@
 @component('components.navbar')
 @endcomponent
 
-<div class="container-narrow">
+@component('layouts.main-content')
   <h1 class="display2">Gallery</h1>
-</div>
+@endcomponent
 
 @component('components.footer')
 @endcomponent
