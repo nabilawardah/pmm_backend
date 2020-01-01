@@ -1,5 +1,28 @@
 .main-content {
-  padding-top: $space-ll;
+  @include screen(smallPhone) {
+    padding-top: $space-ml;
+    padding-bottom: $space-ll;
+  }
+  @include screen(phone) {
+    padding-top: $space-ml;
+    padding-bottom: $space-ll;
+  }
+  @include screen(tablet) {
+    padding-top: $space-ll;
+    padding-bottom: $space-xl;
+  }
+  @include screen(tabletLandscape) {
+    padding-top: $space-ll;
+    padding-bottom: $space-xl;
+  }
+  @include screen(desktop) {
+    padding-top: $space-ll;
+    padding-bottom: $space-xl;
+  }
+  @include screen(desktopWide) {
+    padding-top: $space-ll;
+    padding-bottom: $space-xl;
+  }
 }
 
 .lock-scroll {

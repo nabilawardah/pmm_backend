@@ -107,7 +107,8 @@
 }
 
 .table-footer-info {
-  display: flex;
+  display: inline-flex;
+  flex-wrap: wrap;
   align-items: center;
   padding-bottom: $space-sm;
   padding-top: $space-sm;
@@ -124,6 +125,25 @@
   color: $dark-alpha-60;
   position: relative;
   font-variant-numeric: tabular-nums;
+
+  @include screen(smallPhone) {
+    margin-top: $space-sm;
+  }
+  @include screen(phone) {
+    margin-top: $space-sm;
+  }
+  @include screen(tablet) {
+    margin-top: 0;
+  }
+  @include screen(tabletLandscape) {
+    margin-top: 0;
+  }
+  @include screen(desktop) {
+    margin-top: 0;
+  }
+  @include screen(desktopWide) {
+    margin-top: 0;
+  }
 
   &::after {
     content: url('/icons/arrow-down-small.svg');

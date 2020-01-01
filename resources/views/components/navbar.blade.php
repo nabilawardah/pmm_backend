@@ -86,7 +86,7 @@ $admin_menus = [
   <div class="navbar-wrapper">
     <ul class="navbar-primary inline--ll">
       <li class="brand-wrapper">
-        @include('icons.h')
+        @include('icons.pmm')
       </li>
       @foreach ($primary_menus as $menu)
         @component('components.menu-web', ['name' => $menu->name, 'to' => $menu->to, 'active' => $menu->active])

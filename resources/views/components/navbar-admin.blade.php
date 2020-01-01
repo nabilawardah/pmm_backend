@@ -39,6 +39,9 @@
 <nav class="main-navbar navbar">
   <div class="navbar-wrapper">
     <ul class="navbar-primary inline--ll">
+      <li class="brand-wrapper">
+        @include('icons.pmm')
+      </li>
       @foreach ($primary_menus as $menu)
         @component('components.menu-admin', ['name' => $menu->name, 'to' => $menu->to, 'active' => $menu->active])
         @endcomponent

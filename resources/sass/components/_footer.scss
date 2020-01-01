@@ -1,3 +1,120 @@
+.main-footer-wrapper {
+}
+
 .main-footer {
-  padding-top: $space-xl;
+  padding-top: $space-ml;
+  padding-bottom: $space-ml;
+  border-top: 1px solid $dark-alpha-20;
+  display: flex;
+
+  @include screen(smallPhone) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  @include screen(phone) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  @include screen(tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @include screen(tabletLandscape) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @include screen(desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @include screen(desktopWide) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer-header {
+  display: inline-flex;
+  // flex-wrap: wrap;
+  @include screen(smallPhone) {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: $space-sm;
+  }
+  @include screen(phone) {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: $space-sm;
+  }
+  @include screen(tablet) {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  @include screen(tabletLandscape) {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  @include screen(desktop) {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  @include screen(desktopWide) {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  > .brand {
+    display: block;
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    color: $dark-hex-50;
+
+    @include screen(smallPhone) {
+      margin-bottom: $space-xs;
+      margin-right: $space-m;
+    }
+    @include screen(phone) {
+      margin-bottom: $space-xs;
+      margin-right: $space-s;
+    }
+    @include screen(tablet) {
+      margin-bottom: $space-xs;
+      margin-right: $space-s;
+    }
+    @include screen(tabletLandscape) {
+      margin-bottom: $space-xs;
+      margin-right: $space-s;
+    }
+    @include screen(desktop) {
+      margin-bottom: $space-xs;
+      margin-right: $space-s;
+    }
+    @include screen(desktopWide) {
+      margin-bottom: $space-xs;
+      margin-right: $space-s;
+    }
+  }
+
+  > p {
+    color: $dark-alpha-50;
+    line-height: 22px;
+  }
 }

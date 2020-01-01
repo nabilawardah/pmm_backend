@@ -14,6 +14,11 @@
 Route::get('/sign-in', function () {
     return view('sign-in');
 });
+Route::post('/sign-in', function () {
+    sleep(2);
+
+    return view('web.home');
+});
 
 // Web
 Route::get('/', function () {

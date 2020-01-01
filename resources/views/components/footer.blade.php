@@ -1,13 +1,11 @@
-<footer class="main-footer container-narrow">
-
-  <div class="contact">
-    <p>This is the footer section</p>
-  </div>
-  <div>
-    <p>Let's put social media links here!</p>
-  </div>
+<footer class="main-footer-wrapper container-narrow">
+  <div class="main-footer">
+  <header class="footer-header">
+    @include('icons.pmm')
+    <p class="heading6">&copy; 2020 Paragon Meaningful Movement. All rights reserved.</p>
+  </header>
 
   @component('components.with-love')
-
   @endcomponent
+  </div>
 </footer>

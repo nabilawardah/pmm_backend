@@ -7,8 +7,10 @@
   @component('components.navbar')
   @endcomponent
 
-  <div class="container-narrow">
-    <h1 class="display2">Homepage</h1>
+  <div class="main-content">
+    <div class="container-narrow">
+      <h1 class="display2">Homepage</h1>
+    </div>
   </div>
 
   @component('components.footer')
