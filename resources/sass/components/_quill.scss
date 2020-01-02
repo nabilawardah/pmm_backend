@@ -624,8 +624,35 @@
   font-weight: $semibold;
 }
 .ql-snow .ql-editor a {
-  text-decoration: underline;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  animation: hoverOutDark60 0.4s forwards;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(180deg, transparent 90%, $brand-primary-70 0);
+  background-size: 100% 100%;
+  color: $brand-primary-200;
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(180deg, transparent 96%, $brand-primary-70 0);
+    background-size: 100% 100%;
+  }
+
+  &:hover {
+    animation: hoverInDark60 0.2s forwards;
+  }
 }
+
+@include hoverIn($light-alpha-100, hoverInDark60);
+@include hoverOut($light-alpha-100, hoverOutDark60);
+
 // .ql-snow .ql-editor blockquote {
 //   border-left: 4px solid #ccc;
 //   margin-bottom: 5px;
