@@ -1,4 +1,4 @@
-const mix = require("laravel-mix");
+const mix = require('laravel-mix')
 
 /*
  |--------------------------------------------------------------------------
@@ -12,18 +12,18 @@ const mix = require("laravel-mix");
  */
 
 mix
-  .copyDirectory("resources/assets", "public")
-  .js("resources/js/app.js", "public/js")
-  .js("resources/js/prefetch.js", "public/js")
-  .sass("resources/sass/app.scss", "public/css")
-  .extract(["jquery", "axios", "datatables.net-fixedcolumns-bs4"])
-  .sourceMaps();
+  .copyDirectory('resources/assets', 'public')
+  .js('resources/js/app.js', 'public/js')
+  .js('resources/js/prefetch.js', 'public/js')
+  .sass('resources/sass/app.scss', 'public/css')
+  .extract(['jquery', 'axios', 'quill', 'datatables.net-fixedcolumns-bs4'])
+  .sourceMaps()
 
 // ADJUST with your own setup
 // Change to your own proxy if you're using Laravel Valet,
 // or change to http://localhost:3000 if you're not using laravel valet
-mix.browserSync("http://pmm.dushi");
+mix.browserSync('http://pmm.dushi')
 
 if (mix.inProduction()) {
-  mix.version();
+  mix.version()
 }
