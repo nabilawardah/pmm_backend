@@ -1,4 +1,9 @@
 .article-title {
+  @include rf(40px, 52px);
+  line-height: 52px;
+  letter-spacing: -1.44px;
+  font-weight: $bold;
+
   display: block;
   cursor: text;
   padding-left: 0;

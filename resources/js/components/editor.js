@@ -37,6 +37,17 @@ let toolbarOptions = [
 ]
 
 $(function() {
+  function handlePaste(e, el) {
+    let clipboardData, pastedData
+
+    e.stopPropagation()
+    e.preventDefault()
+
+    clipboardData = e.clipboardData || window.clipboardData
+
+    el.innerText = clipboardData.getData('Text')
+  }
+
   function checkArticleTitle(el) {
     if (el.text().trim() === '' || el.html().trim() === '') {
       el.addClass('empty')
@@ -55,5 +66,9 @@ $(function() {
 
   $(document).on('keyup', '.article-title', function() {
     checkArticleTitle($(this))
+  })
+
+  document.querySelector('#article-title').addEventListener('paste', function(e) {
+    handlePaste(e, this)
   })
 })
