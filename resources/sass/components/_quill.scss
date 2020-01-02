@@ -35,7 +35,7 @@
   height: 100%;
   outline: none;
   overflow-y: auto;
-  padding: 32px 20px;
+  padding: 32px 20px 64px;
   tab-size: 4;
   -moz-tab-size: 4;
   text-align: left;
@@ -386,14 +386,14 @@
 .ql-editor .ql-align-right {
   text-align: right;
 }
+// Placeholder
 .ql-editor.ql-blank::before {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.44);
   content: attr(data-placeholder);
-  font-style: italic;
-  left: 15px;
+  left: 20px;
   pointer-events: none;
   position: absolute;
-  right: 15px;
+  right: 20px;
 }
 .ql-snow.ql-toolbar:after,
 .ql-snow .ql-toolbar:after {
@@ -863,8 +863,9 @@
   padding-bottom: 12px;
   padding-left: 12px;
   padding-right: 12px;
-  box-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  box-shadow: 0px 16px 20px -16px rgba(0, 0, 0, 0.16);
+  border-radius: 0px;
+  margin-bottom: $space-l;
 }
 .ql-toolbar.ql-snow .ql-formats {
   margin-right: 15px;
