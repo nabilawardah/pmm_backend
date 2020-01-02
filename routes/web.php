@@ -53,6 +53,9 @@ Route::get('/admin', function () {
 Route::get('/admin/articles', function () {
     return view('admin.articles.index');
 });
+Route::get('/admin/articles/edit/{id}', function () {
+    return view('admin.articles.edit');
+});
 Route::get('/admin/articles/{id}', function () {
     return view('admin.articles.detail');
 });

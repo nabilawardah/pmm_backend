@@ -40,7 +40,9 @@
       </span>
     </div>
 
-    <h1 class="heading1" style="font-weight: 800; padding-left: 12px">Jakarta Banjir, Jakarta Punya Monorail, Okezone Aja!</h1>
+    <input type="hidden" name="article-title" />
+
+    <h1 class="heading1 article-title" contenteditable>Jakarta Banjir, Jakarta Punya Monorail, Okezone Aja!</h1>
 
     <div id="wysiwyg-editor">
       <p>Hi, there! General Kenobi...</p>

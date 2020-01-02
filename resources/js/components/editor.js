@@ -10,7 +10,7 @@ let articleEditor = new Quill('#wysiwyg-editor', {
     // toolbar: toolbarOptions,
     toolbar: '#toolbar-container',
   },
-  placeholder: 'Compose a new epic...',
+  placeholder: 'Write your article...',
   theme: 'snow',
 })
 
@@ -37,9 +37,23 @@ let toolbarOptions = [
 ]
 
 $(function() {
+  function checkArticleTitle(el) {
+    if (el.text().trim() === '' || el.html().trim() === '') {
+      el.addClass('empty')
+    } else {
+      el.removeClass('empty')
+    }
+  }
+
+  checkArticleTitle($('.article-title'))
+
   $(document).on('click', '.publish-article', function() {
     let contentContainer = $('input[name="article-content"]')
     contentContainer.val(JSON.stringify(articleEditor.getContents()))
     console.log('EDITOR: ', JSON.parse(contentContainer.val()))
+  })
+
+  $(document).on('keyup', '.article-title', function() {
+    checkArticleTitle($(this))
   })
 })
