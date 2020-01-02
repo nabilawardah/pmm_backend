@@ -46,6 +46,9 @@
       <p>Hi, there! General Kenobi...</p>
     </div>
 
+    <input type="hidden" name="article-content" />
+    <button class="button button--medium primary publish-article">Submit Article</button>
+
   @endcomponent
 
   @component('components.footer')

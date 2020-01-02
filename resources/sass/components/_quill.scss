@@ -29,9 +29,10 @@
   margin: 0;
   padding: 0;
 }
+// Editor
 .ql-editor {
   box-sizing: border-box;
-  line-height: 1.42;
+  line-height: 1.68;
   height: 100%;
   outline: none;
   overflow-y: auto;
@@ -593,15 +594,15 @@
 }
 .ql-snow .ql-editor h1 {
   font-size: $heading-1;
-  font-weight: 900;
+  font-weight: $extrabold;
 }
 .ql-snow .ql-editor h2 {
   font-size: $heading-2;
-  font-weight: 900;
+  font-weight: $extrabold;
 }
 .ql-snow .ql-editor h3 {
   font-size: $heading-3;
-  font-weight: 900;
+  font-weight: $extrabold;
 }
 .ql-snow .ql-editor h4 {
   font-size: $heading-4;

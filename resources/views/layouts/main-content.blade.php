@@ -1,3 +1,3 @@
-<div class="container-{{ $width ? $width : 'narrow' }} main-content">
+<div class="container-{{ isset($width) ? $width : 'narrow' }} main-content">
   {{ $slot }}
 </div>

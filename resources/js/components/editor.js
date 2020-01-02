@@ -35,3 +35,11 @@ let toolbarOptions = [
 
   ['clean'], // remove formatting button
 ]
+
+$(function() {
+  $(document).on('click', '.publish-article', function() {
+    let contentContainer = $('input[name="article-content"]')
+    contentContainer.val(JSON.stringify(articleEditor.getContents()))
+    console.log('EDITOR: ', JSON.parse(contentContainer.val()))
+  })
+})
