@@ -2,7 +2,7 @@
   <div class="main-footer">
   <header class="footer-header">
     @include('icons.pmm')
-    <p class="heading6">&copy; 2020 Paragon Meaningful Movement. All rights reserved.</p>
+    <p class="heading6">&copy; {{ date('Y') }} Paragon Meaningful Movement. All rights reserved.</p>
   </header>
 
   @component('components.with-love')
