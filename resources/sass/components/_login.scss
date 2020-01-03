@@ -11,44 +11,33 @@
   height: 100vh;
 }
 
-.login-wrapper {
-  // width: 448px;
-  height: 100%;
-  padding-left: $space-ll;
-  padding-right: $space-ll;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .login-container {
+  justify-self: flex-end;
   background-color: $light-alpha-100;
   width: 100%;
-  // @include screen(smallPhone) {
-  //   max-width: 100%;
-  // }
-  // @include screen(phone) {
-  //   max-width: 100%;
-  // }
-  // @include screen(tablet) {
-  //   max-width: 400px;
-  // }
-  // @include screen(tabletLandscape) {
-  //   max-width: 400px;
-  // }
-  // @include screen(desktop) {
-  //   max-width: 400px;
-  // }
-  // @include screen(desktopWide) {
-  //   max-width: 400px;
-  // }
+  height: 100%;
+  padding: $space-ll;
+  background-color: #fff;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .login-header {
   margin-bottom: $space-ll;
 
   & h1 {
-    margin-bottom: $space-sm;
+    margin-bottom: $space-m;
+  }
+}
+
+.login-brand {
+  position: relative;
+
+  & .brand {
+    display: block;
+    width: 56px;
+    height: 56px;
   }
 }

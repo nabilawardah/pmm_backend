@@ -89,8 +89,19 @@
   }
 
   &.ghost {
-    color: $light-alpha-100;
-    background-color: $brand-primary-200;
+    color: $brand-primary-200;
+    background-color: transparent;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-weight: $medium;
+    border: none;
+    outline: none;
+    transition: all 0.36s;
+
+    &:hover {
+      background-color: $dark-alpha-10;
+      transition: all 0.28s;
+    }
   }
 
   &.stretch {
@@ -127,7 +138,7 @@
     &::before,
     &::after {
       border-radius: 50%;
-      content: "";
+      content: '';
       display: block;
       background-color: $brand-primary-200;
 
