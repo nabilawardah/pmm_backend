@@ -37,6 +37,9 @@
         <button class="ql-video"></button>
       </span>
       <span class="ql-formats">
+        <button class="ql-custom-media"></button>
+      </span>
+      <span class="ql-formats">
         <button class="ql-clean"></button>
       </span>
     </div>
@@ -45,9 +48,7 @@
     <h1 id="article-title" class="article-title" contenteditable autofocus> </h1>
     <input type="hidden" name="article-title" />
 
-    <div id="wysiwyg-editor">
-      <p>Hello, there! General Kenobi...</p>
-    </div>
+    <div id="wysiwyg-editor"></div>
     <input type="hidden" name="article-content" />
 
 

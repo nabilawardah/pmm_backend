@@ -75,5 +75,7 @@ Route::get('/admin/gallery', function () {
     return view('admin.gallery.index');
 });
 
-Route::post('/api/profile/{id}', 'UserController@save');
-Route::post('/api/photo/{id}', 'ProfilePictureController@save');
+Route::post('/api/profile/{id}', 'DummyController@save_user');
+Route::post('/api/photo/{id}', 'DummyController@save_photo');
+
+Route::get('/api/articles/create', 'DummyController@create_post');

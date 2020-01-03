@@ -1,11 +1,9 @@
 {
-    "/js/manifest.js": "/js/manifest.js?id=d91051ea7d0c9bd1981e",
-    "/js/manifest.js.map": "/js/manifest.js.map?id=a07956f82042cc418451",
-    "/js/app.js": "/js/app.js?id=3d91992be461a4a26b61",
-    "/css/app.css": "/css/app.css?id=833fc0b59e7d7dc194f1",
-    "/js/app.js.map": "/js/app.js.map?id=12a100b8d218b885c16d",
-    "/js/prefetch.js": "/js/prefetch.js?id=7cc63ee301a3aefcf9a3",
-    "/js/prefetch.js.map": "/js/prefetch.js.map?id=aa09791f829ccb8c20a4",
-    "/js/vendor.js": "/js/vendor.js?id=a49be5ae9e90be29513d",
-    "/js/vendor.js.map": "/js/vendor.js.map?id=2b11228cc023440ed0f2"
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/js/manifest.js": "/js/manifest.js",
+    "/js/prefetch.js": "/js/prefetch.js",
+    "/js/vendor.js": "/js/vendor.js",
+    "/js/app.946d1dc77a1775ffadaa.hot-update.js": "/js/app.946d1dc77a1775ffadaa.hot-update.js",
+    "/js/app.997b380cc6c0c0ea3874.hot-update.js": "/js/app.997b380cc6c0c0ea3874.hot-update.js"
 }
