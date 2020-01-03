@@ -42,7 +42,7 @@
     </div>
 
 
-    <h1 id="article-title" class="article-title" contenteditable> </h1>
+    <h1 id="article-title" class="article-title" contenteditable autofocus> </h1>
     <input type="hidden" name="article-title" />
 
     <div id="wysiwyg-editor">
