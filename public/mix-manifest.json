@@ -3,7 +3,5 @@
     "/css/app.css": "/css/app.css",
     "/js/manifest.js": "/js/manifest.js",
     "/js/prefetch.js": "/js/prefetch.js",
-    "/js/vendor.js": "/js/vendor.js",
-    "/js/app.946d1dc77a1775ffadaa.hot-update.js": "/js/app.946d1dc77a1775ffadaa.hot-update.js",
-    "/js/app.997b380cc6c0c0ea3874.hot-update.js": "/js/app.997b380cc6c0c0ea3874.hot-update.js"
+    "/js/vendor.js": "/js/vendor.js"
 }

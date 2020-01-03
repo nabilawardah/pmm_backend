@@ -53,9 +53,9 @@ Route::get('/admin', function () {
 Route::get('/admin/articles', function () {
     return view('admin.articles.index');
 });
-Route::get('/admin/articles/edit/{id}', function () {
-    return view('admin.articles.edit');
-});
+
+Route::get('/admin/articles/edit/{id}', 'DummyController@edit_article');
+
 Route::get('/admin/articles/{id}', function () {
     return view('admin.articles.detail');
 });
@@ -78,4 +78,5 @@ Route::get('/admin/gallery', function () {
 Route::post('/api/profile/{id}', 'DummyController@save_user');
 Route::post('/api/photo/{id}', 'DummyController@save_photo');
 
-Route::get('/api/articles/create', 'DummyController@create_post');
+Route::get('/articles/{user_id}/create', 'DummyController@create_article');
+Route::post('/articles/{id}/media', 'DummyController@post_article_media');

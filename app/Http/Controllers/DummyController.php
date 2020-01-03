@@ -31,17 +31,24 @@ class DummyController extends Controller
         }
     }
 
-    public function create_post(Request $request)
+    public function create_article(Request $request)
     {
         $jsonString = file_get_contents(base_path('public/data/articles.json'));
-        $data = json_decode($jsonString, true);
+        $contents = json_decode($jsonString, true);
+        $data = $contents['data'];
+
         $new_article_id = count($data) + 1;
 
-        $new_article = (object) ['id' => $new_article_id];
+        $new_article = (object) [
+            'id' => $new_article_id,
+            'published' => false,
+        ];
         array_push($data, $new_article);
 
+        $contents['data'] = $data;
+
         // Write File
-        $newJsonString = json_encode($data, JSON_PRETTY_PRINT);
+        $newJsonString = json_encode($contents, JSON_PRETTY_PRINT);
         file_put_contents(base_path('public/data/articles.json'), stripslashes($newJsonString));
 
         $path = public_path('articles/article-'.strval($new_article_id));
@@ -49,10 +56,15 @@ class DummyController extends Controller
             File::makeDirectory($path, 0777, true, true);
         }
 
-        return 'articles/article-'.strval($new_article_id);
+        return redirect('/admin/articles/edit/'.$new_article_id);
     }
 
-    public function post_media(Request $request)
+    public function edit_article(Request $request)
+    {
+        return view('admin.articles.edit', ['article_id' => $request->id]);
+    }
+
+    public function post_article_media(Request $request)
     {
         request()->validate([
                 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
