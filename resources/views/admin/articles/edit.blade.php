@@ -46,6 +46,7 @@
 
 
     <h1 id="article-title" class="article-title" contenteditable autofocus> </h1>
+    <input type="hidden" id="article-id" name="article-id" value="{{ $article_id }}" />
     <input type="hidden" name="article-title" />
 
     <div id="wysiwyg-editor"></div>

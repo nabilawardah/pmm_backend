@@ -67,17 +67,19 @@ class DummyController extends Controller
     public function post_article_media(Request $request)
     {
         request()->validate([
-                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
+                'media' => 'required|mimes:jpeg,png,jpg,gif,svg,mp4,avi,3gp,webm,mpeg|max:102400',
            ]);
 
-        if ($file = $request->file('image')) {
-            $destinationPath = 'images/users/'; // upload path
-            $profileImage = date('YmdHis').'-'.strtolower($file->getClientOriginalName());
-            $file->move($destinationPath, $profileImage);
+        if ($file = $request->file('media')) {
+            $destinationPath = 'articles/article-'.$request->id; // upload path
+            $articleMedia = date('YmdHis').'-'.strtolower(str_replace(' ', '-', $file->getClientOriginalName()));
+            $file->move($destinationPath, $articleMedia);
+            $response = [
+                'url' => '/articles/article-'.$request->id.'/'.$articleMedia,
+                'media' => $request->file(),
+            ];
 
-            sleep(2);
-
-            return $profileImage;
+            return $response;
         }
     }
 }

@@ -1,4 +1,5 @@
 import Quill from 'quill'
+import { imageHandler } from './quill-image-handler'
 
 if ($('#wysiwyg-editor').length > 0) {
   const icons = Quill.import('ui/icons')
@@ -10,7 +11,12 @@ if ($('#wysiwyg-editor').length > 0) {
   let articleEditor = new Quill('#wysiwyg-editor', {
     modules: {
       // toolbar: toolbarOptions,
-      toolbar: '#toolbar-container',
+      toolbar: {
+        container: '#toolbar-container',
+        handlers: {
+          image: imageHandler,
+        },
+      },
     },
     placeholder: 'Write your article...',
     theme: 'snow',
