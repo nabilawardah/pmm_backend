@@ -7,9 +7,12 @@
   @component('components.navbar-writing')
   @endcomponent
 
-  @component('layouts.main-content', ['width' => 'post'])
+  @component('layouts.main-content', ['width' => 'bleed'])
 
-    <header class="article-header-wrapper">
+    <div class="article-cover-container cover-empty"></div>
+    <input name="article-cover" type="file" class="article-cover">
+
+    <header class="article-header-wrapper section--inset">
       <h1 id="article-title" class="article-title" contenteditable autofocus> </h1>
       <input type="hidden" id="article-id" name="article-id" value="{{ $article_id }}" />
       <input type="hidden" name="article-title" />
@@ -52,7 +55,6 @@
 
     <div id="wysiwyg-editor"></div>
     <input type="hidden" name="article-content" />
-
 
   @endcomponent
 

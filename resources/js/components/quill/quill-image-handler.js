@@ -1,7 +1,7 @@
 import axios from 'axios'
 import Quill from 'quill'
 
-import { generateMedia } from './media-uploader'
+import { generateMedia } from '../media-uploader'
 
 const Delta = Quill.import('delta')
 

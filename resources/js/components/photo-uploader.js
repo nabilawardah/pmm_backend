@@ -14,13 +14,16 @@ export function generateImageContainer({ label, src }) {
   return markup
 }
 
-function readUrl(input, container) {
+export function readSingleFileUrl({ input, container }, cb) {
   let reader
-
   if (input.files && input.files[0]) {
     reader = new FileReader()
     reader.onload = function(e) {
-      container.css('background-image', `url(${e.target.result})`)
+      if (cb) {
+        cb(e.target.result)
+      } else {
+        container.style.backgroundImage = `url(${e.target.result})`
+      }
     }
     return reader.readAsDataURL(input.files[0])
   }
@@ -34,7 +37,7 @@ export function uploadProfilePhoto(e) {
 export function processPhotoUploading() {
   let input = $('.photo-upload-container')
   let container = $('.preview-photo-container')
-  readUrl(input[0], container)
+  readSingleFileUrl({ input: input[0], container: container[0] })
   hidePrimaryModal()
   showSecondaryModal()
 }

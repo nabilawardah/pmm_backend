@@ -2,6 +2,10 @@
   @include container;
 }
 
+.container-default {
+  @include container;
+}
+
 .container-narrow {
   @include container-narrow;
 }
@@ -16,4 +20,8 @@
 
 .container-bleed-writing {
   @include container-bleed-writing;
+}
+
+.container-editor {
+  @include container-editor;
 }

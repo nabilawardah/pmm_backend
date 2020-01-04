@@ -1,0 +1,19 @@
+@mixin section-inset {
+  max-width: 740px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin section-bleed {
+  width: 100%;
+}
+
+@mixin section-outset {
+  max-width: 1032px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+}
