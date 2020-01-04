@@ -67,8 +67,8 @@ class DummyController extends Controller
     public function post_article_media(Request $request)
     {
         request()->validate([
-                'media' => 'required|mimes:jpeg,png,jpg,gif,svg,mp4,avi,3gp,webm,mpeg|max:102400',
-           ]);
+            'media' => 'required|mimes:jpeg,png,jpg,gif,svg,mp4,avi,3gp,webm,mpeg|max:102400',
+        ]);
 
         if ($file = $request->file('media')) {
             $destinationPath = 'articles/article-'.$request->id; // upload path

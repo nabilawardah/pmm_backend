@@ -36,12 +36,13 @@
   height: 100%;
   outline: none;
   overflow-y: auto;
-  padding: 32px 0px 64px;
+  padding: 32px 0px 128px;
   tab-size: 4;
   -moz-tab-size: 4;
   text-align: left;
   white-space: pre-wrap;
   word-wrap: break-word;
+  position: relative;
 
   & *::selection {
     background-color: #bee5e5;
@@ -920,24 +921,7 @@
   padding-right: 0;
   box-shadow: 0px 16px 20px -16px rgba(0, 0, 0, 0.16);
   border-radius: 0px;
-  @include screen(smallPhone) {
-    margin-bottom: $space-xl;
-  }
-  @include screen(phone) {
-    margin-bottom: $space-xl;
-  }
-  @include screen(tablet) {
-    margin-bottom: $space-l;
-  }
-  @include screen(tabletLandscape) {
-    margin-bottom: $space-l;
-  }
-  @include screen(desktop) {
-    margin-bottom: $space-l;
-  }
-  @include screen(desktopWide) {
-    margin-bottom: $space-l;
-  }
+  // margin-bottom: $space-xl;
 }
 .ql-toolbar.ql-snow .ql-formats {
   margin-right: 15px;

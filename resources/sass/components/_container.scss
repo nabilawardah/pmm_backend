@@ -13,3 +13,7 @@
 .container-bleed {
   @include container-bleed;
 }
+
+.container-bleed-writing {
+  @include container-bleed-writing;
+}

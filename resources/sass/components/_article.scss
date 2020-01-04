@@ -1,3 +1,8 @@
+.article-header-wrapper {
+  margin-bottom: $space-l;
+  background-color: $light-alpha-100;
+}
+
 .article-title {
   @include rf(40px, 52px);
   line-height: 52px;
@@ -11,16 +16,20 @@
   font-weight: $extrabold;
   position: relative;
 
+  &::before {
+    position: absolute;
+  }
+
   &:focus,
   &:active {
     outline: none;
 
     &::before {
       content: 'Title';
-      position: absolute;
       font-size: 24px;
       font-weight: 200;
       color: $dark-alpha-40;
+
       @include screen(smallPhone) {
         left: 0;
         bottom: calc(100% + 4px);
@@ -104,9 +113,11 @@
       left: 0;
       top: 0;
     }
+
     &::before {
       content: '.';
       color: $light-alpha-100;
+
       @include screen(smallPhone) {
         border-left: 1px solid $dark-alpha-30;
         bottom: 0;

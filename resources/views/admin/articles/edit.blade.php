@@ -9,18 +9,26 @@
 
   @component('layouts.main-content', ['width' => 'post'])
 
+    <header class="article-header-wrapper">
+      <h1 id="article-title" class="article-title" contenteditable autofocus> </h1>
+      <input type="hidden" id="article-id" name="article-id" value="{{ $article_id }}" />
+      <input type="hidden" name="article-title" />
+    </header>
+
     <div id="toolbar-container">
       <span class="ql-formats">
         <button class="ql-bold"></button>
         <button class="ql-italic"></button>
         <button class="ql-underline"></button>
-        <button class="ql-strike"></button>
       </span>
       <span class="ql-formats">
         <button class="ql-header" value="1"></button>
         <button class="ql-header" value="2"></button>
         <button class="ql-header" value="3"></button>
+      </span>
+      <span class="ql-formats">
         <button class="ql-blockquote"></button>
+        <button class="ql-divider"></button>
       </span>
       <span class="ql-formats">
         <button class="ql-list" value="ordered"></button>
@@ -34,19 +42,13 @@
       <span class="ql-formats">
         <button class="ql-link"></button>
         <button class="ql-image"></button>
-      </span>
-      <span class="ql-formats">
-        <button class="ql-custom-media"></button>
+        <button class="ql-video"></button>
+        <button class="ql-media"></button>
       </span>
       <span class="ql-formats">
         <button class="ql-clean"></button>
       </span>
     </div>
-
-
-    <h1 id="article-title" class="article-title" contenteditable autofocus> </h1>
-    <input type="hidden" id="article-id" name="article-id" value="{{ $article_id }}" />
-    <input type="hidden" name="article-title" />
 
     <div id="wysiwyg-editor"></div>
     <input type="hidden" name="article-content" />
