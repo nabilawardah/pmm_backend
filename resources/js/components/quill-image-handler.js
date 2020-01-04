@@ -1,11 +1,16 @@
 import axios from 'axios'
 import Quill from 'quill'
 
+import { generateMedia } from './media-uploader'
+
 const Delta = Quill.import('delta')
 
 export function imageHandler() {
+  generateMedia(handleUpload.bind(this))
+}
+
+function handleUpload() {
   let fileInput = this.container.querySelector('input.ql-image[type=file]')
-  console.log(fileInput)
 
   if (fileInput == null) {
     fileInput = document.createElement('input')
