@@ -36,7 +36,7 @@
   height: 100%;
   outline: none;
   overflow-y: auto;
-  padding: 32px 0px 128px;
+  padding: 32px 0px 96px;
   tab-size: 4;
   -moz-tab-size: 4;
   text-align: left;
@@ -734,8 +734,12 @@
   overflow: visible;
 }
 .ql-snow .ql-editor img {
+  cursor: default;
   margin-top: $space-l;
   max-width: 100%;
+}
+.ql-editor p.section--outset + p.section--inset {
+  margin-top: $space-ll;
 }
 .ql-snow .ql-picker {
   color: #444;

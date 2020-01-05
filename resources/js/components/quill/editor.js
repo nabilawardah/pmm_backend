@@ -2,12 +2,21 @@ import Quill from 'quill'
 import { imageHandler } from './quill-image-handler'
 import { CustomClipboard, generateIcon, toolbarOptions, removeFormatTitle, checkTitleState } from './quill-helper'
 
-// Register editor scroll issue on paste
+import CustomImage from './custom-blots/Image'
+
+const icons = Quill.import('ui/icons')
+const Parchment = Quill.import('parchment')
+const Block = Quill.import('blots/block')
+
+Block.className = 'section--inset'
+
+Quill.register(CustomImage)
+Quill.register(Block, true)
+
+// Register solution for scroll issue on paste
 Quill.register('modules/clipboard', CustomClipboard, true)
 
 if ($('#wysiwyg-editor').length > 0) {
-  const icons = Quill.import('ui/icons')
-
   icons.media = generateIcon('media')
   icons.divider = generateIcon('divider')
   icons.header[3] = generateIcon('header-3')
@@ -29,13 +38,26 @@ if ($('#wysiwyg-editor').length > 0) {
   $(function() {
     checkTitleState($('.article-title'))
 
+    articleEditor.root.addEventListener('click', function(ev) {
+      let image = Parchment.find(ev.target.parentNode)
+      if (image instanceof CustomImage) {
+        articleEditor.setSelection(image.offset(articleEditor.scroll), 1, 'user')
+      }
+    })
+
     articleEditor.on('editor-change', function() {
-      $('.ql-editor > *').addClass('section--inset')
-      $('.ql-editor')
-        .find('img')
-        .parent('p')
-        .toggleClass('section--inset')
-        .addClass('section--outset')
+      let images = document.querySelectorAll('p.section--inset > img')
+      if (images) {
+        images.forEach((el, index) => {
+          // let range = articleEditor.getSelection(true)
+          let image = Parchment.find(el)
+          console.group('Image Instance')
+          console.log('IMAGE: ', image)
+          console.log('PARENT: ', articleEditor.getIndex(image.parent))
+          console.log('CONTENTS: ', articleEditor.getContents())
+          console.groupEnd()
+        })
+      }
     })
 
     $(document).on('click', '.publish-article', function() {

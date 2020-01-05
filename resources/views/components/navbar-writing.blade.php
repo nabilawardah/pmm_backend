@@ -17,7 +17,7 @@
           @include('icons.pmm')
         </a>
       </li>
-      <p class="heading4" style="padding-top: 16px; padding-bottom: 16px; line-height: 24px;">New Article</p>
+      <p class="heading6" style="padding-top: 16px; padding-bottom: 16px; line-height: 24px;">New Article</p>
     </ul>
     <ul class="navbar-secondary inline--l">
       <button class="button button--small primary publish-article">Submit Article</button>

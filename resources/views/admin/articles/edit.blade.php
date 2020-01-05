@@ -4,6 +4,12 @@
 
 @section('content')
 
+  <style>
+    .main-content {
+      padding-bottom: 96px;
+    }
+  </style>
+
   @component('components.navbar-writing')
   @endcomponent
 

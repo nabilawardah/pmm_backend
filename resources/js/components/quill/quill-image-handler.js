@@ -43,7 +43,7 @@ function handleUpload() {
                 new Delta()
                   .retain(range.index)
                   .delete(range.length)
-                  .insert({ image: res.data.url }),
+                  .insert({ customImage: { url: res.data.url } }),
                 Quill.sources.USER
               )
               fileInput.value = ''
@@ -54,7 +54,7 @@ function handleUpload() {
                   new Delta()
                     .retain(range.index)
                     .delete(range.length)
-                    .insert({ image: e.target.result }),
+                    .insert({ customImage: { url: e.target.result } }),
                   Quill.sources.USER
                 )
                 fileInput.value = ''
