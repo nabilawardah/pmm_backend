@@ -4,9 +4,9 @@
       (object) [
           'name' => 'Sign Out',
           'to' => '/logout',
-          'active' => false,
       ],
   ];
+
 @endphp
 
 <nav class="main-navbar navbar-focus navbar">
@@ -24,10 +24,10 @@
       <div class="navbar-profile">
         <div class="navbar-profile-photo" style="background-image: url('/images/users/ongki.jpg')"></div>
       </div>
-      {{-- @foreach ($secondary_menus as $menu)
-          @component('components.menu-admin', ['name' => $menu->name, 'to' => $menu->to, 'active' => $menu->active])
+      @foreach ($secondary_menus as $menu)
+          @component('components.menu-admin', ['name' => $menu->name, 'to' => $menu->to, 'active' => $active_page])
         @endcomponent
-      @endforeach --}}
+      @endforeach
     </ul>
   </div>
 </nav>

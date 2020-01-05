@@ -3,8 +3,7 @@
 @section('title', 'Articles')
 
 @section('content')
-  @component('components.navbar-admin')
-  @endcomponent
+  @include('components.navbar-admin')
 
   @component('layouts.main-content', ['width' => 'post'])
 

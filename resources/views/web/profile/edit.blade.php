@@ -5,8 +5,7 @@
 
 @section('content')
 
-@component('components.navbar')
-@endcomponent
+@include('components.navbar')
 
 @component('components.footer')
 @endcomponent

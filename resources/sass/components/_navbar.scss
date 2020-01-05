@@ -55,7 +55,7 @@
   padding-top: $space-m;
   padding-bottom: $space-m;
 
-  &--active {
+  &.active {
     box-shadow: inset 0px -3px 0px $brand-primary-200;
   }
 

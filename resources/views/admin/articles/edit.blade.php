@@ -10,8 +10,7 @@
     }
   </style>
 
-  @component('components.navbar-writing')
-  @endcomponent
+  @include('components.navbar-writing')
 
   @component('layouts.main-content', ['width' => 'bleed'])
 

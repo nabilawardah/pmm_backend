@@ -4,8 +4,7 @@
 
 @section('content')
 
-@component('components.navbar')
-@endcomponent
+@include('components.navbar')
 
 @component('layouts.main-content')
   <h1 class="display2">Gallery</h1>
