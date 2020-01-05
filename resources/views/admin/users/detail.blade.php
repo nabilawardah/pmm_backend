@@ -10,7 +10,6 @@
     <h1 class="display3">User Detail</h1>
   @endcomponent
 
-  @component('components.footer')
-  @endcomponent
+  @include('components.footer')
 
 @endsection

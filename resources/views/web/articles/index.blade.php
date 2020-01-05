@@ -10,7 +10,6 @@
   <h1 class="display2">Articles</h1>
 @endcomponent
 
-@component('components.footer')
-@endcomponent
+@include('components.footer')
 
 @endsection

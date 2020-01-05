@@ -35,7 +35,6 @@
   @endcomponent
 
 
-  @component('components.footer')
-  @endcomponent
+  @include('components.footer')
 
 @endsection

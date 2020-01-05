@@ -7,7 +7,6 @@
 
 @include('components.navbar')
 
-@component('components.footer')
-@endcomponent
+@include('components.footer')
 
 @endsection

@@ -19,10 +19,10 @@
   ];
 
   $secondary_menus = [
-      (object) [
-          'name' => 'Sign Out',
-          'to' => '/logout',
-      ],
+      // (object) [
+      //     'name' => 'Sign Out',
+      //     'to' => '/logout',
+      // ],
       (object) [
           'name' => 'Back to PMM',
           'to' => '/',
