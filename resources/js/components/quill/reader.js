@@ -19,7 +19,7 @@ if ($('#article-container-read').length > 0) {
         insert: {
           customImage: {
             alt: null,
-            url: '/articles/article-2/20200105100746-screen-shot-2019-12-23-at-03.08.53.png',
+            url: '/images/cover.png',
             classList: 'section--outset',
           },
         },
@@ -28,7 +28,7 @@ if ($('#article-container-read').length > 0) {
         insert: {
           customImage: {
             alt: null,
-            url: '/articles/article-2/20200105100758-screen-shot-2019-12-16-at-14.54.33.png',
+            url: '/images/default.png',
             classList: 'section--outset',
           },
         },
