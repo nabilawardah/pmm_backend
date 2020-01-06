@@ -163,9 +163,23 @@ $(
       generateUserProfileDetail(info, initiateModal)
     })
 
+    let editProfile = $('.edit-profile')
+      .parent('section.profile-wrapper')
+      .find('textarea.hidden')
+
+    if (editProfile.length > 0) {
+      generateUserProfileDetail(JSON.parse(editProfile.val()), initiateModal)
+      let profileModal = $('.modal')
+      profileModal.hide()
+    }
+
     $(document).on('click', '.edit-profile', function() {
-      let info = JSON.parse($(this).parent('section.profile-wrapper').find('textarea.hidden').val())
-      generateUserProfileDetail(info, initiateModal)
+      let profileModal = $('.modal')
+      if (profileModal.length > 0) {
+        profileModal.show()
+      } else {
+        generateUserProfileDetail(JSON.parse(editProfile.val()), initiateModal)
+      }
     })
 
     // Monitor user data field changes
