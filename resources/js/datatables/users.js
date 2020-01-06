@@ -48,7 +48,7 @@ let usersTable = $('#users-table').DataTable({
           return `
             <div class="user-info">
               <textarea class="hidden">${fullData}</textarea>
-              <div class="profile-picture" style="background-image: url('/images/users/${profilePicture}');"></div>
+              <div class="profile-thumbnail" style="background-image: url('/images/users/${profilePicture}');"></div>
               <span class="user-data">
                 <div class="heading4 user-main-info">
                   ${full.name} <span class="user-info-id">(<span class="id-pound">#</span>${full.id})</span>

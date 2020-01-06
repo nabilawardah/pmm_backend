@@ -1,0 +1,89 @@
+.profile-wrapper {
+  padding: $space-l $space-ll;
+  max-width: 396px;
+  width: 100%;
+}
+
+.profile-info-wrapper {
+  margin-bottom: $space-l;
+  width: 100%;
+}
+
+.profile-info-photo-container {
+  position: relative;
+  margin-bottom: $space-ml;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-photo {
+  width: 112px;
+  height: 112px;
+  display: block;
+  border-radius: 9999px;
+}
+
+.profile-badge {
+  position: absolute;
+  bottom: -8px;
+  padding: 3px 8px;
+  background-color: $brand-primary-200;
+  color: $light-alpha-100;
+  border: 3px solid $light-alpha-100;
+  border-radius: 999px;
+  z-index: 1;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+}
+
+.profile-name {
+  margin-bottom: $space-s;
+}
+
+.info-work {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-info-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: $space-ml;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.contact-icon {
+  display: block;
+  margin-right: $space-m;
+  color: $dark-alpha-50;
+  width: 20px;
+  height: 20px;
+}
+
+.contact-value {
+  color: $dark-alpha-70;
+  text-decoration: none;
+  font-weight: $medium;
+  transition: all .36s;
+  &:hover {
+    color: $brand-primary-200;
+    transition: all .28s;
+    text-decoration: underline;
+  }
+}
+
+.info--stack {
+  &:not(:last-child) {
+    margin-bottom: $space-ml;
+  }
+}
