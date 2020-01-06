@@ -1,6 +1,11 @@
+.profile-page {
+  display: flex;
+  align-items: center;
+}
+
 .profile-wrapper {
   padding: $space-l $space-ll;
-  max-width: 396px;
+  max-width: 360px;
   width: 100%;
 }
 
@@ -54,7 +59,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: $space-ml;
+  margin-bottom: $space-l;
 }
 
 .profile-info {
@@ -71,19 +76,39 @@
 }
 
 .contact-value {
+  font-size: 17px;
+  line-height: 24px;
   color: $dark-alpha-70;
   text-decoration: none;
   font-weight: $medium;
-  transition: all .36s;
+  transition: all 0.36s;
   &:hover {
     color: $brand-primary-200;
-    transition: all .28s;
+    transition: all 0.28s;
     text-decoration: underline;
   }
 }
 
 .info--stack {
   &:not(:last-child) {
-    margin-bottom: $space-ml;
+    margin-bottom: $space-m;
   }
+}
+
+.profile-achievment {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $space-ll;
+}
+
+.profile-user-achievment {
+  margin-bottom: $space-ml;
+}
+
+.profile-all-achievment {
+  margin-bottom: $space-ll
 }

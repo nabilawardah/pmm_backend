@@ -56,7 +56,7 @@ class DummyController extends Controller
             File::makeDirectory($path, 0777, true, true);
         }
 
-        return redirect('/admin/articles/edit/'.$new_article_id, ['active_page' => 'Articles']);
+        return redirect('admin/articles/edit/'.$new_article_id)->with('active_page', 'Articles');
     }
 
     public function edit_article(Request $request)

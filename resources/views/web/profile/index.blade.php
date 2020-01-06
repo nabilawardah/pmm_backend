@@ -12,8 +12,8 @@
 
   @include('components.navbar')
 
-  @component('layouts.main-content')
-    <main class="card align--center profile-wrapper">
+  @component('layouts.main-content', ['class' => 'profile-page'])
+    <section class="card align--center profile-wrapper">
       <div class="profile-info-photo-container">
         <img class="profile-photo" src="/images/users/default.png" alt="Ongki Herlambang">
         <span class="profile-badge">admin</span>
@@ -43,15 +43,16 @@
         </dl>
       </div>
       <button class="button button--medium default">Edit Profile</button>
-    </main>
-    <main>
-      <h2 class="heading4" style="margin-bottom: 24px;">
+    </section>
+    <section class="profile-achievment">
+      <h2 class="heading4 profile-user-achievment">
         You've got <span class="point-counts">24</span> points.
       </h2>
-      <button class="button button--medium primary">
+      <span class="profile-all-achievment">The whole PMM users got 120 points.</span>
+      <a href="/articles/1/create" class="button button--large primary">
         Add Points
-      </button>
-    </main>
+      </a>
+    </section>
   @endcomponent
 
 @include('components.footer')
