@@ -163,6 +163,11 @@ $(
       generateUserProfileDetail(info, initiateModal)
     })
 
+    $(document).on('click', '.edit-profile', function() {
+      let info = JSON.parse($(this).parent('section.profile-wrapper').find('textarea.hidden').val())
+      generateUserProfileDetail(info, initiateModal)
+    })
+
     // Monitor user data field changes
 
     $(document).on(

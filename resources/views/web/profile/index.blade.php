@@ -14,6 +14,9 @@
 
   @component('layouts.main-content', ['class' => 'profile-page'])
     <section class="card align--center profile-wrapper">
+      <textarea class="hidden">
+        {"id":1,"name":"Ongki Herlambang","email":"ongkiherlambang@gmail.com","role":"admin","photo":"ongki.jpg","phone":"082377296969","divisi":"Kebersihan","working_area":"OB"}
+      </textarea>
       <div class="profile-info-photo-container">
         <img class="profile-photo" src="/images/users/default.png" alt="Ongki Herlambang">
         <span class="profile-badge">admin</span>
@@ -42,13 +45,13 @@
           </dt>
         </dl>
       </div>
-      <button class="button button--medium default">Edit Profile</button>
+      <button class="button button--medium default edit-profile">Edit Profile</button>
     </section>
     <section class="profile-achievment">
       <h2 class="heading4 profile-user-achievment">
-        You've got <span class="point-counts">24</span> points.
+        You've achieved <span class="point-counts">24</span> points.
       </h2>
-      <span class="profile-all-achievment">The whole PMM users got 120 points.</span>
+      <span class="profile-all-achievment">out of total 120 points achieved by all PMM users.</span>
       <a href="/articles/1/create" class="button button--large primary">
         Add Points
       </a>
