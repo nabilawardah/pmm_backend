@@ -12,7 +12,7 @@
         {"id":1,"name":"Ongki Herlambang","email":"ongkiherlambang@gmail.com","role":"admin","photo":"ongki.jpg","phone":"082377296969","divisi":"Kebersihan","working_area":"OB"}
       </textarea>
       <div class="profile-info-photo-container">
-        <img class="profile-photo" src="/images/users/default.png" alt="Ongki Herlambang">
+        <img class="profile-photo" src="/images/users/ongki.jpg" alt="Ongki Herlambang">
         <span class="profile-badge">admin</span>
       </div>
       <div class="profile-info-wrapper">
