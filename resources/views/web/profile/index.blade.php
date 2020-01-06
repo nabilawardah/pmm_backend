@@ -4,12 +4,6 @@
 
 @section('content')
 
-  <style>
-    html, body {
-      min-height: 100vh;
-    }
-  </style>
-
   @include('components.navbar')
 
   @component('layouts.main-content', ['class' => 'profile-page'])

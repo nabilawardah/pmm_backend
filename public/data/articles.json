@@ -1,12 +1,3 @@
 {
-    "data": [
-        {
-            "id": 1,
-            "published": false
-        },
-        {
-            "id": 2,
-            "published": false
-        }
-    ]
+  "data": []
 }
