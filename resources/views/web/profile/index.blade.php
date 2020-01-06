@@ -32,7 +32,7 @@
             </a>
           </dt>
           <dt class="info--stack large">
-            <a href="phone:+6282377298989" class="profile-info">
+            <a href="tel:+6282377298989" class="profile-info">
               <span class="contact-icon">@include('icons.call')</span>
               <span class="contact-value">+62 823 7729 6969</span>
             </a>
