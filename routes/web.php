@@ -49,7 +49,7 @@ Route::get('/admin/articles', function () {
     return view('admin.articles.index', ['active_page' => 'Articles']);
 });
 
-Route::get('/admin/articles/edit/{id}', 'DummyController@edit_article');
+Route::get('/admin/articles/{user_id}/edit/{id}', 'DummyController@edit_article');
 
 Route::get('/admin/articles/{id}', function () {
     return view('admin.articles.detail', ['active_page' => 'Articles']);

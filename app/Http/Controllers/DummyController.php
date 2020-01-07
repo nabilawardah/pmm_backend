@@ -57,6 +57,7 @@ class DummyController extends Controller
 
     public function create_article(Request $request)
     {
+        $user_id = $request->user_id;
         $jsonString = file_get_contents(base_path('public/data/articles.json'));
         $contents = json_decode($jsonString, true);
         $data = $contents['data'];
@@ -65,6 +66,7 @@ class DummyController extends Controller
 
         $new_article = (object) [
             'id' => $new_article_id,
+            'author' => $user_id,
             'published' => false,
         ];
         array_push($data, $new_article);
@@ -75,17 +77,21 @@ class DummyController extends Controller
         $newJsonString = json_encode($contents, JSON_PRETTY_PRINT);
         file_put_contents(base_path('public/data/articles.json'), stripslashes($newJsonString));
 
-        $path = public_path('articles/article-'.strval($new_article_id));
+        $path = public_path('articles/user-'.strval($user_id));
         if (!File::isDirectory($path)) {
             File::makeDirectory($path, 0777, true, true);
         }
 
-        return redirect('admin/articles/edit/'.$new_article_id)->with('active_page', 'Articles');
+        return redirect('admin/articles/'.$user_id.'/edit/'.$new_article_id)->with('active_page', 'Articles');
     }
 
     public function edit_article(Request $request)
     {
-        return view('admin.articles.edit', ['article_id' => $request->id, 'active_page' => 'Articles']);
+        return view('admin.articles.edit', [
+            'user_id' => $request->user_id,
+            'article_id' => $request->id,
+            'active_page' => 'Articles',
+        ]);
     }
 
     public function post_article_media(Request $request)
@@ -95,11 +101,11 @@ class DummyController extends Controller
         ]);
 
         if ($file = $request->file('media')) {
-            $destinationPath = 'articles/article-'.$request->id; // upload path
+            $destinationPath = 'articles/user-'.$request->id; // upload path
             $articleMedia = date('YmdHis').'-'.strtolower(str_replace(' ', '-', $file->getClientOriginalName()));
             $file->move($destinationPath, $articleMedia);
             $response = [
-                'url' => '/articles/article-'.$request->id.'/'.$articleMedia,
+                'url' => '/articles/user-'.$request->id.'/'.$articleMedia,
                 'media' => $request->file(),
             ];
 

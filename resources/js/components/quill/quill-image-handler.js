@@ -23,7 +23,7 @@ function handleUpload() {
 
     fileInput.addEventListener('change', () => {
       if (fileInput.files != null && fileInput.files[0] != null) {
-        let articleId = $('#article-id').val()
+        let userId = $('#user-id').val()
         let data = new FormData()
         const config = {
           headers: { 'content-type': 'multipart/form-data' },
@@ -31,7 +31,7 @@ function handleUpload() {
         data.append('media', fileInput.files[0])
 
         axios
-          .post(`/articles/${articleId}/media`, data, config)
+          .post(`/articles/${userId}/media`, data, config)
           .then(res => {
             console.log('RES: ', res.data)
 
