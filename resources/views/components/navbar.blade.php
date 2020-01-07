@@ -52,7 +52,7 @@ $admin_menus = [
       ],
       (object) [
           'name' => 'Go to Admin',
-          'to' => '/admin',
+          'to' => '/admin/articles',
       ],
   ];
 
@@ -72,7 +72,9 @@ $admin_menus = [
   <div class="navbar-wrapper">
     <ul class="navbar-primary inline--ll">
       <li class="brand-wrapper">
-        @include('icons.pmm')
+        <a href="/">
+          @include('icons.pmm')
+        </a>
       </li>
       @foreach ($primary_menus as $menu)
         @component('components.menu-web', ['name' => $menu->name, 'to' => $menu->to, 'active' => $active_page])

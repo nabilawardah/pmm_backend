@@ -47,9 +47,9 @@ Route::get('/gallery', function () {
 });
 
 // Admin
-Route::get('/admin', function () {
-    return view('admin.home', ['active_page' => 'Home']);
-});
+// Route::get('/admin', function () {
+//     return view('admin.home', ['active_page' => 'Home']);
+// });
 Route::get('/admin/articles', function () {
     return view('admin.articles.index', ['active_page' => 'Articles']);
 });
