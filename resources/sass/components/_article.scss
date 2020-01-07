@@ -158,6 +158,165 @@
   }
 }
 
+.article-subtitle-wrapper {
+  margin-bottom: $space-l;
+  background-color: $light-alpha-100;
+}
+
+.article-subtitle-preview {
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.12px;
+
+  display: block;
+  cursor: text;
+  padding-left: 0;
+  padding-right: 0;
+  font-weight: $regular;
+  position: relative;
+
+  &::before {
+    position: absolute;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+
+    &::before {
+      content: 'Subtitle';
+      font-size: 20px;
+      font-weight: 200;
+      color: $dark-alpha-40;
+
+      @include screen(smallPhone) {
+        left: 0;
+        bottom: calc(100% + 4px);
+        border-left: 1px solid $dark-alpha-30;
+        padding-left: 12px;
+        right: unset;
+        top: unset;
+        border-right: none;
+        padding-right: 0;
+        height: 24px;
+        line-height: 1;
+      }
+      @include screen(phone) {
+        left: 0;
+        bottom: calc(100% + 4px);
+        border-left: 1px solid $dark-alpha-30;
+        padding-left: 12px;
+        right: unset;
+        top: unset;
+        border-right: none;
+        padding-right: 0;
+        height: 24px;
+        line-height: 1;
+      }
+      @include screen(tablet) {
+        left: unset;
+        bottom: unset;
+        border-left: none;
+        padding-left: 0;
+        right: calc(100% + 12px);
+        top: 0;
+        border-right: 1px solid $dark-alpha-30;
+        padding-right: 12px;
+        height: unset;
+        line-height: unset;
+      }
+      @include screen(tabletLandscape) {
+        right: calc(100% + 12px);
+        top: 0;
+        left: unset;
+        bottom: unset;
+        border-left: none;
+        padding-left: 0;
+        border-right: 1px solid $dark-alpha-30;
+        padding-right: 12px;
+        height: unset;
+        line-height: unset;
+      }
+      @include screen(desktop) {
+        right: calc(100% + 12px);
+        top: 0;
+        left: unset;
+        bottom: unset;
+        border-left: none;
+        padding-left: 0;
+        border-right: 1px solid $dark-alpha-30;
+        padding-right: 12px;
+        height: unset;
+        line-height: unset;
+      }
+      @include screen(desktopWide) {
+        right: calc(100% + 12px);
+        top: 0;
+        left: unset;
+        bottom: unset;
+        border-left: none;
+        padding-left: 0;
+        border-right: 1px solid $dark-alpha-30;
+        padding-right: 12px;
+        height: unset;
+        line-height: unset;
+      }
+    }
+  }
+
+  &.empty {
+    &::after {
+      content: 'Subtitle preview';
+      position: absolute;
+      color: $dark-alpha-40;
+      left: 0;
+      top: 0;
+    }
+
+    &::before {
+      content: '.';
+      color: $light-alpha-100;
+
+      @include screen(smallPhone) {
+        border-left: 1px solid $dark-alpha-30;
+        bottom: 0;
+        left: -8px;
+        height: 100%;
+      }
+      @include screen(phone) {
+        border-left: 1px solid $dark-alpha-30;
+        bottom: 0;
+        left: -8px;
+        height: 100%;
+      }
+      @include screen(tablet) {
+        border-left: none;
+        bottom: none;
+        left: unset;
+        height: 100%;
+      }
+      @include screen(tabletLandscape) {
+        border-left: none;
+        bottom: none;
+        left: unset;
+        height: 100%;
+      }
+      @include screen(desktop) {
+        border-left: none;
+        bottom: none;
+        left: unset;
+        height: 100%;
+      }
+      @include screen(desktopWide) {
+        border-left: none;
+        bottom: none;
+        left: unset;
+        height: 100%;
+      }
+    }
+  }
+}
+
 .article-cover {
   position: absolute;
   visibility: hidden;

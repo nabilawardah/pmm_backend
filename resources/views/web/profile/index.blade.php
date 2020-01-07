@@ -170,10 +170,10 @@
               <p class="medium" style="margin-bottom: 12px;">
                 An admin can manage all contents (articles, events, and galleries) and change users role.
               </p>
-              <button class="button button--medium primary">Downgrade to Regular User</button>
+              <button data-id="{{ $user->id }}" data-current="admin" class="button button--medium primary change-user-role">Downgrade to Regular User</button>
             @else
               <div class="edit-profile-role-icon">
-                <img src="/icons/user.svg'" />
+                <img src="/icons/user.svg" />
               </div>
               <p class="heading4" style="margin-bottom: 4px;">
                 This is a regular user account.
@@ -181,7 +181,7 @@
               <p class="medium" style="margin-bottom: 12px;">
                 A regular account can only publish and manage it's own articles and profile info.
               </p>
-              <button class="button button--medium primary">Upgrade to Admin</button>
+              <button data-id="{{ $user->id }}" data-current="user" class="button button--medium primary change-user-role">Upgrade to Admin</button>
             @endif
           </div>
         </section>

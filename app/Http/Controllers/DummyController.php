@@ -133,4 +133,17 @@ class DummyController extends Controller
             'all_working_area' => $this->all_working_area,
         ]);
     }
+
+    public function change_role(Request $request)
+    {
+        if ($request->current === 'admin') {
+            $new_role = 'user';
+        } else {
+            $new_role = 'admin';
+        }
+
+        sleep(2);
+
+        return ['id' => $request->id, 'role' => $new_role];
+    }
 }

@@ -37,6 +37,7 @@ if ($('#wysiwyg-editor').length > 0) {
 
   $(function() {
     checkTitleState($('.article-title'))
+    checkTitleState($('.article-subtitle-preview'))
 
     articleEditor.root.addEventListener('click', function(ev) {
       let image = Parchment.find(ev.target.parentNode)
@@ -70,7 +71,15 @@ if ($('#wysiwyg-editor').length > 0) {
       checkTitleState($(this))
     })
 
+    $(document).on('keyup', '.article-subtitle-preview', function() {
+      checkTitleState($(this))
+    })
+
     document.querySelector('#article-title').addEventListener('paste', function(e) {
+      removeFormatTitle(e, this)
+    })
+
+    document.querySelector('#article-subtitle-preview').addEventListener('paste', function(e) {
       removeFormatTitle(e, this)
     })
   })

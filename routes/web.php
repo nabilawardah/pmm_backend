@@ -70,6 +70,7 @@ Route::get('/admin/gallery', function () {
     return view('admin.gallery.index', ['active_page' => 'Gallery']);
 });
 
+Route::post('/api/role/{id}', 'DummyController@change_role');
 Route::post('/api/profile/{id}', 'DummyController@save_user');
 Route::post('/api/photo/{id}', 'DummyController@save_photo');
 Route::get('/articles/{user_id}/create', 'DummyController@create_article');

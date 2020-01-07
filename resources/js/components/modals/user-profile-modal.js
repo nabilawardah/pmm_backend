@@ -99,9 +99,11 @@ export function generateUserProfileDetail(data, callback, remove) {
             ? 'An admin can manage all contents (articles, events, and galleries) and change users role.'
             : "A regular account can only publish and manage it's own articles and profile info."
         }</p>
-        <button class="button button--medium primary">${
-          data.role === 'admin' ? 'Downgrade to Regular User' : 'Upgrade to Admin'
-        }</button>
+        <button data-id="${data.id}" data-currennt="${
+      data.role
+    }" class="button button--medium primary change-user-role">${
+      data.role === 'admin' ? 'Downgrade to Regular User' : 'Upgrade to Admin'
+    }</button>
       </div>
     </section>
     <div class="modal-action-wrapper">

@@ -18,11 +18,16 @@
     <input name="article-cover" type="file" class="article-cover">
 
     <header class="article-header-wrapper section--inset">
-      <h1 id="article-title" class="article-title" contenteditable autofocus> </h1>
+      <h1 id="article-title" class="article-title" contenteditable autofocus></h1>
       <input type="hidden" id="article-id" name="article-id" value="{{ $article_id }}" />
       <input type="hidden" id="user-id" name="user-id" value="{{ $user_id }}" />
       <input type="hidden" name="article-title" />
     </header>
+
+    <section class="article-subtitle-wrapper section--inset">
+      <p id="article-subtitle-preview" class="article-subtitle-preview" contenteditable></p>
+      <input type="hidden" name="article-subtitle-preview" />
+    </section>
 
     <div id="toolbar-container">
       <span class="ql-formats">

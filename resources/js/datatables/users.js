@@ -7,6 +7,11 @@ import { generateButtonSpinner } from './../components/button-spinner'
 import { generateUserProfileDetail, hideSecondaryModal } from '../components/modals/index'
 import { uploadProfilePhoto, saveProfilePhoto, processPhotoUploading } from './../components/photo-uploader'
 import { addError, removeError } from './../components/input-field'
+import { generateAdminRole, generateUserRole } from './../components/role'
+
+// const axiosConfig = {
+//   headers: { 'content-type': 'multipart/form-data' },
+// }
 
 $(function() {
   // Add custom search field to page header
@@ -134,13 +139,11 @@ $(
       if (!user.isChanged()) {
         button.prop('disabled', true)
       }
-
       if (!user.isValidEmail()) {
         generateErrorEmail()
       }
 
       hideSecondaryModal()
-
       $('body').off('append')
     }
 
@@ -260,6 +263,32 @@ $(
         el.text('Photo Saved')
       })
       usersTable.ajax.reload()
+    })
+
+    // Update user role
+    $(document).on('click', '.change-user-role', function(e) {
+      let el = $(this)
+      el.prop('disabled', true)
+      el.append(generateButtonSpinner())
+      let container = $('.edit-profile-role')
+
+      let id = el.data('id')
+      let currentRole = el.data('current')
+      axios
+        .post(`/api/role/${id}`, { current: currentRole })
+        .then(res => {
+          container.children().remove()
+          let markup
+          if (res.data.role === 'admin') {
+            markup = generateAdminRole(res.data.id)
+          } else {
+            markup = generateUserRole(res.data.id)
+          }
+          container.append(markup)
+          el.children('.loading').remove()
+          el.removeProp('disabled')
+        })
+        .catch(err => console.log('ERR: ', err))
     })
   })()
 )
