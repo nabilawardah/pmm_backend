@@ -24,12 +24,7 @@ Route::post('/sign-in', function () {
 Route::get('/', function () {
     return view('web.home', ['active_page' => 'Home']);
 });
-Route::get('/profile', function () {
-    return view('web.profile.index', ['active_page' => 'Profile']);
-});
-Route::get('/profile/{id}', function () {
-    return view('web.profile.detail', ['active_page' => 'Profile']);
-});
+Route::get('/profile/{id}', 'DummyController@show_user');
 Route::get('/events', function () {
     return view('web.events.index', ['active_page' => 'Events']);
 });

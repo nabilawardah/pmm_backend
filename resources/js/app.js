@@ -1,4 +1,5 @@
 require('./bootstrap')
+require('./helper/preload-image.js')
 
 require('./datatables/users')
 require('./components/quill/editor.js')

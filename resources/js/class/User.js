@@ -26,6 +26,7 @@ export default class User {
 
   setInitial = incomingData => {
     this.initialData = { ...incomingData }
+    // console.log('INITIAL: ', this.initialData)
     return this.initialData
   }
 

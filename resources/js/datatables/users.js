@@ -26,7 +26,6 @@ let usersTable = $('#users-table').DataTable({
 
   columns: [
     {
-      // className: 'table-user-id',
       orderable: false,
       sortable: false,
       render: function() {
@@ -88,7 +87,12 @@ usersTable
 
 $(
   (function() {
-    let modal, button
+    let button
+    let modal = $('.modal')
+
+    if (modal.length > 0) {
+      modal.hide()
+    }
 
     // user Data
     let idField, nameField, emailField, phoneField, divisionField, working_areaField
@@ -134,7 +138,7 @@ $(
 
       hideSecondaryModal()
 
-      $('body').unbind('append')
+      $('body').off('append')
     }
 
     function savedSuccess(user, res, el) {
@@ -160,54 +164,29 @@ $(
           .children('textarea.hidden')
           .val()
       )
-      generateUserProfileDetail(info, initiateModal)
+      generateUserProfileDetail(info, initiateModal, true)
     })
 
     let editProfile = $('.edit-profile')
       .parent('section.profile-wrapper')
       .find('textarea.hidden')
 
-    function preloadImages(urls, allImagesLoadedCallback) {
-      var loadedCounter = 0
-      var toBeLoadedNumber = urls.length
-      urls.forEach(function(url) {
-        preloadImage(url, function() {
-          loadedCounter++
-          console.log('Number of loaded images: ' + loadedCounter)
-          if (loadedCounter == toBeLoadedNumber) {
-            allImagesLoadedCallback()
-          }
-        })
-      })
-      function preloadImage(url, anImageLoadedCallback) {
-        var img = new Image()
-        img.onload = anImageLoadedCallback
-        img.src = url
-      }
-    }
-
-    // Let's call it:
-    preloadImages(['/images/users/default.png', '/images/users/ongki.jpg', '/images/cover.png'], function() {
-      console.log('All images were loaded')
-    })
-
     if (editProfile.length > 0) {
-      generateUserProfileDetail(JSON.parse(editProfile.val()), initiateModal)
+      // generateUserProfileDetail(JSON.parse(editProfile.val()), initiateModal)
       let profileModal = $('.modal')
+      initiateModal()
       profileModal.hide()
     }
 
     $(document).on('click', '.edit-profile', function() {
       let profileModal = $('.modal')
       if (profileModal.length > 0) {
+        initiateModal()
         profileModal.show()
-      } else {
-        generateUserProfileDetail(JSON.parse(editProfile.val()), initiateModal)
       }
     })
 
     // Monitor user data field changes
-
     $(document).on(
       'change keyup',
       '#user-fullname, #user-email, #user-phone, #user-division, #user-working_area',

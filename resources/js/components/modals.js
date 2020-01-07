@@ -7,7 +7,7 @@ let content = $('.main-content')
 let navbar = $('.main-navbar')
 let footer = $('.main-footer')
 
-export function generateBaseModal(data, previewPhoto, callback) {
+export function generateBaseModal(data, previewPhoto, callback, remove) {
   let modalPreviewPhoto = `
     <div class="modal-secondary-area">
       <div class="container-post modal-secondary-wrapper">
@@ -36,10 +36,10 @@ export function generateBaseModal(data, previewPhoto, callback) {
   `
 
   let modal = `
-    <main class="modal">
+    <main class="modal ${remove && 'modal--remove'}">
       <div class="modal-main-area">
         <nav class="modal-nav">
-          <button type="button" class="close-modal button-close--rounded">
+          <button type="button" class="close-modal remove-modal button-close--rounded">
             <div class="modal-close-icon"></div>
             <div class="modal-close-text">esc</div>
           </button>
@@ -70,20 +70,46 @@ export function removeModal() {
   footer.removeClass('lock-scroll')
 }
 
+export function hideModal() {
+  let modal = $('.modal')
+
+  // Remove binding on append
+  body.off('append')
+
+  // Reset modal state
+  showPrimaryModal()
+  hideSecondaryModal()
+  modal.hide()
+
+  // Remove lockscroll
+  body.removeClass('lock-scroll')
+  content.removeClass('lock-scroll')
+  navbar.removeClass('lock-scroll')
+  footer.removeClass('lock-scroll')
+}
+
 $(function() {
   $(document).on('click', '.close-modal', function() {
+    hideModal()
+  })
+
+  $(document).on('click', '.close-modal.remove-modal', function() {
     removeModal()
   })
 
   $(document).on('keyup', function(e) {
     let modal = $('.modal')
+    let modalRemove = $('.modal.modal--remove')
     if (modal.length > 0 && e.key === 'Escape') {
+      hideModal()
+    }
+    if (modalRemove.length > 0 && e.key === 'Escape') {
       removeModal()
     }
   })
 })
 
-export function generateUserProfileDetail(data, callback) {
+export function generateUserProfileDetail(data, callback, remove) {
   const modalContent =
     `
     <h1 class="heading1" style="margin-bottom: 48px;">User Profile</h1>
@@ -171,20 +197,28 @@ export function generateUserProfileDetail(data, callback) {
         <div class="edit-profile-role-icon">
           ${data.role === 'admin' ? '<img src="/icons/admin.svg" />' : '<img src="/icons/user.svg" />'}
         </div>
-        <p class="heading4" style="margin-bottom: 4px;">${data.role === 'admin' ? 'This account has an admin privilege.' : 'This is a regular user account.'}</p>
-        <p class="medium" style="margin-bottom: 12px;">${data.role === 'admin' ? 'An admin can manage all contents (articles, events, and galleries) and change users role.' : 'A regular account can only publish and manage it\'s own articles and profile info.'}</p>
-        <button class="button button--medium primary">${data.role === 'admin' ? 'Downgrade to Regular User' : 'Upgrade to Admin' }</button>
+        <p class="heading4" style="margin-bottom: 4px;">${
+          data.role === 'admin' ? 'This account has an admin privilege.' : 'This is a regular user account.'
+        }</p>
+        <p class="medium" style="margin-bottom: 12px;">${
+          data.role === 'admin'
+            ? 'An admin can manage all contents (articles, events, and galleries) and change users role.'
+            : "A regular account can only publish and manage it's own articles and profile info."
+        }</p>
+        <button class="button button--medium primary">${
+          data.role === 'admin' ? 'Downgrade to Regular User' : 'Upgrade to Admin'
+        }</button>
       </div>
     </section>
     <div class="modal-action-wrapper">
       <footer class="modal-action-bar container-post">
         <button class="button button--large primary save-change">Save Changes</button>
-        <button class="button button--large default close-modal">Cancel</button>
+        <button class="button button--large default close-modal remove-modal">Cancel</button>
       </footer>
     </div>
     `
 
-  generateBaseModal(modalContent, true, callback)
+  generateBaseModal(modalContent, true, callback, remove)
 }
 
 $(document).on('click', '.close-secondary-modal', function() {

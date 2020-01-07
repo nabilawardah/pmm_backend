@@ -6,7 +6,7 @@
       ],
       (object) [
         'name' => 'Profile',
-        'to' => '/profile',
+        'to' => '/profile/1',
       ],
       (object) [
         'name' => 'Articles',

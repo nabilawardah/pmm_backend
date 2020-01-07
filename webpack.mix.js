@@ -14,7 +14,7 @@ const mix = require('laravel-mix')
 mix
   .copyDirectory('resources/assets', 'public')
   .js('resources/js/app.js', 'public/js')
-  .js('resources/js/prefetch.js', 'public/js')
+  .js('resources/js/helper/prefetch.js', 'public/js')
   .sass('resources/sass/app.scss', 'public/css')
   .extract(['jquery', 'axios', 'quill', 'datatables.net-fixedcolumns-bs4'])
   .sourceMaps()
