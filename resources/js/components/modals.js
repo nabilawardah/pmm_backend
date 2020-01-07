@@ -89,8 +89,8 @@ export function generateUserProfileDetail(data, callback) {
     <h1 class="heading1" style="margin-bottom: 48px;">User Profile</h1>
     <main class="edit-profile-wrapper">
       <div class="edit-profile-info">
-      <input type="hidden" name="id" id="user-id" value="${data.id}" />
-      ` +
+        <input type="hidden" name="id" id="user-id" value="${data.id}" />
+          ` +
     generateInputField({
       label: 'Full name',
       type: 'text',
@@ -155,16 +155,27 @@ export function generateUserProfileDetail(data, callback) {
       ]
     ) +
     `
-    </div>
-    <div class="edit-profile-side">
-    ` +
+        </div>
+        <div class="edit-profile-side">
+        ` +
     generateImageContainer({
       label: 'Profile photo',
       src: data.photo,
     }) +
     `
-    </div>
+        </div>
     </main>
+    <section class="edit-profile-role-wrapper">
+      <h2 class="heading3" style="margin-bottom: 12px;">Account Role</h2>
+      <div class="edit-profile-role">
+        <div class="edit-profile-role-icon">
+          ${data.role === 'admin' ? '<img src="/icons/admin.svg" />' : '<img src="/icons/user.svg" />'}
+        </div>
+        <p class="heading4" style="margin-bottom: 4px;">${data.role === 'admin' ? 'This account has an admin privilege.' : 'This is a regular user account.'}</p>
+        <p class="medium" style="margin-bottom: 12px;">${data.role === 'admin' ? 'An admin can manage all contents (articles, events, and galleries) and change users role.' : 'A regular account can only publish and manage it\'s own articles and profile info.'}</p>
+        <button class="button button--medium primary">${data.role === 'admin' ? 'Downgrade to Regular User' : 'Upgrade to Admin' }</button>
+      </div>
+    </section>
     <div class="modal-action-wrapper">
       <footer class="modal-action-bar container-post">
         <button class="button button--large primary save-change">Save Changes</button>

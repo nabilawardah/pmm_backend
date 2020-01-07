@@ -75,3 +75,20 @@
   background-position: center center;
   border-radius: 6px;
 }
+
+.edit-profile-role-wrapper {
+  margin-top: $space-l;
+}
+
+.edit-profile-role {
+  padding: $space-ml;
+  border-radius: 4px;
+  border: 1px solid $dark-alpha-20;
+}
+
+.edit-profile-role-icon {
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin-bottom: $space-m;
+}

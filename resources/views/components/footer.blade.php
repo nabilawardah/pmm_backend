@@ -1,4 +1,4 @@
-<footer class="main-footer-wrapper container-narrow">
+<footer class="main-footer-wrapper container-{{ isset($width) ? $width : 'narrow' }}">
   <div class="main-footer">
   <header class="footer-header">
     @include('icons.pmm')
