@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { showSecondaryModal, hidePrimaryModal, showPrimaryModal, hideSecondaryModal } from './modals'
+import { showSecondaryModal, hidePrimaryModal, showPrimaryModal, hideSecondaryModal } from './modals/index'
 import { generateToast } from './toast'
 
 export function generateImageContainer({ label, src }) {

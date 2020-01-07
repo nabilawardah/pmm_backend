@@ -4,7 +4,7 @@ import axios from 'axios'
 import User from './../class/User'
 import { generateCustomSearch } from './../components/datatable-searchbox'
 import { generateButtonSpinner } from './../components/button-spinner'
-import { generateUserProfileDetail, hideSecondaryModal } from '../components/modals'
+import { generateUserProfileDetail, hideSecondaryModal } from '../components/modals/index'
 import { uploadProfilePhoto, saveProfilePhoto, processPhotoUploading } from './../components/photo-uploader'
 import { addError, removeError } from './../components/input-field'
 
@@ -131,7 +131,10 @@ $(
         working_area: working_areaField.val(),
       })
 
-      button.prop('disabled', true)
+      if (!user.isChanged()) {
+        button.prop('disabled', true)
+      }
+
       if (!user.isValidEmail()) {
         generateErrorEmail()
       }
