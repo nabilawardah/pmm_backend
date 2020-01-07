@@ -113,6 +113,23 @@ class DummyController extends Controller
         }
     }
 
+    public function update_article(Request $request)
+    {
+    }
+
+    public function submit_article(Request $request)
+    {
+        $article = (object) [];
+
+        $article->article_id = $request->article_id;
+        $article->user_id = $request->user_id;
+        $article->title = $request->title;
+        $article->subtitle = $request->subtitle;
+        $article->content = $request->content;
+
+        return json_encode($article);
+    }
+
     public function show_user(Request $request)
     {
         $user = (object) [

@@ -63,8 +63,27 @@ if ($('#wysiwyg-editor').length > 0) {
 
     $(document).on('click', '.publish-article', function() {
       let contentContainer = $('input[name="article-content"]')
+
+      let title = $('#article-title').text()
+      let subtitle = $('#article-subtitle-preview').text()
+      let userId = $('input[name="user-id"]').val()
+      let articleId = $('input[name="article-id"]').val()
+
       contentContainer.val(JSON.stringify(articleEditor.getContents()))
-      console.log('EDITOR: ', contentContainer.val())
+
+      let data = {
+        title,
+        subtitle,
+        article_id: articleId,
+        user_id: userId,
+        content: JSON.stringify(articleEditor.getContents()),
+      }
+      console.log('EDITOR: ', data)
+
+      axios
+        .post(`/articles/${userId}/${articleId}`, data)
+        .then(res => console.log('RES: ', res.data))
+        .catch(err => console.log('ERR', err))
     })
 
     $(document).on('keyup', '.article-title', function() {

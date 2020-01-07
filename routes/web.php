@@ -75,3 +75,4 @@ Route::post('/api/profile/{id}', 'DummyController@save_user');
 Route::post('/api/photo/{id}', 'DummyController@save_photo');
 Route::get('/articles/{user_id}/create', 'DummyController@create_article');
 Route::post('/articles/{id}/media', 'DummyController@post_article_media');
+Route::post('/articles/{user_id}/{article_id}', 'DummyController@submit_article');
