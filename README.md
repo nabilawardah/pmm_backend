@@ -96,3 +96,8 @@ If all done correctly, your browser will open and run the PMM website automatica
 2. Get one gallery item
 3. Add new gallery item
 4. Remove gallery item
+
+## Others
+
+1. Get all division
+2. Get all working area
