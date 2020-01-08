@@ -13,24 +13,24 @@
     padding-right: $container-gutter-mobile;
   }
   @include screen(tablet) {
+    max-width: $page-width + $container-gutter-tablet * 2;
     padding-left: $container-gutter-tablet;
     padding-right: $container-gutter-tablet;
-    max-width: $page-width + $container-gutter-tablet * 2;
   }
   @include screen(tabletLandscape) {
+    max-width: $page-width + $container-gutter-tablet * 2;
     padding-left: $container-gutter-tablet;
     padding-right: $container-gutter-tablet;
-    max-width: $page-width + $container-gutter-tablet * 2;
   }
   @include screen(desktop) {
+    max-width: $page-width + $container-gutter-desktop * 2;
     padding-left: $container-gutter-desktop;
     padding-right: $container-gutter-desktop;
-    max-width: $page-width + $container-gutter-desktop * 2;
   }
   @include screen(desktopWide) {
+    max-width: $page-width + $container-gutter-desktop-wide * 2;
     padding-left: $container-gutter-desktop-wide;
     padding-right: $container-gutter-desktop-wide;
-    max-width: $page-width + $container-gutter-desktop-wide * 2;
   }
 }
 
@@ -75,7 +75,7 @@
   margin: 0 auto;
 
   @include screen(smallPhone) {
-    max-width: $page-width + $container-gutter-mobile-small;
+    max-width: $page-width + $container-gutter-mobile-small * 2;
     padding-left: $container-gutter-mobile-small;
     padding-right: $container-gutter-mobile-small;
   }
@@ -162,5 +162,43 @@
   }
   @include screen(desktopWide) {
     max-width: 720px;
+  }
+}
+
+@mixin container-post-header() {
+  flex-grow: 1;
+  margin-left: auto;
+
+  @include screen(smallPhone) {
+    max-width: $page-width + $container-gutter-mobile-small;
+    padding-left: $container-gutter-mobile-small;
+    padding-right: $container-gutter-mobile-small;
+  }
+  @include screen(phone) {
+    max-width: $page-width + $container-gutter-mobile * 2;
+    padding-left: $container-gutter-mobile;
+    padding-right: $container-gutter-mobile;
+  }
+  @include screen(tablet) {
+    padding-left: $container-gutter-tablet;
+    padding-right: $container-gutter-tablet;
+    max-width: $page-width + $container-gutter-tablet * 2;
+  }
+  @include screen(tabletLandscape) {
+    padding-left: $container-gutter-tablet;
+    padding-right: $container-gutter-tablet;
+    max-width: $page-width + $container-gutter-tablet * 2;
+  }
+  @include screen(desktop) {
+    padding-left: $container-gutter-desktop;
+    padding-right: $container-gutter-desktop;
+    max-width: calc(#{$page-post} + ((100vw - #{$page-post}) / 2));
+    margin-right: 0;
+  }
+  @include screen(desktopWide) {
+    padding-left: $container-gutter-desktop-wide;
+    padding-right: $container-gutter-desktop-wide;
+    max-width: calc(#{$page-post} + ((100vw - #{$page-post}) / 2));
+    margin-right: 0;
   }
 }

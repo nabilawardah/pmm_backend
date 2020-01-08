@@ -17,8 +17,8 @@
     <div class="article-cover-container cover-empty"></div>
     <input name="article-cover" type="file" class="article-cover">
 
-    <header class="article-header-wrapper section--inset">
-      <h1 id="article-title" class="article-title" contenteditable autofocus></h1>
+    <header class="editor-header-wrapper section--inset">
+      <h1 id="editor-title" class="editor-title" contenteditable autofocus></h1>
       <input type="hidden" id="article-id" name="article-id" value="{{ $article_id }}" />
       <input type="hidden" id="user-id" name="user-id" value="{{ $user_id }}" />
       <input type="hidden" name="article-title" />

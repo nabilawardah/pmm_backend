@@ -36,8 +36,8 @@ if ($('#wysiwyg-editor').length > 0) {
   })
 
   $(function() {
-    checkTitleState($('.article-title'))
-    checkTitleState($('.article-subtitle-preview'))
+    checkTitleState($('.editor-title'))
+    checkTitleState($('.editor-subtitle-preview'))
 
     articleEditor.root.addEventListener('click', function(ev) {
       let image = Parchment.find(ev.target.parentNode)
@@ -64,7 +64,7 @@ if ($('#wysiwyg-editor').length > 0) {
     $(document).on('click', '.publish-article', function() {
       let contentContainer = $('input[name="article-content"]')
 
-      let title = $('#article-title').text()
+      let title = $('#editor-title').text()
       let subtitle = $('#article-subtitle-preview').text()
       let userId = $('input[name="user-id"]').val()
       let articleId = $('input[name="article-id"]').val()
@@ -87,7 +87,7 @@ if ($('#wysiwyg-editor').length > 0) {
         .catch(err => console.log('ERR', err))
     })
 
-    $(document).on('keyup', '.article-title', function() {
+    $(document).on('keyup', '.editor-title', function() {
       checkTitleState($(this))
     })
 
@@ -95,7 +95,7 @@ if ($('#wysiwyg-editor').length > 0) {
       checkTitleState($(this))
     })
 
-    document.querySelector('#article-title').addEventListener('paste', function(e) {
+    document.querySelector('#editor-title').addEventListener('paste', function(e) {
       removeFormatTitle(e, this)
     })
 
