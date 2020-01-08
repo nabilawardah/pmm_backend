@@ -28,12 +28,10 @@ Route::get('/profile/{id}', 'DummyController@show_user');
 Route::get('/events', function () {
     return view('web.events.index', ['active_page' => 'Events']);
 });
-Route::get('/articles', function () {
-    return view('web.articles.index', ['active_page' => 'Articles']);
-});
-Route::get('/articles/{id}', function () {
-    return view('web.articles.detail', ['active_page' => 'Articles']);
-});
+
+Route::get('/articles', 'DummyController@article_page');
+Route::get('/articles/{id}', 'DummyController@show_article');
+
 Route::get('/events/{id}', function () {
     return view('web.events.detail', ['active_page' => 'Events']);
 });

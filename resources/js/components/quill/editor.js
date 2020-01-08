@@ -76,6 +76,7 @@ if ($('#wysiwyg-editor').length > 0) {
         subtitle,
         article_id: articleId,
         user_id: userId,
+        html: JSON.stringify(articleEditor.root.innerHTML),
         content: JSON.stringify(articleEditor.getContents()),
       }
       console.log('EDITOR: ', data)

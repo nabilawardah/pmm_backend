@@ -121,28 +121,22 @@ class DummyController extends Controller
     {
         $data_placeholder = [];
         $new_article = [];
-        $new_article['id'] = $request->article_id;
-        $new_article['author'] = $request->user_id;
-        $new_article['title'] = $request->title;
-        $new_article['subtitle'] = $request->subtitle;
-        $new_article['content'] = $request->content;
-
         $jsonString = file_get_contents(base_path('public/data/articles.json'));
         $contents = json_decode($jsonString, true);
         $data = $contents['data'];
 
-        for ($i = 0; $i < count($data); ++$i) {
-            // echo $data[$i] . PHP_EOL;
-            // if($i === 2)
-            //     $original[] = 'four (another one)';
-        }
         foreach ($data as $article) {
             if ((int) $article['id'] === (int) $request->article_id && (int) $article['author'] === (int) $request->user_id) {
+                // return substr($request->html, 1, -1);
+
                 $article['title'] = $request->title;
                 $article['subtitle'] = $request->subtitle;
                 $article['content'] = json_decode($request->content);
+                $article['html'] = $request->html;
+                $article['published'] = true;
 
                 $new_article = $article;
+
                 array_push($data_placeholder, $article);
             } else {
                 array_push($data_placeholder, $article);
@@ -151,10 +145,10 @@ class DummyController extends Controller
 
         $contents['data'] = $data_placeholder;
 
-        $newJsonString = json_encode($contents, JSON_PRETTY_PRINT);
+        $newJsonString = json_encode($contents, JSON_PRETTY_PRINT | JSON_HEX_QUOT);
         file_put_contents(base_path('public/data/articles.json'), stripslashes($newJsonString));
 
-        return $newJsonString;
+        return $new_article;
     }
 
     public function show_user(Request $request)
@@ -189,5 +183,27 @@ class DummyController extends Controller
         sleep(2);
 
         return ['id' => $request->id, 'role' => $new_role];
+    }
+
+    public function article_page(Request $request)
+    {
+        $jsonString = file_get_contents(base_path('public/data/articles.json'));
+        $contents = json_decode($jsonString, true);
+        $data = $contents['data'];
+
+        return view('web.articles.index', ['active_page' => 'Articles', 'articles' => $data]);
+    }
+
+    public function show_article(Request $request)
+    {
+        $jsonString = file_get_contents(base_path('public/data/articles.json'));
+        $contents = json_decode($jsonString, true);
+        $data = $contents['data'];
+
+        foreach ($data as $article) {
+            if ((int) $article['id'] === (int) $request->id) {
+                return view('web.articles.detail', ['active_page' => 'Articles', 'article' => $article, 'html' => json_decode($article['html'])]);
+            }
+        }
     }
 }
