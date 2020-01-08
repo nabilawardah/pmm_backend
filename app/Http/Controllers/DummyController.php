@@ -57,7 +57,7 @@ class DummyController extends Controller
 
     public function create_article(Request $request)
     {
-        $user_id = $request->user_id;
+        $user_id = (int) $request->user_id;
         $jsonString = file_get_contents(base_path('public/data/articles.json'));
         $contents = json_decode($jsonString, true);
         $data = $contents['data'];
@@ -119,15 +119,42 @@ class DummyController extends Controller
 
     public function submit_article(Request $request)
     {
-        $article = (object) [];
+        $data_placeholder = [];
+        $new_article = [];
+        $new_article['id'] = $request->article_id;
+        $new_article['author'] = $request->user_id;
+        $new_article['title'] = $request->title;
+        $new_article['subtitle'] = $request->subtitle;
+        $new_article['content'] = $request->content;
 
-        $article->article_id = $request->article_id;
-        $article->user_id = $request->user_id;
-        $article->title = $request->title;
-        $article->subtitle = $request->subtitle;
-        $article->content = $request->content;
+        $jsonString = file_get_contents(base_path('public/data/articles.json'));
+        $contents = json_decode($jsonString, true);
+        $data = $contents['data'];
 
-        return json_encode($article);
+        for ($i = 0; $i < count($data); ++$i) {
+            // echo $data[$i] . PHP_EOL;
+            // if($i === 2)
+            //     $original[] = 'four (another one)';
+        }
+        foreach ($data as $article) {
+            if ((int) $article['id'] === (int) $request->article_id && (int) $article['author'] === (int) $request->user_id) {
+                $article['title'] = $request->title;
+                $article['subtitle'] = $request->subtitle;
+                $article['content'] = json_decode($request->content);
+
+                $new_article = $article;
+                array_push($data_placeholder, $article);
+            } else {
+                array_push($data_placeholder, $article);
+            }
+        }
+
+        $contents['data'] = $data_placeholder;
+
+        $newJsonString = json_encode($contents, JSON_PRETTY_PRINT);
+        file_put_contents(base_path('public/data/articles.json'), stripslashes($newJsonString));
+
+        return $newJsonString;
     }
 
     public function show_user(Request $request)
