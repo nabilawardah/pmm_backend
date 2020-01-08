@@ -77,7 +77,7 @@ class DummyController extends Controller
         $newJsonString = json_encode($contents, JSON_PRETTY_PRINT | JSON_HEX_QUOT);
         file_put_contents(base_path('public/data/articles.json'), stripslashes($newJsonString));
 
-        $path = public_path('articles/user-'.strval($user_id));
+        $path = public_path('media/user-'.strval($user_id));
         if (!File::isDirectory($path)) {
             File::makeDirectory($path, 0777, true, true);
         }
@@ -101,11 +101,11 @@ class DummyController extends Controller
         ]);
 
         if ($file = $request->file('media')) {
-            $destinationPath = 'articles/user-'.$request->id; // upload path
+            $destinationPath = 'media/user-'.$request->id; // upload path
             $articleMedia = date('YmdHis').'-'.strtolower(str_replace(' ', '-', $file->getClientOriginalName()));
             $file->move($destinationPath, $articleMedia);
             $response = [
-                'url' => '/articles/user-'.$request->id.'/'.$articleMedia,
+                'url' => '/media/user-'.$request->id.'/'.$articleMedia,
                 'media' => $request->file(),
             ];
 

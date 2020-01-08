@@ -12,8 +12,8 @@
   <main class="container-post-header">
     <a class="article-main-wrapper" href="/articles/{{ $articles[0]['id'] }}">
       <article class="article-main">
-        {{-- <header class="article-main-thumbnail" style="background-image: url('{{ asset('/articles/user-'.$articles[0]['author']['id'].'/'.$articles[0]['cover']['src'] ) }}')"> --}}
-        <header class="article-main-thumbnail" style="background-image: url('{{ asset('/articles/user-'.$articles[0]['author']['id'].'/io.png') }}')">
+        {{-- <header class="article-main-thumbnail" style="background-image: url('{{ asset('/media/user-'.$articles[0]['author']['id'].'/'.$articles[0]['cover']['src'] ) }}')"> --}}
+        <header class="article-main-thumbnail" style="background-image: url('{{ asset('/media/user-'.$articles[0]['author']['id'].'/io.png') }}')">
         </header>
         <main class="article-main-text">
           <h1 class="heading2 article-main-text-title" style="margin-bottom: 12px">{{ $articles[0]['title'] }}</h1>
@@ -50,7 +50,7 @@
                   </div>
                 </footer>
               </header>
-              <aside class="article-thumbnail" style="background-image: url('{{ asset('/articles/user-'.$article['author']['id'].'/'.$article['cover']['src'] ) }}')">
+              <aside class="article-thumbnail" style="background-image: url('{{ asset('/media/user-'.$article['author']['id'].'/'.$article['cover']['src'] ) }}')">
               </aside>
             </article>
           </a>
@@ -69,7 +69,7 @@
                   </div>
                 </footer>
               </header>
-              <aside class="article-thumbnail" style="background-image: url('{{ asset('/articles/user-'.$article['author']['id'].'/'.$article['cover']['src'] ) }}')">
+              <aside class="article-thumbnail" style="background-image: url('{{ asset('/media/user-'.$article['author']['id'].'/'.$article['cover']['src'] ) }}')">
               </aside>
             </article>
           </a>
@@ -88,7 +88,7 @@
                   </div>
                 </footer>
               </header>
-              <aside class="article-thumbnail" style="background-image: url('{{ asset('/articles/user-'.$article['author']['id'].'/'.$article['cover']['src'] ) }}')">
+              <aside class="article-thumbnail" style="background-image: url('{{ asset('/media/user-'.$article['author']['id'].'/'.$article['cover']['src'] ) }}')">
               </aside>
             </article>
           </a>
