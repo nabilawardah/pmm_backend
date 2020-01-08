@@ -7,8 +7,9 @@
   @include('components.navbar')
 
   @component('layouts.main-content')
-    <h1 class="display2">Article Detail</h1>
-
+    <header class="section--inset">
+      <h1 class="heading1">{{ $article['title'] }}</h1>
+    </header>
     <section class="ql-container ql-snow">
       <article class="ql-editor">
         {!! trim($article['html'], 'u0022')  !!}
