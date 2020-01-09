@@ -35,6 +35,12 @@ if ($('#wysiwyg-editor').length > 0) {
     theme: 'snow',
   })
 
+  if (!String.prototype.addSlashes) {
+    String.prototype.addSlashes = function() {
+      return this.replace(/[\\']/g, '\\$&').replace(/\u0000/g, '\\0')
+    }
+  } else alert('Warning: String.addSlashes has already been declared elsewhere.')
+
   $(function() {
     checkTitleState($('.editor-title'))
     checkTitleState($('.editor-subtitle-preview'))
@@ -72,12 +78,12 @@ if ($('#wysiwyg-editor').length > 0) {
       contentContainer.val(JSON.stringify(articleEditor.getContents()))
 
       let data = {
-        title,
-        subtitle,
+        title: title,
+        subtitle: subtitle,
         article_id: articleId,
         user_id: userId,
-        html: JSON.stringify(articleEditor.root.innerHTML),
-        content: JSON.stringify(articleEditor.getContents()),
+        html: articleEditor.root.innerHTML,
+        content: articleEditor.getContents(),
       }
       console.log('EDITOR: ', data)
 

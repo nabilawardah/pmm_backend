@@ -9,6 +9,8 @@ class DummyController extends Controller
 {
     private $all_division;
     private $all_working_area;
+    private $jsonArticles;
+    private $articles;
 
     public function __construct()
     {
@@ -29,6 +31,20 @@ class DummyController extends Controller
             (object) ['name' => 'PR', 'value' => 'PR'],
             (object) ['name' => 'MK', 'value' => 'MK'],
         ];
+
+        $this->jsonArticles = json_decode(file_get_contents(base_path('public/data/articles.json')), true);
+        $this->articles = $this->jsonArticles['data'];
+    }
+
+    public function save_article_to_file($article = null)
+    {
+        if (isset($article)) {
+            array_push($this->articles, $article);
+            $this->jsonArticles['data'] = $this->articles;
+        }
+
+        $newJsonString = json_encode($this->jsonArticles, JSON_PRETTY_PRINT);
+        file_put_contents(base_path('public/data/articles.json'), $newJsonString);
     }
 
     public function save_user(Request $request)
@@ -53,102 +69,6 @@ class DummyController extends Controller
 
             return $profileImage;
         }
-    }
-
-    public function create_article(Request $request)
-    {
-        $user_id = (int) $request->user_id;
-        $jsonString = file_get_contents(base_path('public/data/articles.json'));
-        $contents = json_decode($jsonString, true);
-        $data = $contents['data'];
-
-        $new_article_id = count($data) + 1;
-
-        $new_article = (object) [
-            'id' => $new_article_id,
-            'author' => $user_id,
-            'published' => false,
-        ];
-        array_push($data, $new_article);
-
-        $contents['data'] = $data;
-
-        // Write File
-        $newJsonString = json_encode($contents, JSON_PRETTY_PRINT | JSON_HEX_QUOT);
-        file_put_contents(base_path('public/data/articles.json'), stripslashes($newJsonString));
-
-        $path = public_path('media/user-'.strval($user_id));
-        if (!File::isDirectory($path)) {
-            File::makeDirectory($path, 0777, true, true);
-        }
-
-        return redirect('admin/articles/'.$user_id.'/edit/'.$new_article_id)->with('active_page', 'Articles');
-    }
-
-    public function edit_article(Request $request)
-    {
-        return view('admin.articles.edit', [
-            'user_id' => $request->user_id,
-            'article_id' => $request->id,
-            'active_page' => 'Articles',
-        ]);
-    }
-
-    public function post_article_media(Request $request)
-    {
-        request()->validate([
-            'media' => 'required|mimes:jpeg,png,jpg,gif,svg,mp4,avi,3gp,webm,mpeg|max:102400',
-        ]);
-
-        if ($file = $request->file('media')) {
-            $destinationPath = 'media/user-'.$request->id; // upload path
-            $articleMedia = date('YmdHis').'-'.strtolower(str_replace(' ', '-', $file->getClientOriginalName()));
-            $file->move($destinationPath, $articleMedia);
-            $response = [
-                'url' => '/media/user-'.$request->id.'/'.$articleMedia,
-                'media' => $request->file(),
-            ];
-
-            return $response;
-        }
-    }
-
-    public function update_article(Request $request)
-    {
-    }
-
-    public function submit_article(Request $request)
-    {
-        $data_placeholder = [];
-        $new_article = [];
-        $jsonString = file_get_contents(base_path('public/data/articles.json'));
-        $contents = json_decode($jsonString, true);
-        $data = $contents['data'];
-
-        foreach ($data as $article) {
-            if ((int) $article['id'] === (int) $request->article_id && (int) $article['author'] === (int) $request->user_id) {
-                // return substr($request->html, 1, -1);
-
-                $article['title'] = $request->title;
-                $article['subtitle'] = $request->subtitle;
-                $article['content'] = json_decode($request->content);
-                $article['html'] = $request->html;
-                $article['published'] = true;
-
-                $new_article = $article;
-
-                array_push($data_placeholder, $article);
-            } else {
-                array_push($data_placeholder, $article);
-            }
-        }
-
-        $contents['data'] = $data_placeholder;
-
-        $newJsonString = json_encode($contents, JSON_PRETTY_PRINT | JSON_HEX_QUOT);
-        file_put_contents(base_path('public/data/articles.json'), stripslashes($newJsonString));
-
-        return $new_article;
     }
 
     public function show_user(Request $request)
@@ -187,23 +107,96 @@ class DummyController extends Controller
 
     public function article_page(Request $request)
     {
-        $jsonString = file_get_contents(base_path('public/data/articles.json'));
-        $contents = json_decode($jsonString, true);
-        $data = $contents['data'];
+        return view('web.articles.index', ['active_page' => 'Articles', 'articles' => $this->articles]);
+    }
 
-        return view('web.articles.index', ['active_page' => 'Articles', 'articles' => $data]);
+    // ARTICLES
+
+    public function create_article(Request $request)
+    {
+        $user_id = (int) $request->user_id;
+        $new_article_id = count($this->articles) + 1;
+
+        $new_article = (object) [
+            'id' => $new_article_id,
+            'author' => $user_id,
+            'published' => false,
+        ];
+
+        $this->save_article_to_file($new_article);
+
+        $path = public_path('media/user-'.strval($user_id));
+        if (!File::isDirectory($path)) {
+            File::makeDirectory($path, 0777, true, true);
+        }
+
+        return redirect('admin/articles/'.$user_id.'/edit/'.$new_article_id)->with('active_page', 'Articles');
+    }
+
+    public function edit_article(Request $request)
+    {
+        return view('admin.articles.edit', [
+            'user_id' => $request->user_id,
+            'article_id' => $request->id,
+            'active_page' => 'Articles',
+        ]);
+    }
+
+    public function submit_article(Request $request)
+    {
+        $data_placeholder = [];
+        $new_article = [];
+
+        foreach ($this->articles as $article) {
+            if ((int) $article['id'] === (int) $request->article_id && (int) $article['author'] === (int) $request->user_id) {
+                $article['title'] = $request->title;
+                $article['subtitle'] = $request->subtitle;
+                $article['content'] = $request->content;
+                $article['html'] = $request->html;
+                $article['published'] = true;
+
+                $new_article = $article;
+                array_push($data_placeholder, $article);
+            } else {
+                array_push($data_placeholder, $article);
+            }
+        }
+
+        $this->jsonArticles['data'] = $data_placeholder;
+        $this->save_article_to_file();
+
+        return $new_article;
     }
 
     public function show_article(Request $request)
     {
-        $jsonString = file_get_contents(base_path('public/data/articles.json'));
-        $contents = json_decode($jsonString, true);
-        $data = $contents['data'];
-
-        foreach ($data as $article) {
+        foreach ($this->articles as $article) {
             if ((int) $article['id'] === (int) $request->id) {
-                return view('web.articles.detail', ['active_page' => 'Articles', 'article' => $article, 'html' => json_decode($article['html'])]);
+                return view('web.articles.detail', ['active_page' => 'Articles', 'article' => $article, 'html' => $article['html']]);
             }
         }
+    }
+
+    public function post_article_media(Request $request)
+    {
+        request()->validate([
+            'media' => 'required|mimes:jpeg,png,jpg,gif,svg,mp4,avi,3gp,webm,mpeg|max:102400',
+        ]);
+
+        if ($file = $request->file('media')) {
+            $destinationPath = 'media/user-'.$request->id; // upload path
+            $articleMedia = date('YmdHis').'-'.strtolower(str_replace(' ', '-', $file->getClientOriginalName()));
+            $file->move($destinationPath, $articleMedia);
+            $response = [
+                'url' => '/media/user-'.$request->id.'/'.$articleMedia,
+                'media' => $request->file(),
+            ];
+
+            return $response;
+        }
+    }
+
+    public function update_article(Request $request)
+    {
     }
 }

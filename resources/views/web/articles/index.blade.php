@@ -55,44 +55,6 @@
             </article>
           </a>
 
-          <a href="/articles/{{$article['id']}}" class="article-wrapper">
-            <article class="article">
-              <header class="article-text">
-                <h1 class="heading3 article-text-title" style="margin-bottom: 8px">{{ $article['title'] }}</h1>
-                <p class="medium article-text-subtitle">{{ $article['subtitle'] }}</p>
-                <footer class="article-author-wrapper" style="margin-top: 16px;">
-                  <img class="article-author-thumbnail" src="/images/users/default.png" alt="Ongki Herlambang">
-                  <div class="article-author-info">
-                    <p class="heading6" style="margin-bottom: 2px;">{{ $article['author']['name'] }}</p>
-                    {{-- <p class="small article-published-date">{{ $article['author']['name'] }}</p> --}}
-                    <p class="small article-published-date">Published on Jan 7, 2020</p>
-                  </div>
-                </footer>
-              </header>
-              <aside class="article-thumbnail" style="background-image: url('{{ asset('/media/user-'.$article['author']['id'].'/'.$article['cover']['src'] ) }}')">
-              </aside>
-            </article>
-          </a>
-
-          <a href="/articles/{{$article['id']}}" class="article-wrapper">
-            <article class="article">
-              <header class="article-text">
-                <h1 class="heading3 article-text-title" style="margin-bottom: 8px">{{ $article['title'] }}</h1>
-                <p class="medium article-text-subtitle">{{ $article['subtitle'] }}</p>
-                <footer class="article-author-wrapper" style="margin-top: 16px;">
-                  <img class="article-author-thumbnail" src="/images/users/default.png" alt="Ongki Herlambang">
-                  <div class="article-author-info">
-                    <p class="heading6" style="margin-bottom: 2px;">{{ $article['author']['name'] }}</p>
-                    {{-- <p class="small article-published-date">{{ $article['author']['name'] }}</p> --}}
-                    <p class="small article-published-date">Published on Jan 7, 2020</p>
-                  </div>
-                </footer>
-              </header>
-              <aside class="article-thumbnail" style="background-image: url('{{ asset('/media/user-'.$article['author']['id'].'/'.$article['cover']['src'] ) }}')">
-              </aside>
-            </article>
-          </a>
-
           @endif
       @endforeach
     @else
