@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use File;
+use Carbon\Carbon;
 
 class DummyController extends Controller
 {
@@ -11,6 +12,8 @@ class DummyController extends Controller
     private $all_working_area;
     private $jsonArticles;
     private $articles;
+    private $jsonUsers;
+    private $users;
 
     public function __construct()
     {
@@ -34,6 +37,9 @@ class DummyController extends Controller
 
         $this->jsonArticles = json_decode(file_get_contents(base_path('public/data/articles.json')), true);
         $this->articles = $this->jsonArticles['data'];
+
+        $this->jsonUsers = json_decode(file_get_contents(base_path('public/data/users.json')), true);
+        $this->users = $this->jsonUsers['data'];
     }
 
     public function save_article_to_file($article = null)
@@ -107,7 +113,10 @@ class DummyController extends Controller
 
     public function article_page(Request $request)
     {
-        return view('web.articles.index', ['active_page' => 'Articles', 'articles' => $this->articles]);
+        $all_articles = array_reverse($this->articles);
+        $featured_article = array_shift($all_articles);
+
+        return view('web.articles.index', ['active_page' => 'Articles', 'articles' => $all_articles, 'featured_article' => $featured_article]);
     }
 
     // ARTICLES
@@ -116,11 +125,19 @@ class DummyController extends Controller
     {
         $user_id = (int) $request->user_id;
         $new_article_id = count($this->articles) + 1;
+        $user = [];
+
+        foreach ($this->users as $db_user) {
+            if ($db_user['id'] === $user_id) {
+                $user = $db_user;
+            }
+        }
 
         $new_article = (object) [
             'id' => $new_article_id,
-            'author' => $user_id,
+            'author' => $user,
             'published' => false,
+            'created_at' => Carbon::now(),
         ];
 
         $this->save_article_to_file($new_article);
@@ -149,11 +166,13 @@ class DummyController extends Controller
 
         foreach ($this->articles as $article) {
             if ((int) $article['id'] === (int) $request->article_id && (int) $article['author'] === (int) $request->user_id) {
+                $article['cover'] = $request->cover;
                 $article['title'] = $request->title;
                 $article['subtitle'] = $request->subtitle;
                 $article['content'] = $request->content;
                 $article['html'] = $request->html;
                 $article['published'] = true;
+                $article['submitted_at'] = Carbon::now();
 
                 $new_article = $article;
                 array_push($data_placeholder, $article);
@@ -190,6 +209,8 @@ class DummyController extends Controller
             $response = [
                 'url' => '/media/user-'.$request->id.'/'.$articleMedia,
                 'media' => $request->file(),
+                'name' => $articleMedia,
+                'type' => 'image',
             ];
 
             return $response;

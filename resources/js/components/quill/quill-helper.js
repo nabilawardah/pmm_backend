@@ -89,6 +89,7 @@ export function removeFormatTitle(event, element) {
 
 export function checkTitleState(element) {
   if (element.text().trim() === '' || element.html().trim() === '') {
+    console.log('EMPTY: ', element)
     element.addClass('empty')
   } else {
     element.removeClass('empty')

@@ -1,21 +1,62 @@
 import { readSingleFileUrl } from './../photo-uploader'
 
 // Upload cover image
-
 $(function() {
-  let container = $('.article-cover-container')
-  let input = $('.article-cover')
+  let container = $('.editor-cover-container')
+  let input = $('.editor-cover')
 
-  $(document).on('click', '.article-cover-container', function() {
+  $(document).on('click', '.editor-cover-container', function() {
     input.trigger('click')
   })
 
-  $(document).on('change', '.article-cover', function() {
-    readSingleFileUrl({ input: input[0], container: container[0] }, url => {
-      container.css('background-image', `url("${url}")`)
-      if (container.hasClass('cover-empty')) {
-        container.removeClass('cover-empty')
+  $(document).on('change', '.editor-cover', function() {
+    if (input[0].files != null && input[0].files[0] != null) {
+      let userId = $('#user-id').val()
+      let data = new FormData()
+      const config = {
+        headers: { 'content-type': 'multipart/form-data' },
       }
-    })
+      data.append('media', input[0].files[0])
+
+      axios
+        .post(`/articles/${userId}/media`, data, config)
+        .then(res => {
+          if (res.status === 200) {
+            let url = res.data.url
+            let name = res.data.name
+            appendImage({ container, url, input, name })
+          } else {
+            console.log('Cannot upload cover...')
+            let reader = new FileReader()
+            reader.onload = function(e) {
+              let url = e.target.result
+              appendImage({ container, url, input })
+            }
+            reader.readAsDataURL(input[0].files[0])
+          }
+        })
+        .catch(err => console.log('ERROR UPLOADING COVER: ', err))
+    }
   })
+
+  function appendImage({ container, url, input, name }) {
+    let image = document.createElement('img')
+    image.onload = coverChildren
+    image.classList = 'editor-cover-image'
+    if (name) {
+      image.setAttribute('data-name', name)
+    }
+    image.src = url
+    if (container.hasClass('cover-empty')) {
+      container.removeClass('cover-empty')
+    }
+    input.val('')
+
+    function coverChildren() {
+      if (container.find('*').length > 0) {
+        container.find('*').remove()
+      }
+      container.append(image)
+    }
+  }
 })

@@ -14,8 +14,8 @@
 
   @component('layouts.main-content', ['width' => 'bleed'])
 
-    <div class="article-cover-container cover-empty"></div>
-    <input name="article-cover" type="file" class="article-cover">
+    <div class="editor-cover-container cover-empty"></div>
+    <input name="editor-cover" type="file" class="editor-cover">
 
     <header class="editor-header-wrapper section--inset">
       <h1 id="editor-title" class="editor-title" contenteditable autofocus></h1>
@@ -24,9 +24,9 @@
       <input type="hidden" name="article-title" />
     </header>
 
-    <section class="article-subtitle-wrapper section--inset">
-      <p id="article-subtitle-preview" class="article-subtitle-preview" contenteditable></p>
-      <input type="hidden" name="article-subtitle-preview" />
+    <section class="editor-subtitle-wrapper section--inset">
+      <p id="editor-subtitle-preview" class="editor-subtitle-preview" contenteditable></p>
+      <input type="hidden" name="editor-subtitle-preview" />
     </section>
 
     <div id="toolbar-container">
@@ -55,8 +55,8 @@
       </span>
       <span class="ql-formats">
         <button class="ql-link"></button>
-        <button class="ql-image"></button>
-        <button class="ql-video"></button>
+        {{-- <button class="ql-image"></button> --}}
+        {{-- <button class="ql-video"></button> --}}
         <button class="ql-media"></button>
       </span>
       <span class="ql-formats">

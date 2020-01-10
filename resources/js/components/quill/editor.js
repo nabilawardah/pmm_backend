@@ -71,9 +71,10 @@ if ($('#wysiwyg-editor').length > 0) {
       let contentContainer = $('input[name="article-content"]')
 
       let title = $('#editor-title').text()
-      let subtitle = $('#article-subtitle-preview').text()
+      let subtitle = $('#editor-subtitle-preview').text()
       let userId = $('input[name="user-id"]').val()
       let articleId = $('input[name="article-id"]').val()
+      let cover = $('.editor-cover-image').data('name')
 
       contentContainer.val(JSON.stringify(articleEditor.getContents()))
 
@@ -84,20 +85,29 @@ if ($('#wysiwyg-editor').length > 0) {
         user_id: userId,
         html: articleEditor.root.innerHTML,
         content: articleEditor.getContents(),
+        cover: {
+          src: cover,
+          type: 'image',
+        },
       }
       console.log('EDITOR: ', data)
 
       axios
         .post(`/articles/${userId}/${articleId}`, data)
-        .then(res => console.log('RES: ', res.data))
-        .catch(err => console.log('ERR', err))
+        .then(res => {
+          if (res.status === 200) {
+            console.log('RES: ', res)
+            window.location = `/articles/${articleId}`
+          }
+        })
+        .catch(err => console.log('ERROR SUBMITTING ARTICLE: ', err))
     })
 
     $(document).on('keyup', '.editor-title', function() {
       checkTitleState($(this))
     })
 
-    $(document).on('keyup', '.article-subtitle-preview', function() {
+    $(document).on('keyup', '.editor-subtitle-preview', function() {
       checkTitleState($(this))
     })
 
@@ -105,7 +115,7 @@ if ($('#wysiwyg-editor').length > 0) {
       removeFormatTitle(e, this)
     })
 
-    document.querySelector('#article-subtitle-preview').addEventListener('paste', function(e) {
+    document.querySelector('#editor-subtitle-preview').addEventListener('paste', function(e) {
       removeFormatTitle(e, this)
     })
   })

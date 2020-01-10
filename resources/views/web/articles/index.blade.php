@@ -7,33 +7,32 @@
 @include('components.navbar')
 
 @component('layouts.main-content', ['width' => 'bleed'])
-  {{-- <h1 class="display3">Articles</h1> --}}
 
-  <main class="container-post-header">
-    <a class="article-main-wrapper" href="/articles/{{ $articles[0]['id'] }}">
-      <article class="article-main">
-        {{-- <header class="article-main-thumbnail" style="background-image: url('{{ asset('/media/user-'.$articles[0]['author']['id'].'/'.$articles[0]['cover']['src'] ) }}')"> --}}
-        <header class="article-main-thumbnail" style="background-image: url('{{ asset('/media/user-'.$articles[0]['author']['id'].'/io.png') }}')">
-        </header>
-        <main class="article-main-text">
-          <h1 class="heading2 article-main-text-title" style="margin-bottom: 12px">{{ $articles[0]['title'] }}</h1>
-          {{-- <p class="medium article-main-text-subtitle">{{ $articles[0]['subtitle'] }}</p> --}}
-          <p class="large article-main-text-subtitle">First it was burgers. Now plant-based startups are coming for the nugget — but chicken is a much tougher challenge.</p>
-          <footer class="article-author-wrapper" style="margin-top: 16px;">
-            <img class="article-author-thumbnail" src="/images/users/default.png" alt="Ongki Herlambang">
-            <div class="article-author-info">
-              <p class="heading6" style="margin-bottom: 2px;">{{ $articles[0]['author']['name'] }}</p>
-              <p class="small article-published-date">Published on Jan 7, 2020</p>
-            </div>
-          </footer>
-        </main>
-      </article>
-    </a>
-    <div class="article-list-divider" aria-hidden="true"></div>
-  </main>
+  @if($featured_article)
+    <main class="container-post-header">
+      <a class="article-main-wrapper" href="/articles/{{ $featured_article['id'] }}">
+        <article class="article-main">
+          <header class="article-main-thumbnail" style="background-image: url('{{ asset('/media/user-'.$featured_article['author']['id'].'/'.$featured_article['cover']['src'] ) }}')">
+          </header>
+          <main class="article-main-text">
+            <h1 class="heading2 article-main-text-title" style="margin-bottom: 12px">{{ $featured_article['title'] }}</h1>
+            <p class="medium article-main-text-subtitle">{{ $featured_article['subtitle'] }}</p>
+            <footer class="article-author-wrapper" style="margin-top: 16px;">
+              <img class="article-author-thumbnail" src="/images/users/default.png" alt="Ongki Herlambang">
+              <div class="article-author-info">
+                <p class="heading6" style="margin-bottom: 2px;">{{ $featured_article['author']['name'] }}</p>
+                <p class="small article-published-date">Published on {{ date('M d, Y', strtotime($featured_article['submitted_at'])) }}</p>
+              </div>
+            </footer>
+          </main>
+        </article>
+      </a>
+      <div class="article-list-divider" aria-hidden="true"></div>
+    </main>
+  @endif
 
   <main class="article-list stack--ll container-post">
-    @isset($articles)
+    @if($articles)
       @foreach ($articles as $article)
           @if ($article['published'])
 
@@ -46,7 +45,7 @@
                   <img class="article-author-thumbnail" src="/images/users/default.png" alt="Ongki Herlambang">
                   <div class="article-author-info">
                     <p class="heading6" style="margin-bottom: 2px;">{{ $article['author']['name'] }}</p>
-                    <p class="small article-published-date">Published on Jan 7, 2020</p>
+                    <p class="small article-published-date">Published on {{ date('M d, Y', strtotime($articles[0]['submitted_at'])) }}</p>
                   </div>
                 </footer>
               </header>
@@ -57,9 +56,7 @@
 
           @endif
       @endforeach
-    @else
-      <p class="large">There's no article yet to show :(</p>
-    @endisset
+    @endif
   </main>
 
 @endcomponent
