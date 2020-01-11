@@ -49,7 +49,7 @@
     </ul>
     <ul class="navbar-secondary inline--ll">
       <li class="primary-menu-wrapper">
-        <a href="/api/articles/create/1" class="button button--small primary no-pre">
+        <a href="/articles/create/1" class="button button--small primary no-pre">
           Add Points
         </a>
       </li>

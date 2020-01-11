@@ -54,7 +54,8 @@ Route::post('/api/role/{id}', 'DummyController@change_role');
 Route::post('/api/profile/{id}', 'DummyController@save_user');
 Route::post('/api/photo/{id}', 'DummyController@save_photo');
 
-Route::get('/api/articles/create/{user_id}', 'DummyController@new_article');
+Route::get('/articles/create/{user_id}', 'DummyController@create_article');
+
 Route::post('/api/articles/media/{id}', 'DummyController@post_article_media');
 Route::post('/api/articles/submit/{article_id}', 'DummyController@submit_article');
 Route::get('/api/articles', 'DummyController@get_all_articles');

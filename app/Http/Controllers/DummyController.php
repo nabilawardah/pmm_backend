@@ -152,7 +152,7 @@ class DummyController extends Controller
         return $jsonArticles;
     }
 
-    public function new_article(Request $request)
+    public function create_article(Request $request)
     {
         $user_id = (int) $request->user_id;
         $new_article_id = count($this->articles) + 1;
