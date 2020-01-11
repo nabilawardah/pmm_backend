@@ -67,7 +67,7 @@ if ($('#wysiwyg-editor').length > 0) {
       }
     })
 
-    $(document).on('click', '.publish-article', function() {
+    function submitArticle() {
       let contentContainer = $('input[name="article-content"]')
 
       let title = $('#editor-title').text()
@@ -93,7 +93,7 @@ if ($('#wysiwyg-editor').length > 0) {
       console.log('EDITOR: ', data)
 
       axios
-        .post(`/articles/${userId}/${articleId}`, data)
+        .post(`/api/articles/submit/${articleId}`, data)
         .then(res => {
           if (res.status === 200) {
             console.log('RES: ', res)
@@ -101,7 +101,9 @@ if ($('#wysiwyg-editor').length > 0) {
           }
         })
         .catch(err => console.log('ERROR SUBMITTING ARTICLE: ', err))
-    })
+    }
+
+    $(document).on('click', '.publish-article', submitArticle)
 
     $(document).on('keyup', '.editor-title', function() {
       checkTitleState($(this))

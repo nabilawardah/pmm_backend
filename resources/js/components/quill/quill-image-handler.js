@@ -31,7 +31,7 @@ function handleUpload() {
         data.append('media', fileInput.files[0])
 
         axios
-          .post(`/articles/${userId}/media`, data, config)
+          .post(`/api/articles/media/${userId}`, data, config)
           .then(res => {
             console.log('RES: ', res.data)
 

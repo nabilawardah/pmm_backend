@@ -18,10 +18,63 @@
       },
       "featured": true,
       "published": true,
+      "reviewed": false,
+      "submitted": true,
       "created_at": "2020-01-10T04:22:27.438541Z",
       "submitted_at": "2020-01-10T04:23:43.083396Z",
       "title": "Test Writing a New Article with Lots of Special Characters \"\\'`",
       "subtitle": "Just Test Writing a New Article with Lots of Special Characters \"\\'`",
+      "content": {
+        "ops": [
+          {
+            "insert": "Hello there! I'm trying to \"write\" a special article with a lot of \\\\ weird characters. I hope it's going well //. | ddu ddu ddudududududu"
+          },
+          {
+            "insert": {
+              "customImage": {
+                "alt": null,
+                "url": "/media/user-1/20200109141050-app.png",
+                "classList": "section--outset"
+              }
+            }
+          },
+          {
+            "insert": {
+              "customImage": {
+                "alt": null,
+                "url": "/media/user-1/io.png",
+                "classList": "section--outset"
+              }
+            }
+          }
+        ]
+      },
+      "html": "<p class=\"section--inset\">Hello there! I'm trying to \"write\" a special article with a lot of \\\\ weird characters. I hope it's going well //. | ddu ddu ddudududududu</p><div class=\"section--outset\"><img alt=\"undefined\" src=\"/media/user-1/20200109141050-app.png\"></div><div class=\"section--outset\"><img alt=\"undefined\" src=\"/media/user-1/io.png\"></div><p class=\"section--inset\"><br></p>"
+    },
+    {
+      "id": 2,
+      "author": {
+        "id": 1,
+        "name": "Ongki Herlambang",
+        "email": "ongkiherlambang@gmail.com",
+        "role": "admin",
+        "photo": "ongki.jpg",
+        "phone": "082377296969",
+        "divisi": "Kebersihan",
+        "working_area": "OB"
+      },
+      "cover": {
+        "src": "20200109141050-app.png",
+        "type": "image"
+      },
+      "featured": false,
+      "published": false,
+      "reviewed": false,
+      "submitted": true,
+      "created_at": "2020-01-10T04:22:27.438541Z",
+      "submitted_at": "2020-01-10T04:23:43.083396Z",
+      "title": "This is a Good Example for The Second Article",
+      "subtitle": "Just Test Writing a New Article with Lots of Special Characters",
       "content": {
         "ops": [
           {

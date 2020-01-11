@@ -1,16 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/sign-in', function () {
     return view('sign-in', ['active_page' => 'Sign in']);
 });
@@ -39,19 +28,12 @@ Route::get('/gallery', function () {
     return view('web.gallery.index', ['active_page' => 'Gallery']);
 });
 
-// Admin
-// Route::get('/admin', function () {
-//     return view('admin.home', ['active_page' => 'Home']);
-// });
 Route::get('/admin/articles', function () {
     return view('admin.articles.index', ['active_page' => 'Articles']);
 });
-
 Route::get('/admin/articles/{user_id}/edit/{id}', 'DummyController@edit_article');
+Route::get('/admin/articles/{id}', 'DummyController@show_article');
 
-Route::get('/admin/articles/{id}', function () {
-    return view('admin.articles.detail', ['active_page' => 'Articles']);
-});
 Route::get('/admin/events', function () {
     return view('admin.events.index', ['active_page' => 'Events']);
 });
@@ -71,6 +53,8 @@ Route::get('/admin/gallery', function () {
 Route::post('/api/role/{id}', 'DummyController@change_role');
 Route::post('/api/profile/{id}', 'DummyController@save_user');
 Route::post('/api/photo/{id}', 'DummyController@save_photo');
-Route::get('/articles/{user_id}/create', 'DummyController@create_article');
-Route::post('/articles/{id}/media', 'DummyController@post_article_media');
-Route::post('/articles/{user_id}/{article_id}', 'DummyController@submit_article');
+
+Route::get('/api/articles/create/{user_id}', 'DummyController@new_article');
+Route::post('/api/articles/media/{id}', 'DummyController@post_article_media');
+Route::post('/api/articles/submit/{article_id}', 'DummyController@submit_article');
+Route::get('/api/articles', 'DummyController@get_all_articles');

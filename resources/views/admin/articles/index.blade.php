@@ -5,7 +5,7 @@
 @section('content')
   @include('components.navbar-admin')
 
-  @component('layouts.main-content')
+  @component('layouts.main-content', ['width' => 'default'])
 
     <header class="admin-table-header">
       <h1 class="heading1 page-title">Articles</h1>
@@ -25,8 +25,9 @@
         <tr>
           <th></th>
           <th>Articles</th>
+          <th>Listed</th>
           <th>Author</th>
-          <th>Submitted Date</th>
+          <th>Submitted</th>
         </tr>
       </thead>
     </table>

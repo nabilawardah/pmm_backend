@@ -136,7 +136,23 @@ class DummyController extends Controller
 
     // ARTICLES
 
-    public function create_article(Request $request)
+    public function get_all_articles()
+    {
+        $jsonArticles = ['data' => []];
+        $all_articles = [];
+
+        foreach ($this->articles as $article) {
+            if (isset($article['submitted']) && $article['submitted']) {
+                array_push($all_articles, $article);
+            }
+        }
+
+        $jsonArticles['data'] = $all_articles;
+
+        return $jsonArticles;
+    }
+
+    public function new_article(Request $request)
     {
         $user_id = (int) $request->user_id;
         $new_article_id = count($this->articles) + 1;
@@ -153,6 +169,7 @@ class DummyController extends Controller
             'author' => $user,
             'featured' => false,
             'published' => false,
+            'submitted' => false,
             'created_at' => Carbon::now(),
         ];
 
@@ -188,6 +205,7 @@ class DummyController extends Controller
                 $article['content'] = $request->content;
                 $article['html'] = $request->html;
                 $article['published'] = true;
+                $article['submitted'] = true;
                 $article['submitted_at'] = Carbon::now();
 
                 $new_article = $article;
@@ -205,11 +223,15 @@ class DummyController extends Controller
 
     public function show_article(Request $request)
     {
+        $requested_article = [];
+
         foreach ($this->articles as $article) {
             if ((int) $article['id'] === (int) $request->id) {
-                return view('web.articles.detail', ['active_page' => 'Articles', 'article' => $article, 'html' => $article['html']]);
+                $requested_article = $article;
             }
         }
+
+        return view('web.articles.detail', ['active_page' => 'Articles', 'article' => $requested_article, 'html' => $requested_article['html']]);
     }
 
     public function post_article_media(Request $request)

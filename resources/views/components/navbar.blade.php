@@ -1,70 +1,36 @@
 @php
-    $primary_menus = [
-      (object) [
-        'name' => 'Home',
-        'to' => '/',
-      ],
-      (object) [
-        'name' => 'Profile',
-        'to' => '/profile/1',
-      ],
-      (object) [
-        'name' => 'Articles',
-        'to' => '/articles',
-      ],
-      (object) [
-        'name' => 'Events',
-        'to' => '/events',
-      ],
-      (object) [
-        'name' => 'Gallery',
-        'to' => '/gallery',
-      ],
-];
-
-$admin_menus = [
-      (object) [
-        'name' => 'Home',
-        'to' => '/admin',
-      ],
-      (object) [
-        'name' => 'Users',
-        'to' => '/admin/users',
-      ],
-      (object) [
-        'name' => 'Articles',
-        'to' => '/admin/articles',
-      ],
-      (object) [
-        'name' => 'Events',
-        'to' => '/admin/events',
-      ],
-      (object) [
-        'name' => 'Gallery',
-        'to' => '/admin/gallery',
-      ],
+  $primary_menus = [
+    (object) [
+      'name' => 'Home',
+      'to' => '/',
+    ],
+    (object) [
+      'name' => 'Profile',
+      'to' => '/profile/1',
+    ],
+    (object) [
+      'name' => 'Articles',
+      'to' => '/articles',
+    ],
+    (object) [
+      'name' => 'Events',
+      'to' => '/events',
+    ],
+    (object) [
+      'name' => 'Gallery',
+      'to' => '/gallery',
+    ],
   ];
 
   $secondary_menus = [
-      // (object) [
-      //     'name' => 'Sign In',
-      //     'to' => '/sign-in',
-      // ],
-      (object) [
-          'name' => 'Go to Admin',
-          'to' => '/admin/articles',
-      ],
-  ];
-
-  $admin_secondary_menus = [
-      (object) [
-          'name' => 'Sign In',
-          'to' => '/sign-in',
-      ],
-      (object) [
-          'name' => 'Go to Website',
-          'to' => '/',
-      ],
+    // (object) [
+    //     'name' => 'Sign In',
+    //     'to' => '/sign-in',
+    // ],
+    (object) [
+      'name' => 'Go to Admin',
+      'to' => '/admin/articles',
+    ],
   ];
 @endphp
 
@@ -83,7 +49,7 @@ $admin_menus = [
     </ul>
     <ul class="navbar-secondary inline--ll">
       <li class="primary-menu-wrapper">
-        <a class="button button--small primary" href="/articles/1/create">
+        <a href="/api/articles/create/1" class="button button--small primary no-pre">
           Add Points
         </a>
       </li>

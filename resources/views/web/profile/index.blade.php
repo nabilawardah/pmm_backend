@@ -52,9 +52,7 @@
         You've achieved <span class="point-counts">24</span> points.
       </h2>
       <span class="profile-all-achievment">out of total 120 points achieved by all PMM users.</span>
-      <a href="/articles/1/create" class="button button--large primary">
-        Add Points
-      </a>
+      <a href="/api/articles/create/1" class="button button--large primary no-pre">Add Points</a>
     </section>
 
   @endcomponent

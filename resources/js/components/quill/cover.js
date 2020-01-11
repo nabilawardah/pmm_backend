@@ -19,7 +19,7 @@ $(function() {
       data.append('media', input[0].files[0])
 
       axios
-        .post(`/articles/${userId}/media`, data, config)
+        .post(`/api/articles/media/${userId}`, data, config)
         .then(res => {
           if (res.status === 200) {
             let url = res.data.url

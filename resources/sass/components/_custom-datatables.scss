@@ -54,10 +54,11 @@
   }
 }
 
-.article-info {
-  display: flex;
-  align-items: flex-start;
+.table-main-info {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: $dark-alpha-70;
 
   &:hover {
     .user-main-info {
@@ -225,6 +226,54 @@
   min-width: 480px;
 }
 
+.table-article-author {
+  min-width: 320px;
+}
+
 .table-article-title {
   min-width: 480px;
+}
+
+.table-article-status {
+  min-width: 64px;
+  &.td {
+    text-align: center;
+  }
+
+  > .status--listed {
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
+    min-height: 12px;
+    background-color: #008489;
+    border-radius: 9999px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  > .status--submitted {
+    width: 12px;
+    height: 2px;
+    min-width: 12px;
+    min-height: 2px;
+    background-color: $dark-hex-60;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  > svg {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.table-article-submitted-date {
+  min-width: 144px;
+
+  &.td {
+    font-weight: 500;
+    font-size: 15px;
+  }
 }
