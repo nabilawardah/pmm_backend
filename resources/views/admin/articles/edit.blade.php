@@ -17,6 +17,7 @@
     <div class="editor-cover-container cover-empty"></div>
     <input name="editor-cover" type="file" class="editor-cover">
 
+    <section>
     <header class="editor-header-wrapper section--inset">
       <h1 id="editor-title" class="editor-title" contenteditable autofocus></h1>
       <input type="hidden" id="article-id" name="article-id" value="{{ $article_id }}" />
@@ -27,6 +28,7 @@
     <section class="editor-subtitle-wrapper section--inset">
       <p id="editor-subtitle-preview" class="editor-subtitle-preview" contenteditable></p>
       <input type="hidden" name="editor-subtitle-preview" />
+    </section>
     </section>
 
     <div id="toolbar-container">
@@ -42,7 +44,7 @@
       </span>
       <span class="ql-formats">
         <button class="ql-blockquote"></button>
-        <button class="ql-divider"></button>
+        {{-- <button class="ql-divider"></button> --}}
       </span>
       <span class="ql-formats">
         <button class="ql-list" value="ordered"></button>

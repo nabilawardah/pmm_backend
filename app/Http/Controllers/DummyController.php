@@ -113,10 +113,25 @@ class DummyController extends Controller
 
     public function article_page(Request $request)
     {
-        $all_articles = array_reverse($this->articles);
-        $featured_article = array_shift($all_articles);
+        $all_articles = [];
+        $featured_article;
 
-        return view('web.articles.index', ['active_page' => 'Articles', 'articles' => $all_articles, 'featured_article' => $featured_article]);
+        foreach ($this->articles as $article) {
+            if (isset($article['featured']) && $article['featured'] === true && $article['published'] === true) {
+                $featured_article = $article;
+            }
+
+            if ($article['published'] === true && isset($article['featured']) && $article['featured'] === false) {
+                array_push($all_articles, $article);
+            }
+        }
+
+        return view('web.articles.index', [
+            'active_page' => 'Articles',
+            'articles' => array_reverse($all_articles),
+            'featured_article' => $featured_article ? $featured_article : null,
+            ]
+        );
     }
 
     // ARTICLES
@@ -136,6 +151,7 @@ class DummyController extends Controller
         $new_article = (object) [
             'id' => $new_article_id,
             'author' => $user,
+            'featured' => false,
             'published' => false,
             'created_at' => Carbon::now(),
         ];

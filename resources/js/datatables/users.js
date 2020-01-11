@@ -9,10 +9,6 @@ import { uploadProfilePhoto, saveProfilePhoto, processPhotoUploading } from './.
 import { addError, removeError } from './../components/input-field'
 import { generateAdminRole, generateUserRole } from './../components/role'
 
-// const axiosConfig = {
-//   headers: { 'content-type': 'multipart/form-data' },
-// }
-
 $(function() {
   // Add custom search field to page header
   generateCustomSearch('#users-table_filter')

@@ -46,10 +46,10 @@ $admin_menus = [
   ];
 
   $secondary_menus = [
-      (object) [
-          'name' => 'Sign In',
-          'to' => '/sign-in',
-      ],
+      // (object) [
+      //     'name' => 'Sign In',
+      //     'to' => '/sign-in',
+      // ],
       (object) [
           'name' => 'Go to Admin',
           'to' => '/admin/articles',
@@ -82,6 +82,11 @@ $admin_menus = [
       @endforeach
     </ul>
     <ul class="navbar-secondary inline--ll">
+      <li class="primary-menu-wrapper">
+        <a class="button button--small primary" href="/articles/1/create">
+          Add Points
+        </a>
+      </li>
       @foreach ($secondary_menus as $menu)
           @component('components.menu-web', ['name' => $menu->name, 'to' => $menu->to, 'active' => $active_page])
         @endcomponent
