@@ -10,7 +10,8 @@ export class CustomClipboard extends Clipboard {
     let range = this.quill.getSelection()
     let delta = new Delta().retain(range.index)
     this.container.style.top =
-      (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0).toString() + 'px'
+      ((window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0) + 1200).toString() +
+      'px'
     this.container.focus()
     setTimeout(() => {
       this.quill.selection.update(Quill.sources.SILENT)
@@ -18,7 +19,9 @@ export class CustomClipboard extends Clipboard {
       this.quill.updateContents(delta, Quill.sources.USER)
       this.quill.setSelection(delta.length() - range.length, Quill.sources.SILENT)
       let bounds = this.quill.getBounds(delta.length() - range.length, Quill.sources.SILENT)
-      this.quill.scrollingContainer.scrollTop = bounds.top
+
+      // Need to set the value fixed because we have lots of crap above the container
+      this.quill.scrollingContainer.scrollTop = bounds.top + 650
     }, 1)
   }
 }

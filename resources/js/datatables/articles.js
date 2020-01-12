@@ -47,15 +47,15 @@ let articlesTable = $('#articles-table').DataTable({
         } else {
           return `
             <a href="/admin/articles/${full.id}" class="article-info table-main-info">
-              <div class="profile-thumbnail lazyload-bg" style="width: 72px; height: 48px; min-width: 72px; min-height: 48px; background-image: url('${cover}'), linear-gradient(to top, #008384, #008384);"></div>
+              <div class="profile-thumbnail lazyload-bg" style="margin-right: 16px; border-radius: 0; width: 72px; height: 56px; min-width: 72px; min-height: 56px; background-image: url('${cover}'), linear-gradient(to top, #008384, #008384);"></div>
               <textarea class="hidden">${fullData}</textarea>
               <span class="user-data">
-                <div class="heading4 user-main-info">
-                  <span>
-                    ${full.title}
+                <h3 class="user-main-info">
+                  <span class="article-list-title">
+                    ${full.title.trim()}
                   </span>
-                  ${full.reviewed ? '' : '<span class="user-role">New!</span>'}
-                </div>
+                  ${full.reviewed ? '' : '<span class="user-role primary">New!</span>'}
+                </h3>
               </span>
             </a>
           `
@@ -94,7 +94,7 @@ let articlesTable = $('#articles-table').DataTable({
               <span class="user-data">
                 <div class="medium user-main-info">
                   ${data.name} <span class="user-info-id">
-                  ${admin ? '<span class="user-role">admin</span>' : ''}
+                  ${admin ? '<span class="user-role default">admin</span>' : ''}
                 </div>
               </span>
             </div>

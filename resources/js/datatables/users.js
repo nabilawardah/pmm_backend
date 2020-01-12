@@ -52,7 +52,7 @@ let usersTable = $('#users-table').DataTable({
               <span class="user-data">
                 <div class="heading4 user-main-info">
                   ${full.name} <span class="user-info-id">(<span class="id-pound">#</span>${full.id})</span>
-                  ${admin ? '<span class="user-role">admin</span>' : ''}
+                  ${admin ? '<span class="user-role primary">admin</span>' : ''}
                 </div>
                 <span class="medium" style="color: #767676;">
                   ${full.email}

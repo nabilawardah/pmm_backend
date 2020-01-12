@@ -1,4 +1,4 @@
-<div class="modal">
+<div class="modal" style="display: none;">
   <div class="modal-main-area">
     <nav class="modal-nav">
       <button type="button" class="close-modal button-close--rounded">

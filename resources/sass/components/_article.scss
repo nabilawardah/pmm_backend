@@ -460,3 +460,15 @@
 .article-reader > .ql-editor {
   padding-bottom: 0;
 }
+
+.article-list-title {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+  width: 420px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

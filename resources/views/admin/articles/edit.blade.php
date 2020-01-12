@@ -11,33 +11,25 @@
   </style>
 
   @include('components.navbar-writing')
+  @include('components.confirm-delete-article')
 
   @component('layouts.main-content', ['width' => 'bleed'])
-
-    @isset($article['cover'])
-      <div class="editor-cover-container">
-        <img class="editor-cover-image" data-name="{{ $article['cover']['src'] }}" src="/media/user-1/{{ $article['cover']['src'] }}">
-      </div>
-    @else
-      <div class="editor-cover-container cover-empty"></div>
-    @endisset
-
     <section>
-      <input name="editor-cover" type="file" class="editor-cover">
+      @isset($article['cover'])
+        <div class="editor-cover-container">
+          <img class="editor-cover-image" data-name="{{ $article['cover']['src'] }}" src="/media/user-1/{{ $article['cover']['src'] }}">
+        </div>
+      @else
+        <div class="editor-cover-container cover-empty"></div>
+      @endisset
+
       <header class="editor-header-wrapper section--inset">
         <h1 id="editor-title" class="editor-title" contenteditable autofocus>{{ $article['title'] ?? '' }}</h1>
-        <input type="hidden" id="article-id" name="article-id" value="{{ $article_id }}" />
-        <input type="hidden" id="user-id" name="user-id" value="{{ $user_id }}" />
-        <input type="hidden" name="article-title" />
       </header>
 
       <section class="editor-subtitle-wrapper section--inset">
         <p id="editor-subtitle-preview" class="editor-subtitle-preview" contenteditable>{{$article['subtitle'] ?? ''}}</p>
-        <input type="hidden" name="editor-subtitle-preview" />
       </section>
-
-      <input type="hidden" name="article-content" value="{{ json_encode($article['content'] ?? '') ?? '' }}" />
-      <textarea class="hidden" name="article-data" id="article-data">{{ json_encode($article) ?? '' }}</textarea>
     </section>
 
     <div id="toolbar-container">
@@ -77,8 +69,14 @@
 
     <div id="wysiwyg-editor"></div>
 
+    <input name="editor-cover" type="file" class="editor-cover">
+    <input type="hidden" id="article-id" name="article-id" value="{{ $article_id }}" />
+    <input type="hidden" id="user-id" name="user-id" value="{{ $user_id }}" />
+    <input type="hidden" name="article-title" />
+    <input type="hidden" name="editor-subtitle-preview" />
+    <input type="hidden" name="article-content" value="{{ json_encode($article['content'] ?? '') ?? '' }}" />
+    <textarea class="hidden" name="article-data" id="article-data">{{ json_encode($article) ?? '' }}</textarea>
   @endcomponent
 
-  @include('components.confirm-delete-article')
 
 @endsection

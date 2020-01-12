@@ -93,9 +93,17 @@
   line-height: 16px;
   padding: 2px 5px;
   border-radius: 999px;
-  background-color: $brand-primary-200;
-  color: $light-alpha-100;
   margin-left: 4px;
+
+  &.primary {
+    background-color: $brand-primary-200;
+    color: $light-alpha-100;
+  }
+
+  &.default {
+    background-color: $dark-hex-30;
+    color: $dark-alpha-60;
+  }
 }
 
 .profile-thumbnail {
@@ -276,4 +284,9 @@
     font-weight: 500;
     font-size: 15px;
   }
+}
+
+.user-main-info {
+  min-width: 360px;
+  max-width: 360px;
 }
