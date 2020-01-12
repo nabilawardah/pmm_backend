@@ -32,7 +32,7 @@ export function generateBaseModal(data, previewPhoto, callback, remove) {
   `
 
   let modal = `
-    <main class="modal ${remove && 'modal--remove'}">
+    <main class="modal ${remove ? 'modal--remove' : ''}">
       <div class="modal-main-area">
         <nav class="modal-nav">
           <button type="button" class="close-modal remove-modal button-close--rounded">
@@ -54,6 +54,17 @@ export function generateBaseModal(data, previewPhoto, callback, remove) {
   content.addClass('lock-scroll')
   navbar.addClass('lock-scroll')
   footer.addClass('lock-scroll')
+}
+
+export function showModal() {
+  let modal = $('.modal')
+  if (modal.length > 0) {
+    modal.fadeIn(280)
+    body.addClass('lock-scroll')
+    content.addClass('lock-scroll')
+    navbar.addClass('lock-scroll')
+    footer.addClass('lock-scroll')
+  }
 }
 
 export function removeModal() {

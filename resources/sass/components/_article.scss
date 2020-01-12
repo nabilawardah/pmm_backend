@@ -437,10 +437,17 @@
 }
 
 .article-author-thumbnail {
-  width: 36px;
-  height: 36px;
+  &:not(.larger) {
+    width: 36px;
+    height: 36px;
+    margin-right: 12px;
+  }
   border-radius: 9999px;
-  margin-right: 12px;
+  &.larger {
+    width: 48px;
+    height: 48px;
+    margin-right: 16px;
+  }
 }
 
 .article-author-wrapper {
@@ -448,4 +455,8 @@
   justify-content: flex-start;
   align-items: center;
   color: $dark-alpha-60;
+}
+
+.article-reader > .ql-editor {
+  padding-bottom: 0;
 }

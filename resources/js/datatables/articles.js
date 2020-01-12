@@ -5,15 +5,15 @@ import dayjs from 'dayjs'
 import User from './../class/User'
 import { generateCustomSearch } from './../components/datatable-searchbox'
 import { generateButtonSpinner } from './../components/button-spinner'
-import { generateUserProfileDetail, hideSecondaryModal } from '../components/modals/index'
+import { showModal } from '../components/modals/index'
 import { uploadProfilePhoto, saveProfilePhoto, processPhotoUploading } from './../components/photo-uploader'
 import { addError, removeError } from './../components/input-field'
 import { generateAdminRole, generateUserRole } from './../components/role'
 
-$(function() {
-  generateCustomSearch('#articles-table_filter')
-  axios.get('/api/articles').then(res => console.log('ARTICLES: ', res))
-})
+// $(function() {
+//   generateCustomSearch('#articles-table_filter')
+//   axios.get('/api/articles').then(res => console.log('ARTICLES: ', res))
+// })
 
 // Generate Datatables
 let articlesTable = $('#articles-table').DataTable({
@@ -46,7 +46,7 @@ let articlesTable = $('#articles-table').DataTable({
           return data
         } else {
           return `
-            <a href="/articles/${full.id}" class="article-info table-main-info">
+            <a href="/admin/articles/${full.id}" class="article-info table-main-info">
               <div class="profile-thumbnail lazyload-bg" style="width: 72px; height: 48px; min-width: 72px; min-height: 48px; background-image: url('${cover}'), linear-gradient(to top, #008384, #008384);"></div>
               <textarea class="hidden">${fullData}</textarea>
               <span class="user-data">
@@ -133,3 +133,39 @@ articlesTable
       })
   })
   .draw()
+
+$(function() {
+  let singleArticleData = $('#single-article-data')
+
+  if (singleArticleData.length > 0) {
+    $(document).on('click', '.unlist-article', unpublishArticle)
+    $(document).on('click', '.publish-article', publishArticle)
+    $(document).on('click', '.confirm-delete-article', showModal)
+
+    function unpublishArticle() {
+      let data = JSON.parse(singleArticleData.val())
+      console.log('UNPUBLISHING...')
+      console.log(data)
+      axios
+        .get(`/api/articles/unlist/${data.id}`)
+        .then(res => {
+          singleArticleData.val(JSON.stringify(res.data))
+          window.location.reload()
+        })
+        .catch(err => console.log('ERR: ', err))
+    }
+
+    function publishArticle() {
+      let data = JSON.parse(singleArticleData.val())
+      console.log('PUBLISHING...')
+      console.log(data)
+      axios
+        .get(`/api/articles/publish/${data.id}`)
+        .then(res => {
+          singleArticleData.val(JSON.stringify(res.data))
+          window.location.reload()
+        })
+        .catch(err => console.log('ERR: ', err))
+    }
+  }
+})

@@ -3,6 +3,7 @@ export {
   generateBaseModal,
   removeModal,
   hideModal,
+  showModal,
   hidePrimaryModal,
   showPrimaryModal,
   hideSecondaryModal,

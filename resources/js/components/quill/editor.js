@@ -42,6 +42,16 @@ if ($('#wysiwyg-editor').length > 0) {
   } else alert('Warning: String.addSlashes has already been declared elsewhere.')
 
   $(function() {
+    // Edit State
+    let articleDataContainer = $('textarea#article-data')
+    let articleData
+    if (articleDataContainer.length > 0) {
+      articleData = JSON.parse(articleDataContainer.val())
+      console.log('EDITING ARTICLE: ', articleData)
+      articleEditor.setContents(articleData.content)
+      // articleEditor.root.classList.remove('ql-blank')
+    }
+
     checkTitleState($('.editor-title'))
     checkTitleState($('.editor-subtitle-preview'))
 

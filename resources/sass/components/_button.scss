@@ -89,7 +89,13 @@
   }
 
   &.ghost {
-    color: $brand-primary-200;
+    &.primary {
+      color: $brand-primary-200;
+    }
+
+    &.secondary {
+      color: $brand-secondary-100;
+    }
     background-color: transparent;
     padding-top: 8px;
     padding-bottom: 8px;

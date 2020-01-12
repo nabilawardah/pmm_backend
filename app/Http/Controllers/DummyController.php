@@ -17,6 +17,8 @@ class DummyController extends Controller
 
     public function __construct()
     {
+        date_default_timezone_set('Asia/Jakarta');
+
         $this->all_division = [
             (object) ['name' => 'Kebersihan', 'value' => 'Kebersihan'],
             (object) ['name' => 'Operasional', 'value' => 'Operasional'],
@@ -117,11 +119,11 @@ class DummyController extends Controller
         $featured_article;
 
         foreach ($this->articles as $article) {
-            if (isset($article['featured']) && $article['featured'] === true && $article['published'] === true) {
+            if (isset($article['featured']) && $article['featured'] && $article['published']) {
                 $featured_article = $article;
             }
 
-            if ($article['published'] === true && isset($article['featured']) && $article['featured'] === false) {
+            if ($article['published'] && isset($article['featured']) && !$article['featured']) {
                 array_push($all_articles, $article);
             }
         }
@@ -129,7 +131,7 @@ class DummyController extends Controller
         return view('web.articles.index', [
             'active_page' => 'Articles',
             'articles' => array_reverse($all_articles),
-            'featured_article' => $featured_article ? $featured_article : null,
+            'featured_article' => $featured_article,
             ]
         );
     }
@@ -185,7 +187,15 @@ class DummyController extends Controller
 
     public function edit_article(Request $request)
     {
+        $selected_article = [];
+        foreach ($this->articles as $article) {
+            if ((int) $request->id === (int) $article['id']) {
+                $selected_article = $article;
+            }
+        }
+
         return view('admin.articles.edit', [
+            'article' => $selected_article,
             'user_id' => $request->user_id,
             'article_id' => $request->id,
             'active_page' => 'Articles',
@@ -204,7 +214,7 @@ class DummyController extends Controller
                 $article['subtitle'] = $request->subtitle;
                 $article['content'] = $request->content;
                 $article['html'] = $request->html;
-                $article['published'] = true;
+                $article['published'] = false;
                 $article['submitted'] = true;
                 $article['submitted_at'] = Carbon::now();
 
@@ -234,6 +244,19 @@ class DummyController extends Controller
         return view('web.articles.detail', ['active_page' => 'Articles', 'article' => $requested_article, 'html' => $requested_article['html']]);
     }
 
+    public function show_article_admin(Request $request)
+    {
+        $requested_article = [];
+
+        foreach ($this->articles as $article) {
+            if ((int) $article['id'] === (int) $request->id) {
+                $requested_article = $article;
+            }
+        }
+
+        return view('admin.articles.detail', ['active_page' => 'Articles', 'article' => $requested_article, 'html' => $requested_article['html']]);
+    }
+
     public function post_article_media(Request $request)
     {
         request()->validate([
@@ -255,7 +278,56 @@ class DummyController extends Controller
         }
     }
 
-    public function update_article(Request $request)
+    public function unlist_article(Request $request)
     {
+        $modified_article = [];
+        $placeholder = [];
+        foreach ($this->articles as $article) {
+            if ((int) $article['id'] === (int) $request['article_id']) {
+                $article['published'] = false;
+                $modified_article = $article;
+                array_push($placeholder, $article);
+            }
+        }
+
+        $this->jsonArticles['data'] = $placeholder;
+        $this->save_article_to_file();
+
+        return $modified_article;
+    }
+
+    public function publish_article(Request $request)
+    {
+        $modified_article = [];
+        $placeholder = [];
+        foreach ($this->articles as $article) {
+            if ((int) $article['id'] === (int) $request['article_id']) {
+                $article['published'] = true;
+                $article['published_at'] = Carbon::now();
+                $modified_article = $article;
+                array_push($placeholder, $article);
+            }
+        }
+
+        $this->jsonArticles['data'] = $placeholder;
+        $this->save_article_to_file();
+
+        return $modified_article;
+    }
+
+    public function delete_article(Request $request)
+    {
+        $modified_article = [];
+        $placeholder = [];
+        foreach ($this->articles as $article) {
+            if ((int) $article['id'] !== (int) $request['article_id']) {
+                array_push($placeholder, $article);
+            }
+        }
+
+        $this->jsonArticles['data'] = $placeholder;
+        $this->save_article_to_file();
+
+        return redirect('/admin/articles');
     }
 }

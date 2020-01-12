@@ -32,7 +32,7 @@ Route::get('/admin/articles', function () {
     return view('admin.articles.index', ['active_page' => 'Articles']);
 });
 Route::get('/admin/articles/{user_id}/edit/{id}', 'DummyController@edit_article');
-Route::get('/admin/articles/{id}', 'DummyController@show_article');
+Route::get('/admin/articles/{id}', 'DummyController@show_article_admin');
 
 Route::get('/admin/events', function () {
     return view('admin.events.index', ['active_page' => 'Events']);
@@ -59,3 +59,7 @@ Route::get('/articles/create/{user_id}', 'DummyController@create_article');
 Route::post('/api/articles/media/{id}', 'DummyController@post_article_media');
 Route::post('/api/articles/submit/{article_id}', 'DummyController@submit_article');
 Route::get('/api/articles', 'DummyController@get_all_articles');
+
+Route::get('/api/articles/unlist/{article_id}', 'DummyController@unlist_article');
+Route::get('/api/articles/publish/{article_id}', 'DummyController@publish_article');
+Route::get('/api/articles/delete/{article_id}', 'DummyController@delete_article');
