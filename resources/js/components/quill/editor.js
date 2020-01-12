@@ -100,8 +100,8 @@ if ($('#wysiwyg-editor').length > 0) {
           type: 'image',
         },
       }
-      console.log('EDITOR: ', data)
 
+      console.log('EDITOR: ', data)
       axios
         .post(`/api/articles/submit/${articleId}`, data)
         .then(res => {

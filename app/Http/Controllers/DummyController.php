@@ -131,7 +131,7 @@ class DummyController extends Controller
         return view('web.articles.index', [
             'active_page' => 'Articles',
             'articles' => array_reverse($all_articles),
-            'featured_article' => $featured_article,
+            'featured_article' => $featured_article ?? null,
             ]
         );
     }
@@ -287,6 +287,8 @@ class DummyController extends Controller
                 $article['published'] = false;
                 $modified_article = $article;
                 array_push($placeholder, $article);
+            } else {
+                array_push($placeholder, $article);
             }
         }
 
@@ -305,6 +307,8 @@ class DummyController extends Controller
                 $article['published'] = true;
                 $article['published_at'] = Carbon::now();
                 $modified_article = $article;
+                array_push($placeholder, $article);
+            } else {
                 array_push($placeholder, $article);
             }
         }

@@ -11,6 +11,7 @@
   @include('components.navbar-article-admin')
 
   @component('layouts.main-content', ['width' => 'default'])
+    <textarea class="hidden" id="single-article-data">{{ json_encode($article) }}</textarea>
     <header class="section--inset" style="margin-bottom: 64px">
       <h1 class="heading1" style="margin-bottom: 32px">{{ html_entity_decode($article['title'], ENT_HTML5) }}</h1>
       <footer class="article-author-wrapper" style="margin-bottom: 32px;">

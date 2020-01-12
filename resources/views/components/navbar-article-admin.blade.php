@@ -10,7 +10,7 @@
       <li style="display: flex; align-items: center;">
         <img src="/icons/arrow-down-small.svg" alt="Back" style="width: 12px; height: 12px; margin-right: 8px; color: #767676; transform: rotate(90deg)">
         {{-- <a class="medium" href="/admin/articles" style="color: #767676;">Back to Articles</a> --}}
-        <a class="medium back-link" style="color: #767676;">Back to Articles</a>
+        <a class="medium back-link" style="color: #767676; font-weight: 500;">Back to Articles</a>
       </li>
     </ul>
     <ul class="navbar-secondary inline--l">
