@@ -89,7 +89,7 @@ usersTable
 $(
   (function() {
     let button
-    let modal = $('.modal')
+    let modal = $('.modal:not(.no-hide)')
 
     if (modal.length > 0) {
       modal.hide()

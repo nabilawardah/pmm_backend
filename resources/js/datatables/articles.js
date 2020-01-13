@@ -140,7 +140,7 @@ $(function() {
   if (singleArticleData.length > 0) {
     $(document).on('click', '.unlist-article', unpublishArticle)
     $(document).on('click', '.publish-article', publishArticle)
-    $(document).on('click', '.confirm-delete-article', showModal)
+    $(document).on('click', '.confirm-delete-article', () => showModal('#confirm-delete-article'))
 
     function unpublishArticle() {
       let data = JSON.parse(singleArticleData.val())

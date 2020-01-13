@@ -10,7 +10,17 @@
         "photo": "ongki.jpg",
         "phone": "082377296969",
         "divisi": "Kebersihan",
-        "working_area": "OB"
+        "working_area": "OB",
+        "media": [
+          {
+            "type": "image",
+            "url": "20200109141050-app.png"
+          },
+          {
+            "type": "image",
+            "url": "io.png"
+          }
+        ]
       },
       "cover": {
         "src": "io.png",
@@ -62,7 +72,17 @@
         "photo": "ongki.jpg",
         "phone": "082377296969",
         "divisi": "Kebersihan",
-        "working_area": "OB"
+        "working_area": "OB",
+        "media": [
+          {
+            "type": "image",
+            "url": "20200109141050-app.png"
+          },
+          {
+            "type": "image",
+            "url": "io.png"
+          }
+        ]
       },
       "cover": {
         "src": "20200109141050-app.png",

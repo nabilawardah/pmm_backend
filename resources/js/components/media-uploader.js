@@ -5,13 +5,17 @@ let footer = $('.main-footer')
 
 export function generateMedia(callback) {
   let content = `
-    <header>
-      <h1 class="heading1">Add Media to Your Article</h1>
+    <header style="width: 100%;">
+      <h1 class="heading2">Add Media to Your Article</h1>
       <p class="medium">Add a new one or choose from your media library</p>
     </header>
     <div>
       <button class="button button--medium primary">Upload</button>
     </div>
+    <section>
+      <h3 class="heading2">Choose from your library</h3>
+      <ul class="media-library-container"></ul>
+    </section>
   `
 
   let markup = `
@@ -25,11 +29,11 @@ export function generateMedia(callback) {
             <div class="modal-close-text">esc</div>
           </button>
         </nav>
-        <div class="modal-wrapper container-narrow">
+        <div class="modal-wrapper container">
           ${content}
           <div class="modal-action-wrapper">
             <footer class="modal-action-bar container-narrow">
-              <button class="button button--large primary save-change">Save Changes</button>
+              <button class="button button--large primary select-media">Select Media</button>
               <button class="button button--large default close-modal">Cancel</button>
             </footer>
           </div>

@@ -28,6 +28,7 @@
     "datatables.net-fixedcolumns-bs4": "^3.3.0",
     "datatables.net-fixedcolumns-dt": "^3.3.0",
     "dayjs": "^1.8.19",
+    "is-image-url": "^1.1.8",
     "jquery": "^3.4.1",
     "lazysizes": "^5.2.0",
     "lqip": "^2.1.0",

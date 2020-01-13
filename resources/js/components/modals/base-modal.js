@@ -58,8 +58,13 @@ export function generateBaseModal(data, previewPhoto, callback, remove) {
   footer.addClass('lock-scroll')
 }
 
-export function showModal() {
-  let modal = $('.modal')
+export function showModal(id) {
+  let modal
+  if (id) {
+    modal = $(id)
+  } else {
+    modal = $('.modal')
+  }
   if (modal.length > 0) {
     modal.fadeIn(280)
     body.addClass('lock-scroll')
@@ -69,8 +74,13 @@ export function showModal() {
   }
 }
 
-export function removeModal() {
-  let modal = $('.modal')
+export function removeModal(id) {
+  let modal
+  if (id) {
+    modal = $(id)
+  } else {
+    modal = $('.modal')
+  }
   body.off('append')
   modal.remove()
   body.removeClass('lock-scroll')
@@ -79,8 +89,14 @@ export function removeModal() {
   footer.removeClass('lock-scroll')
 }
 
-export function hideModal() {
-  let modal = $('.modal')
+export function hideModal(id) {
+  let modal
+  if (id) {
+    modal = $(id)
+  } else {
+    modal = $('.modal')
+  }
+
   // Remove binding on append
   body.off('append')
   // Reset modal state

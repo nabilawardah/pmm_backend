@@ -12,6 +12,7 @@
 
   @include('components.navbar-writing')
   @include('components.confirm-delete-article')
+  @include('components.media-library')
 
   @component('layouts.main-content', ['width' => 'bleed'])
     <section>
@@ -59,7 +60,7 @@
       <span class="ql-formats">
         <button class="ql-link"></button>
         {{-- <button class="ql-image"></button> --}}
-        {{-- <button class="ql-video"></button> --}}
+        <button class="ql-video"></button>
         <button class="ql-media"></button>
       </span>
       <span class="ql-formats">

@@ -1,8 +1,9 @@
 import Quill from 'quill'
 import { imageHandler } from './quill-image-handler'
-import { CustomClipboard, generateIcon, toolbarOptions, removeFormatTitle, checkTitleState } from './quill-helper'
+import { CustomClipboard, generateIcon, removeFormatTitle, checkTitleState } from './quill-helper'
 
 import CustomImage from './custom-blots/Image'
+import CustomVideo from './custom-blots/Video'
 
 const icons = Quill.import('ui/icons')
 const Parchment = Quill.import('parchment')
@@ -11,6 +12,7 @@ const Block = Quill.import('blots/block')
 Block.className = 'section--inset'
 
 Quill.register(CustomImage)
+Quill.register(CustomVideo)
 Quill.register(Block, true)
 
 // Register solution for scroll issue on paste
@@ -34,6 +36,8 @@ if ($('#wysiwyg-editor').length > 0) {
     placeholder: 'Write your article...',
     theme: 'snow',
   })
+
+  window.activeQuill = articleEditor
 
   if (!String.prototype.addSlashes) {
     String.prototype.addSlashes = function() {

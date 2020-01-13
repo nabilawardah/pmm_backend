@@ -168,7 +168,7 @@ class DummyController extends Controller
 
         $new_article = (object) [
             'id' => $new_article_id,
-            'author' => $user,
+            'author' => (int) $user['id'],
             'featured' => false,
             'published' => false,
             'submitted' => false,
@@ -188,15 +188,23 @@ class DummyController extends Controller
     public function edit_article(Request $request)
     {
         $selected_article = [];
+        $author = [];
         foreach ($this->articles as $article) {
             if ((int) $request->id === (int) $article['id']) {
                 $selected_article = $article;
             }
         }
 
+        foreach ($this->users as $user) {
+            if ((int) $request->user_id === (int) $user['id']) {
+                $author = $user;
+            }
+        }
+
         return view('admin.articles.edit', [
             'article' => $selected_article,
             'user_id' => $request->user_id,
+            'author' => $author,
             'article_id' => $request->id,
             'active_page' => 'Articles',
         ]);
@@ -234,6 +242,7 @@ class DummyController extends Controller
     public function show_article(Request $request)
     {
         $requested_article = [];
+        $author = [];
 
         foreach ($this->articles as $article) {
             if ((int) $article['id'] === (int) $request->id) {
@@ -241,12 +250,19 @@ class DummyController extends Controller
             }
         }
 
-        return view('web.articles.detail', ['active_page' => 'Articles', 'article' => $requested_article, 'html' => $requested_article['html']]);
+        foreach ($this->users as $user) {
+            if ((int) $requested_article['id'] === (int) $user['id']) {
+                $author = $user;
+            }
+        }
+
+        return view('web.articles.detail', ['active_page' => 'Articles', 'author' => $author, 'article' => $requested_article, 'html' => $requested_article['html']]);
     }
 
     public function show_article_admin(Request $request)
     {
         $requested_article = [];
+        $author = [];
 
         foreach ($this->articles as $article) {
             if ((int) $article['id'] === (int) $request->id) {
@@ -254,7 +270,13 @@ class DummyController extends Controller
             }
         }
 
-        return view('admin.articles.detail', ['active_page' => 'Articles', 'article' => $requested_article, 'html' => $requested_article['html']]);
+        foreach ($this->users as $user) {
+            if ((int) $requested_article['id'] === (int) $user->id) {
+                $author = $user;
+            }
+        }
+
+        return view('admin.articles.detail', ['active_page' => 'Articles', 'article' => $requested_article, 'author' => $author, 'html' => $requested_article['html']]);
     }
 
     public function post_article_media(Request $request)
@@ -333,5 +355,18 @@ class DummyController extends Controller
         $this->save_article_to_file();
 
         return redirect('/admin/articles');
+    }
+
+    public function get_all_media(Request $request)
+    {
+        $all_media = [];
+
+        foreach ($this->users as $user) {
+            if ((int) $request['user_id'] === (int) $user['id']) {
+                $all_media = $user['media'];
+            }
+        }
+
+        return $all_media;
     }
 }
