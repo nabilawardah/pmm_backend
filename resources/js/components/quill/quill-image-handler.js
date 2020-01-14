@@ -60,8 +60,9 @@ function handleUpload() {
     fileInput.setAttribute('hidden', 'true')
     fileInput.setAttribute(
       'accept',
-      'image/png, image/gif, image/jpeg, image/bmp, image/x-icon, video/mp4, video/3gpp, video/quicktime, video/x-msvideo, video/x-ms-wmv, video/mpeg, video/webm'
+      'image/png, image/gif, image/jpeg, image/bmp, image/x-icon, video/ogg, video/mp4, video/webm'
     )
+    // 'image/png, image/gif, image/jpeg, image/bmp, image/x-icon, video/ogg, video/mp4, video/3gpp, video/quicktime, video/x-msvideo, video/x-ms-wmv, video/mpeg, video/webm'
     fileInput.classList.add('ql-image')
 
     fileInput.addEventListener('change', () => {
@@ -76,6 +77,9 @@ function handleUpload() {
           headers: { 'content-type': 'multipart/form-data' },
         }
         data.append('media', fileInput.files[0])
+
+        console.log('FILE: ', file)
+        console.log('TYPE: ', fileType)
 
         axios
           .post(`/api/articles/media/${userId}`, data, config)
@@ -101,7 +105,7 @@ function handleUpload() {
                   new Delta()
                     .retain(range.index)
                     .delete(range.length)
-                    .insert({ customVideo: { url: res.data.url, type: 'video/mp4' } }),
+                    .insert({ customVideo: { url: res.data.url, type: fileType } }),
                   Quill.sources.USER
                 )
                 fileInput.value = ''
@@ -120,6 +124,7 @@ function handleUpload() {
               }
               reader.readAsDataURL(fileInput.files[0])
             }
+            hideModal()
           })
           .catch(err => console.log(err))
       }
@@ -139,8 +144,8 @@ $(function() {
   $(document).on('click', '.add-media-with-link', function() {
     // let url =
     //   'https://res.cloudinary.com/vasilenka/image/upload/v1540917416/kotakita/library/2018-10-30/lib-bungarampai.jpg'
-
-    let url = $('#add-media-link').val()
+    let input = $('#add-media-link')
+    let url = input.val()
 
     let range = activeQuill.getSelection(true)
 
@@ -165,6 +170,7 @@ $(function() {
 
     updateMediaLibrary()
     hideModal()
+    input.val('')
   })
 
   $(document).on('click', '.media-library-item-placeholder', function() {

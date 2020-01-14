@@ -1,4 +1,4 @@
-<main id="media-library" class="modal no-hide">
+<main id="media-library" class="modal">
   <div class="modal-main-area" style="width: 100%;">
 
     <nav class="modal-nav">
@@ -13,18 +13,27 @@
     <div class="modal-wrapper container-narrow" style="width: 100%;">
 
       <header style="width: 100%;" class="media-upload-header">
-        <h1 class="heading2">Add media to your article</h1>
+        <h1 class="heading2">Add Photo & Video</h1>
       </header>
 
       <div class="media-upload-area">
         <button class="button button--large primary upload-media-library">Upload Media</button>
+        <span style="margin-top: 24px; color: #767676;">
+          Please provide only
+          <strong>*.jpg</strong>,
+          <strong>*.jpeg</strong>,
+          <strong>*.svg</strong>,
+          <strong>*.gif</strong>,
+          <strong>*.png</strong>,
+          <strong>*.mp4</strong>,
+          <strong>*.ogv</strong>,
+          and <strong>*.webm</strong> file format.</span>
       </div>
 
       <section style="margin-bottom: 48px;">
         <fieldset class="input" style="margin-bottom: 12px;">
-          <label class="input-label" for="add-media-link">or add media from a link</label>
-          <input id="add-media-link" class="input-field" name="add-media-link" type="url" placeholder="Paste your link..."/>
-          <span class="input-hint">Please include http:// or https://</span>
+          <label class="input-label" for="add-media-link">Add media from a link (Youtube, Vimeo, or a direct link to the file)</label>
+          <input style="margin-right: 8px;" id="add-media-link" class="input-field" name="add-media-link" type="url" placeholder="Paste your link..."/>
         </fieldset>
         <button class="button button--medium primary add-media-with-link">Use Link</button>
       </section>

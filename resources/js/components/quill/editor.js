@@ -61,7 +61,7 @@ if ($('#wysiwyg-editor').length > 0) {
 
     articleEditor.root.addEventListener('click', function(ev) {
       let image = Parchment.find(ev.target.parentNode)
-      if (image instanceof CustomImage) {
+      if (image instanceof CustomImage || image instanceof CustomVideo) {
         articleEditor.setSelection(image.offset(articleEditor.scroll), 1, 'user')
       }
     })

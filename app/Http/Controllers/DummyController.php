@@ -281,8 +281,10 @@ class DummyController extends Controller
 
     public function post_article_media(Request $request)
     {
+        // 'media' => 'required|mimes:jpeg,png,jpg,gif,svg,mp4,avi,3gp,webm,mpeg|max:102400',
+
         request()->validate([
-            'media' => 'required|mimes:jpeg,png,jpg,gif,svg,mp4,avi,3gp,webm,mpeg|max:102400',
+            'media' => 'required|mimes:jpeg,png,jpg,gif,svg,mp4,ogv,webm',
         ]);
 
         if ($file = $request->file('media')) {
