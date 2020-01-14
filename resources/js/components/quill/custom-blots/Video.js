@@ -11,6 +11,7 @@ class VideoBlot extends BlockEmbed {
     let className = `section--inset ${value.class ? value.class : ''}`.trim()
 
     let video = processVideoUrl(value.url)
+    console.log('VIDEO: ', video)
 
     if (video.type === 'iframe') {
       children = document.createElement('iframe')
@@ -38,16 +39,27 @@ class VideoBlot extends BlockEmbed {
 
     node.appendChild(children)
     node.setAttribute('class', className)
-    console.log(children)
     return node
   }
 
   static value(node) {
     return {
-      alt: node.getAttribute('alt'),
-      url: node.firstChild.getAttribute('src'),
+      alt: node.firstChild.getAttribute('alt') || '',
+      url: node.firstChild.firstChild.getAttribute('src'),
       classList: node.getAttribute('class'),
     }
+  }
+
+  static formats(node) {
+    // We still need to report unregistered embed formats
+    let format = {}
+    if (node.hasAttribute('height')) {
+      format.height = node.getAttribute('height')
+    }
+    if (node.hasAttribute('width')) {
+      format.width = node.getAttribute('width')
+    }
+    return format
   }
 }
 

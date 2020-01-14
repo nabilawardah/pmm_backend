@@ -22,7 +22,7 @@
         <span class="small" style="margin-right: 16px; color: #767676">Article unlisted</span>
         <button class="button button--small primary publish-article">Publish</button>
       @endif
-      <a href="/admin/articles/{{ $article['author']['id'] }}/edit/{{ $article['id'] }}" class="no-pre button button--small default edit-article">Edit</a>
+      <a href="/admin/articles/{{ $author['id'] }}/edit/{{ $article['id'] }}" class="no-pre button button--small default edit-article">Edit</a>
       <button class="button button--small secondary ghost confirm-delete-article">Delete</button>
       </div>
       <div class="navbar-profile">

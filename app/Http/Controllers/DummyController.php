@@ -120,10 +120,20 @@ class DummyController extends Controller
 
         foreach ($this->articles as $article) {
             if (isset($article['featured']) && $article['featured'] && $article['published']) {
+                foreach ($this->users as $user) {
+                    if ((int) $user['id'] === (int) $article['author']) {
+                        $article['author'] = $user;
+                    }
+                }
                 $featured_article = $article;
             }
 
             if ($article['published'] && isset($article['featured']) && !$article['featured']) {
+                foreach ($this->users as $user) {
+                    if ((int) $user['id'] === (int) $article['author']) {
+                        $article['author'] = $user;
+                    }
+                }
                 array_push($all_articles, $article);
             }
         }
@@ -145,6 +155,11 @@ class DummyController extends Controller
 
         foreach ($this->articles as $article) {
             if (isset($article['submitted']) && $article['submitted']) {
+                foreach ($this->users as $user) {
+                    if ((int) $user['id'] === (int) $article['author']) {
+                        $article['author'] = $user;
+                    }
+                }
                 array_push($all_articles, $article);
             }
         }
@@ -251,7 +266,7 @@ class DummyController extends Controller
         }
 
         foreach ($this->users as $user) {
-            if ((int) $requested_article['id'] === (int) $user['id']) {
+            if ((int) $requested_article['author'] === (int) $user['id']) {
                 $author = $user;
             }
         }
@@ -265,14 +280,13 @@ class DummyController extends Controller
         $author = [];
 
         foreach ($this->articles as $article) {
-            if ((int) $article['id'] === (int) $request->id) {
+            if ((int) $article['id'] === (int) $request['id']) {
+                foreach ($this->users as $user) {
+                    if ((int) $user['id'] === (int) $article['author']) {
+                        $author = $user;
+                    }
+                }
                 $requested_article = $article;
-            }
-        }
-
-        foreach ($this->users as $user) {
-            if ((int) $requested_article['id'] === (int) $user->id) {
-                $author = $user;
             }
         }
 

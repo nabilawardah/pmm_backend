@@ -13,12 +13,12 @@
       <footer class="article-author-wrapper" style="margin-bottom: 32px;">
         <img class="article-author-thumbnail larger" src="/images/users/default.png" alt="Ongki Herlambang">
         <div class="article-author-info">
-          <p class="heading5" style="color: #484848; margin-bottom: 2px;">{{ $article['author']['name'] }}</p>
+          <p class="heading5" style="color: #484848; margin-bottom: 2px;">{{ $author['name'] }}</p>
           <p class="medium article-published-date" style="color: #767676;">Published on {{ date('M d, Y', strtotime($article['submitted_at'])) }}</p>
         </div>
       </footer>
     </header>
-    <img class="editor-cover-image" src="/media/user-{{ $article['author']['id'] }}/{{ $article['cover']['src'] }}" alt="">
+    <img class="editor-cover-image" src="/media/user-{{ $author['id'] }}/{{ $article['cover']['src'] }}" alt="">
     <section class="ql-container ql-snow article-reader">
       <article class="ql-editor">
         {!! html_entity_decode($article['html'])  !!}

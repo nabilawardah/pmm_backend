@@ -8,6 +8,7 @@ import CustomVideo from './custom-blots/Video'
 const icons = Quill.import('ui/icons')
 const Parchment = Quill.import('parchment')
 const Block = Quill.import('blots/block')
+const Delta = Quill.import('delta')
 
 Block.className = 'section--inset'
 
@@ -18,7 +19,9 @@ Quill.register(Block, true)
 // Register solution for scroll issue on paste
 Quill.register('modules/clipboard', CustomClipboard, true)
 
-if ($('#wysiwyg-editor').length > 0) {
+let wysiwyg = $('#wysiwyg-editor')
+
+if (wysiwyg.length > 0) {
   icons.media = generateIcon('media')
   icons.divider = generateIcon('divider')
   icons.header[3] = generateIcon('header-3')
@@ -37,27 +40,23 @@ if ($('#wysiwyg-editor').length > 0) {
     theme: 'snow',
   })
 
+  // Edit State
+  let articleDataContainer = $('textarea#article-data')
+  if (articleDataContainer.length > 0) {
+    let articleData = JSON.parse(articleDataContainer.val())
+    console.log('EDITING ARTICLE: ', articleData)
+    articleEditor.setContents(articleData.content)
+  }
+
   window.activeQuill = articleEditor
 
-  if (!String.prototype.addSlashes) {
-    String.prototype.addSlashes = function() {
-      return this.replace(/[\\']/g, '\\$&').replace(/\u0000/g, '\\0')
-    }
-  } else alert('Warning: String.addSlashes has already been declared elsewhere.')
-
   $(function() {
-    // Edit State
-    let articleDataContainer = $('textarea#article-data')
-    let articleData
-    if (articleDataContainer.length > 0) {
-      articleData = JSON.parse(articleDataContainer.val())
-      console.log('EDITING ARTICLE: ', articleData)
-      articleEditor.setContents(articleData.content)
-      // articleEditor.root.classList.remove('ql-blank')
-    }
-
     checkTitleState($('.editor-title'))
     checkTitleState($('.editor-subtitle-preview'))
+
+    console.log('====================')
+    console.log(articleEditor)
+    console.log('====================')
 
     articleEditor.root.addEventListener('click', function(ev) {
       let image = Parchment.find(ev.target.parentNode)
@@ -82,15 +81,21 @@ if ($('#wysiwyg-editor').length > 0) {
     })
 
     function submitArticle() {
-      let contentContainer = $('input[name="article-content"]')
-
       let title = $('#editor-title').text()
       let subtitle = $('#editor-subtitle-preview').text()
       let userId = $('input[name="user-id"]').val()
       let articleId = $('input[name="article-id"]').val()
       let cover = $('.editor-cover-image').data('name')
 
-      contentContainer.val(JSON.stringify(articleEditor.getContents()))
+      let content = articleEditor.getContents()
+      let modified = content.map(c => {
+        if (c.insert === '\n') {
+          c.insert = `<br />`
+          return c
+        } else {
+          return c
+        }
+      })
 
       let data = {
         title: title,
@@ -98,7 +103,7 @@ if ($('#wysiwyg-editor').length > 0) {
         article_id: articleId,
         user_id: userId,
         html: articleEditor.root.innerHTML,
-        content: articleEditor.getContents(),
+        content: modified,
         cover: {
           src: cover,
           type: 'image',
@@ -106,6 +111,7 @@ if ($('#wysiwyg-editor').length > 0) {
       }
 
       console.log('EDITOR: ', data)
+
       axios
         .post(`/api/articles/submit/${articleId}`, data)
         .then(res => {

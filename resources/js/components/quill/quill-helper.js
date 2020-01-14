@@ -123,9 +123,16 @@ export function processVideoUrl(url) {
     modified = str.split('/vimeo.com/')
     newUrl = `https://player.vimeo.com/video/${modified[1]}`
     return { type: 'iframe', host: 'vimeo', url: newUrl }
-  } else if (str.includes('/media/user-')) {
+  } else if (str.match(/\.(mp4|webm|ogv|ogg)$/) != null) {
     return { type: 'video', host: 'local', url }
   } else {
     return { type: 'iframe', host: 'unknown', url }
   }
+}
+
+export function sanitize(url, protocols) {
+  let anchor = document.createElement('a')
+  anchor.href = url
+  let protocol = anchor.href.slice(0, anchor.href.indexOf(':'))
+  return protocols.indexOf(protocol) > -1
 }

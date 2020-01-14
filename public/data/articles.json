@@ -2,26 +2,7 @@
   "data": [
     {
       "id": 1,
-      "author": {
-        "id": 1,
-        "name": "Ongki Herlambang",
-        "email": "ongkiherlambang@gmail.com",
-        "role": "admin",
-        "photo": "ongki.jpg",
-        "phone": "082377296969",
-        "divisi": "Kebersihan",
-        "working_area": "OB",
-        "media": [
-          {
-            "type": "image",
-            "url": "20200109141050-app.png"
-          },
-          {
-            "type": "image",
-            "url": "io.png"
-          }
-        ]
-      },
+      "author": 1,
       "cover": {
         "src": "io.png",
         "type": "image"
@@ -64,26 +45,7 @@
     },
     {
       "id": 2,
-      "author": {
-        "id": 1,
-        "name": "Ongki Herlambang",
-        "email": "ongkiherlambang@gmail.com",
-        "role": "admin",
-        "photo": "ongki.jpg",
-        "phone": "082377296969",
-        "divisi": "Kebersihan",
-        "working_area": "OB",
-        "media": [
-          {
-            "type": "image",
-            "url": "20200109141050-app.png"
-          },
-          {
-            "type": "image",
-            "url": "io.png"
-          }
-        ]
-      },
+      "author": 1,
       "cover": {
         "src": "20200109141050-app.png",
         "type": "image"

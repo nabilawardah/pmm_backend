@@ -1,4 +1,8 @@
-<main id="media-library" class="modal">
+{{-- @php
+    dd($author)
+@endphp --}}
+
+<main id="media-library" class="modal" style="display: none;">
   <div class="modal-main-area" style="width: 100%;">
 
     <nav class="modal-nav">
@@ -41,10 +45,10 @@
       <section class="media-upload-library">
         <h3 class="heading3" style="margin-bottom: 24px;">Choose from your library</h3>
         <ul class="media-upload-library-container">
-          @foreach ($article['author']['media'] as $media)
+          @foreach ($author['media'] as $media)
             <li class="media-library-item-container">
-              <picture class="media-library-item-placeholder" data-url="/media/user-{{ $article['author']['id'] }}/{{ $media['url'] }}" data-type="{{ $media['type'] }}">
-                <img class="media-library-item" src="/media/user-{{ $article['author']['id'] }}/{{ $media['url'] }}" alt="{{ $media['url'] }}">
+              <picture class="media-library-item-placeholder" data-url="/media/user-{{ $author['id'] }}/{{ $media['url'] }}" data-type="{{ $media['type'] }}">
+                <img class="media-library-item" src="/media/user-{{ $author['id'] }}/{{ $media['url'] }}" alt="{{ $media['url'] }}">
               </picture>
             </li>
           @endforeach
