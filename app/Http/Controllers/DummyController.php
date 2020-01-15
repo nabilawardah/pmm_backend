@@ -391,6 +391,31 @@ class DummyController extends Controller
         return $all_media;
     }
 
+    public function get_data_events(Request $request)
+    {
+        $data_events = ['data' => []];
+
+        foreach ($this->events as $event) {
+            $event_participants = [];
+            $event_admin = [];
+
+            foreach ($this->users as $user) {
+                if (in_array((int) $user['id'], $event['participants'])) {
+                    array_push($event_participants, $user);
+                }
+                if ((int) $user['id'] === (int) $event['admin']) {
+                    $event_admin = $user;
+                }
+            }
+
+            $event['participants'] = $event_participants;
+            $event['admin'] = $event_admin;
+            array_push($data_events['data'], $event);
+        }
+
+        return $data_events;
+    }
+
     public function events_page(Request $request)
     {
         return view('web.events.index', [

@@ -62,3 +62,5 @@ Route::get('/api/articles/publish/{article_id}', 'DummyController@publish_articl
 Route::get('/api/articles/delete/{article_id}', 'DummyController@delete_article');
 
 Route::get('/api/media/{user_id}', 'DummyController@get_all_media');
+
+Route::get('/api/events', 'DummyController@get_data_events');

@@ -5,6 +5,7 @@ require('./helper/back-link')
 
 require('./datatables/users')
 require('./datatables/articles')
+require('./datatables/events')
 
 require('./components/quill/editor')
 require('./components/quill/reader')
