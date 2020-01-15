@@ -14,13 +14,11 @@ Route::get('/', function () {
     return view('web.home', ['active_page' => 'Home']);
 });
 Route::get('/profile/{id}', 'DummyController@show_user');
-Route::get('/events', function () {
-    return view('web.events.index', ['active_page' => 'Events']);
-});
 
 Route::get('/articles', 'DummyController@article_page');
 Route::get('/articles/{id}', 'DummyController@show_article');
 
+Route::get('/events', 'DummyController@events_page');
 Route::get('/events/{id}', function () {
     return view('web.events.detail', ['active_page' => 'Events']);
 });

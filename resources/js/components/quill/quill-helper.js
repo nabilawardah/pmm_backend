@@ -21,7 +21,7 @@ export class CustomClipboard extends Clipboard {
       let bounds = this.quill.getBounds(delta.length() - range.length, Quill.sources.SILENT)
 
       // Need to set the value fixed because we have lots of crap above the container
-      this.quill.scrollingContainer.scrollTop = bounds.top + 800
+      this.quill.scrollingContainer.scrollTop = bounds.top + 1080
     }, 1)
   }
 }

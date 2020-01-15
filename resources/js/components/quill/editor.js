@@ -8,7 +8,6 @@ import CustomVideo from './custom-blots/Video'
 const icons = Quill.import('ui/icons')
 const Parchment = Quill.import('parchment')
 const Block = Quill.import('blots/block')
-const Delta = Quill.import('delta')
 
 Block.className = 'section--inset'
 
@@ -54,10 +53,6 @@ if (wysiwyg.length > 0) {
     checkTitleState($('.editor-title'))
     checkTitleState($('.editor-subtitle-preview'))
 
-    console.log('====================')
-    console.log(articleEditor)
-    console.log('====================')
-
     articleEditor.root.addEventListener('click', function(ev) {
       let image = Parchment.find(ev.target.parentNode)
       if (image instanceof CustomImage || image instanceof CustomVideo) {
@@ -77,6 +72,17 @@ if (wysiwyg.length > 0) {
           console.log('CONTENTS: ', articleEditor.getContents())
           console.groupEnd()
         })
+      }
+    })
+
+    articleEditor.on('text-change', function(delta, oldDelta, source) {
+      if (source == 'user') {
+        console.log('Something...')
+        let block = $('.ql-editor p') // Select all p tag inside .ql-editor
+        let content = block.html() // Get the text content
+        let child = `<span style="font-size: 14px; font-family: Microsoft YaHei;">${content}</span>` // Generate new markup
+        block.find('*').remove() // Remove all initial child
+        block.append(child) // Append new child
       }
     })
 

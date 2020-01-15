@@ -15,7 +15,6 @@
   @include('components.media-library')
 
   @component('layouts.main-content', ['width' => 'bleed'])
-    <textarea class="hidden" name="article-data" id="article-data">{{ json_encode($article) ?? '' }}</textarea>
     <section>
       @isset($article['cover'])
         <div class="editor-cover-container">
@@ -76,6 +75,7 @@
     <input type="hidden" id="user-id" name="user-id" value="{{ $user_id }}" />
     <input type="hidden" name="article-title" />
     <input type="hidden" name="editor-subtitle-preview" />
+    <textarea class="hidden" name="article-data" id="article-data">{{ json_encode($article) ?? '' }}</textarea>
   @endcomponent
 
 

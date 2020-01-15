@@ -14,6 +14,8 @@ class DummyController extends Controller
     private $articles;
     private $jsonUsers;
     private $users;
+    private $jsonEvents;
+    private $events;
 
     public function __construct()
     {
@@ -42,6 +44,9 @@ class DummyController extends Controller
 
         $this->jsonUsers = json_decode(file_get_contents(base_path('public/data/users.json')), true);
         $this->users = $this->jsonUsers['data'];
+
+        $this->jsonEvents = json_decode(file_get_contents(base_path('public/data/events.json')), true);
+        $this->events = $this->jsonEvents['data'];
     }
 
     public function save_article_to_file($article = null)
@@ -384,5 +389,13 @@ class DummyController extends Controller
         }
 
         return $all_media;
+    }
+
+    public function events_page(Request $request)
+    {
+        return view('web.events.index', [
+            'active_page' => 'Events',
+            'events' => $this->events,
+        ]);
     }
 }
