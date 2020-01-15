@@ -5,18 +5,20 @@
       "admin": 1,
       "poster": "poster-1.jpg",
       "featured": false,
-      "participants": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+      "participants": [1, 3, 4, 5],
       "created_at": "2020-01-10T04:22:27.438541Z",
       "title": "Integration of IOT in Alibaba Cloud - Bandung",
       "subtitle": "Alibaba Cloud offers many solutions to enhance Industry 4.0 capabilities, especially in IoT industry.",
       "date": {
         "start": "2020-01-11T04:22:27.438541Z",
         "end": "2020-01-13T04:22:27.438541Z",
-        "notes": "Some notes here"
+        "notes": "Some notes here",
+        "formatted_date": "11 – 13 January 2020",
+        "formatted_time": "08:00 AM – 11:30 AM"
       },
       "location": {
         "name": "EduPlex Coworking Space",
-        "description": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
+        "detail": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
       },
       "content": {},
       "html": ""
@@ -26,18 +28,20 @@
       "admin": 1,
       "poster": "poster-2.jpg",
       "featured": false,
-      "participants": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+      "participants": [1],
       "created_at": "2020-01-10T04:22:27.438541Z",
       "title": "Millennials Career Talk: Here We Come, Boomers!",
       "subtitle": "Kicking off the year with talkshow and sharing sessions about career opportunities for millennials in 4.0 era with intergenerational experts.",
       "date": {
         "start": "2020-01-11T04:22:27.438541Z",
         "end": "2020-01-13T04:22:27.438541Z",
-        "notes": "Add some notes about the date here"
+        "notes": "A detailed schedule provided on the event description",
+        "formatted_date": "11 – 13 January 2020",
+        "formatted_time": "08:00 AM – 11:30 AM"
       },
       "location": {
         "name": "BLOCK71 Bandung",
-        "description": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
+        "detail": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
       },
       "content": {},
       "html": ""
@@ -47,18 +51,20 @@
       "admin": 1,
       "poster": "poster-3.jpg",
       "featured": false,
-      "participants": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+      "participants": [1, 3],
       "created_at": "2020-01-10T04:22:27.438541Z",
       "title": "Tech Talk in Bandung: Modern Application Architecture",
       "subtitle": "Mau belajar tentang event-driven microservice architecture? Datang ke acara Tech Talk yang diadakan oleh SIRCLO x Innovation Factory!",
       "date": {
         "start": "2020-01-11T04:22:27.438541Z",
         "end": "2020-01-13T04:22:27.438541Z",
-        "notes": "Add some notes about the date here"
+        "notes": "A detailed schedule provided on the event description",
+        "formatted_date": "11 – 13 January 2020",
+        "formatted_time": "08:00 AM – 11:30 AM"
       },
       "location": {
         "name": "BLOCK71 Bandung",
-        "description": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
+        "detail": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
       },
       "content": {},
       "html": ""
@@ -68,18 +74,20 @@
       "admin": 1,
       "poster": "poster-4.jpg",
       "featured": false,
-      "participants": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+      "participants": [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
       "created_at": "2020-01-10T04:22:27.438541Z",
       "title": "Study in UK Expo 2020 - Bandung",
       "subtitle": "Study in UK Expo 2020 - Bandung",
       "date": {
         "start": "2020-01-11T04:22:27.438541Z",
         "end": "2020-01-13T04:22:27.438541Z",
-        "notes": ""
+        "notes": "",
+        "formatted_date": "11 – 13 January 2020",
+        "formatted_time": "08:00 AM – 11:30 AM"
       },
       "location": {
         "name": "Crowne Plaza Bandung",
-        "description": "Jalan Lembong 19, Sumur Bandung, Jawa Barat 40111, Indonesia"
+        "detail": "Jalan Lembong 19, Sumur Bandung, Jawa Barat 40111, Indonesia"
       },
       "content": {},
       "html": ""
@@ -89,18 +97,20 @@
       "admin": 1,
       "poster": "poster-5.png",
       "featured": false,
-      "participants": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+      "participants": [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
       "created_at": "2020-01-10T04:22:27.438541Z",
       "title": "Global Democracies in Retreat, What's at Stake?",
       "subtitle": "Global Democracies in Retreat. What's at stake? A speaker series to uncover the current realities as the global world order shifts.",
       "date": {
         "start": "2020-01-11T04:22:27.438541Z",
         "end": "2020-01-13T04:22:27.438541Z",
-        "notes": "Add some notes about the date here"
+        "notes": "A detailed schedule provided on the event description",
+        "formatted_date": "11 – 13 January 2020",
+        "formatted_time": "08:00 AM – 11:30 AM"
       },
       "location": {
         "name": "Vancouver Public Library, Central Library",
-        "description": "West Georgia Street 350, Vancouver, BC V6B 6B1"
+        "detail": "West Georgia Street 350, Vancouver, BC V6B 6B1"
       },
       "content": {},
       "html": ""
@@ -110,18 +120,20 @@
       "admin": 1,
       "poster": "poster-6.png",
       "featured": false,
-      "participants": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+      "participants": [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
       "created_at": "2020-01-10T04:22:27.438541Z",
       "title": "Bandung IoT Maker Day 2020",
       "subtitle": "Towards Smart City and Smart Village",
       "date": {
         "start": "2020-01-11T04:22:27.438541Z",
         "end": "2020-01-13T04:22:27.438541Z",
-        "notes": "Add some notes about the date here"
+        "notes": "A detailed schedule provided on the event description",
+        "formatted_date": "11 – 13 January 2020",
+        "formatted_time": "08:00 AM – 11:30 AM"
       },
       "location": {
         "name": "Grand Tebu Hotel Bandung",
-        "description": "Jalan L. L. R.E. Martadinata No.207, Kec. Bandung Wetan, Jawa Barat 40114, Indonesia"
+        "detail": "Jalan L. L. R.E. Martadinata No.207, Kec. Bandung Wetan, Jawa Barat 40114, Indonesia"
       },
       "content": {},
       "html": ""
@@ -131,18 +143,20 @@
       "admin": 1,
       "poster": "poster-7.png",
       "featured": false,
-      "participants": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+      "participants": [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
       "created_at": "2020-01-10T04:22:27.438541Z",
       "title": "Kopi Chat: Building Winning HR Ecosystem in Your Startup",
       "subtitle": "Building a winning HR Ecosystem in your startup",
       "date": {
         "start": "2020-01-11T04:22:27.438541Z",
         "end": "2020-01-13T04:22:27.438541Z",
-        "notes": "Add some notes about the date here"
+        "notes": "A detailed schedule provided on the event description",
+        "formatted_date": "11 – 13 January 2020",
+        "formatted_time": "08:00 AM – 11:30 AM"
       },
       "location": {
         "name": "BLOCK71 Bandung",
-        "description": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
+        "detail": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
       },
       "content": {},
       "html": ""

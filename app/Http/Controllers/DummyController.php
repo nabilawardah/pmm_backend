@@ -398,4 +398,40 @@ class DummyController extends Controller
             'events' => $this->events,
         ]);
     }
+
+    public function show_event(Request $request)
+    {
+        $selected_event = [];
+        $participants = [];
+        $thumbnail_participants = [];
+        $other_participants = [];
+
+        foreach ($this->events as $event) {
+            if ((int) $event['id'] === (int) $request->id) {
+                $selected_event = $event;
+            }
+        }
+
+        foreach ($this->users as $user) {
+            if (in_array((int) $user['id'], $selected_event['participants'])) {
+                array_push($participants, $user);
+            }
+        }
+
+        for ($i = 0; $i < count($participants); ++$i) {
+            if ($i < 5) {
+                array_push($thumbnail_participants, $participants[$i]);
+            } else {
+                array_push($other_participants, $participants[$i]);
+            }
+        }
+
+        return view('web.events.detail', [
+            'active_page' => 'Events',
+            'event' => $selected_event,
+            'participants' => $participants,
+            'thumbnail_participants' => $thumbnail_participants,
+            'other_participants' => $other_participants,
+        ]);
+    }
 }

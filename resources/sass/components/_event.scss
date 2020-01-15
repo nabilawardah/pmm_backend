@@ -76,4 +76,144 @@
 }
 
 .event-list-footer {
+  color: $dark-hex-60;
+}
+
+.event-detail-outer-wrapper {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: $space-ll;
+  grid-row-gap: 0px;
+  padding: $space-ll;
+  position: relative;
+}
+
+.event-detail-info {
+  position: sticky;
+  top: 48px;
+  height: calc(100vh - 96px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.event-detail-aside {
+  position: sticky;
+  top: 48px;
+  height: calc(100vh - 96px);
+  width: 100%;
+}
+
+.event-detail-poster-wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 96px);
+  overflow: hidden;
+}
+
+.event-detail-poster {
+  border-radius: 6px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 1;
+  transition: opacity 500ms ease 0s;
+}
+
+.divider {
+  width: 100%;
+  border-bottom: 1px solid $dark-alpha-30;
+
+  &--small {
+    margin-top: $space-sm;
+    margin-bottom: $space-sm;
+  }
+
+  &--medium {
+    margin-top: $space-ml;
+    margin-bottom: $space-ml;
+  }
+
+  &--large {
+    margin-top: $space-ll;
+    margin-bottom: $space-ll;
+  }
+}
+
+.event-detail-subtitle {
+  font-size: 22px;
+  line-height: 28px;
+  color: $dark-alpha-70;
+  margin-bottom: $space-ml;
+  font-weight: 500;
+}
+
+.event-detail-info-list-item {
+  display: flex;
+  margin-bottom: $space-l;
+}
+
+.event-detail-info-list-item-icon {
+  display: inline-flex;
+  margin-right: $space-sm;
+  width: 16px;
+  height: 20px;
+  align-items: center;
+}
+
+.event-detail-info-list-item-detail {
+  flex: auto;
+  display: block;
+
+  > .heading5 {
+    font-variant-numeric: tabular-nums;
+  }
+
+  > .small {
+    color: $dark-hex-60;
+  }
+}
+
+.event-detail-participants-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-bottom: $space-l;
+  border-bottom: 1px solid $dark-alpha-20;
+  margin-bottom: $space-l;
+}
+
+.event-detail-participants-image-wrapper {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  overflow: hidden;
+  border: 3px solid $light-alpha-100;
+
+  &:not(:first-child) {
+    margin-left: -6px;
+  }
+}
+
+.event-detail-participants-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+  object-position: center center;
 }
