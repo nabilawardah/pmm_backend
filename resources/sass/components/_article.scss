@@ -317,38 +317,6 @@
   }
 }
 
-.editor-cover {
-  position: absolute;
-  visibility: hidden;
-  z-index: -999;
-  top: -100;
-}
-
-.editor-cover-container {
-  @include section-outset;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom: $space-ll;
-  // padding-bottom: 60vh;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-color: transparent;
-}
-
-.cover-empty {
-  @include section-inset;
-  padding-bottom: 30vh;
-  background-color: $dark-alpha-10;
-  border: dashed 4px $dark-alpha-30;
-  border-radius: 12px;
-  margin-bottom: $space-ll;
-}
-
-.editor-cover-image {
-  width: 100%;
-}
-
 // Article List
 .article-list {
 }

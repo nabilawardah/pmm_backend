@@ -10,7 +10,11 @@
     }
   </style>
 
-  @include('components.navbar-writing')
+  @include('components.navbar-writing', [
+    'title' => 'New Article',
+    'action_class' => 'publish-article',
+    'action_label' => 'Submit Article'
+  ])
   @include('components.confirm-delete', [
     'message' => 'Deleted articles are gone forever. Are you sure?',
     'url' => '/api/articles/delete/'.$article['id']
@@ -20,11 +24,11 @@
   @component('layouts.main-content', ['width' => 'bleed'])
     <section>
       @isset($article['cover'])
-        <div class="editor-cover-container">
-          <img class="editor-cover-image" data-name="{{ $article['cover']['src'] }}" src="/media/user-1/{{ $article['cover']['src'] }}">
+        <div class="editor-cover-container editor-cover-container--article">
+          <img class="editor-cover-image editor-cover-image--article" data-name="{{ $article['cover']['src'] }}" src="/media/user-1/{{ $article['cover']['src'] }}">
         </div>
       @else
-        <div class="editor-cover-container cover-empty"></div>
+        <div class="editor-cover-container cover-empty editor-cover-container--article"></div>
       @endisset
 
       <header class="editor-header-wrapper section--inset">

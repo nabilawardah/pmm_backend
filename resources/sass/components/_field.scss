@@ -1,7 +1,7 @@
 .input {
   display: block;
   position: relative;
-  z-index: $layer-xs;
+  // z-index: $layer-xs;
 
   &:not(:last-child) {
     margin-bottom: $space-ml;
@@ -77,4 +77,16 @@
   right: 12px;
   bottom: 12px;
   z-index: -1;
+}
+
+.date-picker-outer-wrapper {
+}
+
+.date-picker-container {
+  width: 100%;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
 }

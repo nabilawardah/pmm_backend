@@ -222,3 +222,17 @@
   position: relative;
   overflow-y: scroll;
 }
+
+.edit-event-step {
+  width: 100%;
+  height: 100vh;
+  background-color: $light-alpha-100;
+
+  &.step-1 {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: $space-ll;
+    grid-row-gap: 0px;
+  }
+}

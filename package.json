@@ -27,6 +27,7 @@
     "datatables.net-dt": "^1.10.20",
     "datatables.net-fixedcolumns-bs4": "^3.3.0",
     "datatables.net-fixedcolumns-dt": "^3.3.0",
+    "date-fns": "^2.9.0",
     "dayjs": "^1.8.19",
     "is-image-url": "^1.1.8",
     "jquery": "^3.4.1",
