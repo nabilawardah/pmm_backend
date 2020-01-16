@@ -37,6 +37,9 @@ Route::get('/admin/events', function () {
 Route::get('/admin/events/{id}', function () {
     return view('admin.events.detail', ['active_page' => 'Events']);
 });
+Route::get('/admin/events/create/{user_id}', 'DummyController@create_event');
+Route::get('/admin/events/{user_id}/edit/{id}', 'DummyController@edit_event');
+
 Route::get('/admin/users', function () {
     return view('admin.users.index', ['active_page' => 'Users']);
 });
@@ -64,3 +67,4 @@ Route::get('/api/articles/delete/{article_id}', 'DummyController@delete_article'
 Route::get('/api/media/{user_id}', 'DummyController@get_all_media');
 
 Route::get('/api/events', 'DummyController@get_data_events');
+Route::post('/api/events/submit/{event_id}', 'DummyController@submit_event');

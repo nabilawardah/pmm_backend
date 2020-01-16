@@ -3,8 +3,6 @@ import Quill from 'quill'
 let articleReader
 
 if ($('#article-container-read').length > 0) {
-  console.log('SOMETHING...')
-
   articleReader = new Quill('#article-container-read', {
     modules: {
       // toolbar: toolbarOptions,

@@ -217,3 +217,8 @@
   object-fit: cover;
   object-position: center center;
 }
+
+.event-detail-description {
+  position: relative;
+  overflow-y: scroll;
+}

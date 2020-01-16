@@ -1,4 +1,4 @@
-<div id="confirm-delete-article" class="modal" style="display: none;">
+<div id="confirm-delete" class="modal" style="display: none;">
   <div class="modal-main-area">
     <nav class="modal-nav">
       <button type="button" class="close-modal button-close--rounded">
@@ -13,10 +13,10 @@
         Delete
       </h2>
       <p class="large" style="text-align: center; margin-bottom: 48px;">
-        Deleted articles are gone forever. Are you sure?
+        {{ $message ?? '' }}
       </p>
       <footer style="display: inline-flex; align-items: center; justify-content: center; width: 100%;" class="inline--m">
-        <a href="/api/articles/delete/{{$article['id']}}" class="no-pre button button--medium secondary delete-article">Delete</a>
+      <a href="{{ $url ?? '' }}" class="no-pre button button--medium secondary delete-article">Delete</a>
         <button class="button button--medium default close-modal">Cancel</button>
       </footer>
     </div>

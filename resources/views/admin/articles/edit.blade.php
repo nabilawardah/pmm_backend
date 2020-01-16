@@ -11,8 +11,11 @@
   </style>
 
   @include('components.navbar-writing')
-  @include('components.confirm-delete-article')
-  @include('components.media-library')
+  @include('components.confirm-delete', [
+    'message' => 'Deleted articles are gone forever. Are you sure?',
+    'url' => '/api/articles/delete/'.$article['id']
+  ])
+  @include('components.media-library', ['user' => $author])
 
   @component('layouts.main-content', ['width' => 'bleed'])
     <section>

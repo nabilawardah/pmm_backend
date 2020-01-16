@@ -23,7 +23,7 @@
         <button class="button button--small primary publish-article">Publish</button>
       @endif
       <a href="/admin/articles/{{ $author['id'] }}/edit/{{ $article['id'] }}" class="no-pre button button--small default edit-article">Edit</a>
-      <button class="button button--small secondary ghost confirm-delete-article">Delete</button>
+      <button class="button button--small secondary ghost confirm-delete">Delete</button>
       </div>
       <div class="navbar-profile">
         <div class="navbar-profile-photo" style="background-image: url('/images/users/ongki.jpg')"></div>

@@ -75,17 +75,6 @@ if (wysiwyg.length > 0) {
       }
     })
 
-    articleEditor.on('text-change', function(delta, oldDelta, source) {
-      if (source == 'user') {
-        console.log('Something...')
-        let block = $('.ql-editor p') // Select all p tag inside .ql-editor
-        let content = block.html() // Get the text content
-        let child = `<span style="font-size: 14px; font-family: Microsoft YaHei;">${content}</span>` // Generate new markup
-        block.find('*').remove() // Remove all initial child
-        block.append(child) // Append new child
-      }
-    })
-
     function submitArticle() {
       let title = $('#editor-title').text()
       let subtitle = $('#editor-subtitle-preview').text()

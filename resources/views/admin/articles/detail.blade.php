@@ -28,7 +28,9 @@
 
   @endcomponent
 
-  @include('components.confirm-delete-article')
+  @include('components.confirm-delete', [
+    confirm-delete
+  ])
   @include('components.footer')
 
 @endsection

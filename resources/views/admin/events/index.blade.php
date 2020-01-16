@@ -19,6 +19,8 @@
         </button>
       </fieldset>
 
+      <a href="/admin/events/create/1" style="min-width: fit-content;" class="no-pre button button--medium primary">Add New Event</a>
+
     </header>
 
     <table id="events-table" class="table" cellspacing="0" width="100%">

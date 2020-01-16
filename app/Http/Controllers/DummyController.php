@@ -60,6 +60,17 @@ class DummyController extends Controller
         file_put_contents(base_path('public/data/articles.json'), $newJsonString);
     }
 
+    public function save_event_to_file($event = null)
+    {
+        if (isset($event)) {
+            array_push($this->events, $event);
+            $this->jsonEvents['data'] = $this->events;
+        }
+
+        $newJsonString = json_encode($this->jsonEvents, JSON_PRETTY_PRINT);
+        file_put_contents(base_path('public/data/events.json'), $newJsonString);
+    }
+
     public function save_user(Request $request)
     {
         sleep(2);
@@ -418,9 +429,16 @@ class DummyController extends Controller
 
     public function events_page(Request $request)
     {
+        $published_events = [];
+        foreach ($this->events as $event) {
+            if ($event['published'] === true) {
+                array_push($published_events, $event);
+            }
+        }
+
         return view('web.events.index', [
             'active_page' => 'Events',
-            'events' => $this->events,
+            'events' => $published_events,
         ]);
     }
 
@@ -458,5 +476,89 @@ class DummyController extends Controller
             'thumbnail_participants' => $thumbnail_participants,
             'other_participants' => $other_participants,
         ]);
+    }
+
+    public function create_event(Request $request)
+    {
+        $user_id = (int) $request->user_id;
+        $new_event_id = count($this->events) + 1;
+        $user = [];
+
+        foreach ($this->users as $db_user) {
+            if ($db_user['id'] === $user_id) {
+                $user = $db_user;
+            }
+        }
+
+        $new_event = (object) [
+            'id' => $new_event_id,
+            'admin' => (int) $user['id'],
+            'participants' => [],
+            'published' => false,
+        ];
+
+        $this->save_event_to_file($new_event);
+
+        $path = public_path('media/user-'.strval($user_id));
+        if (!File::isDirectory($path)) {
+            File::makeDirectory($path, 0777, true, true);
+        }
+
+        return redirect('/admin/events/'.$user_id.'/edit/'.$new_event_id)->with('active_page', 'Articles');
+    }
+
+    public function edit_event(Request $request)
+    {
+        $selected_event = [];
+        $admin = [];
+        foreach ($this->events as $event) {
+            if ((int) $request->id === (int) $event['id']) {
+                $selected_event = $event;
+            }
+        }
+
+        foreach ($this->users as $user) {
+            if ((int) $request->user_id === (int) $user['id']) {
+                $admin = $user;
+            }
+        }
+
+        return view('admin.events.edit', [
+            'event' => $selected_event,
+            'user_id' => $request->user_id,
+            'admin' => $admin,
+            'event_id' => $request->id,
+            'active_page' => 'Events',
+        ]);
+    }
+
+    public function submit_event(Request $request)
+    {
+        // 'created_at' => Carbon::now(),
+        $data_placeholder = [];
+        $new_article = [];
+
+        foreach ($this->events as $event) {
+            if ((int) $event['id'] === (int) $request->event_id && (int) $event['admin'] === (int) $request->user_id) {
+                $event['title'] = $request->title;
+                $event['subtitle'] = $request->subtitle;
+                $event['poster'] = $request->poster;
+                $event['content'] = $request->content;
+                $event['date'] = $request->date;
+                $event['location'] = $request->location;
+                $event['html'] = $request->html;
+                $event['created_at'] = Carbon::now();
+
+                $new_event = $event;
+                array_push($data_placeholder, $event);
+            } else {
+                array_push($data_placeholder, $event);
+            }
+        }
+
+        $this->jsonEvents['data'] = $data_placeholder;
+        $this->save_event_to_file();
+
+        return $new_article;
     }
 }

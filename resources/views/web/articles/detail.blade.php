@@ -1,9 +1,5 @@
 @extends('layouts.web-provider')
 
-{{-- @php
-    dd($html)
-@endphp --}}
-
 @section('title', $article['title'])
 
 @section('content')
@@ -32,7 +28,10 @@
 
   @endcomponent
 
-  @include('components.confirm-delete-article')
+  @include('components.confirm-delete', [
+    'message' => 'Deleted articles are gone forever. Are you sure?',
+    'url' => '/api/events/delete/'.$article['id']
+  ])
   @include('components.footer')
 
 @endsection
