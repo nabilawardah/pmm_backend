@@ -17,9 +17,9 @@
         "formatted_date": "11 – 13 January 2020",
         "formatted_time": "08:00 AM – 11:30 AM"
       },
-      "location": {
+      "venue": {
         "name": "EduPlex Coworking Space",
-        "detail": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
+        "address": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
       },
       "content": {},
       "html": ""
@@ -41,9 +41,9 @@
         "formatted_date": "10 – 13 January 2020",
         "formatted_time": "08:00 AM – 11:30 AM"
       },
-      "location": {
+      "venue": {
         "name": "BLOCK71 Bandung",
-        "detail": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
+        "address": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
       },
       "content": {},
       "html": ""
@@ -65,9 +65,9 @@
         "formatted_date": "11 – 13 January 2020",
         "formatted_time": "08:00 AM – 11:30 AM"
       },
-      "location": {
+      "venue": {
         "name": "BLOCK71 Bandung",
-        "detail": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
+        "address": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
       },
       "content": {},
       "html": ""
@@ -89,9 +89,9 @@
         "formatted_date": "11 – 13 January 2020",
         "formatted_time": "08:00 AM – 11:30 AM"
       },
-      "location": {
+      "venue": {
         "name": "Crowne Plaza Bandung",
-        "detail": "Jalan Lembong 19, Sumur Bandung, Jawa Barat 40111, Indonesia"
+        "address": "Jalan Lembong 19, Sumur Bandung, Jawa Barat 40111, Indonesia"
       },
       "content": {},
       "html": ""
@@ -113,9 +113,9 @@
         "formatted_date": "11 – 13 January 2020",
         "formatted_time": "08:00 AM – 11:30 AM"
       },
-      "location": {
+      "venue": {
         "name": "Vancouver Public Library, Central Library",
-        "detail": "West Georgia Street 350, Vancouver, BC V6B 6B1"
+        "address": "West Georgia Street 350, Vancouver, BC V6B 6B1"
       },
       "content": {},
       "html": ""
@@ -137,9 +137,9 @@
         "formatted_date": "11 – 13 January 2020",
         "formatted_time": "08:00 AM – 11:30 AM"
       },
-      "location": {
+      "venue": {
         "name": "Grand Tebu Hotel Bandung",
-        "detail": "Jalan L. L. R.E. Martadinata No.207, Kec. Bandung Wetan, Jawa Barat 40114, Indonesia"
+        "address": "Jalan L. L. R.E. Martadinata No.207, Kec. Bandung Wetan, Jawa Barat 40114, Indonesia"
       },
       "content": {},
       "html": ""
@@ -161,9 +161,9 @@
         "formatted_date": "11 – 13 January 2020",
         "formatted_time": "08:00 AM – 11:30 AM"
       },
-      "location": {
+      "venue": {
         "name": "BLOCK71 Bandung",
-        "detail": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
+        "address": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
       },
       "content": {},
       "html": ""

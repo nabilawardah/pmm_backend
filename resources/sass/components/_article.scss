@@ -262,6 +262,10 @@
         line-height: unset;
       }
     }
+
+    &.event-summary::before {
+      content: 'Summary';
+    }
   }
 
   &.empty {
@@ -271,6 +275,10 @@
       color: $dark-alpha-40;
       left: 0;
       top: 0;
+    }
+
+    &.event-summary::after {
+      content: 'Write a short event summary to get attendees excited.';
     }
 
     &::before {

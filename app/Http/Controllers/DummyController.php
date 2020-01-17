@@ -545,7 +545,7 @@ class DummyController extends Controller
                 $event['poster'] = $request->poster;
                 $event['content'] = $request->content;
                 $event['date'] = $request->date;
-                $event['location'] = $request->location;
+                $event['venue'] = $request->venue;
                 $event['html'] = $request->html;
                 $event['created_at'] = Carbon::now();
 

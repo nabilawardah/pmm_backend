@@ -90,8 +90,8 @@ if (eventsTableContainer.length > 0) {
         },
       },
       {
-        data: 'location',
-        name: 'location',
+        data: 'venue',
+        name: 'venue',
         className: 'table-article-submitted-date',
         render: function(data, type, full, meta) {
           if (type === 'sort') {

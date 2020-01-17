@@ -24,7 +24,7 @@
             <h1 class="heading3 event-list-title">{{ $event['title'] }}</h1>
             <p class="small event-list-subtitle">{{ $event['subtitle'] }}</p>
             <footer class="event-list-footer heading6">
-              {{ $event['location']['name'] }}
+              {{ $event['venue']['name'] }}
               {{-- <span style="margin-left: 4px; margin-right: 4px;">•</span> --}}
             </footer>
           </article>

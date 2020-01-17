@@ -28,31 +28,52 @@
         <header class="editor-header-wrapper">
           <h1 id="editor-title" class="editor-title" contenteditable autofocus>{{ $event['title'] ?? '' }}</h1>
         </header>
-        <section class="editor-subtitle-wrapper">
-          <p id="editor-subtitle-preview" class="editor-subtitle-preview" contenteditable>{{$event['subtitle'] ?? ''}}</p>
+
+        <section class="editor-subtitle-wrapper" style="margin-bottom: 48px;">
+          <p id="editor-subtitle-preview" class="editor-subtitle-preview event-summary" contenteditable>{{$event['subtitle'] ?? 'Summary'}}</p>
         </section>
-        <section>
-          <fieldset class="input">
-            <label class="input-label" for="date-start">Date</label>
-            <div class="date-picker-outer-wrapper">
-              <div class="date-picker-container">
-              <input class="input-field date-picker" type="text" id="date-start" placeholder="Start" style="margin-right: 8px;" data-value="{{ $event['date']['start'] ?? now() }}" value="{{ date('d F Y', strtotime($event['date']['start'] ?? now())) }}">
-                <div class="popout calendar-outer-container" style="display: none;" id="popout-start-date"></div>
-              </div>
-              <div class="date-picker-container">
-                <input class="input-field" type="text" id="date-end" placeholder="End">
-                <div class="popout calendar-outer-container" style="display: none;" id="popout-end-date"></div>
-              </div>
-            </div>
-          </fieldset>
-          <fieldset class="input">
-            <label class="input-label" for="time-start">Time</label>
-            <span style="display: flex;">
-              <input class="input-field" type="text" id="time-start" placeholder="Start" style="margin-right: 8px;">
+
+        <section style="margin-bottom: 48px;">
+
+          <h2 class="heading3" style="margin-bottom: 32px;">Date and Time</h2>
+          <div class="date-time-outer-wrapper">
+            <fieldset class="input date-picker-container" style="margin-bottom: 0;">
+              <label class="input-label" for="date-start">Start Date</label>
+              <input class="input-field date-picker" type="text" id="date-start" placeholder="Start Date" data-value="{{ $event['date']['start'] ?? now() }}" value="{{ date('d F Y', strtotime($event['date']['start'] ?? now())) }}">
+              <div class="popout calendar-outer-container" style="display: none;" id="popout-start-date"></div>
+            </fieldset>
+            <fieldset class="input time-picker-container" style="margin-bottom: 0;">
+              <label class="input-label" for="time-start">Start time</label>
+              <input class="input-field" type="text" id="time-start" placeholder="Start">
+            </fieldset>
+          </div>
+
+          <div class="date-time-outer-wrapper">
+            <fieldset class="input date-picker-container" style="margin-bottom: 0;">
+              <label class="input-label" for="date-end">End Date</label>
+              <input class="input-field date-picker" type="text" id="date-end" placeholder="End Date" data-value="{{ $event['date']['start'] ?? now() }}" value="{{ date('d F Y', strtotime($event['date']['end'] ?? now())) }}">
+              <div class="popout calendar-outer-container" style="display: none;" id="popout-end-date"></div>
+            </fieldset>
+            <fieldset class="input time-picker-container" style="margin-bottom: 0;">
+              <label class="input-label" for="time-end">Start time</label>
               <input class="input-field" type="text" id="time-end" placeholder="End">
-            </span>
+            </fieldset>
+          </div>
+
+        </section>
+
+        <section>
+          <h2 class="heading3" style="margin-bottom: 32px;">Venue</h2>
+          <fieldset class="input">
+            <label for="venue-name" class="input-label">Name</label>
+            <input type="text" class="input-field" id="venue-name" placeholder="Venue Name" value="{{ $event['venue']['name'] ?? '' }}">
+          </fieldset>
+          <fieldset class="input">
+            <label for="venue-detail" class="input-label">Name</label>
+            <input type="text" class="input-field" id="venue-detail" placeholder="Venue Name" value="{{ $event['venue']['address'] ?? '' }}">
           </fieldset>
         </section>
+
       </section>
 
       <section>

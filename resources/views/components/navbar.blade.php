@@ -53,6 +53,9 @@
           Add Points
         </a>
       </li>
+      <li class="primary-menu-wrapper">
+        <a href="/admin/events/create/1" style="min-width: fit-content;" class="no-pre button button--medium primary">Add New Event</a>
+      </li>
       @foreach ($secondary_menus as $menu)
           @component('components.menu-web', ['name' => $menu->name, 'to' => $menu->to, 'active' => $active_page])
         @endcomponent

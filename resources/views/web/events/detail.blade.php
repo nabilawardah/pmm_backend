@@ -35,8 +35,8 @@
             @include('icons.place')
           </span>
           <span class="event-detail-info-list-item-detail">
-            <p class="heading5" style="margin-bottom: 8px">{{ $event['location']['name'] }}</p>
-            <p class="small">{{ $event['location']['detail'] }}</p>
+            <p class="heading5" style="margin-bottom: 8px">{{ $event['venue']['name'] }}</p>
+            <p class="small">{{ $event['venue']['address'] }}</p>
           </span>
         </li>
         <button class="button button--large primary stretch">Join Event</button>
