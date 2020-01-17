@@ -225,7 +225,6 @@
 
 .edit-event-step {
   width: 100%;
-  height: 100vh;
   background-color: $light-alpha-100;
 
   &.step-1 {
@@ -234,5 +233,13 @@
     grid-template-rows: 1fr;
     grid-column-gap: $space-ll;
     grid-row-gap: 0px;
+    padding-top: $space-ll;
+    padding-bottom: $space-ll;
   }
+}
+
+.editor-poster-outer-wrapper {
+  height: calc(100vh - 152px);
+  position: sticky;
+  top: 104px;
 }
