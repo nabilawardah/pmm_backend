@@ -243,3 +243,25 @@
   position: sticky;
   top: 104px;
 }
+
+.event-step-label-container {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: sticky;
+  top: 0;
+  background-color: $light-alpha-100;
+  z-index: $layer-top;
+  margin-bottom: $space-ml;
+}
+
+.event-step-label {
+  text-transform: uppercase;
+  padding-bottom: $space-m;
+  box-shadow: inset 0px -3px 0px 0px $brand-primary-200;
+  line-height: 24px;
+  display: block;
+  font-variant-numeric: tabular-nums;
+}

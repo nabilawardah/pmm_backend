@@ -1,14 +1,13 @@
 import 'datatables.net-fixedcolumns-bs4'
 import axios from 'axios'
-import dayjs from 'dayjs'
 
-import User from '../class/User'
+// import Event from '../class/Event'
 import { generateCustomSearch } from '../components/datatable-searchbox'
 import { generateButtonSpinner } from '../components/button-spinner'
 import { showModal } from '../components/modals/index'
-import { uploadProfilePhoto, saveProfilePhoto, processPhotoUploading } from '../components/photo-uploader'
 import { addError, removeError } from '../components/input-field'
-import { generateAdminRole, generateUserRole } from '../components/role'
+
+import { formatDate, formatTime } from './../components/calendar/index'
 
 $(function() {
   generateCustomSearch('#events-table_filter')
@@ -144,3 +143,81 @@ if (eventsTableContainer.length > 0) {
     })
     .draw()
 }
+
+$(function() {
+  // let toStep2 = $('.edit-event-to-step-2')
+
+  function submitEvent() {
+    let title = $('#event-title').val()
+    let subtitle = $('#event-summary').val()
+    let userId = $('input[name="user-id"]').val()
+    let eventId = $('input[name="event-id"]').val()
+    let cover = $('.editor-cover-image').data('name')
+
+    let startDate = $('#date-start').data('value')
+    let endDate = $('#date-end').data('value')
+    let startTime = $('#time-start').val()
+    let endTime = $('#time-end').val()
+    let dateNotes = $('#date-notes').val()
+
+    let venueName = $('#venue-name').val()
+    let venueLocation = $('#venue-location').val()
+
+    let content = window.activeQuill.getContents()
+    let modified = content.map(c => {
+      if (c.insert === '\n') {
+        c.insert = `<br />`
+        return c
+      } else {
+        return c
+      }
+    })
+
+    let data = {
+      title: title,
+      subtitle: subtitle,
+      article_id: eventId,
+      user_id: userId,
+      html: window.activeQuill.root.innerHTML,
+      content: modified,
+      cover: cover,
+      date: {
+        start_date: startDate,
+        start_time: startTime,
+        end_date: endDate,
+        end_time: endTime,
+        notes: dateNotes,
+        formatted_time: formatTime(startTime, endTime),
+        formatted_date: formatDate(startDate, endDate),
+      },
+      venue: {
+        name: venueName,
+        address: venueLocation,
+      },
+    }
+
+    console.log('EDITOR: ', data)
+
+    axios
+      .post(`/api/events/submit/${eventId}`, data)
+      .then(res => {
+        if (res.status === 200) {
+          console.log('RES: ', res)
+          window.location = `/events/${eventId}`
+        }
+      })
+      .catch(err => console.log('ERROR SUBMITTING ARTICLE: ', err))
+  }
+
+  $(document).on('click', '.publish-event', submitEvent)
+
+  $(document).on('click', '.edit-event-to-step-2', function() {
+    $(this)
+      .parents('.edit-event-step.step-1')
+      .fadeOut(200)
+    $(this)
+      .parents('.edit-event-step.step-1')
+      .siblings('.step-2')
+      .fadeIn(200)
+  })
+})

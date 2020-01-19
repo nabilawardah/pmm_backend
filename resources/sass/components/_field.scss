@@ -26,9 +26,14 @@
   line-height: 16px;
   font-weight: $medium;
   color: $dark-alpha-80;
+
+  &.label--event {
+    font-weight: $regular;
+  }
 }
 
 .input-field {
+  font-weight: 300;
   width: 100%;
   padding: 11px;
   border: 1px solid $dark-hex-20;
@@ -37,11 +42,17 @@
   font-size: $body-3;
   line-height: 24px;
   transition: all 0.36s;
+  letter-spacing: normal;
 
   &:focus,
   &:active {
     border-color: $brand-primary-200;
     transition: all 0.28s;
+  }
+
+  &::placeholder {
+    color: $dark-hex-50;
+    font-weight: 300;
   }
 }
 

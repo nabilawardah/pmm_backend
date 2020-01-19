@@ -34,7 +34,8 @@
   &.editor-cover-container--event {
     position: relative;
     &::before {
-      content: 'Upload event poster';
+      content: 'Add event poster';
+      padding: 24px;
       font-size: 21px;
       line-height: 24px;
       font-weight: 500;
@@ -49,7 +50,7 @@
       align-items: center;
     }
     width: 100%;
-    height: calc(100vh - 104px);
+    height: calc(100vh - 152px);
   }
 }
 

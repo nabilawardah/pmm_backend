@@ -75,7 +75,7 @@
       </span>
     </div>
 
-    <div id="wysiwyg-editor"></div>
+    <div id="wysiwyg-editor" data-placeholder="Write your article..."></div>
 
     <input name="editor-cover" type="file" class="editor-cover">
     <input type="hidden" id="article-id" name="article-id" value="{{ $article_id }}" />

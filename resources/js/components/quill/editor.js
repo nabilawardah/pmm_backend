@@ -21,11 +21,13 @@ Quill.register('modules/clipboard', CustomClipboard, true)
 let wysiwyg = $('#wysiwyg-editor')
 
 if (wysiwyg.length > 0) {
+  let placeholder = wysiwyg.data('placeholder')
+
   icons.media = generateIcon('media')
   icons.divider = generateIcon('divider')
   icons.header[3] = generateIcon('header-3')
 
-  let articleEditor = new Quill('#wysiwyg-editor', {
+  let wysiwygEditor = new Quill('#wysiwyg-editor', {
     modules: {
       toolbar: {
         container: '#toolbar-container',
@@ -35,7 +37,7 @@ if (wysiwyg.length > 0) {
       },
     },
     scrollingContainer: 'html, body',
-    placeholder: 'Write your article...',
+    placeholder: placeholder,
     theme: 'snow',
   })
 
@@ -44,32 +46,32 @@ if (wysiwyg.length > 0) {
   if (articleDataContainer.length > 0) {
     let articleData = JSON.parse(articleDataContainer.val())
     console.log('EDITING ARTICLE: ', articleData)
-    articleEditor.setContents(articleData.content)
+    wysiwygEditor.setContents(articleData.content)
   }
 
-  window.activeQuill = articleEditor
+  window.activeQuill = wysiwygEditor
 
   $(function() {
     checkTitleState($('.editor-title'))
     checkTitleState($('.editor-subtitle-preview'))
 
-    articleEditor.root.addEventListener('click', function(ev) {
+    wysiwygEditor.root.addEventListener('click', function(ev) {
       let image = Parchment.find(ev.target.parentNode)
       if (image instanceof CustomImage || image instanceof CustomVideo) {
-        articleEditor.setSelection(image.offset(articleEditor.scroll), 1, 'user')
+        wysiwygEditor.setSelection(image.offset(wysiwygEditor.scroll), 1, 'user')
       }
     })
 
-    articleEditor.on('editor-change', function() {
+    wysiwygEditor.on('editor-change', function() {
       let images = document.querySelectorAll('p.section--inset > img')
       if (images) {
         images.forEach((el, index) => {
-          // let range = articleEditor.getSelection(true)
+          // let range = wysiwygEditor.getSelection(true)
           let image = Parchment.find(el)
           console.group('Image Instance')
           console.log('IMAGE: ', image)
-          console.log('PARENT: ', articleEditor.getIndex(image.parent))
-          console.log('CONTENTS: ', articleEditor.getContents())
+          console.log('PARENT: ', wysiwygEditor.getIndex(image.parent))
+          console.log('CONTENTS: ', wysiwygEditor.getContents())
           console.groupEnd()
         })
       }
@@ -82,7 +84,7 @@ if (wysiwyg.length > 0) {
       let articleId = $('input[name="article-id"]').val()
       let cover = $('.editor-cover-image').data('name')
 
-      let content = articleEditor.getContents()
+      let content = wysiwygEditor.getContents()
       let modified = content.map(c => {
         if (c.insert === '\n') {
           c.insert = `<br />`
@@ -97,7 +99,7 @@ if (wysiwyg.length > 0) {
         subtitle: subtitle,
         article_id: articleId,
         user_id: userId,
-        html: articleEditor.root.innerHTML,
+        html: wysiwygEditor.root.innerHTML,
         content: modified,
         cover: {
           src: cover,
@@ -128,12 +130,18 @@ if (wysiwyg.length > 0) {
       checkTitleState($(this))
     })
 
-    document.querySelector('#editor-title').addEventListener('paste', function(e) {
-      removeFormatTitle(e, this)
-    })
+    let editorTitle = document.querySelector('#editor-title')
+    if (editorTitle) {
+      editorTitle.addEventListener('paste', function(e) {
+        removeFormatTitle(e, this)
+      })
+    }
 
-    document.querySelector('#editor-subtitle-preview').addEventListener('paste', function(e) {
-      removeFormatTitle(e, this)
-    })
+    let editorSubtitle = document.querySelector('#editor-subtitle-preview')
+    if (editorSubtitle) {
+      editorSubtitle.addEventListener('paste', function(e) {
+        removeFormatTitle(e, this)
+      })
+    }
   })
 }
