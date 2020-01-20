@@ -209,6 +209,19 @@ $(function() {
       .catch(err => console.log('ERROR SUBMITTING EVENT: ', err))
   }
 
+  function joinEvent() {
+    let event = JSON.parse($('#event-data').val())
+    let user_id = Number($(this).data('user'))
+
+    axios
+      .post(`/api/events/join/${event.id}`, { user_id })
+      .then(res => {
+        console.log(res)
+        window.location.reload()
+      })
+      .catch(err => console.log(err))
+  }
+
   $(document).on('click', '.publish-event', submitEvent)
 
   $(document).on('click', '.edit-event-to-step-2', function() {
@@ -230,4 +243,6 @@ $(function() {
       .siblings('.step-1')
       .fadeIn(200)
   })
+
+  $(document).on('click', '.join-event', joinEvent)
 })

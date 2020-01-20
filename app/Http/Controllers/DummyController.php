@@ -561,4 +561,27 @@ class DummyController extends Controller
 
         return $new_article;
     }
+
+    public function join_event(Request $request)
+    {
+        $event_id = $request->event_id;
+        $user_id = $request->user_id;
+        $data_placeholder = [];
+        $new_event = [];
+
+        foreach ($this->events as $event) {
+            if ((int) $event['id'] === (int) $event_id) {
+                if (!in_array((int) $user_id, $event['participants'])) {
+                    array_push($event['participants'], $user_id);
+                }
+                $new_event = $event;
+            }
+            array_push($data_placeholder, $event);
+        }
+
+        $this->jsonEvents['data'] = $data_placeholder;
+        $this->save_event_to_file();
+
+        return $new_event;
+    }
 }

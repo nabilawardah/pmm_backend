@@ -68,3 +68,4 @@ Route::get('/api/media/{user_id}', 'DummyController@get_all_media');
 
 Route::get('/api/events', 'DummyController@get_data_events');
 Route::post('/api/events/submit/{event_id}', 'DummyController@submit_event');
+Route::post('/api/events/join/{event_id}', 'DummyController@join_event');

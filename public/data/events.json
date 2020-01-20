@@ -1,907 +1,966 @@
 {
-  "data": [
-    {
-      "id": 1,
-      "admin": 1,
-      "poster": "poster-1.jpg",
-      "featured": false,
-      "published": true,
-      "participants": [],
-      "created_at": "2020-01-10T04:22:27.438541Z",
-      "title": "Integration of IOT in Alibaba Cloud - Bandung",
-      "subtitle": "Alibaba Cloud offers many solutions to enhance Industry 4.0 capabilities, especially in IoT industry.",
-      "date": {
-        "start": "2020-01-11T04:22:27.438541Z",
-        "end": "2020-01-13T04:22:27.438541Z",
-        "notes": "Some notes here",
-        "formatted_date": "11 – 13 January 2020",
-        "formatted_time": "08:00 AM – 11:30 AM"
-      },
-      "venue": {
-        "name": "EduPlex Coworking Space",
-        "address": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
-      },
-      "content": [
+    "data": [
         {
-          "insert": "This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.\nThis is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it."
+            "id": 1,
+            "admin": 1,
+            "poster": "poster-1.jpg",
+            "featured": false,
+            "published": true,
+            "participants": [
+                1
+            ],
+            "created_at": "2020-01-10T04:22:27.438541Z",
+            "title": "Integration of IOT in Alibaba Cloud - Bandung",
+            "subtitle": "Alibaba Cloud offers many solutions to enhance Industry 4.0 capabilities, especially in IoT industry.",
+            "date": {
+                "start": "2020-01-11T04:22:27.438541Z",
+                "end": "2020-01-13T04:22:27.438541Z",
+                "notes": "Some notes here",
+                "formatted_date": "11 \u2013 13 January 2020",
+                "formatted_time": "08:00 AM \u2013 11:30 AM"
+            },
+            "venue": {
+                "name": "EduPlex Coworking Space",
+                "address": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
+            },
+            "content": [
+                {
+                    "insert": "This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.\nThis is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it."
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "RUSSELL BRAND"
+                },
+                {
+                    "attributes": {
+                        "header": 3
+                    },
+                    "insert": "<br \/>"
+                },
+                {
+                    "insert": "Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.\nWeb:\u00a0"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/russellbrand.com\/"
+                    },
+                    "insert": "russellbrand.com"
+                },
+                {
+                    "insert": "Twitter:"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/twitter.com\/rustyrockets"
+                    },
+                    "insert": "\u00a0twitter.com\/rustyrockets"
+                },
+                {
+                    "insert": "Instagram:\u00a0"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/instagram.com\/russellbrand"
+                    },
+                    "insert": "instagram.com\/russellbrand"
+                },
+                {
+                    "insert": "You Tube:\u00a0"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/youtube.com\/russellbrand"
+                    },
+                    "insert": "YouTube.com\/russellbrand"
+                },
+                {
+                    "insert": "<br \/>"
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "NO REFUNDS."
+                },
+                {
+                    "insert": "Please note this show is only suitable for ages 16+\nLatecomers will not be admitted until a suitable point in the show."
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "DOORS OPEN AT 6PM"
+                },
+                {
+                    "insert": "<br \/>"
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "SEATING"
+                },
+                {
+                    "attributes": {
+                        "header": 3
+                    },
+                    "insert": "<br \/>"
+                },
+                {
+                    "insert": "Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage."
+                },
+                {
+                    "insert": {
+                        "customImage": true
+                    }
+                },
+                {
+                    "insert": {
+                        "customImage": true
+                    }
+                },
+                {
+                    "insert": "<br \/>"
+                }
+            ],
+            "html": "<p class=\"section--inset\">This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.<\/p><p class=\"section--inset\">This is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it.<\/p><h3 class=\"section--inset\"><strong>RUSSELL BRAND<\/strong><\/h3><p class=\"section--inset\">Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.<\/p><p class=\"section--inset\">Web:&nbsp;<a href=\"http:\/\/russellbrand.com\/\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">russellbrand.com<\/a><\/p><p class=\"section--inset\">Twitter:<a href=\"http:\/\/twitter.com\/rustyrockets\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">&nbsp;twitter.com\/rustyrockets<\/a><\/p><p class=\"section--inset\">Instagram:&nbsp;<a href=\"http:\/\/instagram.com\/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">instagram.com\/russellbrand<\/a><\/p><p class=\"section--inset\">You Tube:&nbsp;<a href=\"http:\/\/youtube.com\/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">YouTube.com\/russellbrand<\/a><\/p><p class=\"section--inset\"><strong>NO REFUNDS.<\/strong><\/p><p class=\"section--inset\">Please note this show is only suitable for ages 16+<\/p><p class=\"section--inset\">Latecomers will not be admitted until a suitable point in the show.<\/p><p class=\"section--inset\"><strong>DOORS OPEN AT 6PM<\/strong><\/p><h3 class=\"section--inset\"><strong>SEATING<\/strong><\/h3><p class=\"section--inset\">Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage.<\/p><div class=\"section--inset\"><img src=\"\/media\/user-1\/20200120074247-seat-1.jpeg\"><\/div><div class=\"section--inset\"><img src=\"\/media\/user-1\/20200120074254-seat-2.jpeg\"><\/div><p class=\"section--inset\"><br><\/p>"
         },
         {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "RUSSELL BRAND"
+            "id": 2,
+            "admin": 1,
+            "poster": "poster-2.jpg",
+            "featured": false,
+            "published": true,
+            "participants": [
+                1
+            ],
+            "created_at": "2020-01-10T04:22:27.438541Z",
+            "title": "Millennials Career Talk: Here We Come, Boomers!",
+            "subtitle": "Kicking off the year with talkshow and sharing sessions about career opportunities for millennials in 4.0 era with intergenerational experts.",
+            "date": {
+                "start": "2020-01-10T04:22:27.438541Z",
+                "end": "2020-01-13T04:22:27.438541Z",
+                "notes": "A detailed schedule provided on the event description",
+                "formatted_date": "10 \u2013 13 January 2020",
+                "formatted_time": "08:00 AM \u2013 11:30 AM"
+            },
+            "venue": {
+                "name": "BLOCK71 Bandung",
+                "address": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
+            },
+            "content": [
+                {
+                    "insert": "This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.\nThis is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it."
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "RUSSELL BRAND"
+                },
+                {
+                    "attributes": {
+                        "header": 3
+                    },
+                    "insert": "<br \/>"
+                },
+                {
+                    "insert": "Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.\nWeb:\u00a0"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/russellbrand.com\/"
+                    },
+                    "insert": "russellbrand.com"
+                },
+                {
+                    "insert": "Twitter:"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/twitter.com\/rustyrockets"
+                    },
+                    "insert": "\u00a0twitter.com\/rustyrockets"
+                },
+                {
+                    "insert": "Instagram:\u00a0"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/instagram.com\/russellbrand"
+                    },
+                    "insert": "instagram.com\/russellbrand"
+                },
+                {
+                    "insert": "You Tube:\u00a0"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/youtube.com\/russellbrand"
+                    },
+                    "insert": "YouTube.com\/russellbrand"
+                },
+                {
+                    "insert": "<br \/>"
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "NO REFUNDS."
+                },
+                {
+                    "insert": "Please note this show is only suitable for ages 16+\nLatecomers will not be admitted until a suitable point in the show."
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "DOORS OPEN AT 6PM"
+                },
+                {
+                    "insert": "<br \/>"
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "SEATING"
+                },
+                {
+                    "attributes": {
+                        "header": 3
+                    },
+                    "insert": "<br \/>"
+                },
+                {
+                    "insert": "Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage."
+                },
+                {
+                    "insert": {
+                        "customImage": true
+                    }
+                },
+                {
+                    "insert": {
+                        "customImage": true
+                    }
+                },
+                {
+                    "insert": "<br \/>"
+                }
+            ],
+            "html": "<p class=\"section--inset\">This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.<\/p><p class=\"section--inset\">This is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it.<\/p><h3 class=\"section--inset\"><strong>RUSSELL BRAND<\/strong><\/h3><p class=\"section--inset\">Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.<\/p><p class=\"section--inset\">Web:&nbsp;<a href=\"http:\/\/russellbrand.com\/\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">russellbrand.com<\/a><\/p><p class=\"section--inset\">Twitter:<a href=\"http:\/\/twitter.com\/rustyrockets\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">&nbsp;twitter.com\/rustyrockets<\/a><\/p><p class=\"section--inset\">Instagram:&nbsp;<a href=\"http:\/\/instagram.com\/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">instagram.com\/russellbrand<\/a><\/p><p class=\"section--inset\">You Tube:&nbsp;<a href=\"http:\/\/youtube.com\/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">YouTube.com\/russellbrand<\/a><\/p><p class=\"section--inset\"><strong>NO REFUNDS.<\/strong><\/p><p class=\"section--inset\">Please note this show is only suitable for ages 16+<\/p><p class=\"section--inset\">Latecomers will not be admitted until a suitable point in the show.<\/p><p class=\"section--inset\"><strong>DOORS OPEN AT 6PM<\/strong><\/p><h3 class=\"section--inset\"><strong>SEATING<\/strong><\/h3><p class=\"section--inset\">Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage.<\/p><div class=\"section--inset\"><img src=\"\/media\/user-1\/20200120074247-seat-1.jpeg\"><\/div><div class=\"section--inset\"><img src=\"\/media\/user-1\/20200120074254-seat-2.jpeg\"><\/div><p class=\"section--inset\"><br><\/p>"
         },
         {
-          "attributes": {
-            "header": 3
-          },
-          "insert": "<br />"
+            "id": 3,
+            "admin": 1,
+            "poster": "poster-3.jpg",
+            "featured": false,
+            "published": true,
+            "participants": [
+                1,
+                3
+            ],
+            "created_at": "2020-01-10T04:22:27.438541Z",
+            "title": "Tech Talk in Bandung: Modern Application Architecture",
+            "subtitle": "Mau belajar tentang event-driven microservice architecture? Datang ke acara Tech Talk yang diadakan oleh SIRCLO x Innovation Factory!",
+            "date": {
+                "start": "2020-01-11T04:22:27.438541Z",
+                "end": "2020-01-13T04:22:27.438541Z",
+                "notes": "A detailed schedule provided on the event description",
+                "formatted_date": "11 \u2013 13 January 2020",
+                "formatted_time": "08:00 AM \u2013 11:30 AM"
+            },
+            "venue": {
+                "name": "BLOCK71 Bandung",
+                "address": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
+            },
+            "content": [
+                {
+                    "insert": "This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.\nThis is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it."
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "RUSSELL BRAND"
+                },
+                {
+                    "attributes": {
+                        "header": 3
+                    },
+                    "insert": "<br \/>"
+                },
+                {
+                    "insert": "Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.\nWeb:\u00a0"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/russellbrand.com\/"
+                    },
+                    "insert": "russellbrand.com"
+                },
+                {
+                    "insert": "Twitter:"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/twitter.com\/rustyrockets"
+                    },
+                    "insert": "\u00a0twitter.com\/rustyrockets"
+                },
+                {
+                    "insert": "Instagram:\u00a0"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/instagram.com\/russellbrand"
+                    },
+                    "insert": "instagram.com\/russellbrand"
+                },
+                {
+                    "insert": "You Tube:\u00a0"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/youtube.com\/russellbrand"
+                    },
+                    "insert": "YouTube.com\/russellbrand"
+                },
+                {
+                    "insert": "<br \/>"
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "NO REFUNDS."
+                },
+                {
+                    "insert": "Please note this show is only suitable for ages 16+\nLatecomers will not be admitted until a suitable point in the show."
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "DOORS OPEN AT 6PM"
+                },
+                {
+                    "insert": "<br \/>"
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "SEATING"
+                },
+                {
+                    "attributes": {
+                        "header": 3
+                    },
+                    "insert": "<br \/>"
+                },
+                {
+                    "insert": "Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage."
+                },
+                {
+                    "insert": {
+                        "customImage": true
+                    }
+                },
+                {
+                    "insert": {
+                        "customImage": true
+                    }
+                },
+                {
+                    "insert": "<br \/>"
+                }
+            ],
+            "html": "<p class=\"section--inset\">This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.<\/p><p class=\"section--inset\">This is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it.<\/p><h3 class=\"section--inset\"><strong>RUSSELL BRAND<\/strong><\/h3><p class=\"section--inset\">Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.<\/p><p class=\"section--inset\">Web:&nbsp;<a href=\"http:\/\/russellbrand.com\/\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">russellbrand.com<\/a><\/p><p class=\"section--inset\">Twitter:<a href=\"http:\/\/twitter.com\/rustyrockets\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">&nbsp;twitter.com\/rustyrockets<\/a><\/p><p class=\"section--inset\">Instagram:&nbsp;<a href=\"http:\/\/instagram.com\/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">instagram.com\/russellbrand<\/a><\/p><p class=\"section--inset\">You Tube:&nbsp;<a href=\"http:\/\/youtube.com\/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">YouTube.com\/russellbrand<\/a><\/p><p class=\"section--inset\"><strong>NO REFUNDS.<\/strong><\/p><p class=\"section--inset\">Please note this show is only suitable for ages 16+<\/p><p class=\"section--inset\">Latecomers will not be admitted until a suitable point in the show.<\/p><p class=\"section--inset\"><strong>DOORS OPEN AT 6PM<\/strong><\/p><h3 class=\"section--inset\"><strong>SEATING<\/strong><\/h3><p class=\"section--inset\">Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage.<\/p><div class=\"section--inset\"><img src=\"\/media\/user-1\/20200120074247-seat-1.jpeg\"><\/div><div class=\"section--inset\"><img src=\"\/media\/user-1\/20200120074254-seat-2.jpeg\"><\/div><p class=\"section--inset\"><br><\/p>"
         },
         {
-          "insert": "Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.\nWeb:\u00a0"
+            "id": 4,
+            "admin": 1,
+            "poster": "poster-4.jpg",
+            "featured": false,
+            "published": true,
+            "participants": [
+                1,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13
+            ],
+            "created_at": "2020-01-10T04:22:27.438541Z",
+            "title": "Study in UK Expo 2020 - Bandung",
+            "subtitle": "Study in UK Expo 2020 - Bandung",
+            "date": {
+                "start": "2020-01-11T04:22:27.438541Z",
+                "end": "2020-01-13T04:22:27.438541Z",
+                "notes": "",
+                "formatted_date": "11 \u2013 13 January 2020",
+                "formatted_time": "08:00 AM \u2013 11:30 AM"
+            },
+            "venue": {
+                "name": "Crowne Plaza Bandung",
+                "address": "Jalan Lembong 19, Sumur Bandung, Jawa Barat 40111, Indonesia"
+            },
+            "content": [
+                {
+                    "insert": "This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.\nThis is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it."
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "RUSSELL BRAND"
+                },
+                {
+                    "attributes": {
+                        "header": 3
+                    },
+                    "insert": "<br \/>"
+                },
+                {
+                    "insert": "Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.\nWeb:\u00a0"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/russellbrand.com\/"
+                    },
+                    "insert": "russellbrand.com"
+                },
+                {
+                    "insert": "Twitter:"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/twitter.com\/rustyrockets"
+                    },
+                    "insert": "\u00a0twitter.com\/rustyrockets"
+                },
+                {
+                    "insert": "Instagram:\u00a0"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/instagram.com\/russellbrand"
+                    },
+                    "insert": "instagram.com\/russellbrand"
+                },
+                {
+                    "insert": "You Tube:\u00a0"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/youtube.com\/russellbrand"
+                    },
+                    "insert": "YouTube.com\/russellbrand"
+                },
+                {
+                    "insert": "<br \/>"
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "NO REFUNDS."
+                },
+                {
+                    "insert": "Please note this show is only suitable for ages 16+\nLatecomers will not be admitted until a suitable point in the show."
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "DOORS OPEN AT 6PM"
+                },
+                {
+                    "insert": "<br \/>"
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "SEATING"
+                },
+                {
+                    "attributes": {
+                        "header": 3
+                    },
+                    "insert": "<br \/>"
+                },
+                {
+                    "insert": "Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage."
+                },
+                {
+                    "insert": {
+                        "customImage": true
+                    }
+                },
+                {
+                    "insert": {
+                        "customImage": true
+                    }
+                },
+                {
+                    "insert": "<br \/>"
+                }
+            ],
+            "html": "<p class=\"section--inset\">This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.<\/p><p class=\"section--inset\">This is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it.<\/p><h3 class=\"section--inset\"><strong>RUSSELL BRAND<\/strong><\/h3><p class=\"section--inset\">Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.<\/p><p class=\"section--inset\">Web:&nbsp;<a href=\"http:\/\/russellbrand.com\/\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">russellbrand.com<\/a><\/p><p class=\"section--inset\">Twitter:<a href=\"http:\/\/twitter.com\/rustyrockets\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">&nbsp;twitter.com\/rustyrockets<\/a><\/p><p class=\"section--inset\">Instagram:&nbsp;<a href=\"http:\/\/instagram.com\/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">instagram.com\/russellbrand<\/a><\/p><p class=\"section--inset\">You Tube:&nbsp;<a href=\"http:\/\/youtube.com\/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">YouTube.com\/russellbrand<\/a><\/p><p class=\"section--inset\"><strong>NO REFUNDS.<\/strong><\/p><p class=\"section--inset\">Please note this show is only suitable for ages 16+<\/p><p class=\"section--inset\">Latecomers will not be admitted until a suitable point in the show.<\/p><p class=\"section--inset\"><strong>DOORS OPEN AT 6PM<\/strong><\/p><h3 class=\"section--inset\"><strong>SEATING<\/strong><\/h3><p class=\"section--inset\">Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage.<\/p><div class=\"section--inset\"><img src=\"\/media\/user-1\/20200120074247-seat-1.jpeg\"><\/div><div class=\"section--inset\"><img src=\"\/media\/user-1\/20200120074254-seat-2.jpeg\"><\/div><p class=\"section--inset\"><br><\/p>"
         },
         {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://russellbrand.com/"
-          },
-          "insert": "russellbrand.com"
+            "id": 5,
+            "admin": 1,
+            "poster": "poster-5.png",
+            "featured": false,
+            "published": true,
+            "participants": [
+                1,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13
+            ],
+            "created_at": "2020-01-10T04:22:27.438541Z",
+            "title": "Global Democracies in Retreat, What's at Stake?",
+            "subtitle": "Global Democracies in Retreat. What's at stake? A speaker series to uncover the current realities as the global world order shifts.",
+            "date": {
+                "start": "2020-01-11T04:22:27.438541Z",
+                "end": "2020-01-13T04:22:27.438541Z",
+                "notes": "A detailed schedule provided on the event description",
+                "formatted_date": "11 \u2013 13 January 2020",
+                "formatted_time": "08:00 AM \u2013 11:30 AM"
+            },
+            "venue": {
+                "name": "Vancouver Public Library, Central Library",
+                "address": "West Georgia Street 350, Vancouver, BC V6B 6B1"
+            },
+            "content": [
+                {
+                    "insert": "This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.\nThis is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it."
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "RUSSELL BRAND"
+                },
+                {
+                    "attributes": {
+                        "header": 3
+                    },
+                    "insert": "<br \/>"
+                },
+                {
+                    "insert": "Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.\nWeb:\u00a0"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/russellbrand.com\/"
+                    },
+                    "insert": "russellbrand.com"
+                },
+                {
+                    "insert": "Twitter:"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/twitter.com\/rustyrockets"
+                    },
+                    "insert": "\u00a0twitter.com\/rustyrockets"
+                },
+                {
+                    "insert": "Instagram:\u00a0"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/instagram.com\/russellbrand"
+                    },
+                    "insert": "instagram.com\/russellbrand"
+                },
+                {
+                    "insert": "You Tube:\u00a0"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/youtube.com\/russellbrand"
+                    },
+                    "insert": "YouTube.com\/russellbrand"
+                },
+                {
+                    "insert": "<br \/>"
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "NO REFUNDS."
+                },
+                {
+                    "insert": "Please note this show is only suitable for ages 16+\nLatecomers will not be admitted until a suitable point in the show."
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "DOORS OPEN AT 6PM"
+                },
+                {
+                    "insert": "<br \/>"
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "SEATING"
+                },
+                {
+                    "attributes": {
+                        "header": 3
+                    },
+                    "insert": "<br \/>"
+                },
+                {
+                    "insert": "Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage."
+                },
+                {
+                    "insert": {
+                        "customImage": true
+                    }
+                },
+                {
+                    "insert": {
+                        "customImage": true
+                    }
+                },
+                {
+                    "insert": "<br \/>"
+                }
+            ],
+            "html": "<p class=\"section--inset\">This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.<\/p><p class=\"section--inset\">This is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it.<\/p><h3 class=\"section--inset\"><strong>RUSSELL BRAND<\/strong><\/h3><p class=\"section--inset\">Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.<\/p><p class=\"section--inset\">Web:&nbsp;<a href=\"http:\/\/russellbrand.com\/\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">russellbrand.com<\/a><\/p><p class=\"section--inset\">Twitter:<a href=\"http:\/\/twitter.com\/rustyrockets\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">&nbsp;twitter.com\/rustyrockets<\/a><\/p><p class=\"section--inset\">Instagram:&nbsp;<a href=\"http:\/\/instagram.com\/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">instagram.com\/russellbrand<\/a><\/p><p class=\"section--inset\">You Tube:&nbsp;<a href=\"http:\/\/youtube.com\/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">YouTube.com\/russellbrand<\/a><\/p><p class=\"section--inset\"><strong>NO REFUNDS.<\/strong><\/p><p class=\"section--inset\">Please note this show is only suitable for ages 16+<\/p><p class=\"section--inset\">Latecomers will not be admitted until a suitable point in the show.<\/p><p class=\"section--inset\"><strong>DOORS OPEN AT 6PM<\/strong><\/p><h3 class=\"section--inset\"><strong>SEATING<\/strong><\/h3><p class=\"section--inset\">Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage.<\/p><div class=\"section--inset\"><img src=\"\/media\/user-1\/20200120074247-seat-1.jpeg\"><\/div><div class=\"section--inset\"><img src=\"\/media\/user-1\/20200120074254-seat-2.jpeg\"><\/div><p class=\"section--inset\"><br><\/p>"
         },
         {
-          "insert": "Twitter:"
+            "id": 6,
+            "admin": 1,
+            "poster": "poster-6.png",
+            "featured": false,
+            "published": true,
+            "participants": [
+                1,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13
+            ],
+            "created_at": "2020-01-10T04:22:27.438541Z",
+            "title": "Bandung IoT Maker Day 2020",
+            "subtitle": "Towards Smart City and Smart Village",
+            "date": {
+                "start": "2020-01-11T04:22:27.438541Z",
+                "end": "2020-01-13T04:22:27.438541Z",
+                "notes": "A detailed schedule provided on the event description",
+                "formatted_date": "11 \u2013 13 January 2020",
+                "formatted_time": "08:00 AM \u2013 11:30 AM"
+            },
+            "venue": {
+                "name": "Grand Tebu Hotel Bandung",
+                "address": "Jalan L. L. R.E. Martadinata No.207, Kec. Bandung Wetan, Jawa Barat 40114, Indonesia"
+            },
+            "content": [
+                {
+                    "insert": "This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.\nThis is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it."
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "RUSSELL BRAND"
+                },
+                {
+                    "attributes": {
+                        "header": 3
+                    },
+                    "insert": "<br \/>"
+                },
+                {
+                    "insert": "Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.\nWeb:\u00a0"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/russellbrand.com\/"
+                    },
+                    "insert": "russellbrand.com"
+                },
+                {
+                    "insert": "Twitter:"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/twitter.com\/rustyrockets"
+                    },
+                    "insert": "\u00a0twitter.com\/rustyrockets"
+                },
+                {
+                    "insert": "Instagram:\u00a0"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/instagram.com\/russellbrand"
+                    },
+                    "insert": "instagram.com\/russellbrand"
+                },
+                {
+                    "insert": "You Tube:\u00a0"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/youtube.com\/russellbrand"
+                    },
+                    "insert": "YouTube.com\/russellbrand"
+                },
+                {
+                    "insert": "<br \/>"
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "NO REFUNDS."
+                },
+                {
+                    "insert": "Please note this show is only suitable for ages 16+\nLatecomers will not be admitted until a suitable point in the show."
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "DOORS OPEN AT 6PM"
+                },
+                {
+                    "insert": "<br \/>"
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "SEATING"
+                },
+                {
+                    "attributes": {
+                        "header": 3
+                    },
+                    "insert": "<br \/>"
+                },
+                {
+                    "insert": "Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage."
+                },
+                {
+                    "insert": {
+                        "customImage": true
+                    }
+                },
+                {
+                    "insert": {
+                        "customImage": true
+                    }
+                },
+                {
+                    "insert": "<br \/>"
+                }
+            ],
+            "html": "<p class=\"section--inset\">This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.<\/p><p class=\"section--inset\">This is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it.<\/p><h3 class=\"section--inset\"><strong>RUSSELL BRAND<\/strong><\/h3><p class=\"section--inset\">Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.<\/p><p class=\"section--inset\">Web:&nbsp;<a href=\"http:\/\/russellbrand.com\/\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">russellbrand.com<\/a><\/p><p class=\"section--inset\">Twitter:<a href=\"http:\/\/twitter.com\/rustyrockets\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">&nbsp;twitter.com\/rustyrockets<\/a><\/p><p class=\"section--inset\">Instagram:&nbsp;<a href=\"http:\/\/instagram.com\/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">instagram.com\/russellbrand<\/a><\/p><p class=\"section--inset\">You Tube:&nbsp;<a href=\"http:\/\/youtube.com\/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">YouTube.com\/russellbrand<\/a><\/p><p class=\"section--inset\"><strong>NO REFUNDS.<\/strong><\/p><p class=\"section--inset\">Please note this show is only suitable for ages 16+<\/p><p class=\"section--inset\">Latecomers will not be admitted until a suitable point in the show.<\/p><p class=\"section--inset\"><strong>DOORS OPEN AT 6PM<\/strong><\/p><h3 class=\"section--inset\"><strong>SEATING<\/strong><\/h3><p class=\"section--inset\">Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage.<\/p><div class=\"section--inset\"><img src=\"\/media\/user-1\/20200120074247-seat-1.jpeg\"><\/div><div class=\"section--inset\"><img src=\"\/media\/user-1\/20200120074254-seat-2.jpeg\"><\/div><p class=\"section--inset\"><br><\/p>"
         },
         {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://twitter.com/rustyrockets"
-          },
-          "insert": "\u00a0twitter.com/rustyrockets"
-        },
-        {
-          "insert": "Instagram:\u00a0"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://instagram.com/russellbrand"
-          },
-          "insert": "instagram.com/russellbrand"
-        },
-        {
-          "insert": "You Tube:\u00a0"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://youtube.com/russellbrand"
-          },
-          "insert": "YouTube.com/russellbrand"
-        },
-        {
-          "insert": "<br />"
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "NO REFUNDS."
-        },
-        {
-          "insert": "Please note this show is only suitable for ages 16+\nLatecomers will not be admitted until a suitable point in the show."
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "DOORS OPEN AT 6PM"
-        },
-        {
-          "insert": "<br />"
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "SEATING"
-        },
-        {
-          "attributes": {
-            "header": 3
-          },
-          "insert": "<br />"
-        },
-        {
-          "insert": "Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage."
-        },
-        {
-          "insert": {
-            "customImage": true
-          }
-        },
-        {
-          "insert": {
-            "customImage": true
-          }
-        },
-        {
-          "insert": "<br />"
+            "id": 7,
+            "admin": 1,
+            "poster": "poster-7.png",
+            "featured": false,
+            "published": true,
+            "participants": [
+                1,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13
+            ],
+            "created_at": "2020-01-10T04:22:27.438541Z",
+            "title": "Kopi Chat: Building Winning HR Ecosystem in Your Startup",
+            "subtitle": "Building a winning HR Ecosystem in your startup",
+            "date": {
+                "start": "2020-01-11T04:22:27.438541Z",
+                "end": "2020-01-13T04:22:27.438541Z",
+                "notes": "A detailed schedule provided on the event description",
+                "formatted_date": "11 \u2013 13 January 2020",
+                "formatted_time": "08:00 AM \u2013 11:30 AM"
+            },
+            "venue": {
+                "name": "BLOCK71 Bandung",
+                "address": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
+            },
+            "content": [
+                {
+                    "insert": "This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.\nThis is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it."
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "RUSSELL BRAND"
+                },
+                {
+                    "attributes": {
+                        "header": 3
+                    },
+                    "insert": "<br \/>"
+                },
+                {
+                    "insert": "Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.\nWeb:\u00a0"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/russellbrand.com\/"
+                    },
+                    "insert": "russellbrand.com"
+                },
+                {
+                    "insert": "Twitter:"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/twitter.com\/rustyrockets"
+                    },
+                    "insert": "\u00a0twitter.com\/rustyrockets"
+                },
+                {
+                    "insert": "Instagram:\u00a0"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/instagram.com\/russellbrand"
+                    },
+                    "insert": "instagram.com\/russellbrand"
+                },
+                {
+                    "insert": "You Tube:\u00a0"
+                },
+                {
+                    "attributes": {
+                        "color": "var(--eds-control,#3659e3)",
+                        "link": "http:\/\/youtube.com\/russellbrand"
+                    },
+                    "insert": "YouTube.com\/russellbrand"
+                },
+                {
+                    "insert": "<br \/>"
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "NO REFUNDS."
+                },
+                {
+                    "insert": "Please note this show is only suitable for ages 16+\nLatecomers will not be admitted until a suitable point in the show."
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "DOORS OPEN AT 6PM"
+                },
+                {
+                    "insert": "<br \/>"
+                },
+                {
+                    "attributes": {
+                        "bold": true
+                    },
+                    "insert": "SEATING"
+                },
+                {
+                    "attributes": {
+                        "header": 3
+                    },
+                    "insert": "<br \/>"
+                },
+                {
+                    "insert": "Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage."
+                },
+                {
+                    "insert": {
+                        "customImage": true
+                    }
+                },
+                {
+                    "insert": {
+                        "customImage": true
+                    }
+                },
+                {
+                    "insert": "<br \/>"
+                }
+            ],
+            "html": "<p class=\"section--inset\">This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.<\/p><p class=\"section--inset\">This is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it.<\/p><h3 class=\"section--inset\"><strong>RUSSELL BRAND<\/strong><\/h3><p class=\"section--inset\">Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.<\/p><p class=\"section--inset\">Web:&nbsp;<a href=\"http:\/\/russellbrand.com\/\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">russellbrand.com<\/a><\/p><p class=\"section--inset\">Twitter:<a href=\"http:\/\/twitter.com\/rustyrockets\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">&nbsp;twitter.com\/rustyrockets<\/a><\/p><p class=\"section--inset\">Instagram:&nbsp;<a href=\"http:\/\/instagram.com\/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">instagram.com\/russellbrand<\/a><\/p><p class=\"section--inset\">You Tube:&nbsp;<a href=\"http:\/\/youtube.com\/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">YouTube.com\/russellbrand<\/a><\/p><p class=\"section--inset\"><strong>NO REFUNDS.<\/strong><\/p><p class=\"section--inset\">Please note this show is only suitable for ages 16+<\/p><p class=\"section--inset\">Latecomers will not be admitted until a suitable point in the show.<\/p><p class=\"section--inset\"><strong>DOORS OPEN AT 6PM<\/strong><\/p><h3 class=\"section--inset\"><strong>SEATING<\/strong><\/h3><p class=\"section--inset\">Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage.<\/p><div class=\"section--inset\"><img src=\"\/media\/user-1\/20200120074247-seat-1.jpeg\"><\/div><div class=\"section--inset\"><img src=\"\/media\/user-1\/20200120074254-seat-2.jpeg\"><\/div><p class=\"section--inset\"><br><\/p>"
         }
-      ],
-      "html": "<p class=\"section--inset\">This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.</p><p class=\"section--inset\">This is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it.</p><h3 class=\"section--inset\"><strong>RUSSELL BRAND</strong></h3><p class=\"section--inset\">Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.</p><p class=\"section--inset\">Web:&nbsp;<a href=\"http://russellbrand.com/\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">russellbrand.com</a></p><p class=\"section--inset\">Twitter:<a href=\"http://twitter.com/rustyrockets\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">&nbsp;twitter.com/rustyrockets</a></p><p class=\"section--inset\">Instagram:&nbsp;<a href=\"http://instagram.com/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">instagram.com/russellbrand</a></p><p class=\"section--inset\">You Tube:&nbsp;<a href=\"http://youtube.com/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">YouTube.com/russellbrand</a></p><p class=\"section--inset\"><strong>NO REFUNDS.</strong></p><p class=\"section--inset\">Please note this show is only suitable for ages 16+</p><p class=\"section--inset\">Latecomers will not be admitted until a suitable point in the show.</p><p class=\"section--inset\"><strong>DOORS OPEN AT 6PM</strong></p><h3 class=\"section--inset\"><strong>SEATING</strong></h3><p class=\"section--inset\">Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage.</p><div class=\"section--inset\"><img src=\"/media/user-1/20200120074247-seat-1.jpeg\"></div><div class=\"section--inset\"><img src=\"/media/user-1/20200120074254-seat-2.jpeg\"></div><p class=\"section--inset\"><br></p>"
-    },
-    {
-      "id": 2,
-      "admin": 1,
-      "poster": "poster-2.jpg",
-      "featured": false,
-      "published": true,
-      "participants": [1],
-      "created_at": "2020-01-10T04:22:27.438541Z",
-      "title": "Millennials Career Talk: Here We Come, Boomers!",
-      "subtitle": "Kicking off the year with talkshow and sharing sessions about career opportunities for millennials in 4.0 era with intergenerational experts.",
-      "date": {
-        "start": "2020-01-10T04:22:27.438541Z",
-        "end": "2020-01-13T04:22:27.438541Z",
-        "notes": "A detailed schedule provided on the event description",
-        "formatted_date": "10 – 13 January 2020",
-        "formatted_time": "08:00 AM – 11:30 AM"
-      },
-      "venue": {
-        "name": "BLOCK71 Bandung",
-        "address": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
-      },
-      "content": [
-        {
-          "insert": "This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.\nThis is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it."
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "RUSSELL BRAND"
-        },
-        {
-          "attributes": {
-            "header": 3
-          },
-          "insert": "<br />"
-        },
-        {
-          "insert": "Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.\nWeb:\u00a0"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://russellbrand.com/"
-          },
-          "insert": "russellbrand.com"
-        },
-        {
-          "insert": "Twitter:"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://twitter.com/rustyrockets"
-          },
-          "insert": "\u00a0twitter.com/rustyrockets"
-        },
-        {
-          "insert": "Instagram:\u00a0"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://instagram.com/russellbrand"
-          },
-          "insert": "instagram.com/russellbrand"
-        },
-        {
-          "insert": "You Tube:\u00a0"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://youtube.com/russellbrand"
-          },
-          "insert": "YouTube.com/russellbrand"
-        },
-        {
-          "insert": "<br />"
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "NO REFUNDS."
-        },
-        {
-          "insert": "Please note this show is only suitable for ages 16+\nLatecomers will not be admitted until a suitable point in the show."
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "DOORS OPEN AT 6PM"
-        },
-        {
-          "insert": "<br />"
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "SEATING"
-        },
-        {
-          "attributes": {
-            "header": 3
-          },
-          "insert": "<br />"
-        },
-        {
-          "insert": "Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage."
-        },
-        {
-          "insert": {
-            "customImage": true
-          }
-        },
-        {
-          "insert": {
-            "customImage": true
-          }
-        },
-        {
-          "insert": "<br />"
-        }
-      ],
-      "html": "<p class=\"section--inset\">This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.</p><p class=\"section--inset\">This is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it.</p><h3 class=\"section--inset\"><strong>RUSSELL BRAND</strong></h3><p class=\"section--inset\">Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.</p><p class=\"section--inset\">Web:&nbsp;<a href=\"http://russellbrand.com/\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">russellbrand.com</a></p><p class=\"section--inset\">Twitter:<a href=\"http://twitter.com/rustyrockets\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">&nbsp;twitter.com/rustyrockets</a></p><p class=\"section--inset\">Instagram:&nbsp;<a href=\"http://instagram.com/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">instagram.com/russellbrand</a></p><p class=\"section--inset\">You Tube:&nbsp;<a href=\"http://youtube.com/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">YouTube.com/russellbrand</a></p><p class=\"section--inset\"><strong>NO REFUNDS.</strong></p><p class=\"section--inset\">Please note this show is only suitable for ages 16+</p><p class=\"section--inset\">Latecomers will not be admitted until a suitable point in the show.</p><p class=\"section--inset\"><strong>DOORS OPEN AT 6PM</strong></p><h3 class=\"section--inset\"><strong>SEATING</strong></h3><p class=\"section--inset\">Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage.</p><div class=\"section--inset\"><img src=\"/media/user-1/20200120074247-seat-1.jpeg\"></div><div class=\"section--inset\"><img src=\"/media/user-1/20200120074254-seat-2.jpeg\"></div><p class=\"section--inset\"><br></p>"
-    },
-    {
-      "id": 3,
-      "admin": 1,
-      "poster": "poster-3.jpg",
-      "featured": false,
-      "published": true,
-      "participants": [1, 3],
-      "created_at": "2020-01-10T04:22:27.438541Z",
-      "title": "Tech Talk in Bandung: Modern Application Architecture",
-      "subtitle": "Mau belajar tentang event-driven microservice architecture? Datang ke acara Tech Talk yang diadakan oleh SIRCLO x Innovation Factory!",
-      "date": {
-        "start": "2020-01-11T04:22:27.438541Z",
-        "end": "2020-01-13T04:22:27.438541Z",
-        "notes": "A detailed schedule provided on the event description",
-        "formatted_date": "11 – 13 January 2020",
-        "formatted_time": "08:00 AM – 11:30 AM"
-      },
-      "venue": {
-        "name": "BLOCK71 Bandung",
-        "address": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
-      },
-      "content": [
-        {
-          "insert": "This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.\nThis is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it."
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "RUSSELL BRAND"
-        },
-        {
-          "attributes": {
-            "header": 3
-          },
-          "insert": "<br />"
-        },
-        {
-          "insert": "Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.\nWeb:\u00a0"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://russellbrand.com/"
-          },
-          "insert": "russellbrand.com"
-        },
-        {
-          "insert": "Twitter:"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://twitter.com/rustyrockets"
-          },
-          "insert": "\u00a0twitter.com/rustyrockets"
-        },
-        {
-          "insert": "Instagram:\u00a0"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://instagram.com/russellbrand"
-          },
-          "insert": "instagram.com/russellbrand"
-        },
-        {
-          "insert": "You Tube:\u00a0"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://youtube.com/russellbrand"
-          },
-          "insert": "YouTube.com/russellbrand"
-        },
-        {
-          "insert": "<br />"
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "NO REFUNDS."
-        },
-        {
-          "insert": "Please note this show is only suitable for ages 16+\nLatecomers will not be admitted until a suitable point in the show."
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "DOORS OPEN AT 6PM"
-        },
-        {
-          "insert": "<br />"
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "SEATING"
-        },
-        {
-          "attributes": {
-            "header": 3
-          },
-          "insert": "<br />"
-        },
-        {
-          "insert": "Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage."
-        },
-        {
-          "insert": {
-            "customImage": true
-          }
-        },
-        {
-          "insert": {
-            "customImage": true
-          }
-        },
-        {
-          "insert": "<br />"
-        }
-      ],
-      "html": "<p class=\"section--inset\">This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.</p><p class=\"section--inset\">This is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it.</p><h3 class=\"section--inset\"><strong>RUSSELL BRAND</strong></h3><p class=\"section--inset\">Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.</p><p class=\"section--inset\">Web:&nbsp;<a href=\"http://russellbrand.com/\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">russellbrand.com</a></p><p class=\"section--inset\">Twitter:<a href=\"http://twitter.com/rustyrockets\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">&nbsp;twitter.com/rustyrockets</a></p><p class=\"section--inset\">Instagram:&nbsp;<a href=\"http://instagram.com/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">instagram.com/russellbrand</a></p><p class=\"section--inset\">You Tube:&nbsp;<a href=\"http://youtube.com/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">YouTube.com/russellbrand</a></p><p class=\"section--inset\"><strong>NO REFUNDS.</strong></p><p class=\"section--inset\">Please note this show is only suitable for ages 16+</p><p class=\"section--inset\">Latecomers will not be admitted until a suitable point in the show.</p><p class=\"section--inset\"><strong>DOORS OPEN AT 6PM</strong></p><h3 class=\"section--inset\"><strong>SEATING</strong></h3><p class=\"section--inset\">Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage.</p><div class=\"section--inset\"><img src=\"/media/user-1/20200120074247-seat-1.jpeg\"></div><div class=\"section--inset\"><img src=\"/media/user-1/20200120074254-seat-2.jpeg\"></div><p class=\"section--inset\"><br></p>"
-    },
-    {
-      "id": 4,
-      "admin": 1,
-      "poster": "poster-4.jpg",
-      "featured": false,
-      "published": true,
-      "participants": [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-      "created_at": "2020-01-10T04:22:27.438541Z",
-      "title": "Study in UK Expo 2020 - Bandung",
-      "subtitle": "Study in UK Expo 2020 - Bandung",
-      "date": {
-        "start": "2020-01-11T04:22:27.438541Z",
-        "end": "2020-01-13T04:22:27.438541Z",
-        "notes": "",
-        "formatted_date": "11 – 13 January 2020",
-        "formatted_time": "08:00 AM – 11:30 AM"
-      },
-      "venue": {
-        "name": "Crowne Plaza Bandung",
-        "address": "Jalan Lembong 19, Sumur Bandung, Jawa Barat 40111, Indonesia"
-      },
-      "content": [
-        {
-          "insert": "This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.\nThis is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it."
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "RUSSELL BRAND"
-        },
-        {
-          "attributes": {
-            "header": 3
-          },
-          "insert": "<br />"
-        },
-        {
-          "insert": "Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.\nWeb:\u00a0"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://russellbrand.com/"
-          },
-          "insert": "russellbrand.com"
-        },
-        {
-          "insert": "Twitter:"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://twitter.com/rustyrockets"
-          },
-          "insert": "\u00a0twitter.com/rustyrockets"
-        },
-        {
-          "insert": "Instagram:\u00a0"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://instagram.com/russellbrand"
-          },
-          "insert": "instagram.com/russellbrand"
-        },
-        {
-          "insert": "You Tube:\u00a0"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://youtube.com/russellbrand"
-          },
-          "insert": "YouTube.com/russellbrand"
-        },
-        {
-          "insert": "<br />"
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "NO REFUNDS."
-        },
-        {
-          "insert": "Please note this show is only suitable for ages 16+\nLatecomers will not be admitted until a suitable point in the show."
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "DOORS OPEN AT 6PM"
-        },
-        {
-          "insert": "<br />"
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "SEATING"
-        },
-        {
-          "attributes": {
-            "header": 3
-          },
-          "insert": "<br />"
-        },
-        {
-          "insert": "Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage."
-        },
-        {
-          "insert": {
-            "customImage": true
-          }
-        },
-        {
-          "insert": {
-            "customImage": true
-          }
-        },
-        {
-          "insert": "<br />"
-        }
-      ],
-      "html": "<p class=\"section--inset\">This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.</p><p class=\"section--inset\">This is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it.</p><h3 class=\"section--inset\"><strong>RUSSELL BRAND</strong></h3><p class=\"section--inset\">Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.</p><p class=\"section--inset\">Web:&nbsp;<a href=\"http://russellbrand.com/\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">russellbrand.com</a></p><p class=\"section--inset\">Twitter:<a href=\"http://twitter.com/rustyrockets\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">&nbsp;twitter.com/rustyrockets</a></p><p class=\"section--inset\">Instagram:&nbsp;<a href=\"http://instagram.com/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">instagram.com/russellbrand</a></p><p class=\"section--inset\">You Tube:&nbsp;<a href=\"http://youtube.com/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">YouTube.com/russellbrand</a></p><p class=\"section--inset\"><strong>NO REFUNDS.</strong></p><p class=\"section--inset\">Please note this show is only suitable for ages 16+</p><p class=\"section--inset\">Latecomers will not be admitted until a suitable point in the show.</p><p class=\"section--inset\"><strong>DOORS OPEN AT 6PM</strong></p><h3 class=\"section--inset\"><strong>SEATING</strong></h3><p class=\"section--inset\">Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage.</p><div class=\"section--inset\"><img src=\"/media/user-1/20200120074247-seat-1.jpeg\"></div><div class=\"section--inset\"><img src=\"/media/user-1/20200120074254-seat-2.jpeg\"></div><p class=\"section--inset\"><br></p>"
-    },
-    {
-      "id": 5,
-      "admin": 1,
-      "poster": "poster-5.png",
-      "featured": false,
-      "published": true,
-      "participants": [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-      "created_at": "2020-01-10T04:22:27.438541Z",
-      "title": "Global Democracies in Retreat, What's at Stake?",
-      "subtitle": "Global Democracies in Retreat. What's at stake? A speaker series to uncover the current realities as the global world order shifts.",
-      "date": {
-        "start": "2020-01-11T04:22:27.438541Z",
-        "end": "2020-01-13T04:22:27.438541Z",
-        "notes": "A detailed schedule provided on the event description",
-        "formatted_date": "11 – 13 January 2020",
-        "formatted_time": "08:00 AM – 11:30 AM"
-      },
-      "venue": {
-        "name": "Vancouver Public Library, Central Library",
-        "address": "West Georgia Street 350, Vancouver, BC V6B 6B1"
-      },
-      "content": [
-        {
-          "insert": "This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.\nThis is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it."
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "RUSSELL BRAND"
-        },
-        {
-          "attributes": {
-            "header": 3
-          },
-          "insert": "<br />"
-        },
-        {
-          "insert": "Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.\nWeb:\u00a0"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://russellbrand.com/"
-          },
-          "insert": "russellbrand.com"
-        },
-        {
-          "insert": "Twitter:"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://twitter.com/rustyrockets"
-          },
-          "insert": "\u00a0twitter.com/rustyrockets"
-        },
-        {
-          "insert": "Instagram:\u00a0"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://instagram.com/russellbrand"
-          },
-          "insert": "instagram.com/russellbrand"
-        },
-        {
-          "insert": "You Tube:\u00a0"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://youtube.com/russellbrand"
-          },
-          "insert": "YouTube.com/russellbrand"
-        },
-        {
-          "insert": "<br />"
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "NO REFUNDS."
-        },
-        {
-          "insert": "Please note this show is only suitable for ages 16+\nLatecomers will not be admitted until a suitable point in the show."
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "DOORS OPEN AT 6PM"
-        },
-        {
-          "insert": "<br />"
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "SEATING"
-        },
-        {
-          "attributes": {
-            "header": 3
-          },
-          "insert": "<br />"
-        },
-        {
-          "insert": "Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage."
-        },
-        {
-          "insert": {
-            "customImage": true
-          }
-        },
-        {
-          "insert": {
-            "customImage": true
-          }
-        },
-        {
-          "insert": "<br />"
-        }
-      ],
-      "html": "<p class=\"section--inset\">This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.</p><p class=\"section--inset\">This is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it.</p><h3 class=\"section--inset\"><strong>RUSSELL BRAND</strong></h3><p class=\"section--inset\">Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.</p><p class=\"section--inset\">Web:&nbsp;<a href=\"http://russellbrand.com/\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">russellbrand.com</a></p><p class=\"section--inset\">Twitter:<a href=\"http://twitter.com/rustyrockets\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">&nbsp;twitter.com/rustyrockets</a></p><p class=\"section--inset\">Instagram:&nbsp;<a href=\"http://instagram.com/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">instagram.com/russellbrand</a></p><p class=\"section--inset\">You Tube:&nbsp;<a href=\"http://youtube.com/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">YouTube.com/russellbrand</a></p><p class=\"section--inset\"><strong>NO REFUNDS.</strong></p><p class=\"section--inset\">Please note this show is only suitable for ages 16+</p><p class=\"section--inset\">Latecomers will not be admitted until a suitable point in the show.</p><p class=\"section--inset\"><strong>DOORS OPEN AT 6PM</strong></p><h3 class=\"section--inset\"><strong>SEATING</strong></h3><p class=\"section--inset\">Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage.</p><div class=\"section--inset\"><img src=\"/media/user-1/20200120074247-seat-1.jpeg\"></div><div class=\"section--inset\"><img src=\"/media/user-1/20200120074254-seat-2.jpeg\"></div><p class=\"section--inset\"><br></p>"
-    },
-    {
-      "id": 6,
-      "admin": 1,
-      "poster": "poster-6.png",
-      "featured": false,
-      "published": true,
-      "participants": [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-      "created_at": "2020-01-10T04:22:27.438541Z",
-      "title": "Bandung IoT Maker Day 2020",
-      "subtitle": "Towards Smart City and Smart Village",
-      "date": {
-        "start": "2020-01-11T04:22:27.438541Z",
-        "end": "2020-01-13T04:22:27.438541Z",
-        "notes": "A detailed schedule provided on the event description",
-        "formatted_date": "11 – 13 January 2020",
-        "formatted_time": "08:00 AM – 11:30 AM"
-      },
-      "venue": {
-        "name": "Grand Tebu Hotel Bandung",
-        "address": "Jalan L. L. R.E. Martadinata No.207, Kec. Bandung Wetan, Jawa Barat 40114, Indonesia"
-      },
-      "content": [
-        {
-          "insert": "This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.\nThis is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it."
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "RUSSELL BRAND"
-        },
-        {
-          "attributes": {
-            "header": 3
-          },
-          "insert": "<br />"
-        },
-        {
-          "insert": "Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.\nWeb:\u00a0"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://russellbrand.com/"
-          },
-          "insert": "russellbrand.com"
-        },
-        {
-          "insert": "Twitter:"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://twitter.com/rustyrockets"
-          },
-          "insert": "\u00a0twitter.com/rustyrockets"
-        },
-        {
-          "insert": "Instagram:\u00a0"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://instagram.com/russellbrand"
-          },
-          "insert": "instagram.com/russellbrand"
-        },
-        {
-          "insert": "You Tube:\u00a0"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://youtube.com/russellbrand"
-          },
-          "insert": "YouTube.com/russellbrand"
-        },
-        {
-          "insert": "<br />"
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "NO REFUNDS."
-        },
-        {
-          "insert": "Please note this show is only suitable for ages 16+\nLatecomers will not be admitted until a suitable point in the show."
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "DOORS OPEN AT 6PM"
-        },
-        {
-          "insert": "<br />"
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "SEATING"
-        },
-        {
-          "attributes": {
-            "header": 3
-          },
-          "insert": "<br />"
-        },
-        {
-          "insert": "Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage."
-        },
-        {
-          "insert": {
-            "customImage": true
-          }
-        },
-        {
-          "insert": {
-            "customImage": true
-          }
-        },
-        {
-          "insert": "<br />"
-        }
-      ],
-      "html": "<p class=\"section--inset\">This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.</p><p class=\"section--inset\">This is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it.</p><h3 class=\"section--inset\"><strong>RUSSELL BRAND</strong></h3><p class=\"section--inset\">Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.</p><p class=\"section--inset\">Web:&nbsp;<a href=\"http://russellbrand.com/\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">russellbrand.com</a></p><p class=\"section--inset\">Twitter:<a href=\"http://twitter.com/rustyrockets\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">&nbsp;twitter.com/rustyrockets</a></p><p class=\"section--inset\">Instagram:&nbsp;<a href=\"http://instagram.com/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">instagram.com/russellbrand</a></p><p class=\"section--inset\">You Tube:&nbsp;<a href=\"http://youtube.com/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">YouTube.com/russellbrand</a></p><p class=\"section--inset\"><strong>NO REFUNDS.</strong></p><p class=\"section--inset\">Please note this show is only suitable for ages 16+</p><p class=\"section--inset\">Latecomers will not be admitted until a suitable point in the show.</p><p class=\"section--inset\"><strong>DOORS OPEN AT 6PM</strong></p><h3 class=\"section--inset\"><strong>SEATING</strong></h3><p class=\"section--inset\">Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage.</p><div class=\"section--inset\"><img src=\"/media/user-1/20200120074247-seat-1.jpeg\"></div><div class=\"section--inset\"><img src=\"/media/user-1/20200120074254-seat-2.jpeg\"></div><p class=\"section--inset\"><br></p>"
-    },
-    {
-      "id": 7,
-      "admin": 1,
-      "poster": "poster-7.png",
-      "featured": false,
-      "published": true,
-      "participants": [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-      "created_at": "2020-01-10T04:22:27.438541Z",
-      "title": "Kopi Chat: Building Winning HR Ecosystem in Your Startup",
-      "subtitle": "Building a winning HR Ecosystem in your startup",
-      "date": {
-        "start": "2020-01-11T04:22:27.438541Z",
-        "end": "2020-01-13T04:22:27.438541Z",
-        "notes": "A detailed schedule provided on the event description",
-        "formatted_date": "11 – 13 January 2020",
-        "formatted_time": "08:00 AM – 11:30 AM"
-      },
-      "venue": {
-        "name": "BLOCK71 Bandung",
-        "address": "Jalan Ir. H. Juanda No.84, Kecamatan Coblong, Bandung 40132, Indonesia"
-      },
-      "content": [
-        {
-          "insert": "This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.\nThis is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it."
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "RUSSELL BRAND"
-        },
-        {
-          "attributes": {
-            "header": 3
-          },
-          "insert": "<br />"
-        },
-        {
-          "insert": "Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.\nWeb:\u00a0"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://russellbrand.com/"
-          },
-          "insert": "russellbrand.com"
-        },
-        {
-          "insert": "Twitter:"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://twitter.com/rustyrockets"
-          },
-          "insert": "\u00a0twitter.com/rustyrockets"
-        },
-        {
-          "insert": "Instagram:\u00a0"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://instagram.com/russellbrand"
-          },
-          "insert": "instagram.com/russellbrand"
-        },
-        {
-          "insert": "You Tube:\u00a0"
-        },
-        {
-          "attributes": {
-            "color": "var(--eds-control,#3659e3)",
-            "link": "http://youtube.com/russellbrand"
-          },
-          "insert": "YouTube.com/russellbrand"
-        },
-        {
-          "insert": "<br />"
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "NO REFUNDS."
-        },
-        {
-          "insert": "Please note this show is only suitable for ages 16+\nLatecomers will not be admitted until a suitable point in the show."
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "DOORS OPEN AT 6PM"
-        },
-        {
-          "insert": "<br />"
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "SEATING"
-        },
-        {
-          "attributes": {
-            "header": 3
-          },
-          "insert": "<br />"
-        },
-        {
-          "insert": "Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage."
-        },
-        {
-          "insert": {
-            "customImage": true
-          }
-        },
-        {
-          "insert": {
-            "customImage": true
-          }
-        },
-        {
-          "insert": "<br />"
-        }
-      ],
-      "html": "<p class=\"section--inset\">This 90-minute experience will introduce you to the system that saved his life, continues to save his sanity and will work for anyone who is willing to commit to it.</p><p class=\"section--inset\">This is a program for living for those aspiring to be saints who have lived too long among demons. This is an alternative vision for life at a time devoid of real values and connection. This could be the thing you have been looking for and it\u2019s weird that this is the way you\u2019re going to find it.</p><h3 class=\"section--inset\"><strong>RUSSELL BRAND</strong></h3><p class=\"section--inset\">Russell Brand is a comedian, actor and activist for mental health and drug rehabilitation. He is the author of seven books, including the New York Times\u2019 Bestseller, Recovery: Freedom From Our Addictions, and Mentors: How to Help and Be Helped. His podcast, \u201cUnder The Skin\u201d is available on Luminary.</p><p class=\"section--inset\">Web:&nbsp;<a href=\"http://russellbrand.com/\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">russellbrand.com</a></p><p class=\"section--inset\">Twitter:<a href=\"http://twitter.com/rustyrockets\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">&nbsp;twitter.com/rustyrockets</a></p><p class=\"section--inset\">Instagram:&nbsp;<a href=\"http://instagram.com/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">instagram.com/russellbrand</a></p><p class=\"section--inset\">You Tube:&nbsp;<a href=\"http://youtube.com/russellbrand\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--eds-control,#3659e3);\">YouTube.com/russellbrand</a></p><p class=\"section--inset\"><strong>NO REFUNDS.</strong></p><p class=\"section--inset\">Please note this show is only suitable for ages 16+</p><p class=\"section--inset\">Latecomers will not be admitted until a suitable point in the show.</p><p class=\"section--inset\"><strong>DOORS OPEN AT 6PM</strong></p><h3 class=\"section--inset\"><strong>SEATING</strong></h3><p class=\"section--inset\">Seats are first come first served in the section you purchase. Higher priced tickets are closer to the stage.</p><div class=\"section--inset\"><img src=\"/media/user-1/20200120074247-seat-1.jpeg\"></div><div class=\"section--inset\"><img src=\"/media/user-1/20200120074254-seat-2.jpeg\"></div><p class=\"section--inset\"><br></p>"
-    }
-  ]
+    ]
 }

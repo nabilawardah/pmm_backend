@@ -10,6 +10,8 @@
 
 @section('content')
 
+<textarea hidden name="event-data" id="event-data" class="hidden">{{ json_encode($event) ?? '' }}</textarea>
+
 @component('layouts.main-content', ['width' => 'bleed'])
   <main class="event-detail-outer-wrapper">
 
@@ -40,7 +42,7 @@
             <p class="small">{{ $event['venue']['address'] }}</p>
           </span>
         </li>
-        <button class="button button--large primary stretch">Join Event</button>
+        <button class="button button--large primary stretch join-event" data-user="1">Join Event</button>
       </ul>
     </section>
 
