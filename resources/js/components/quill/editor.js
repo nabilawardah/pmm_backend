@@ -10,7 +10,6 @@ const Parchment = Quill.import('parchment')
 const Block = Quill.import('blots/block')
 
 Block.className = 'section--inset'
-
 Quill.register(CustomImage)
 Quill.register(CustomVideo)
 Quill.register(Block, true)
@@ -29,6 +28,7 @@ if (wysiwyg.length > 0) {
 
   let wysiwygEditor = new Quill('#wysiwyg-editor', {
     modules: {
+      // blotFormatter: {},
       toolbar: {
         container: '#toolbar-container',
         handlers: {
@@ -45,6 +45,13 @@ if (wysiwyg.length > 0) {
   let articleDataContainer = $('textarea#article-data')
   if (articleDataContainer.length > 0) {
     let articleData = JSON.parse(articleDataContainer.val())
+    console.log('EDITING ARTICLE: ', articleData)
+    wysiwygEditor.setContents(articleData.content)
+  }
+
+  let eventDataContainer = $('textarea#event-data')
+  if (eventDataContainer.length > 0) {
+    let articleData = JSON.parse(eventDataContainer.val())
     console.log('EDITING ARTICLE: ', articleData)
     wysiwygEditor.setContents(articleData.content)
   }

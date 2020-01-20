@@ -11,7 +11,7 @@
     }
   </style>
 
-  @include('components.navbar-writing', [
+  @include('components.navbar-event', [
     'action_class' => 'publish-event',
     'action_label' => 'Save & Publish Event'
   ])
@@ -113,7 +113,7 @@
           <button class="ql-underline"></button>
         </span>
         <span class="ql-formats">
-          <button class="ql-header" value="1"></button>
+          {{-- <button class="ql-header" value="1"></button> --}}
           <button class="ql-header" value="2"></button>
           <button class="ql-header" value="3"></button>
         </span>
@@ -141,11 +141,20 @@
         </span>
       </div>
 
-      <div id="wysiwyg-editor" data-placeholder="Add event detail..."></div>
+      <div style="margin-bottom: 80px;" id="wysiwyg-editor" data-placeholder="Add event detail..."></div>
+
+      <div class="modal-action-wrapper">
+        <footer class="modal-action-bar section--inset">
+          <button class="button primary button--large edit-event-to-step-1">
+            <svg viewBox="0 0 18 18" role="presentation" aria-hidden="true" focusable="false" style="margin-left: -8px; margin-right: 8px; height: 1em; width: 1em; display: block; fill: currentcolor;"><path d="m13.7 16.29a1 1 0 1 1 -1.42 1.41l-8-8a1 1 0 0 1 0-1.41l8-8a1 1 0 1 1 1.42 1.41l-7.29 7.29z" fill-rule="evenodd"></path></svg>
+            Back to Basic Info</button>
+          <button class="button ghost button--large">Cancel</button>
+        </footer>
+      </div>
 
     </main>
 
-    <input name="editor-cover" hidden type="file" class="editor-cover">
+    <input name="editor-cover" data-type="event" hidden type="file" class="editor-cover">
     <input type="hidden" id="event-id" name="event-id" value="{{ $event_id }}" />
     <input type="hidden" id="user-id" name="user-id" value="{{ $user_id }}" />
     {{-- <input type="hidden" name="event-title" /> --}}

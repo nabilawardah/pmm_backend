@@ -456,7 +456,7 @@ class DummyController extends Controller
         }
 
         foreach ($this->users as $user) {
-            if (in_array((int) $user['id'], $selected_event['participants'])) {
+            if (isset($selected_event['participants']) && count($selected_event['participants']) > 0 && in_array((int) $user['id'], $selected_event['participants'])) {
                 array_push($participants, $user);
             }
         }

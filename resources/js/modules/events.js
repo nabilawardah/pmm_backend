@@ -180,7 +180,7 @@ $(function() {
       user_id: userId,
       html: window.activeQuill.root.innerHTML,
       content: modified,
-      cover: cover,
+      poster: cover,
       date: {
         start_date: startDate,
         start_time: startTime,
@@ -206,7 +206,7 @@ $(function() {
           window.location = `/events/${eventId}`
         }
       })
-      .catch(err => console.log('ERROR SUBMITTING ARTICLE: ', err))
+      .catch(err => console.log('ERROR SUBMITTING EVENT: ', err))
   }
 
   $(document).on('click', '.publish-event', submitEvent)
@@ -218,6 +218,16 @@ $(function() {
     $(this)
       .parents('.edit-event-step.step-1')
       .siblings('.step-2')
+      .fadeIn(200)
+  })
+
+  $(document).on('click', '.edit-event-to-step-1', function() {
+    $(this)
+      .parents('.edit-event-step.step-2')
+      .fadeOut(200)
+    $(this)
+      .parents('.edit-event-step.step-2')
+      .siblings('.step-1')
       .fadeIn(200)
   })
 })

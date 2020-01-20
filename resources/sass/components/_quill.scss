@@ -8,7 +8,7 @@
   box-sizing: border-box;
   font-family: $font-primary;
   font-size: $body-3;
-  height: 100%;
+  // min-height: 100%;
   margin: 0px;
   position: relative;
 }
@@ -653,31 +653,31 @@
 .ql-snow .ql-direction.ql-active svg:first-child {
   display: none;
 }
-.ql-snow .ql-editor h1 {
+.ql-snow h1 {
   font-size: $heading-1;
   font-weight: $extrabold;
 }
-.ql-snow .ql-editor h2 {
+.ql-snow h2 {
   font-size: $heading-2;
   font-weight: $bold;
 }
-.ql-snow .ql-editor h3 {
+.ql-snow h3 {
   font-size: $heading-3;
   font-weight: $bold;
 }
-.ql-snow .ql-editor h4 {
+.ql-snow h4 {
   font-size: $heading-4;
   font-weight: $semibold;
 }
-.ql-snow .ql-editor h5 {
+.ql-snow h5 {
   font-size: $heading-5;
   font-weight: $semibold;
 }
-.ql-snow .ql-editor h6 {
+.ql-snow h6 {
   font-size: $heading-6;
   font-weight: $semibold;
 }
-.ql-snow .ql-editor a {
+.ql-snow a {
   position: relative;
   cursor: pointer;
   text-decoration: none;
@@ -701,7 +701,7 @@
 @include hoverIn($light-alpha-100, hoverInDark60);
 @include hoverOut($light-alpha-100, hoverOutDark60);
 
-.ql-snow .ql-editor blockquote {
+.ql-snow blockquote {
   border-left: none;
   // border-left: 2px solid $dark-alpha-30;
   font-size: 28px;
@@ -715,31 +715,31 @@
   padding-right: 6%;
 }
 
-.ql-snow .ql-editor blockquote + blockquote {
+.ql-snow blockquote + blockquote {
   margin-top: 0;
 }
 
-.ql-snow .ql-editor code,
-.ql-snow .ql-editor pre {
+.ql-snow code,
+.ql-snow pre {
   background-color: #f0f0f0;
   border-radius: 3px;
 }
-.ql-snow .ql-editor pre {
+.ql-snow pre {
   white-space: pre-wrap;
   margin-bottom: 5px;
   margin-top: 5px;
   padding: 5px 10px;
 }
-.ql-snow .ql-editor code {
+.ql-snow code {
   font-size: 85%;
   padding: 2px 4px;
 }
-.ql-snow .ql-editor pre.ql-syntax {
+.ql-snow pre.ql-syntax {
   background-color: #23241f;
   color: #f8f8f2;
   overflow: visible;
 }
-.ql-snow .ql-editor img {
+.ql-snow img {
   cursor: default;
   margin-top: $space-l;
   max-width: 100%;
@@ -1057,4 +1057,19 @@
 }
 .ql-container.ql-snow {
   border: none;
+}
+
+.ql-event {
+  height: unset;
+  padding: 0;
+
+  > * {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.ql-event-container {
+  height: unset;
+  padding-top: 0;
 }

@@ -198,6 +198,6 @@ $(function() {
 
     hideModal()
 
-    console.log('CLICKED...', selected)
+    // console.log('CLICKED...', selected)
   })
 })
