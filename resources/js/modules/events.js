@@ -222,6 +222,19 @@ $(function() {
       .catch(err => console.log(err))
   }
 
+  function cancelEventRegistration() {
+    let event = JSON.parse($('#event-data').val())
+    let user_id = Number($(this).data('user'))
+
+    axios
+      .post(`/api/events/cancel_registration/${event.id}`, { user_id })
+      .then(res => {
+        console.log('CANCEL: ', res.data)
+        window.location.reload()
+      })
+      .catch(err => console.log('ERR CANCEL: ', err))
+  }
+
   $(document).on('click', '.publish-event', submitEvent)
 
   $(document).on('click', '.edit-event-to-step-2', function() {
@@ -245,4 +258,5 @@ $(function() {
   })
 
   $(document).on('click', '.join-event', joinEvent)
+  $(document).on('click', '.cancel-event-registration', cancelEventRegistration)
 })

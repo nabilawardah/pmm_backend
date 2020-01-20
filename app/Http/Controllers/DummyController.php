@@ -448,10 +448,15 @@ class DummyController extends Controller
         $participants = [];
         $thumbnail_participants = [];
         $other_participants = [];
+        $user_id = $request->user_id ?? 1;
+        $registered = false;
 
         foreach ($this->events as $event) {
             if ((int) $event['id'] === (int) $request->id) {
                 $selected_event = $event;
+                if (in_array((int) $user_id, $event['participants'])) {
+                    $registered = true;
+                }
             }
         }
 
@@ -475,6 +480,7 @@ class DummyController extends Controller
             'participants' => $participants,
             'thumbnail_participants' => $thumbnail_participants,
             'other_participants' => $other_participants,
+            'registered' => $registered,
         ]);
     }
 
@@ -573,6 +579,29 @@ class DummyController extends Controller
             if ((int) $event['id'] === (int) $event_id) {
                 if (!in_array((int) $user_id, $event['participants'])) {
                     array_push($event['participants'], $user_id);
+                }
+                $new_event = $event;
+            }
+            array_push($data_placeholder, $event);
+        }
+
+        $this->jsonEvents['data'] = $data_placeholder;
+        $this->save_event_to_file();
+
+        return $new_event;
+    }
+
+    public function cancel_event_registration(Request $request)
+    {
+        $event_id = $request->event_id;
+        $user_id = $request->user_id;
+        $data_placeholder = [];
+        $new_event = [];
+
+        foreach ($this->events as $event) {
+            if ((int) $event['id'] === (int) $event_id) {
+                if (($key = array_search((int) $user_id, $event['participants'])) !== false) {
+                    unset($event['participants'][$key]);
                 }
                 $new_event = $event;
             }
