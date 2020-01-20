@@ -121,42 +121,41 @@
 .event-detail-info {
   position: sticky;
   top: 48px;
-  height: calc(100vh - 96px);
   flex-direction: column;
   justify-content: space-between;
-  @include screen(smallPhone) {
-    display: none;
-  }
-  @include screen(phone) {
-    display: none;
-  }
-  @include screen(tablet) {
-    display: none;
-  }
-  @include screen(tabletLandscape) {
-    display: none;
-  }
   @include screen(desktop) {
     display: none;
+    height: calc(100vh - 152px);
   }
   @include screen(desktopWide) {
     display: flex;
+    height: calc(100vh - 96px);
   }
 }
 
 .event-detail-aside {
   position: sticky;
   top: 48px;
-  height: calc(100vh - 96px);
   width: 100%;
+  @include screen(desktop) {
+    height: calc(100vh - 152px);
+  }
+  @include screen(desktopWide) {
+    height: calc(100vh - 96px);
+  }
 }
 
 .event-detail-poster-wrapper {
   display: block;
   position: relative;
   width: 100%;
-  height: calc(100vh - 96px);
   overflow: hidden;
+  @include screen(desktop) {
+    height: calc(100vh - 152px);
+  }
+  @include screen(desktopWide) {
+    height: calc(100vh - 96px);
+  }
 }
 
 .event-detail-poster {

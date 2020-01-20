@@ -77,7 +77,7 @@
         </ul>
       </section>
 
-      <p class="event-detail-subtitle subtitle-wide">{{ $event['subtitle'] }}</p>
+      <p class="event-detail-subtitle subtitle-wide" style="font-weight: 500;">{{ $event['subtitle'] }}</p>
 
       @if(count($thumbnail_participants) > 0)
         <div class="event-detail-participants-container participants-wide">
