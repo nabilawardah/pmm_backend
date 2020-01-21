@@ -1,0 +1,12 @@
+.prev-month,
+.next-month {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: $brand-primary-200;
+
+  &.button--disabled {
+    color: $dark-alpha-40;
+  }
+}

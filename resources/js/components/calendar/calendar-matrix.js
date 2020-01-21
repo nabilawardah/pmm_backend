@@ -12,7 +12,7 @@ export function generateCalendarMatrix(year, month, weekStartsOn = 1) {
   //  3. Get the differences in weeks from lastDay to firstDay
   //  Add (+1) to get total row we need for the matrix to cover all the days in the month
   //  It'll be used as total rows needed for our matrix
-  const matrixRows = differenceInCalendarWeeks(lastDay, firstDay, { weekStartsOn }) + 2
+  const matrixRows = differenceInCalendarWeeks(lastDay, firstDay, { weekStartsOn }) + 1
 
   //  4. Set the number of days in a week.
   //  It'll be used as total columns needed for our matrix
