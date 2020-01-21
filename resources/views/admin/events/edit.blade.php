@@ -18,7 +18,8 @@
 
   @include('components.navbar-event', [
     'action_class' => 'publish-event',
-    'action_label' => 'Save & Publish Event'
+    'action_label' => 'Save & Publish Event',
+    'show_publish' => true
   ])
 
   @include('components.confirm-delete', [

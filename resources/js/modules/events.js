@@ -203,7 +203,7 @@ $(function() {
       .then(res => {
         if (res.status === 200) {
           console.log('RES: ', res)
-          // window.location = `/events/${eventId}`
+          window.location = `/events/${eventId}`
         }
       })
       .catch(err => console.log('ERROR SUBMITTING EVENT: ', err))

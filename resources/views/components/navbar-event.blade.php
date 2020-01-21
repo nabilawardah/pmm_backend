@@ -11,8 +11,16 @@
         Back
       </a>
       <div style="display: inline-flex; align-items: center; justify-content: flex-start;">
-        <button class="button button--small primary publish-event" style="margin-right: 8px;">Save & Publish</button>
-        <a href="/admin/events/{{ $event['admin'] }}/edit/{{ $event['id'] }}" class="no-pre button button--small default edit-event">Edit</a>
+        @isset($show_publish)
+          @if($show_publish)
+            <button class="button button--small primary publish-event" style="margin-right: 8px;">Save & Publish</button>
+          @endif
+        @endisset
+        @isset($show_edit)
+          @if($show_edit)
+            <a href="/admin/events/{{ $event['admin'] }}/edit/{{ $event['id'] }}" class="no-pre button button--small default edit-event">Edit</a>
+          @endif
+        @endisset
         <button class="button button--small secondary ghost confirm-delete">Delete</button>
       </div>
     </section>

@@ -10,7 +10,11 @@
 
 @section('content')
 
-@include('components.navbar-event')
+@include('components.navbar-event', [
+  'action_class' => 'publish-event',
+  'action_label' => 'Save & Publish Event',
+  'show_edit' => true,
+  ])
 
 @include('components.confirm-delete', [
   'message' => 'Deleted events are gone forever. Are you sure?',

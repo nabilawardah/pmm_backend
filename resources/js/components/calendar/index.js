@@ -1,6 +1,7 @@
 import {
   isToday,
   addMonths,
+  formatRFC3339,
   subMonths,
   isSameDay,
   isSameYear,
@@ -180,18 +181,18 @@ $(function() {
         .parents('.date-picker-container')
         .find('input.date-picker')
 
+      inputField.data('value', formatRFC3339(new Date(data)))
+      inputField.attr('data-value', formatRFC3339(new Date(data)))
       inputField.attr('value', format(new Date(data), 'd MMMM yyyy'))
-      inputField.attr('data-value', data)
-      inputField.data('value', data)
       inputField.val(format(new Date(data), 'd MMMM yyyy'))
 
       if (isStartDate && isStartDate.length > 0) {
         let endDate = new Date($('#date-end').attr('data-value'))
         if (isBefore(endDate, new Date(data))) {
           let endDateField = $('#date-end')
-          endDateField.attr('data-value', data)
+          endDateField.attr('data-value', formatRFC3339(new Date(data)))
+          endDateField.data('value', formatRFC3339(new Date(data)))
           endDateField.attr('value', format(new Date(data), 'd MMMM yyyy'))
-          endDateField.data('value', data)
           endDateField.val(format(new Date(data), 'd MMMM yyyy'))
         }
       }
