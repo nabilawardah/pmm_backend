@@ -10,6 +10,13 @@
 
 @section('content')
 
+@include('components.navbar-event')
+
+@include('components.confirm-delete', [
+  'message' => 'Deleted events are gone forever. Are you sure?',
+  'url' => '/api/events/delete/'.$event['id']
+])
+
 <textarea hidden name="event-data" id="event-data" class="hidden">{{ json_encode($event) ?? '' }}</textarea>
 
 @component('layouts.main-content', ['width' => 'bleed'])
@@ -17,9 +24,6 @@
 
     <section class="event-detail-info">
       <header class="padding-bottom: 48px;">
-        <a href="/events" style="display: inline-flex; align-items: center; justify-content: flex-start; margin-bottom: 24px">
-          <svg viewBox="0 0 18 18" role="presentation" aria-hidden="true" focusable="false" style="margin-right: 8px; height: 1em; width: 1em; display: block; fill: currentcolor;"><path d="m13.7 16.29a1 1 0 1 1 -1.42 1.41l-8-8a1 1 0 0 1 0-1.41l8-8a1 1 0 1 1 1.42 1.41l-7.29 7.29z" fill-rule="evenodd"></path></svg>
-          Back</a>
         <h1 class="heading2" style="margin-bottom: 24px;">{{ $event['title'] ?? '' }}</h1>
       </header>
       <ul class="event-detail-info-list-container">
@@ -58,9 +62,6 @@
 
       <section class="event-detail-info-mobile">
         <header style="padding-bottom: 32px; border-bottom: 1px solid rgba(0,0,0,.12); margin-bottom: 32px;">
-          <a href="/events" style="display: inline-flex; align-items: center; justify-content: flex-start; margin-bottom: 24px">
-            <svg viewBox="0 0 18 18" role="presentation" aria-hidden="true" focusable="false" style="margin-right: 8px; height: 1em; width: 1em; display: block; fill: currentcolor;"><path d="m13.7 16.29a1 1 0 1 1 -1.42 1.41l-8-8a1 1 0 0 1 0-1.41l8-8a1 1 0 1 1 1.42 1.41l-7.29 7.29z" fill-rule="evenodd"></path></svg>
-            Back</a>
           <h1 class="heading2" style="margin-bottom: 16px;">{{ $event['title'] ?? '' }}</h1>
           <p class="event-detail-subtitle">{{ $event['subtitle'] }}</p>
         </header>

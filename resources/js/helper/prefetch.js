@@ -85,7 +85,7 @@ function prefetchPages() {
 
   // Add URL to queue on mouse hover, after timeout
   const mouseOverListener = event => {
-    const elm = event.target.closest('a')
+    const elm = event.target.closest('a:not(.no-pre)')
     if (elm && elm.href && !alreadyPrefetched.has(elm.href)) {
       hoverTimer = setTimeout(() => {
         addUrlToQueue(elm.href, true)
@@ -95,13 +95,13 @@ function prefetchPages() {
 
   // Preload on touchstart on mobile
   const touchStartListener = event => {
-    const elm = event.target.closest('a')
+    const elm = event.target.closest('a:not(.no-pre)')
     if (elm && elm.href && !alreadyPrefetched.has(elm.href)) addUrlToQueue(elm.href, true)
   }
 
   // Clear timeout on mouse out if not already preloaded
   const mouseOutListener = event => {
-    const elm = event.target.closest('a')
+    const elm = event.target.closest('a:not(.no-pre)')
     if (elm && elm.href && !alreadyPrefetched.has(elm.href)) {
       clearTimeout(hoverTimer)
     }

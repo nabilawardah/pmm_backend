@@ -11,11 +11,13 @@
       "title": "Integration of IOT in Alibaba Cloud - Bandung",
       "subtitle": "Alibaba Cloud offers many solutions to enhance Industry 4.0 capabilities, especially in IoT industry.",
       "date": {
-        "start": "2020-01-11T04:22:27.438541Z",
-        "end": "2020-01-13T04:22:27.438541Z",
-        "notes": "Some notes here",
-        "formatted_date": "11 – 13 January 2020",
-        "formatted_time": "08:00 AM – 11:30 AM"
+        "start_date": "2020-01-11T04:22:27.438541Z",
+        "start_time": "08:00 AM",
+        "end_date": "2020-01-11T04:22:27.438541Z",
+        "end_time": "10:00 AM",
+        "notes": "This better be good mate.",
+        "formatted_time": "08:00 AM \u2013 10:00 AM",
+        "formatted_date": "11 January 2020"
       },
       "venue": {
         "name": "EduPlex Coworking Space",
@@ -140,11 +142,13 @@
       "title": "Millennials Career Talk: Here We Come, Boomers!",
       "subtitle": "Kicking off the year with talkshow and sharing sessions about career opportunities for millennials in 4.0 era with intergenerational experts.",
       "date": {
-        "start": "2020-01-10T04:22:27.438541Z",
-        "end": "2020-01-13T04:22:27.438541Z",
-        "notes": "A detailed schedule provided on the event description",
-        "formatted_date": "10 – 13 January 2020",
-        "formatted_time": "08:00 AM – 11:30 AM"
+        "start_date": "2020-01-11T04:22:27.438541Z",
+        "start_time": "08:00 AM",
+        "end_date": "2020-01-11T04:22:27.438541Z",
+        "end_time": "10:00 AM",
+        "notes": "This better be good mate.",
+        "formatted_time": "08:00 AM \u2013 10:00 AM",
+        "formatted_date": "11 January 2020"
       },
       "venue": {
         "name": "BLOCK71 Bandung",
@@ -269,11 +273,13 @@
       "title": "Tech Talk in Bandung: Modern Application Architecture",
       "subtitle": "Mau belajar tentang event-driven microservice architecture? Datang ke acara Tech Talk yang diadakan oleh SIRCLO x Innovation Factory!",
       "date": {
-        "start": "2020-01-11T04:22:27.438541Z",
-        "end": "2020-01-13T04:22:27.438541Z",
-        "notes": "A detailed schedule provided on the event description",
-        "formatted_date": "11 – 13 January 2020",
-        "formatted_time": "08:00 AM – 11:30 AM"
+        "start_date": "2020-01-11T04:22:27.438541Z",
+        "start_time": "08:00 AM",
+        "end_date": "2020-01-11T04:22:27.438541Z",
+        "end_time": "10:00 AM",
+        "notes": "This better be good mate.",
+        "formatted_time": "08:00 AM \u2013 10:00 AM",
+        "formatted_date": "11 January 2020"
       },
       "venue": {
         "name": "BLOCK71 Bandung",
@@ -398,11 +404,13 @@
       "title": "Study in UK Expo 2020 - Bandung",
       "subtitle": "Study in UK Expo 2020 - Bandung",
       "date": {
-        "start": "2020-01-11T04:22:27.438541Z",
-        "end": "2020-01-13T04:22:27.438541Z",
-        "notes": "",
-        "formatted_date": "11 – 13 January 2020",
-        "formatted_time": "08:00 AM – 11:30 AM"
+        "start_date": "2020-01-11T04:22:27.438541Z",
+        "start_time": "08:00 AM",
+        "end_date": "2020-01-11T04:22:27.438541Z",
+        "end_time": "10:00 AM",
+        "notes": "This better be good mate.",
+        "formatted_time": "08:00 AM \u2013 10:00 AM",
+        "formatted_date": "11 January 2020"
       },
       "venue": {
         "name": "Crowne Plaza Bandung",
@@ -527,11 +535,13 @@
       "title": "Global Democracies in Retreat, What's at Stake?",
       "subtitle": "Global Democracies in Retreat. What's at stake? A speaker series to uncover the current realities as the global world order shifts.",
       "date": {
-        "start": "2020-01-11T04:22:27.438541Z",
-        "end": "2020-01-13T04:22:27.438541Z",
-        "notes": "A detailed schedule provided on the event description",
-        "formatted_date": "11 – 13 January 2020",
-        "formatted_time": "08:00 AM – 11:30 AM"
+        "start_date": "2020-01-11T04:22:27.438541Z",
+        "start_time": "08:00 AM",
+        "end_date": "2020-01-11T04:22:27.438541Z",
+        "end_time": "10:00 AM",
+        "notes": "This better be good mate.",
+        "formatted_time": "08:00 AM \u2013 10:00 AM",
+        "formatted_date": "11 January 2020"
       },
       "venue": {
         "name": "Vancouver Public Library, Central Library",
@@ -656,11 +666,13 @@
       "title": "Bandung IoT Maker Day 2020",
       "subtitle": "Towards Smart City and Smart Village",
       "date": {
-        "start": "2020-01-11T04:22:27.438541Z",
-        "end": "2020-01-13T04:22:27.438541Z",
-        "notes": "A detailed schedule provided on the event description",
-        "formatted_date": "11 – 13 January 2020",
-        "formatted_time": "08:00 AM – 11:30 AM"
+        "start_date": "2020-01-11T04:22:27.438541Z",
+        "start_time": "08:00 AM",
+        "end_date": "2020-01-11T04:22:27.438541Z",
+        "end_time": "10:00 AM",
+        "notes": "This better be good mate.",
+        "formatted_time": "08:00 AM \u2013 10:00 AM",
+        "formatted_date": "11 January 2020"
       },
       "venue": {
         "name": "Grand Tebu Hotel Bandung",
@@ -785,11 +797,13 @@
       "title": "Kopi Chat: Building Winning HR Ecosystem in Your Startup",
       "subtitle": "Building a winning HR Ecosystem in your startup",
       "date": {
-        "start": "2020-01-11T04:22:27.438541Z",
-        "end": "2020-01-13T04:22:27.438541Z",
-        "notes": "A detailed schedule provided on the event description",
-        "formatted_date": "11 – 13 January 2020",
-        "formatted_time": "08:00 AM – 11:30 AM"
+        "start_date": "2020-01-11T04:22:27.438541Z",
+        "start_time": "08:00 AM",
+        "end_date": "2020-01-11T04:22:27.438541Z",
+        "end_time": "10:00 AM",
+        "notes": "This better be good mate.",
+        "formatted_time": "08:00 AM \u2013 10:00 AM",
+        "formatted_date": "11 January 2020"
       },
       "venue": {
         "name": "BLOCK71 Bandung",

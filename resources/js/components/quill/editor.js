@@ -46,7 +46,18 @@ if (wysiwyg.length > 0) {
   if (articleDataContainer.length > 0) {
     let articleData = JSON.parse(articleDataContainer.val())
     console.log('EDITING ARTICLE: ', articleData)
-    wysiwygEditor.setContents(articleData.content)
+    let content = {
+      ops: [],
+    }
+    content.ops = articleData.content.ops.map(c => {
+      console.log(typeof c.insert)
+      if (!c.insert || !c.insert === undefined) {
+        return (c.insert = '\n')
+      } else {
+        return c
+      }
+    })
+    wysiwygEditor.setContents(content.ops)
   }
 
   let eventDataContainer = $('textarea#event-data')
@@ -90,16 +101,7 @@ if (wysiwyg.length > 0) {
       let userId = $('input[name="user-id"]').val()
       let articleId = $('input[name="article-id"]').val()
       let cover = $('.editor-cover-image').data('name')
-
       let content = wysiwygEditor.getContents()
-      let modified = content.map(c => {
-        if (c.insert === '\n') {
-          c.insert = `<br />`
-          return c
-        } else {
-          return c
-        }
-      })
 
       let data = {
         title: title,
@@ -107,7 +109,7 @@ if (wysiwyg.length > 0) {
         article_id: articleId,
         user_id: userId,
         html: wysiwygEditor.root.innerHTML,
-        content: modified,
+        content: content,
         cover: {
           src: cover,
           type: 'image',

@@ -4,6 +4,11 @@
 
 @section('content')
 
+  @include('components.confirm-delete', [
+    'message' => 'Deleted events are gone forever. Are you sure?',
+    'url' => '/api/events/delete/'.$event['id']
+  ])
+
   <style>
     .main-content {
       padding-top: 0;
@@ -48,23 +53,23 @@
           <div class="date-time-outer-wrapper">
             <fieldset class="input date-picker-container" style="margin-bottom: 0;">
               <label class="input-label label--event" for="date-start">Start Date</label>
-              <input class="input-field date-picker" type="text" id="date-start" placeholder="Start Date" data-value="{{ $event['date']['start'] ?? now() }}" value="{{ date('d F Y', strtotime($event['date']['start'] ?? now())) }}">
+              <input class="input-field date-picker" type="text" id="date-start" placeholder="Start Date" data-value="{{ $event['date']['start_date'] ?? now() }}" value="{{ date('d F Y', strtotime($event['date']['start_date'] ?? now())) }}">
               <div class="popout calendar-outer-container" style="display: none;" id="popout-start-date"></div>
             </fieldset>
             <fieldset class="input time-picker-container" style="margin-bottom: 0;">
               <label class="input-label label--event" for="time-start">Start time</label>
-              <input class="input-field" type="text" id="time-start" placeholder="HH:MM">
+            <input class="input-field" type="text" id="time-start" placeholder="HH:MM" data-value="{{ $event['date']['start_time'] ?? '08:00' }}" value="{{ $event['date']['start_time'] ?? '08:00' }}">
             </fieldset>
           </div>
           <div class="date-time-outer-wrapper">
             <fieldset class="input date-picker-container" style="margin-bottom: 0;">
               <label class="input-label label--event" for="date-end">End Date</label>
-              <input class="input-field date-picker" type="text" id="date-end" placeholder="End Date" data-value="{{ $event['date']['start'] ?? now() }}" value="{{ date('d F Y', strtotime($event['date']['end'] ?? now())) }}">
+              <input class="input-field date-picker" type="text" id="date-end" placeholder="End Date" data-value="{{ $event['date']['end_date'] ?? now() }}" value="{{ date('d F Y', strtotime($event['date']['end_date'] ?? now())) }}">
               <div class="popout calendar-outer-container" style="display: none;" id="popout-end-date"></div>
             </fieldset>
             <fieldset class="input time-picker-container" style="margin-bottom: 0;">
               <label class="input-label label--event" for="time-end">End time</label>
-              <input class="input-field" type="text" id="time-end" placeholder="HH:MM">
+              <input class="input-field" type="text" id="time-end" placeholder="HH:MM" data-value="{{ $event['date']['end_time'] ?? '08:00' }}" value="{{ $event['date']['end_time'] ?? '08:00' }}">
             </fieldset>
           </div>
           <fieldset class="input">
@@ -156,9 +161,7 @@
 
     <input name="editor-cover" data-type="event" hidden type="file" class="editor-cover">
     <input type="hidden" id="event-id" name="event-id" value="{{ $event_id }}" />
-    <input type="hidden" id="user-id" name="user-id" value="{{ $user_id }}" />
-    {{-- <input type="hidden" name="event-title" /> --}}
-    {{-- <input type="hidden" name="editor-subtitle-preview" /> --}}
+    <input type="hidden" id="user-id" name="user-id" value="{{ $user_id ?? 1 }}" />
     <textarea class="hidden" name="event-data" id="event-data">{{ json_encode($event) ?? '' }}</textarea>
 
   @endcomponent

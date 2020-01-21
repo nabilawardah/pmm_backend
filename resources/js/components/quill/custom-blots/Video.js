@@ -44,26 +44,25 @@ class VideoBlot extends BlockEmbed {
     return node
   }
 
-  // static value(node) {
-  //   return node
-  //   return {
-  //     alt: node.firstChild.getAttribute('alt') || '',
-  //     url: node.firstChild.firstChild.getAttribute('src'),
-  //     classList: node.getAttribute('class'),
-  //   }
-  // }
+  static value(node) {
+    return {
+      alt: node.firstChild.getAttribute('alt') || '',
+      url: node.firstChild.firstChild.getAttribute('src'),
+      classList: node.getAttribute('class'),
+    }
+  }
 
-  // static formats(node) {
-  //   // We still need to report unregistered embed formats
-  //   let format = {}
-  //   if (node.hasAttribute('height')) {
-  //     format.height = node.getAttribute('height')
-  //   }
-  //   if (node.hasAttribute('width')) {
-  //     format.width = node.getAttribute('width')
-  //   }
-  //   return format
-  // }
+  static formats(node) {
+    // We still need to report unregistered embed formats
+    let format = {}
+    if (node.hasAttribute('height')) {
+      format.height = node.getAttribute('height')
+    }
+    if (node.hasAttribute('width')) {
+      format.width = node.getAttribute('width')
+    }
+    return format
+  }
 }
 
 VideoBlot.blotName = 'customVideo'

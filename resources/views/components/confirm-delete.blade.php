@@ -17,7 +17,7 @@
       </p>
       <footer style="display: inline-flex; align-items: center; justify-content: center; width: 100%;" class="inline--m">
       <a href="{{ $url ?? '' }}" class="no-pre button button--medium secondary delete-article">Delete</a>
-        <button class="button button--medium default close-modal">Cancel</button>
+      <button class="button button--medium default close-modal">Cancel</button>
       </footer>
     </div>
   </div>

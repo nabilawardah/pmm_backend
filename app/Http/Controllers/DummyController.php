@@ -421,7 +421,9 @@ class DummyController extends Controller
 
             $event['participants'] = $event_participants;
             $event['admin'] = $event_admin;
-            array_push($data_events['data'], $event);
+            if (isset($event['created_at'])) {
+                array_push($data_events['data'], $event);
+            }
         }
 
         return $data_events;
@@ -540,9 +542,8 @@ class DummyController extends Controller
 
     public function submit_event(Request $request)
     {
-        // 'created_at' => Carbon::now(),
         $data_placeholder = [];
-        $new_article = [];
+        $new_event = [];
 
         foreach ($this->events as $event) {
             if ((int) $event['id'] === (int) $request->event_id && (int) $event['admin'] === (int) $request->user_id) {
@@ -565,7 +566,7 @@ class DummyController extends Controller
         $this->jsonEvents['data'] = $data_placeholder;
         $this->save_event_to_file();
 
-        return $new_article;
+        return $new_event;
     }
 
     public function join_event(Request $request)
