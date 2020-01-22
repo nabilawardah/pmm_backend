@@ -55,18 +55,18 @@
             <fieldset class="input date-picker-container" style="margin-bottom: 0;">
               <label class="input-label label--event" for="date-start">Start Date</label>
               <input class="input-field date-picker" type="text" id="date-start" placeholder="Start Date" data-value="{{ $event['date']['start_date'] ?? now() }}" value="{{ date('d F Y', strtotime($event['date']['start_date'] ?? now())) }}">
-              <div class="popout calendar-outer-container" style="display: none;" id="popout-start-date"></div>
+              <div class="popout calendar-outer-container hidden" style="display: none;" id="popout-start-date"></div>
             </fieldset>
             <fieldset class="input time-picker-container" style="margin-bottom: 0;">
               <label class="input-label label--event" for="time-start">Start time</label>
-            <input class="input-field" type="text" id="time-start" placeholder="HH:MM" data-value="{{ $event['date']['start_time'] ?? '08:00' }}" value="{{ $event['date']['start_time'] ?? '08:00' }}">
+              <input class="input-field" type="text" id="time-start" placeholder="HH:MM" data-value="{{ $event['date']['start_time'] ?? '08:00' }}" value="{{ $event['date']['start_time'] ?? '08:00' }}">
             </fieldset>
           </div>
           <div class="date-time-outer-wrapper">
             <fieldset class="input date-picker-container" style="margin-bottom: 0;">
               <label class="input-label label--event" for="date-end">End Date</label>
               <input class="input-field date-picker" type="text" id="date-end" placeholder="End Date" data-value="{{ $event['date']['end_date'] ?? now() }}" value="{{ date('d F Y', strtotime($event['date']['end_date'] ?? now())) }}">
-              <div class="popout calendar-outer-container" style="display: none;" id="popout-end-date"></div>
+              <div class="popout calendar-outer-container hidden" style="display: none;" id="popout-end-date"></div>
             </fieldset>
             <fieldset class="input time-picker-container" style="margin-bottom: 0;">
               <label class="input-label label--event" for="time-end">End time</label>

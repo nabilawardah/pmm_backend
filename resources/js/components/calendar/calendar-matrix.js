@@ -1,4 +1,20 @@
-import { addDays, startOfWeek, differenceInCalendarWeeks, endOfMonth, startOfMonth, format } from 'date-fns'
+import {
+  isToday,
+  addMonths,
+  isSameDay,
+  isSameYear,
+  isPast,
+  isSameMonth,
+  getMonth,
+  getYear,
+  isBefore,
+  addDays,
+  startOfWeek,
+  differenceInCalendarWeeks,
+  endOfMonth,
+  startOfMonth,
+  format,
+} from 'date-fns'
 
 export function generateCalendarMatrix(year, month, weekStartsOn = 1) {
   //  1. Generate the date from params, then get the firstDay and lastDay in the month
@@ -38,4 +54,36 @@ export function generateCalendarMatrix(year, month, weekStartsOn = 1) {
       )
 
   return calendar
+}
+
+export function generateCalendar({ month, year }) {
+  let markup = `
+      <ul class="calendar-week calendar-week--header">
+        <li class="calendar-day-wrapper calendar-day-wrapper--header">MON</li>
+        <li class="calendar-day-wrapper calendar-day-wrapper--header">TUE</li>
+        <li class="calendar-day-wrapper calendar-day-wrapper--header">WED</li>
+        <li class="calendar-day-wrapper calendar-day-wrapper--header">THU</li>
+        <li class="calendar-day-wrapper calendar-day-wrapper--header">FRI</li>
+        <li class="calendar-day-wrapper calendar-day-wrapper--header">SAT</li>
+        <li class="calendar-day-wrapper calendar-day-wrapper--header">SUN</li>
+      </ul>
+    `
+  let weeks = generateCalendarMatrix(year, month)
+
+  weeks.map((week, index) => {
+    let days = ``
+
+    week.map((day, index) => {
+      days += `<li class="calendar-day-wrapper" data-date="${day}"><span class="calendar-day ${
+        isPast(new Date(day)) && !isToday(new Date(day)) ? 'is-past' : ''
+      } ${!isSameMonth(day, new Date(year, month, 1)) ? 'not-same-month' : ''}" data-date="${day}">${format(
+        day,
+        'd'
+      )}</span></li>`
+    })
+
+    markup += `<ul class="calendar-week">` + days + `</ul>`
+  })
+
+  return markup
 }
