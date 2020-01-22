@@ -49,7 +49,7 @@
           </fieldset>
         </section>
 
-        <section style="margin-bottom: 48px;">
+        <section class="date-picker-parents-reference" style="margin-bottom: 48px;">
           <h2 class="heading3" style="margin-bottom: 32px;">Date and Time</h2>
           <div class="date-time-outer-wrapper">
             <fieldset class="input date-picker-container" style="margin-bottom: 0;">

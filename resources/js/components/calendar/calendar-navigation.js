@@ -62,13 +62,25 @@ export function checkCalendarButtonNavigationState({ date, container }) {
   }
 }
 
+function hideOtherActiveDatepicker(container) {
+  container.addClass('active-date-picker')
+  container
+    .parents('.date-time-outer-wrapper')
+    .siblings('div.date-time-outer-wrapper')
+    .find('.active-date-picker')
+    .removeClass('active-date-picker')
+    .find('div.popout')
+    .hide()
+    .addClass('hidden')
+}
+
 export function triggerDatePicker() {
   let current = new Date($(this).data('value'))
   let month = getMonth(current)
   let year = getYear(current)
-
   let container = $(this).parents('.date-picker-container')
-  container.addClass('active-date-picker')
+
+  hideOtherActiveDatepicker(container)
 
   container.attr('data-next', addMonths(current, 1))
   container.attr('data-prev', subMonths(current, 1))
@@ -167,10 +179,7 @@ export function prevMonth() {
 
 export function blurDatePicker(e) {
   let active = $('.active-date-picker')
-  // console.log(e.active)
-  // console.log(active.length > 0, !active.is(e.target), !popout.hasClass('hidden'))
-  // console.log($.contains(document.querySelector('.active-date-picker').querySelector('.popout'), e.target))
-  // if (!$.contains(document.querySelector('.active-date-picker').querySelector('.popout'), e.target)) {
+
   if (active.length > 0) {
     let popout = active.find('div.popout')
     if (
@@ -179,17 +188,11 @@ export function blurDatePicker(e) {
       !$.contains(document.querySelector('.active-date-picker').querySelector('.input-label'), e.target) &&
       !$.contains(document.querySelector('.active-date-picker').querySelector('.input-field'), e.target)
     ) {
-      // if(popout)
-      // popout.fadeOut(100)
-      popout.addClass('hidden').hide()
-      // console.log(!$.contains(document.querySelector('.active-date-picker').querySelector('div.popout'), e.target))
+      popout
+        .addClass('hidden')
+        .hide()
+        .parents('.active-date-picker')
+        .removeClass('.active-date-picker')
     }
   }
-  // if (
-  //   (active.length > 0 &&
-  //     !$.contains(document.querySelector('.active-date-picker').querySelector('div.popout'), e.target),
-  //   !active.is(e.target) && !popout.hasClass('hidden'))
-  // ) {
-  //   popout.addClass('hidden').fadeOut(200)
-  // }
 }
