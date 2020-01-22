@@ -70,3 +70,7 @@ Route::get('/api/events', 'DummyController@get_data_events');
 Route::post('/api/events/submit/{event_id}', 'DummyController@submit_event');
 Route::post('/api/events/join/{event_id}', 'DummyController@join_event');
 Route::post('/api/events/cancel_registration/{event_id}', 'DummyController@cancel_event_registration');
+
+Route::get('/sample', function () {
+    return view('admin.events.dummy', ['active_page' => 'Events']);
+});

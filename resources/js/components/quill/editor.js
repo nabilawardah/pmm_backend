@@ -10,8 +10,8 @@ const Parchment = Quill.import('parchment')
 const Block = Quill.import('blots/block')
 
 Block.className = 'section--inset'
-Quill.register(CustomImage)
-Quill.register(CustomVideo)
+Quill.register({ 'formats/customImage': CustomImage }, true)
+Quill.register({ 'formats/customVideo': CustomVideo }, true)
 Quill.register(Block, true)
 
 // Register solution for scroll issue on paste

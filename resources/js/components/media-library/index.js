@@ -1,11 +1,10 @@
 import axios from 'axios'
-import Quill from 'quill'
 import isImageUrl from 'is-image-url'
+import { exec, init } from 'pell/src/pell'
+import { processVideoUrl, generateVideoElement } from './media-helper'
 
 import { generateMedia } from '../media-uploader'
 import { showModal, hideModal } from '../modals/index'
-
-const Delta = Quill.import('delta')
 
 let body = $('body')
 let mainContent = $('.main-content')
@@ -13,6 +12,9 @@ let navbar = $('.main-navbar')
 let footer = $('.main-footer')
 
 export function imageHandler() {
+  window.globalSelection = document.getSelection()
+  window.savedSelection = [globalSelection.focusNode, globalSelection.focusOffset]
+  console.log(savedSelection)
   showModal('#media-library')
   // generateMedia(handleUpload.bind(this))
 }
@@ -51,7 +53,9 @@ function updateMediaLibrary() {
 }
 
 function handleUpload() {
-  let container = window.activeQuill.container
+  console.log('PELL')
+
+  let container = document.body
   let fileInput = container.querySelector('input.ql-image[type=file]')
 
   if (fileInput == null) {
@@ -84,42 +88,30 @@ function handleUpload() {
         axios
           .post(`/api/articles/media/${userId}`, data, config)
           .then(res => {
-            console.log('RES: ', res.data)
+            // console.log('RES: ', res.data)
 
-            let quillInstance = window.activeQuill || this.quill
-            let range = quillInstance.getSelection(true)
+            // let pellInstance = window.pell
+            // let range = pellInstance.getSelection(true)
+            // console.log(range)
 
             if (res.status === 200) {
               // File is an image
               if ($.inArray(fileType, validImageTypes) >= 0) {
-                quillInstance.updateContents(
-                  new Delta()
-                    .retain(range.index)
-                    .delete(range.length)
-                    .insert({ customImage: { url: res.data.url } }),
-                  Quill.sources.USER
-                )
+                // console.log('URL', res.data.url)
+                exec('insertImage', res.data.url)
+                exec('formatBlock', '<p>')
                 fileInput.value = ''
               } else {
-                quillInstance.updateContents(
-                  new Delta()
-                    .retain(range.index)
-                    .delete(range.length)
-                    .insert({ customVideo: { url: res.data.url, type: fileType } }),
-                  Quill.sources.USER
-                )
+                console.log('URL', res.data.url, fileType)
+                let video = processVideoUrl(res.data.url)
+                generateVideoElement(video, fileType)
                 fileInput.value = ''
               }
             } else {
               let reader = new FileReader()
               reader.onload = function(e) {
-                quillInstance.updateContents(
-                  new Delta()
-                    .retain(range.index)
-                    .delete(range.length)
-                    .insert({ customImage: { url: e.target.result } }),
-                  Quill.sources.USER
-                )
+                console.log('URL', e.target.result)
+                exec('insertImage', e.target.result)
                 fileInput.value = ''
               }
               reader.readAsDataURL(fileInput.files[0])
@@ -137,36 +129,27 @@ function handleUpload() {
 $(function() {
   let selected = {}
 
-  if (window.activeQuill) {
+  if (window.pell) {
     $(document).on('click', '.upload-media-library', function() {
       handleUpload()
     })
 
     $(document).on('click', '.add-media-with-link', function() {
-      // let url =
-      //   'https://res.cloudinary.com/vasilenka/image/upload/v1540917416/kotakita/library/2018-10-30/lib-bungarampai.jpg'
       let input = $('#add-media-link')
       let url = input.val()
 
-      let range = activeQuill.getSelection(true)
+      globalSelection.collapse(savedSelection[0], savedSelection[1])
 
-      console.log(url, isImageUrl(url))
+      // console.log(url, isImageUrl(url))
       if (isImageUrl(url)) {
-        activeQuill.updateContents(
-          new Delta()
-            .retain(range.index)
-            .delete(range.length)
-            .insert({ customImage: { url } }),
-          Quill.sources.USER
-        )
+        console.log('IMAGE: ', url)
+        let image = document.createElement('IMG')
+        image.setAttribute('src', url)
+        image.onload = exec('insertHTML', image)
       } else {
-        activeQuill.updateContents(
-          new Delta()
-            .retain(range.index)
-            .delete(range.length)
-            .insert({ customVideo: { url } }),
-          Quill.sources.USER
-        )
+        console.log('VIDEO: ', video)
+        let video = processVideoUrl(url)
+        generateVideoElement(video)
       }
 
       updateMediaLibrary()
@@ -185,21 +168,9 @@ $(function() {
         .toggleClass('selected')
       $(this).toggleClass('selected')
 
-      let range = activeQuill.getSelection(true)
-
-      activeQuill.updateContents(
-        new Delta()
-          .retain(range.index)
-          .delete(range.length)
-          .insert({ customImage: { url: selected.url } }),
-        Quill.sources.USER
-      )
-
+      exec('insertImage', selected.url)
       updateMediaLibrary()
-
       hideModal()
-
-      // console.log('CLICKED...', selected)
     })
   }
 })

@@ -7,7 +7,7 @@ import { generateButtonSpinner } from '../components/button-spinner'
 import { showModal } from '../components/modals/index'
 import { addError, removeError } from '../components/input-field'
 
-import { formatDate, formatTime } from './../components/calendar/index'
+import { formatDate, formatTime } from '../components/calendar/index'
 
 $(function() {
   generateCustomSearch('#events-table_filter')
@@ -164,14 +164,14 @@ $(function() {
     let venueLocation = $('#venue-location').val()
 
     let content = window.activeQuill.getContents()
-    let modified = content.map(c => {
-      if (c.insert === '\n') {
-        c.insert = `&nbsp;`
-        return c
-      } else {
-        return c
-      }
-    })
+    // let modified = content.map(c => {
+    //   if (c.insert === '\n') {
+    //     c.insert = `&nbsp;`
+    //     return c
+    //   } else {
+    //     return c
+    //   }
+    // })
 
     let data = {
       title: title,
@@ -179,7 +179,7 @@ $(function() {
       article_id: eventId,
       user_id: userId,
       html: window.activeQuill.root.innerHTML,
-      content: modified,
+      content: content,
       poster: cover,
       date: {
         start_date: startDate,

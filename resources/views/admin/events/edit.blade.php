@@ -112,20 +112,18 @@
 
     <main class="edit-event-step step-2" style="display: none;">
 
-      <div id="toolbar-container">
+      {{-- <div id="toolbar-container">
         <span class="ql-formats">
           <button class="ql-bold"></button>
           <button class="ql-italic"></button>
           <button class="ql-underline"></button>
         </span>
         <span class="ql-formats">
-          {{-- <button class="ql-header" value="1"></button> --}}
           <button class="ql-header" value="2"></button>
           <button class="ql-header" value="3"></button>
         </span>
         <span class="ql-formats">
           <button class="ql-blockquote"></button>
-          {{-- <button class="ql-divider"></button> --}}
         </span>
         <span class="ql-formats">
           <button class="ql-list" value="ordered"></button>
@@ -138,16 +136,16 @@
         </span>
         <span class="ql-formats">
           <button class="ql-link"></button>
-          {{-- <button class="ql-image"></button> --}}
           <button class="ql-video"></button>
           <button class="ql-media"></button>
         </span>
         <span class="ql-formats">
           <button class="ql-clean"></button>
         </span>
-      </div>
+      </div> --}}
 
-      <div style="margin-bottom: 80px;" id="wysiwyg-editor" data-placeholder="Add event detail..."></div>
+      {{-- <div style="margin-bottom: 80px;" id="wysiwyg-editor" data-placeholder="Add event detail..."></div> --}}
+      <div id="pell-editor"></div>
 
       <div class="modal-action-wrapper">
         <footer class="modal-action-bar section--inset">

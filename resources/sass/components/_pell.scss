@@ -1,0 +1,129 @@
+$pell-actionbar-color: #fff !default;
+$pell-border-color: rgba(10, 10, 10, 0.1) !default;
+$pell-border-style: solid !default;
+$pell-border-width: 1px !default;
+$pell-button-height: 32px !default;
+$pell-button-selected-color: #f0f0f0 !default;
+$pell-button-width: 32px !default;
+$pell-content-height: auto !default;
+$pell-content-padding: $space-ml !default;
+$pell-font-size: 17px !default;
+
+.pell {
+  border: $pell-border-width $pell-border-style $pell-border-color;
+  box-sizing: border-box;
+}
+
+.pell-content {
+  box-sizing: border-box;
+  height: $pell-content-height;
+  outline: 0;
+  overflow-y: auto;
+  padding: $pell-content-padding;
+}
+
+.pell-actionbar {
+  background-color: $pell-actionbar-color;
+  box-shadow: inset 0px -1px 0px 0px $dark-hex-10, 0px 16px 20px -16px rgba(0, 0, 0, 0.16);
+  padding-top: $space-sm;
+  padding-bottom: $space-sm;
+  position: sticky;
+  top: 0;
+  z-index: $layer-s;
+}
+
+.pell-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: 0;
+  height: $pell-button-height;
+  width: $pell-button-width;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+
+  &[title='undefined'] {
+    width: 16px;
+  }
+
+  & svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+
+  & .pell-fill {
+    fill: $dark-hex-70;
+  }
+
+  & .pell-stroke {
+    stroke: $dark-hex-70;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+
+    &.pell-fill {
+      fill: currentColor;
+    }
+
+    &.pell-thin {
+      stroke-width: 1px;
+    }
+  }
+
+  &:hover {
+    & .pell-fill {
+      fill: $brand-primary-200;
+    }
+
+    & .pell-stroke {
+      stroke: $brand-primary-200;
+    }
+  }
+}
+
+.pell-button-selected {
+  // color: $brand-primary-200;
+  // background-color: $pell-button-selected-color;
+
+  & .pell-fill {
+    fill: $brand-primary-200;
+  }
+
+  & .pell-stroke {
+    stroke: $brand-primary-200;
+  }
+}
+
+.pell-even {
+  fill-rule: evenodd;
+}
+
+#pell-editor .pell-content {
+  font-size: $pell-font-size;
+  line-height: 27px;
+
+  & > p:not(:first-child) {
+    margin-top: $space-ml;
+  }
+
+  & > a {
+    text-decoration: underline;
+  }
+
+  & img {
+    width: 100%;
+  }
+
+  & iframe {
+    width: 100%;
+  }
+
+  & .pell-video {
+    width: 100%;
+    min-height: 400px;
+  }
+}

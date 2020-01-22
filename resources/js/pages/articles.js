@@ -2,13 +2,13 @@ import 'datatables.net-fixedcolumns-bs4'
 import axios from 'axios'
 import dayjs from 'dayjs'
 
-import User from './../class/User'
-import { generateCustomSearch } from './../components/datatable-searchbox'
-import { generateButtonSpinner } from './../components/button-spinner'
+import User from '../class/User'
+import { generateCustomSearch } from '../components/datatable-searchbox'
+import { generateButtonSpinner } from '../components/button-spinner'
 import { showModal } from '../components/modals/index'
-import { uploadProfilePhoto, saveProfilePhoto, processPhotoUploading } from './../components/photo-uploader'
-import { addError, removeError } from './../components/input-field'
-import { generateAdminRole, generateUserRole } from './../components/role'
+import { uploadProfilePhoto, saveProfilePhoto, processPhotoUploading } from '../components/photo-uploader'
+import { addError, removeError } from '../components/input-field'
+import { generateAdminRole, generateUserRole } from '../components/role'
 
 $(function() {
   generateCustomSearch('#articles-table_filter')

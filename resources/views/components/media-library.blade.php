@@ -38,7 +38,7 @@
         <button class="button button--medium primary add-media-with-link">Use Link</button>
       </section>
 
-      <section class="media-upload-library">
+      {{-- <section class="media-upload-library">
         <h3 class="heading3" style="margin-bottom: 24px;">Choose from your library</h3>
         <ul class="media-upload-library-container">
           @foreach ($user['media'] as $media)
@@ -49,7 +49,7 @@
             </li>
           @endforeach
         </ul>
-      </section>
+      </section> --}}
 
       <div class="modal-action-wrapper">
         <footer class="modal-action-bar container-narrow">

@@ -1,13 +1,13 @@
 import 'datatables.net-fixedcolumns-bs4'
 import axios from 'axios'
 
-import User from './../class/User'
-import { generateCustomSearch } from './../components/datatable-searchbox'
-import { generateButtonSpinner } from './../components/button-spinner'
+import User from '../class/User'
+import { generateCustomSearch } from '../components/datatable-searchbox'
+import { generateButtonSpinner } from '../components/button-spinner'
 import { generateUserProfileDetail, hideSecondaryModal } from '../components/modals/index'
-import { uploadProfilePhoto, saveProfilePhoto, processPhotoUploading } from './../components/photo-uploader'
-import { addError, removeError } from './../components/input-field'
-import { generateAdminRole, generateUserRole } from './../components/role'
+import { uploadProfilePhoto, saveProfilePhoto, processPhotoUploading } from '../components/photo-uploader'
+import { addError, removeError } from '../components/input-field'
+import { generateAdminRole, generateUserRole } from '../components/role'
 
 $(function() {
   // Add custom search field to page header
