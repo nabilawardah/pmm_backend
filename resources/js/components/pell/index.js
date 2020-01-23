@@ -42,13 +42,13 @@ pellEditor.onpaste = function(event) {
   exec('insertHTML', pastedData)
 }
 
-$(function(){
-
+$(function() {
   let eventDataContainer = $('textarea#event-data')
-  if (eventDataContainer.length > 0) {
+  if (eventDataContainer.length > 0 && eventDataContainer.val()) {
     let eventData = JSON.parse(eventDataContainer.val())
-    console.log('EVENT-DATA: ', eventData.html)
-    pellEditor.content.innerHTML = eventData.html
+    if (!typeof eventData === undefined) {
+      // console.log('EVENT-DATA: ', eventData.html)
+      pellEditor.content.innerHTML = eventData.html
+    }
   }
-
 })

@@ -159,27 +159,16 @@ $(function() {
     let startTime = $('#time-start').val()
     let endTime = $('#time-end').val()
     let dateNotes = $('#date-notes').val()
-
     let venueName = $('#venue-name').val()
     let venueLocation = $('#venue-location').val()
-
-    let content = window.activeQuill.getContents()
-    // let modified = content.map(c => {
-    //   if (c.insert === '\n') {
-    //     c.insert = `&nbsp;`
-    //     return c
-    //   } else {
-    //     return c
-    //   }
-    // })
+    let html = window.pell.content.innerHTML
 
     let data = {
       title: title,
       subtitle: subtitle,
       article_id: eventId,
       user_id: userId,
-      html: window.activeQuill.root.innerHTML,
-      content: content,
+      html: html,
       poster: cover,
       date: {
         start_date: startDate,
