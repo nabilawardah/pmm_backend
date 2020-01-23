@@ -1,0 +1,856 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "default.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 2,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "io.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 3,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "launch.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 4,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "https://www.youtube.com/embed/mPkBdEysvtI",
+        "type": "video",
+        "origin": "external",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 5,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "poster-1.jpg",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 6,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "small.mp4",
+        "type": "video",
+        "origin": "local",
+        "filetype": "video/mp4",
+        "thumbnail": "default.png"
+      }
+    },
+    {
+      "id": 7,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "https://www.youtube.com/embed/9W44NWYwa1g",
+        "type": "video",
+        "origin": "external",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 8,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "poster-5.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 9,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "teaser.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 10,
+      "author": 1,
+      "name": "This is some long title for the gallery item0 and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "small.mp4",
+        "type": "video",
+        "origin": "local",
+        "filetype": "video/mp4",
+        "thumbnail": "default.png"
+      }
+    },
+    {
+      "id": 1,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "default.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 2,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "io.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 3,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "launch.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 4,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "https://www.youtube.com/embed/mPkBdEysvtI",
+        "type": "video",
+        "origin": "external",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 5,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "poster-1.jpg",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 6,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "small.mp4",
+        "type": "video",
+        "origin": "local",
+        "filetype": "video/mp4",
+        "thumbnail": "default.png"
+      }
+    },
+    {
+      "id": 7,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "https://www.youtube.com/embed/9W44NWYwa1g",
+        "type": "video",
+        "origin": "external",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 8,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "poster-5.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 9,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "teaser.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 10,
+      "author": 1,
+      "name": "This is some long title for the gallery item0 and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "small.mp4",
+        "type": "video",
+        "origin": "local",
+        "filetype": "video/mp4",
+        "thumbnail": "default.png"
+      }
+    },
+    {
+      "id": 1,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "default.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 2,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "io.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 3,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "launch.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 4,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "https://www.youtube.com/embed/mPkBdEysvtI",
+        "type": "video",
+        "origin": "external",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 5,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "poster-1.jpg",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 6,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "small.mp4",
+        "type": "video",
+        "origin": "local",
+        "filetype": "video/mp4",
+        "thumbnail": "default.png"
+      }
+    },
+    {
+      "id": 7,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "https://www.youtube.com/embed/9W44NWYwa1g",
+        "type": "video",
+        "origin": "external",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 8,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "poster-5.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 9,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "teaser.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 10,
+      "author": 1,
+      "name": "This is some long title for the gallery item0 and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "small.mp4",
+        "type": "video",
+        "origin": "local",
+        "filetype": "video/mp4",
+        "thumbnail": "default.png"
+      }
+    },
+    {
+      "id": 1,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "default.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 2,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "io.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 3,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "launch.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 4,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "https://www.youtube.com/embed/mPkBdEysvtI",
+        "type": "video",
+        "origin": "external",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 5,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "poster-1.jpg",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 6,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "small.mp4",
+        "type": "video",
+        "origin": "local",
+        "filetype": "video/mp4",
+        "thumbnail": "default.png"
+      }
+    },
+    {
+      "id": 7,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "https://www.youtube.com/embed/9W44NWYwa1g",
+        "type": "video",
+        "origin": "external",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 8,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "poster-5.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 9,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "teaser.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 10,
+      "author": 1,
+      "name": "This is some long title for the gallery item0 and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "small.mp4",
+        "type": "video",
+        "origin": "local",
+        "filetype": "video/mp4",
+        "thumbnail": "default.png"
+      }
+    },
+    {
+      "id": 1,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "default.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 2,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "io.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 3,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "launch.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 4,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "https://www.youtube.com/embed/mPkBdEysvtI",
+        "type": "video",
+        "origin": "external",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 5,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "poster-1.jpg",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 6,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "small.mp4",
+        "type": "video",
+        "origin": "local",
+        "filetype": "video/mp4",
+        "thumbnail": "default.png"
+      }
+    },
+    {
+      "id": 7,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "https://www.youtube.com/embed/9W44NWYwa1g",
+        "type": "video",
+        "origin": "external",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 8,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "poster-5.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 9,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "teaser.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 10,
+      "author": 1,
+      "name": "This is some long title for the gallery item0 and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "small.mp4",
+        "type": "video",
+        "origin": "local",
+        "filetype": "video/mp4",
+        "thumbnail": "default.png"
+      }
+    },
+    {
+      "id": 1,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "default.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 2,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "io.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 3,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "launch.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 4,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "https://www.youtube.com/embed/mPkBdEysvtI",
+        "type": "video",
+        "origin": "external",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 5,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "poster-1.jpg",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 6,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "small.mp4",
+        "type": "video",
+        "origin": "local",
+        "filetype": "video/mp4",
+        "thumbnail": "default.png"
+      }
+    },
+    {
+      "id": 7,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "https://www.youtube.com/embed/9W44NWYwa1g",
+        "type": "video",
+        "origin": "external",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 8,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "poster-5.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 9,
+      "author": 1,
+      "name": "This is some long title for the gallery item and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "teaser.png",
+        "type": "image",
+        "origin": "local",
+        "filetype": ""
+      }
+    },
+    {
+      "id": 10,
+      "author": 1,
+      "name": "This is some long title for the gallery item0 and it should be clamped on the view.",
+      "alt": "Add some alt text here for a11y purpose",
+      "caption": "Add some caption here, a long one. So we can see how it's done.",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "attribute": {
+        "src": "small.mp4",
+        "type": "video",
+        "origin": "local",
+        "filetype": "video/mp4",
+        "thumbnail": "default.png"
+      }
+    }
+  ]
+}

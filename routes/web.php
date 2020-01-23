@@ -21,9 +21,7 @@ Route::get('/articles/{id}', 'DummyController@show_article');
 Route::get('/events', 'DummyController@events_page');
 Route::get('/events/{id}', 'DummyController@show_event');
 
-Route::get('/gallery', function () {
-    return view('web.gallery.index', ['active_page' => 'Gallery']);
-});
+Route::get('/gallery', 'DummyController@gallery_page');
 
 Route::get('/admin/articles', function () {
     return view('admin.articles.index', ['active_page' => 'Articles']);

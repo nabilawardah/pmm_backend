@@ -16,6 +16,10 @@ class DummyController extends Controller
     private $users;
     private $jsonEvents;
     private $events;
+    private $jsonGallery;
+    private $gallery;
+    private $jsonCollections;
+    private $collections;
 
     public function __construct()
     {
@@ -47,6 +51,12 @@ class DummyController extends Controller
 
         $this->jsonEvents = json_decode(file_get_contents(base_path('public/data/events.json')), true);
         $this->events = $this->jsonEvents['data'];
+
+        $this->jsonGallery = json_decode(file_get_contents(base_path('public/data/gallery.json')), true);
+        $this->gallery = $this->jsonGallery['data'];
+
+        $this->jsonCollections = json_decode(file_get_contents(base_path('public/data/collections.json')), true);
+        $this->collections = $this->jsonCollections['data'];
     }
 
     public function save_article_to_file($article = null)
@@ -612,5 +622,13 @@ class DummyController extends Controller
         $this->save_event_to_file();
 
         return $new_event;
+    }
+
+    public function gallery_page(Request $request)
+    {
+        return view('web.gallery.index', [
+            'gallery' => $this->gallery,
+            'active_page' => 'Gallery',
+        ]);
     }
 }
