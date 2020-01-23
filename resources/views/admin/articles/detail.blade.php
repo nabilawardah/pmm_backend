@@ -19,11 +19,10 @@
       </footer>
     </header>
     <img class="editor-cover-image" src="/media/user-{{ $author['id'] }}/{{ $article['cover']['src'] }}" alt="">
-    <section class="ql-container ql-snow article-reader">
-      <article class="ql-editor">
-        {!! html_entity_decode($article['html'])  !!}
-      </article>
-    </section>
+
+    <article class="pell-content section--inset" style="display: block; margin-bottom: 64px;">
+      {!! html_entity_decode($article['html'])  !!}
+    </article>
 
 
   @endcomponent

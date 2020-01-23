@@ -251,7 +251,6 @@ class DummyController extends Controller
                 $article['cover'] = $request->cover;
                 $article['title'] = $request->title;
                 $article['subtitle'] = $request->subtitle;
-                $article['content'] = $request->content;
                 $article['html'] = $request->html;
                 $article['published'] = false;
                 $article['submitted'] = true;

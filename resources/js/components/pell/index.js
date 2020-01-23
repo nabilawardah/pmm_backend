@@ -1,6 +1,7 @@
 import pell, { exec } from 'pell/src/pell'
 import striptags from 'striptags'
 import { pellActions } from './pell-actions'
+import { removeFormatTitle, checkTitleState, cleanupAttributes, cleanupEverything } from './pell-helper'
 
 let pellEditor = pell.init({
   element: document.getElementById('pell-editor'),
@@ -23,32 +24,53 @@ pellEditor.onpaste = function(event) {
   event.preventDefault()
 
   const clipboardData = event.clipboardData || window.clipboardData
-  let pastedData = clipboardData.getData('text/html')
-  pastedData = striptags(pastedData, ['h3', 'h2', 'h1', 'p', 'br', 'ul', 'ol', 'li']) // remove all html except the listed tags
+  let sanitizedHTML = cleanupAttributes(clipboardData.getData('text/html'))
 
-  let wrapper = document.createElement('div')
-  wrapper.innerHTML = pastedData
-
-  let allChildren = wrapper.getElementsByTagName('*')
-  for (let index = 0; index < allChildren.length; index++) {
-    const element = allChildren[index]
-    element.removeAttribute('id')
-    element.removeAttribute('class')
-    element.removeAttribute('style')
-  }
-
-  pastedData = wrapper.innerHTML
-
-  exec('insertHTML', pastedData)
+  exec('insertHTML', sanitizedHTML)
 }
 
 $(function() {
   let eventDataContainer = $('textarea#event-data')
-  if (eventDataContainer.length > 0 && eventDataContainer.val()) {
+  let articleDataContainer = $('textarea#article-data')
+
+  checkTitleState($('.editor-title'))
+  checkTitleState($('.editor-subtitle-preview'))
+
+  if (eventDataContainer.length > 0) {
     let eventData = JSON.parse(eventDataContainer.val())
-    if (!typeof eventData === undefined) {
+    if (eventData.html) {
       // console.log('EVENT-DATA: ', eventData.html)
       pellEditor.content.innerHTML = eventData.html
     }
+  }
+
+  if (articleDataContainer.length > 0) {
+    let articleData = JSON.parse(articleDataContainer.val())
+    if (typeof articleData.html !== undefined) {
+      // console.log('ARTICLE-DATA: ', articleData.html)
+      pellEditor.content.innerHTML = articleData.html
+    }
+  }
+
+  $(document).on('keyup', '.editor-title', function() {
+    checkTitleState($(this))
+  })
+
+  $(document).on('keyup', '.editor-subtitle-preview', function() {
+    checkTitleState($(this))
+  })
+
+  let editorTitle = document.querySelector('#editor-title')
+  if (editorTitle) {
+    editorTitle.addEventListener('paste', function(e) {
+      removeFormatTitle(e, this)
+    })
+  }
+
+  let editorSubtitle = document.querySelector('#editor-subtitle-preview')
+  if (editorSubtitle) {
+    editorSubtitle.addEventListener('paste', function(e) {
+      removeFormatTitle(e, this)
+    })
   }
 })

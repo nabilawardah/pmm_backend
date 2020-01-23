@@ -1,3 +1,5 @@
+import striptags from 'striptags'
+
 // Generate icons for custom handler and others
 export function generateIcon(name) {
   switch (name) {
@@ -134,4 +136,57 @@ export function generateIcon(name) {
     default:
       break
   }
+}
+
+// Remove format when pasting text to article title content-editable
+export function removeFormatTitle(event, element) {
+  let clipboardData
+  event.stopPropagation()
+  event.preventDefault()
+
+  clipboardData = event.clipboardData || window.clipboardData
+  element.innerText = clipboardData.getData('Text')
+}
+
+export function checkTitleState(element) {
+  if (element.text().trim() === '' || element.html().trim() === '') {
+    // console.log('EMPTY: ', element)
+    element.addClass('empty')
+  } else {
+    element.removeClass('empty')
+  }
+}
+
+export function cleanupEverything(text) {
+  text = striptags(text, []) // remove all html except the listed tags
+
+  let wrapper = document.createElement('div')
+  wrapper.innerHTML = text
+
+  let allChildren = wrapper.getElementsByTagName('*')
+  for (let index = 0; index < allChildren.length; index++) {
+    const element = allChildren[index]
+    element.removeAttribute('id')
+    element.removeAttribute('class')
+    element.removeAttribute('style')
+  }
+
+  return wrapper.innerText
+}
+
+export function cleanupAttributes(text) {
+  text = striptags(text, ['h3', 'h2', 'h1', 'a', 'p', 'br', 'ul', 'ol', 'li'])
+
+  let wrapper = document.createElement('div')
+  wrapper.innerHTML = text
+
+  let allChildren = wrapper.getElementsByTagName('*')
+  for (let index = 0; index < allChildren.length; index++) {
+    const element = allChildren[index]
+    element.removeAttribute('id')
+    element.removeAttribute('class')
+    element.removeAttribute('style')
+  }
+
+  return wrapper.innerHTML
 }

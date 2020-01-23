@@ -37,7 +37,7 @@ export function generateVideoElement(video, filetype) {
   if (video.type === 'iframe') {
     markup = `&nbsp;<p><iframe class="pell-video" src=${video.url} frameborder="0" allowfullscreen="true" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" autoplay="false"></iframe></p><p>&nbsp;</p>`
   } else {
-    markup = `&nbsp;<p><video class="pell-video" loop="true" controls="true" autoplay="false" autostart="false"><source src="${video.url}" type="${filetype}"/></video></p><p>&nbsp;</p>`
+    markup = `&nbsp;<p><video class="pell-video" loop="true" controls="true"><source src="${video.url}" type="${filetype}"/></video></p><p>&nbsp;</p>`
   }
 
   globalSelection.collapse(savedSelection[0], savedSelection[1])

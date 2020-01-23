@@ -81,25 +81,6 @@ export let toolbarOptions = [
   ['clean'], // remove formatting button
 ]
 
-// Remove format when pasting text to article title content-editable
-export function removeFormatTitle(event, element) {
-  let clipboardData
-  event.stopPropagation()
-  event.preventDefault()
-
-  clipboardData = event.clipboardData || window.clipboardData
-  element.innerText = clipboardData.getData('Text')
-}
-
-export function checkTitleState(element) {
-  if (element.text().trim() === '' || element.html().trim() === '') {
-    // console.log('EMPTY: ', element)
-    element.addClass('empty')
-  } else {
-    element.removeClass('empty')
-  }
-}
-
 export function processVideoUrl(url) {
   let str = String(url)
   let modified, newUrl

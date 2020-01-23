@@ -20,6 +20,7 @@ $pell-font-size: 17px !default;
   outline: 0;
   overflow-y: auto;
   padding: $pell-content-padding;
+  padding-bottom: $space-xxl;
 }
 
 .pell-actionbar {
@@ -102,7 +103,11 @@ $pell-font-size: 17px !default;
   fill-rule: evenodd;
 }
 
-#pell-editor .pell-content {
+.pell-editor {
+  margin-bottom: $space-xxl;
+}
+
+.pell-content {
   font-size: $pell-font-size;
   line-height: 27px;
 

@@ -112,7 +112,7 @@
 
     <main class="edit-event-step step-2" style="display: none;">
 
-      <div id="pell-editor"></div>
+      <div class="pell-editor" id="pell-editor"></div>
 
       <div class="modal-action-wrapper">
         <footer class="modal-action-bar section--inset">

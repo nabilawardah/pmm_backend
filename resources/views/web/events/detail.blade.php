@@ -111,11 +111,9 @@
         </div>
       @endif
 
-      <section class="ql-container ql-snow ql-event-container" style="min-height: 0; margin-top: -24px;">
-        <article class="ql-editor ql-event" style="min-height: 0; display: block;">
-          {!! html_entity_decode($event['html'])  !!}
-        </article>
-      </section>
+      <article class="pell-content" style="display: block; margin-bottom: 64px; padding-left: 0; padding-right: 0;">
+        {!! html_entity_decode($event['html'])  !!}
+      </article>
 
       <div class="modal-action-wrapper">
         <footer class="modal-action-bar section--outset action--inline">

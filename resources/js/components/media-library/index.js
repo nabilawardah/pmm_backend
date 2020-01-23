@@ -14,7 +14,7 @@ let footer = $('.main-footer')
 export function imageHandler() {
   window.globalSelection = document.getSelection()
   window.savedSelection = [globalSelection.focusNode, globalSelection.focusOffset]
-  console.log(savedSelection)
+  // console.log(savedSelection)
   showModal('#media-library')
   // generateMedia(handleUpload.bind(this))
 }
@@ -47,13 +47,13 @@ function updateMediaLibrary() {
           container.append(item)
         })
       }
-      console.log(res.data)
+      // console.log(res.data)
     })
     .catch(err => console.log('ERR GETTING MEDIA: ', err))
 }
 
 function handleUpload() {
-  console.log('PELL')
+  // console.log('PELL')
 
   let container = document.body
   let fileInput = container.querySelector('input.ql-image[type=file]')
@@ -82,8 +82,8 @@ function handleUpload() {
         }
         data.append('media', fileInput.files[0])
 
-        console.log('FILE: ', file)
-        console.log('TYPE: ', fileType)
+        // console.log('FILE: ', file)
+        // console.log('TYPE: ', fileType)
 
         axios
           .post(`/api/articles/media/${userId}`, data, config)
@@ -102,7 +102,7 @@ function handleUpload() {
                 exec('formatBlock', '<p>')
                 fileInput.value = ''
               } else {
-                console.log('URL', res.data.url, fileType)
+                // console.log('URL', res.data.url, fileType)
                 let video = processVideoUrl(res.data.url)
                 generateVideoElement(video, fileType)
                 fileInput.value = ''
@@ -110,7 +110,7 @@ function handleUpload() {
             } else {
               let reader = new FileReader()
               reader.onload = function(e) {
-                console.log('URL', e.target.result)
+                // console.log('URL', e.target.result)
                 exec('insertImage', e.target.result)
                 fileInput.value = ''
               }
@@ -142,12 +142,12 @@ $(function() {
 
       // console.log(url, isImageUrl(url))
       if (isImageUrl(url)) {
-        console.log('IMAGE: ', url)
+        // console.log('IMAGE: ', url)
         let image = document.createElement('IMG')
         image.setAttribute('src', url)
         image.onload = exec('insertHTML', image)
       } else {
-        console.log('VIDEO: ', video)
+        // console.log('VIDEO: ', video)
         let video = processVideoUrl(url)
         generateVideoElement(video)
       }

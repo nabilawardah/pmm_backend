@@ -16,38 +16,13 @@
       "published_at": "2020-01-10T04:23:43.083396Z",
       "title": "Test Writing a New Article with Lots of Special Characters \"\\'`",
       "subtitle": "Just Test Writing a New Article with Lots of Special Characters \"\\'`",
-      "content": {
-        "ops": [
-          {
-            "insert": "Hello there! I'm trying to \"write\" a special article with a lot of \\\\ weird characters. I hope it's going well //. | ddu ddu ddudududududu"
-          },
-          {
-            "insert": {
-              "customImage": {
-                "alt": null,
-                "url": "/media/user-1/20200109141050-app.png",
-                "classList": "section--outset"
-              }
-            }
-          },
-          {
-            "insert": {
-              "customImage": {
-                "alt": null,
-                "url": "/media/user-1/io.png",
-                "classList": "section--outset"
-              }
-            }
-          }
-        ]
-      },
-      "html": "<p class=\"section--inset\">Hello there! I'm trying to \"write\" a special article with a lot of \\\\ weird characters. I hope it's going well //. | ddu ddu ddudududududu</p><div class=\"section--outset\"><img alt=\"undefined\" src=\"/media/user-1/20200109141050-app.png\"></div><div class=\"section--outset\"><img alt=\"undefined\" src=\"/media/user-1/io.png\"></div><p class=\"section--inset\"><br></p>"
+      "html": "<p>Hello there! I'm trying to \"write\" a special article with a lot of \\\\ weird characters. I hope it's going well //. | ddu ddu ddudududududu</p><h2>Here's some experience for writing an article.</h2><p>You can add images to your article by clicking on the media icon on the toolbar. It's the one on right side.</p><p>Try it out and add images from your computer like this:</p><p><img src=\"/media/user-1/20200123171831-astemir-almov--kgrpsetnw8-unsplash.jpg\"><br></p><p>Looking good!</p><p>But then, \"how about video?\" you asked.</p><p>Well, don't worry.</p><p>Try using the <b>Insert Media</b> button again, and now paste a link to the video into the link field. Like this:</p><p><iframe class=\"pell-video\" src=\"https://youtube.com/embed/fFyC68CIEio\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" autoplay=\"false\"></iframe></p><p>Sweet, yeah!</p><p>You can add a youtube and vimeo videos. But our lovely kominfo still blocking vimeo, so for now just going with a youtube video will be safe for us all.</p><p>Also, you can upload your own video directly from your computer using the <b>Insert Media</b> button. Try it out!</p><p><video class=\"pell-video\" loop=\"true\" controls=\"true\"><source src=\"/media/user-1/20200123172218-small.mp4\" type=\"video/mp4\"></video></p><p>For now, we support uploading videos for *.mp4, *.webm, and *.ogv files because unfortunately some browsers doesn't support a wide variety of video files.</p><h2>Alright, that's it then.</h2><p>Try it out yourself and tell me how's the experience on writing an article.</p><p>Let me know if you have some feedback.</p>"
     },
     {
       "id": 2,
       "author": 1,
       "cover": {
-        "src": "20200109141050-app.png",
+        "src": "20200123171831-astemir-almov--kgrpsetnw8-unsplash.jpg",
         "type": "image"
       },
       "featured": false,
@@ -58,32 +33,7 @@
       "created_at": "2020-01-10T04:22:27.438541Z",
       "title": "This is a Good Example for The Second Article",
       "subtitle": "Just Test Writing a New Article with Lots of Special Characters",
-      "content": {
-        "ops": [
-          {
-            "insert": "Hello there! I'm trying to \"write\" a special article with a lot of \\\\ weird characters. I hope it's going well //. | ddu ddu ddudududududu"
-          },
-          {
-            "insert": {
-              "customImage": {
-                "alt": null,
-                "url": "/media/user-1/20200109141050-app.png",
-                "classList": "section--outset"
-              }
-            }
-          },
-          {
-            "insert": {
-              "customImage": {
-                "alt": null,
-                "url": "/media/user-1/io.png",
-                "classList": "section--outset"
-              }
-            }
-          }
-        ]
-      },
-      "html": "<p class=\"section--inset\">Hello there! I'm trying to \"write\" a special article with a lot of \\\\ weird characters. I hope it's going well //. | ddu ddu ddudududududu</p><div class=\"section--outset\"><img alt=\"undefined\" src=\"/media/user-1/20200109141050-app.png\"></div><div class=\"section--outset\"><img alt=\"undefined\" src=\"/media/user-1/io.png\"></div><p class=\"section--inset\"><br></p>"
+      "html": "<p>Hello there! I'm trying to \"write\" a special article with a lot of \\\\ weird characters. I hope it's going well //. | ddu ddu ddudududududu</p><h2>Here's some experience for writing an article.</h2><p>You can add images to your article by clicking on the media icon on the toolbar. It's the one on right side.</p><p>Try it out and add images from your computer like this:</p><p><img src=\"/media/user-1/20200123171831-astemir-almov--kgrpsetnw8-unsplash.jpg\"><br></p><p>Looking good!</p><p>But then, \"how about video?\" you asked.</p><p>Well, don't worry.</p><p>Try using the <b>Insert Media</b> button again, and now paste a link to the video into the link field. Like this:</p><p><iframe class=\"pell-video\" src=\"https://youtube.com/embed/fFyC68CIEio\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" autoplay=\"false\"></iframe></p><p>Sweet, yeah!</p><p>You can add a youtube and vimeo videos. But our lovely kominfo still blocking vimeo, so for now just going with a youtube video will be safe for us all.</p><p>Also, you can upload your own video directly from your computer using the <b>Insert Media</b> button. Try it out!</p><p><video class=\"pell-video\" loop=\"true\" controls=\"true\"><source src=\"/media/user-1/20200123172218-small.mp4\" type=\"video/mp4\"></video></p><p>For now, we support uploading videos for *.mp4, *.webm, and *.ogv files because unfortunately some browsers doesn't support a wide variety of video files.</p><h2>Alright, that's it then.</h2><p>Try it out yourself and tell me how's the experience on writing an article.</p><p>Let me know if you have some feedback.</p>"
     }
   ]
 }

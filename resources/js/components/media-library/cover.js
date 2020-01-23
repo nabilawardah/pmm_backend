@@ -1,4 +1,4 @@
-import { readSingleFileUrl } from './../photo-uploader'
+import { readSingleFileUrl } from '../photo-uploader'
 
 // Upload cover image
 $(function() {
@@ -27,7 +27,7 @@ $(function() {
             let name = res.data.name
             appendImage({ container, url, input, name, coverType })
           } else {
-            console.log('Cannot upload cover...')
+            // console.log('Cannot upload cover...')
             let reader = new FileReader()
             reader.onload = function(e) {
               let url = e.target.result

@@ -1,13 +1,11 @@
 import 'datatables.net-fixedcolumns-bs4'
 import axios from 'axios'
 
-// import Event from '../class/Event'
 import { generateCustomSearch } from '../components/datatable-searchbox'
-import { generateButtonSpinner } from '../components/button-spinner'
 import { showModal } from '../components/modals/index'
-import { addError, removeError } from '../components/input-field'
-
 import { formatDate, formatTime } from '../components/calendar/index'
+// import { generateButtonSpinner } from '../components/button-spinner'
+// import { addError, removeError } from '../components/input-field'
 
 $(function() {
   generateCustomSearch('#events-table_filter')
@@ -23,7 +21,7 @@ if (eventsTableContainer.length > 0) {
     ajax: '/api/events',
     scrollX: true,
     drawCallback: function(settings) {
-      console.log('Data refreshed...')
+      // console.log('Data refreshed...')
     },
     order: [],
 
@@ -185,13 +183,13 @@ $(function() {
       },
     }
 
-    console.log('EDITOR: ', data)
+    // console.log('EDITOR: ', data)
 
     axios
       .post(`/api/events/submit/${eventId}`, data)
       .then(res => {
         if (res.status === 200) {
-          console.log('RES: ', res)
+          // console.log('RES: ', res)
           window.location = `/events/${eventId}`
         }
       })
@@ -205,7 +203,7 @@ $(function() {
     axios
       .post(`/api/events/join/${event.id}`, { user_id })
       .then(res => {
-        console.log(res)
+        // console.log(res)
         window.location.reload()
       })
       .catch(err => console.log(err))
@@ -218,7 +216,7 @@ $(function() {
     axios
       .post(`/api/events/cancel_registration/${event.id}`, { user_id })
       .then(res => {
-        console.log('CANCEL: ', res.data)
+        // console.log('CANCEL: ', res.data)
         window.location.reload()
       })
       .catch(err => console.log('ERR CANCEL: ', err))

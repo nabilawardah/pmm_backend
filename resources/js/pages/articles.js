@@ -2,13 +2,12 @@ import 'datatables.net-fixedcolumns-bs4'
 import axios from 'axios'
 import dayjs from 'dayjs'
 
-import User from '../class/User'
 import { generateCustomSearch } from '../components/datatable-searchbox'
-import { generateButtonSpinner } from '../components/button-spinner'
 import { showModal } from '../components/modals/index'
-import { uploadProfilePhoto, saveProfilePhoto, processPhotoUploading } from '../components/photo-uploader'
-import { addError, removeError } from '../components/input-field'
-import { generateAdminRole, generateUserRole } from '../components/role'
+// import { generateButtonSpinner } from '../components/button-spinner'
+// import { uploadProfilePhoto, saveProfilePhoto, processPhotoUploading } from '../components/photo-uploader'
+// import { addError, removeError } from '../components/input-field'
+// import { generateAdminRole, generateUserRole } from '../components/role'
 
 $(function() {
   generateCustomSearch('#articles-table_filter')
@@ -25,7 +24,7 @@ if (articleTableContainer.length > 0) {
     ajax: '/api/articles',
     scrollX: true,
     drawCallback: function(settings) {
-      console.log('Data refreshed...')
+      // console.log('Data refreshed...')
     },
     order: [],
 
@@ -148,8 +147,8 @@ $(function() {
 
     function unpublishArticle() {
       let data = JSON.parse(singleArticleData.val())
-      console.log('UNPUBLISHING...')
-      console.log(data)
+      // console.log('UNPUBLISHING...')
+      // console.log(data)
       axios
         .get(`/api/articles/unlist/${data.id}`)
         .then(res => {
@@ -161,8 +160,8 @@ $(function() {
 
     function publishArticle() {
       let data = JSON.parse(singleArticleData.val())
-      console.log('PUBLISHING...')
-      console.log(data)
+      // console.log('PUBLISHING...')
+      // console.log(data)
       axios
         .get(`/api/articles/publish/${data.id}`)
         .then(res => {
@@ -172,4 +171,39 @@ $(function() {
         .catch(err => console.log('ERR: ', err))
     }
   }
+
+  function submitArticle() {
+    let title = $('#editor-title').text()
+    let subtitle = $('#editor-subtitle-preview').text()
+    let userId = $('input[name="user-id"]').val()
+    let articleId = $('input[name="article-id"]').val()
+    let cover = $('.editor-cover-image').data('name')
+    let html = window.pell.content.innerHTML
+
+    let data = {
+      title: title,
+      subtitle: subtitle,
+      article_id: articleId,
+      user_id: userId,
+      html: html,
+      cover: {
+        src: cover,
+        type: 'image',
+      },
+    }
+
+    // console.log('SUBMIT ARTCILE: ', data)
+
+    axios
+      .post(`/api/articles/submit/${articleId}`, data)
+      .then(res => {
+        if (res.status === 200) {
+          // console.log('RES: ', res)
+          window.location = `/articles/${articleId}`
+        }
+      })
+      .catch(err => console.log('ERROR SUBMITTING ARTICLE: ', err))
+  }
+
+  $(document).on('click', '.publish-article', submitArticle)
 })
