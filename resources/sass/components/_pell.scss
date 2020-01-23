@@ -179,10 +179,17 @@ $pell-font-size: 17px !default;
     margin-top: $space-ll;
     padding-left: 6%;
     padding-right: 6%;
+
+    * {
+      font-weight: 300;
+    }
   }
 
   & blockquote + p {
     margin-top: $space-ll !important;
+  }
+  & blockquote + blockquote {
+    margin-top: 0;
   }
 
   & hr {

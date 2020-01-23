@@ -232,6 +232,7 @@ $(function() {
       .parents('.edit-event-step.step-1')
       .siblings('.step-2')
       .fadeIn(200)
+    $(document).scrollTop(0)
   })
 
   $(document).on('click', '.edit-event-to-step-1', function() {
@@ -242,6 +243,7 @@ $(function() {
       .parents('.edit-event-step.step-2')
       .siblings('.step-1')
       .fadeIn(200)
+    $(document).scrollTop(0)
   })
 
   $(document).on('click', '.join-event', joinEvent)
