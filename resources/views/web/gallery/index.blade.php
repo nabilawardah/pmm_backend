@@ -16,7 +16,7 @@
       @if ($item['attribute']['type'] === 'image' && $item['attribute']['origin'] === 'local')
         <li class="gallery-item item-image-wrapper">
           <picture class="gallery-item-image-outer">
-            <img class="gallery-item-image" src="{{ '/gallery/'.$item['attribute']['src'] }}" alt="{{ $item['alt'] }}">
+            <img class="gallery-item-image" src="{{ '/galleries/'.$item['attribute']['src'] }}" alt="{{ $item['alt'] }}">
             <div class="gallery-item-caption">
               <p class="heading5" style="color: #FFFFFF;">{{ $item['name'] }}</p>
               <span style="color: rgba(255,255,255,.80)" class="small">{{ $item['caption'] }}</span>
@@ -36,7 +36,7 @@
       @elseif( $item['attribute']['type'] === 'video' && $item['attribute']['origin'] === 'local' )
         <li class="gallery-item item-video-wrapper">
           <picture class="gallery-item-image-outer" data-alt="{{ $item['alt'] }}">
-            <img class="gallery-item-image" src="{{ '/gallery/'.$item['attribute']['thumbnail'] }}" alt="{{ $item['alt'] }}">
+            <img class="gallery-item-image" src="{{ '/galleries/'.$item['attribute']['thumbnail'] }}" alt="{{ $item['alt'] }}">
             <div class="gallery-item-caption">
               <p class="heading5" style="color: #FFFFFF;">{{ $item['name'] }}</p>
               <span style="color: rgba(255,255,255,.80);" class="small">{{ $item['caption'] }}</span>
