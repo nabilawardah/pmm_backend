@@ -1,6 +1,6 @@
 require('./bootstrap')
 require('./helper/preload-image')
-require('./helper/custom-lqip')
+// require('./helper/custom-lqip')
 require('./helper/back-link')
 
 require('./pages/users')

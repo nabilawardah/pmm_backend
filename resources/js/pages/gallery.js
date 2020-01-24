@@ -1,4 +1,8 @@
+// import lazyload from 'lazyload'
+import LazyLoad from 'vanilla-lazyload'
+
 $(function() {
+  let lazyloadInstance = new LazyLoad({ elements_selector: '.lazy', threshold: 2000 })
   generateThumbnail()
 })
 

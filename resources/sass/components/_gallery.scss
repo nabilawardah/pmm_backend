@@ -59,7 +59,7 @@
   cursor: pointer;
   border-radius: 8px;
   overflow: hidden;
-  background-color: $brand-primary-100;
+  background-color: $dark-hex-10;
   position: relative;
 
   &:hover {
@@ -71,7 +71,7 @@
     .gallery-item-play-icon-container {
       color: red;
       z-index: $layer-m;
-      box-shadow: 0px 4px 8px rgba(0,0,0,.33);
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.33);
     }
   }
 }

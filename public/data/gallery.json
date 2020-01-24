@@ -192,7 +192,7 @@
       "caption": "Add some caption here, a long one. So we can see how it's done.",
       "published_date": "2020-01-23T13:39:04.634775Z",
       "attribute": {
-        "src": "https://www.youtube.com/embed/mPkBdEysvtI",
+        "src": "https://www.youtube.com/embed/-r-uKi8zLNU",
         "type": "video",
         "origin": "external",
         "filetype": ""
@@ -235,7 +235,7 @@
       "caption": "Add some caption here, a long one. So we can see how it's done.",
       "published_date": "2020-01-23T13:39:04.634775Z",
       "attribute": {
-        "src": "https://www.youtube.com/embed/9W44NWYwa1g",
+        "src": "https://www.youtube.com/embed/NdkgIXtKMW0",
         "type": "video",
         "origin": "external",
         "filetype": ""
@@ -334,7 +334,7 @@
       "caption": "Add some caption here, a long one. So we can see how it's done.",
       "published_date": "2020-01-23T13:39:04.634775Z",
       "attribute": {
-        "src": "https://www.youtube.com/embed/mPkBdEysvtI",
+        "src": "https://www.youtube.com/embed/EQIyuDDWiHc",
         "type": "video",
         "origin": "external",
         "filetype": ""
@@ -377,7 +377,7 @@
       "caption": "Add some caption here, a long one. So we can see how it's done.",
       "published_date": "2020-01-23T13:39:04.634775Z",
       "attribute": {
-        "src": "https://www.youtube.com/embed/9W44NWYwa1g",
+        "src": "https://www.youtube.com/embed/8FETTwHNsTA",
         "type": "video",
         "origin": "external",
         "filetype": ""
@@ -476,7 +476,7 @@
       "caption": "Add some caption here, a long one. So we can see how it's done.",
       "published_date": "2020-01-23T13:39:04.634775Z",
       "attribute": {
-        "src": "https://www.youtube.com/embed/mPkBdEysvtI",
+        "src": "https://www.youtube.com/embed/nyp_PczrqFE",
         "type": "video",
         "origin": "external",
         "filetype": ""
@@ -519,7 +519,7 @@
       "caption": "Add some caption here, a long one. So we can see how it's done.",
       "published_date": "2020-01-23T13:39:04.634775Z",
       "attribute": {
-        "src": "https://www.youtube.com/embed/9W44NWYwa1g",
+        "src": "https://www.youtube.com/embed/7Glc2mHLPRM",
         "type": "video",
         "origin": "external",
         "filetype": ""
@@ -618,7 +618,7 @@
       "caption": "Add some caption here, a long one. So we can see how it's done.",
       "published_date": "2020-01-23T13:39:04.634775Z",
       "attribute": {
-        "src": "https://www.youtube.com/embed/mPkBdEysvtI",
+        "src": "https://www.youtube.com/embed/5bvcyIV4yzo",
         "type": "video",
         "origin": "external",
         "filetype": ""
@@ -661,7 +661,7 @@
       "caption": "Add some caption here, a long one. So we can see how it's done.",
       "published_date": "2020-01-23T13:39:04.634775Z",
       "attribute": {
-        "src": "https://www.youtube.com/embed/9W44NWYwa1g",
+        "src": "https://www.youtube.com/embed/Gl9GtO_vQxw",
         "type": "video",
         "origin": "external",
         "filetype": ""
@@ -718,7 +718,7 @@
       "caption": "Add some caption here, a long one. So we can see how it's done.",
       "published_date": "2020-01-23T13:39:04.634775Z",
       "attribute": {
-        "src": "default.png",
+        "src": "dummy-1.jpg",
         "type": "image",
         "origin": "local",
         "filetype": ""
@@ -732,7 +732,7 @@
       "caption": "Add some caption here, a long one. So we can see how it's done.",
       "published_date": "2020-01-23T13:39:04.634775Z",
       "attribute": {
-        "src": "io.png",
+        "src": "dummy-2.jpg",
         "type": "image",
         "origin": "local",
         "filetype": ""
@@ -746,7 +746,7 @@
       "caption": "Add some caption here, a long one. So we can see how it's done.",
       "published_date": "2020-01-23T13:39:04.634775Z",
       "attribute": {
-        "src": "launch.png",
+        "src": "dummy-3.jpg",
         "type": "image",
         "origin": "local",
         "filetype": ""
@@ -760,7 +760,7 @@
       "caption": "Add some caption here, a long one. So we can see how it's done.",
       "published_date": "2020-01-23T13:39:04.634775Z",
       "attribute": {
-        "src": "https://www.youtube.com/embed/mPkBdEysvtI",
+        "src": "https://www.youtube.com/embed/G7iI7YmIr30",
         "type": "video",
         "origin": "external",
         "filetype": ""
@@ -774,7 +774,7 @@
       "caption": "Add some caption here, a long one. So we can see how it's done.",
       "published_date": "2020-01-23T13:39:04.634775Z",
       "attribute": {
-        "src": "poster-1.jpg",
+        "src": "dummy-4.jpg",
         "type": "image",
         "origin": "local",
         "filetype": ""
@@ -803,7 +803,7 @@
       "caption": "Add some caption here, a long one. So we can see how it's done.",
       "published_date": "2020-01-23T13:39:04.634775Z",
       "attribute": {
-        "src": "https://www.youtube.com/embed/9W44NWYwa1g",
+        "src": "https://www.youtube.com/embed/hbs-esZeCsI",
         "type": "video",
         "origin": "external",
         "filetype": ""
@@ -817,7 +817,7 @@
       "caption": "Add some caption here, a long one. So we can see how it's done.",
       "published_date": "2020-01-23T13:39:04.634775Z",
       "attribute": {
-        "src": "poster-5.png",
+        "src": "dummy-5.jpg",
         "type": "image",
         "origin": "local",
         "filetype": ""
@@ -831,7 +831,7 @@
       "caption": "Add some caption here, a long one. So we can see how it's done.",
       "published_date": "2020-01-23T13:39:04.634775Z",
       "attribute": {
-        "src": "teaser.png",
+        "src": "dummy-6.png",
         "type": "image",
         "origin": "local",
         "filetype": ""
