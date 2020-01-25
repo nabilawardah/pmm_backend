@@ -1,4 +1,4 @@
-const VALID_IMAGES = ['image/gif', 'image/jpeg', 'image/png']
+const VALID_IMAGES = ['image/gif', 'image/svg+xml', 'image/jpeg', 'image/png']
 const VALID_VIDEOS = ['video/webm', 'video/mp4', 'video/ogg']
 
 export function generateTemporaryPlaceholder({ file, id, src, fileType, external }) {
@@ -7,18 +7,18 @@ export function generateTemporaryPlaceholder({ file, id, src, fileType, external
   if (external) {
     console.log('IFRAME')
     preview = `
-      <iframe class="gallery-item-preview" src="${src}" frameborder="0" allowfullscreen="true" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      <iframe class="gallery-item-preview gallery-item-preview--video" src="${src}" frameborder="0" allowfullscreen="true" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
     `
   } else {
     if ($.inArray(fileType, VALID_IMAGES) >= 0) {
       console.log('PHOTO')
       preview = `
-        <img class="gallery-item-preview" src="${src}" />
+        <img class="gallery-item-preview gallery-item-preview--image" src="${src}" />
       `
     } else if ($.inArray(fileType, VALID_VIDEOS) >= 0) {
       console.log('VIDEO')
       preview = `
-        <video class="gallery-item-preview" loop="true" controls="true">
+        <video class="gallery-item-preview gallery-item-preview--video" loop="true" controls="true">
           <source src="${src}" type="${fileType}"/>
         </video>
       `
@@ -47,6 +47,9 @@ export function generateTemporaryPlaceholder({ file, id, src, fileType, external
           <label class="input-label" for="caption-${id}">Caption</label>
           <textarea class="input-field" name="caption-${id}" id="caption-${id}" rows="4"></textarea>
         </fieldset>
+        <footer>
+          <button class="button button--medium secondary ghost upload-gallery-item-remove">Remove</button>
+        </footer>
       </aside>
     </section>
   `

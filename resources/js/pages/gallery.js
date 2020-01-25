@@ -13,6 +13,8 @@ $(function() {
 
   $(document).on('click', '.upload-gallery-item-preview-wrapper', triggerUploadGalleryItem)
   $('input.upload-gallery-item-input').on('change', uploadGalleryItem)
+
+  $(document).on('click', '.upload-gallery-item-remove', removeGalleryItem)
 })
 
 function generateThumbnail() {
@@ -92,4 +94,10 @@ function uploadGalleryItem() {
       }, 3000)
     }
   }
+}
+
+function removeGalleryItem() {
+  let el = $(this)
+  let container = el.parents('section.upload-gallery-item')
+  container.slideUp(200)
 }

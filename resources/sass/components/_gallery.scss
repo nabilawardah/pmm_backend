@@ -143,13 +143,13 @@
   display: block;
   background-color: $dark-alpha-10;
   width: 100%;
-  padding-bottom: 100%;
+  padding-bottom: 256px;
   overflow: hidden;
   position: relative;
-  border: dashed 4px $dark-alpha-30;
+  border: dashed 4px $dark-alpha-20;
 
   &::before {
-    content: '+ Add photo/video';
+    content: '+ Add photo/video from your computer';
     padding: 24px;
     font-size: 17px;
     line-height: 24px;
@@ -190,7 +190,14 @@
   right: 0;
   bottom: 0;
   left: 0;
-  object-fit: cover;
   object-position: center center;
   background-color: $dark-hex-90;
+
+  &--image {
+    object-fit: cover;
+  }
+
+  &--video {
+    object-fit: contain;
+  }
 }
