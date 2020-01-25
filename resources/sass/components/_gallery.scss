@@ -94,8 +94,6 @@
   grid-row: span 2;
 }
 
-// ITEM
-
 .gallery-item-image-outer {
   position: relative;
   width: 100%;
@@ -127,9 +125,11 @@
   display: flex;
   justify-content: space-between;
 
-  &:not(:last-child) {
-    margin-bottom: $space-ll;
+  &:not(:last-of-type) {
+    margin-bottom: $space-xl;
+    border: 1px solid $dark-alpha-20;
   }
+
 }
 
 .upload-gallery-item-preview-outer-wrapper,
@@ -138,48 +138,36 @@
 }
 
 .upload-gallery-item-preview-wrapper {
-  cursor: pointer;
-  border-radius: 8px;
-  display: block;
-  background-color: $dark-alpha-10;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $dark-hex-10;
   width: 100%;
-  padding-bottom: 256px;
+  padding: $space-xl $space-ml $space-ml;
   overflow: hidden;
   position: relative;
-  border: dashed 4px $dark-alpha-20;
-
-  &::before {
-    content: '+ Add photo/video from your computer';
-    padding: 24px;
-    font-size: 17px;
-    line-height: 24px;
-    font-weight: 500;
-    color: $dark-alpha-50;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  border: dashed 4px $dark-alpha-30;
 
   &--filled {
+    background-color: $dark-hex-10;
     cursor: pointer;
-    border-radius: 8px;
     display: block;
-    background-color: $dark-alpha-10;
     width: 100%;
     padding-bottom: 100%;
     overflow: hidden;
     position: relative;
   }
+
+  > span > strong {
+    font-weight: 500;
+  }
 }
 
 .upload-gallery-item-info {
   flex: 1;
-  padding-left: $space-ll;
+  padding: $space-l;
 }
 
 .gallery-item-preview {
@@ -191,13 +179,32 @@
   bottom: 0;
   left: 0;
   object-position: center center;
-  background-color: $dark-hex-90;
 
   &--image {
     object-fit: cover;
+    background-color: transparent;
   }
 
   &--video {
     object-fit: contain;
+    background-color: $dark-hex-90;
   }
+}
+
+.upload-gallery-item-icon {
+  width: 160px;
+  margin-bottom: $space-l;
+}
+
+.add-embed-gallery-item {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  flex-wrap: nowrap;
+  padding-top: $space-sm;
+  padding-bottom: $space-ll;
+}
+
+.media-player-icon {
+  width: 200px;
 }

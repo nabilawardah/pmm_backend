@@ -671,7 +671,7 @@ class DummyController extends Controller
             $response = [
                 'url' => '/galleries/'.$galleryItem,
                 'media' => $request->file(),
-                'name' => $galleryItem,
+                'name' => $file->getClientOriginalName(),
                 'type' => $request->type,
             ];
 

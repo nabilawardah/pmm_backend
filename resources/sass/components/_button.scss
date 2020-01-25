@@ -106,7 +106,8 @@
     transition: all 0.36s;
 
     &:hover {
-      background-color: $dark-alpha-10;
+      // background-color: $dark-alpha-10;
+      text-decoration: underline;
       transition: all 0.28s;
     }
   }

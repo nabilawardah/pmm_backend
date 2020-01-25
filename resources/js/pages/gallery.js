@@ -11,7 +11,7 @@ $(function() {
   $(document).on('click', '.add-new-gallery-item', showAddNewGalleryItem)
   $(document).on('click', '.add-new-album', showAddNewAlbum)
 
-  $(document).on('click', '.upload-gallery-item-preview-wrapper', triggerUploadGalleryItem)
+  $(document).on('click', '.trigger-upload-gallery-item', triggerUploadGalleryItem)
   $('input.upload-gallery-item-input').on('change', uploadGalleryItem)
 
   $(document).on('click', '.upload-gallery-item-remove', removeGalleryItem)
@@ -87,6 +87,7 @@ function uploadGalleryItem() {
               id: res.data.name,
               src: res.data.url,
               fileType: res.data.type,
+              title: res.data.name
             })
             container.prepend(gallerySection)
           })
