@@ -74,7 +74,7 @@ function uploadGalleryItem() {
       data.append('gallery', file)
 
       axios
-          .post(`/api/gallery/${userId}`, data, config)
+          .post(`/api/gallery/${userId}`, {...data, type: file.type}, config)
           .then(res => {
             console.log('GALLERY ITEM: ', res.data)
           })

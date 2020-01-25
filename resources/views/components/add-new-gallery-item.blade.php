@@ -21,7 +21,7 @@
       <section class="upload-gallery-item">
         <div class="upload-gallery-item-preview-wrapper">
           <picture class="upload-gallery-item-preview"></picture>
-          <input multiple class="upload-gallery-item-input" hidden class="hidden" type="file" accept="image/png, image/gif, image/svg+xml, image/jpeg, image/bmp, video/ogg, video/mp4, video/webm" />
+          <input multiple class="upload-gallery-item-input" hidden class="hidden" type="file" accept="image/png, image/gif, image/jpeg, image/bmp, video/ogg, video/mp4, video/webm" />
         </div>
         <aside class="upload-gallery-item-info">
           <header style="margin-bottom: 24px;">
