@@ -661,7 +661,7 @@ class DummyController extends Controller
         $user = $request->user_id;
 
         request()->validate([
-            'gallery' => 'required|mimes:jpeg,png,jpg,gif,mp4,ogv,webm',
+            'gallery' => 'required|mimes:jpeg,png,jpg,gif,svg,mp4,ogv,webm',
         ]);
 
         if ($file = $request->file('gallery')) {

@@ -2,9 +2,7 @@
 import LazyLoad from 'vanilla-lazyload'
 import { showModal } from '../components/modals/base-modal'
 import axios from 'axios'
-
-const VALID_IMAGES = ['image/gif', 'image/jpeg', 'image/png']
-const VALID_VIDEOS = ['video/webm', 'video/mp4', 'video/ogg']
+import { generateNewGalleryItem, generateTemporaryPlaceholder } from '../components/gallery'
 
 $(function() {
   let lazyloadInstance = new LazyLoad({ elements_selector: '.lazy', threshold: 2000 })
@@ -13,7 +11,7 @@ $(function() {
   $(document).on('click', '.add-new-gallery-item', showAddNewGalleryItem)
   $(document).on('click', '.add-new-album', showAddNewAlbum)
 
-  $(document).on('click', '.upload-gallery-item-preview', triggerUploadGalleryItem)
+  $(document).on('click', '.upload-gallery-item-preview-wrapper', triggerUploadGalleryItem)
   $('input.upload-gallery-item-input').on('change', uploadGalleryItem)
 })
 
@@ -53,18 +51,21 @@ function triggerUploadGalleryItem() {
 }
 
 function uploadGalleryItem() {
+  let container = $('#upload-gallery-item-outer-wrapper')
   let el = $(this)
   let files = el[0].files
   if (files.length > 0) {
     for (let i = 0; i < files.length; i++) {
       const file = files[i]
 
-      // let reader = new FileReader()
-      // reader.onload = function(e) {
-      //   let url = e.target.result
-      // console.log(file)
-      // }
-      // reader.readAsDataURL(file)
+      let reader = new FileReader()
+      reader.onload = function(e) {
+        let url = e.target.result
+        let image = document.createElement('IMG')
+        image.src = url
+        image.onload = console.log(image)
+      }
+      reader.readAsDataURL(file)
 
       let userId = $('#user-id').val()
       let data = new FormData()
@@ -72,13 +73,23 @@ function uploadGalleryItem() {
         headers: { 'content-type': 'multipart/form-data' },
       }
       data.append('gallery', file)
+      data.append('type', file.type)
 
-      axios
-          .post(`/api/gallery/${userId}`, {...data, type: file.type}, config)
+      setTimeout(() => {
+        axios
+          .post(`/api/gallery/${userId}`, data, config)
           .then(res => {
-            console.log('GALLERY ITEM: ', res.data)
+            console.log('RES: ', res.data)
+            let gallerySection = generateTemporaryPlaceholder({
+              file,
+              id: res.data.name,
+              src: res.data.url,
+              fileType: res.data.type,
+            })
+            container.prepend(gallerySection)
           })
           .catch(err => console.log('ERROR UPLOADING GALLERY ITEM: ', err))
+      }, 3000)
     }
   }
 }

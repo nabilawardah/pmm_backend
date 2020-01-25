@@ -16,12 +16,12 @@
       </nav>
     </div>
 
-    <div class="modal-wrapper container-narrow" style="width: 100%; padding-top: 48px; padding-bottom: 48px;">
+    <div id="upload-gallery-item-outer-wrapper" class="modal-wrapper container-narrow" style="width: 100%; padding-top: 48px; padding-bottom: 48px;">
 
       <section class="upload-gallery-item">
-        <div class="upload-gallery-item-preview-wrapper">
-          <picture class="upload-gallery-item-preview"></picture>
-          <input multiple class="upload-gallery-item-input" hidden class="hidden" type="file" accept="image/png, image/gif, image/jpeg, image/bmp, video/ogg, video/mp4, video/webm" />
+        <div class="upload-gallery-item-preview-outer-wrapper">
+          <picture class="upload-gallery-item-preview-wrapper"></picture>
+          <input multiple class="upload-gallery-item-input" hidden class="hidden" type="file" accept="image/png, image/gif, image/svg+xml, image/jpeg, image/bmp, video/ogg, video/mp4, video/webm" />
         </div>
         <aside class="upload-gallery-item-info">
           <header style="margin-bottom: 24px;">
