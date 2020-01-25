@@ -2,6 +2,7 @@ require('./bootstrap')
 require('./helper/preload-image')
 // require('./helper/custom-lqip')
 require('./helper/back-link')
+require('./helper/lock-body')
 
 require('./pages/users')
 require('./pages/articles')

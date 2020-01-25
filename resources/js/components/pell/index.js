@@ -3,30 +3,34 @@ import striptags from 'striptags'
 import { pellActions } from './pell-actions'
 import { removeFormatTitle, checkTitleState, cleanupAttributes, cleanupEverything } from './pell-helper'
 
-let pellEditor = pell.init({
-  element: document.getElementById('pell-editor'),
-  onChange: html => html,
-  defaultParagraphSeparator: 'p',
-  styleWithCSS: false,
-  actions: pellActions,
-  classes: {
-    actionbar: 'pell-actionbar section--inset',
-    button: 'pell-button',
-    content: 'pell-content section--inset',
-    selected: 'pell-button-selected',
-  },
-})
+let pellEditor
 
-window.pell = pellEditor
+if (document.getElementById('pell-editor')) {
+  pellEditor = pell.init({
+    element: document.getElementById('pell-editor'),
+    onChange: html => html,
+    defaultParagraphSeparator: 'p',
+    styleWithCSS: false,
+    actions: pellActions,
+    classes: {
+      actionbar: 'pell-actionbar section--inset',
+      button: 'pell-button',
+      content: 'pell-content section--inset',
+      selected: 'pell-button-selected',
+    },
+  })
 
-pellEditor.onpaste = function(event) {
-  event.stopPropagation()
-  event.preventDefault()
+  window.pell = pellEditor
 
-  const clipboardData = event.clipboardData || window.clipboardData
-  let sanitizedHTML = cleanupAttributes(clipboardData.getData('text/html'))
+  pellEditor.onpaste = function(event) {
+    event.stopPropagation()
+    event.preventDefault()
 
-  exec('insertHTML', sanitizedHTML)
+    const clipboardData = event.clipboardData || window.clipboardData
+    let sanitizedHTML = cleanupAttributes(clipboardData.getData('text/html'))
+
+    exec('insertHTML', sanitizedHTML)
+  }
 }
 
 $(function() {

@@ -44,9 +44,7 @@ Route::get('/admin/users', function () {
 Route::get('/admin/users/{id}', function () {
     return view('admin.users.detail', ['active_page' => 'Users']);
 });
-Route::get('/admin/gallery', function () {
-    return view('admin.gallery.index', ['active_page' => 'Gallery']);
-});
+Route::get('/admin/gallery', 'DummyController@admin_gallery_page');
 
 Route::post('/api/role/{id}', 'DummyController@change_role');
 Route::post('/api/profile/{id}', 'DummyController@save_user');
@@ -68,3 +66,6 @@ Route::get('/api/events', 'DummyController@get_data_events');
 Route::post('/api/events/submit/{event_id}', 'DummyController@submit_event');
 Route::post('/api/events/join/{event_id}', 'DummyController@join_event');
 Route::post('/api/events/cancel_registration/{event_id}', 'DummyController@cancel_event_registration');
+Route::get('/api/events/delete/{event_id}', 'DummyController@delete_event');
+
+Route::post('/api/gallery/{user_id}', 'DummyController@post_gallery_item');

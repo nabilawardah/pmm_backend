@@ -200,3 +200,14 @@
     font-weight: $medium;
   }
 }
+
+.modal-top-nav-wrapper {
+  width: 100%;
+}
+
+.modal-top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}

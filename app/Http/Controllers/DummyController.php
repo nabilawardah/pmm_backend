@@ -624,11 +624,58 @@ class DummyController extends Controller
         return $new_event;
     }
 
+    public function delete_event(Request $request)
+    {
+        $modified_event = [];
+        $placeholder = [];
+        foreach ($this->events as $event) {
+            if ((int) $event['id'] !== (int) $request['event_id']) {
+                array_push($placeholder, $event);
+            }
+        }
+
+        $this->jsonEvents['data'] = $placeholder;
+        $this->save_event_to_file();
+
+        return redirect('/admin/events');
+    }
+
     public function gallery_page(Request $request)
     {
         return view('web.gallery.index', [
             'gallery' => $this->gallery,
             'active_page' => 'Gallery',
         ]);
+    }
+
+    public function admin_gallery_page(Request $request)
+    {
+        return view('admin.gallery.index', [
+            'gallery' => $this->gallery,
+            'active_page' => 'Gallery',
+        ]);
+    }
+
+    public function post_gallery_item(Request $request)
+    {
+        $user = $request->user_id;
+
+        request()->validate([
+            'gallery' => 'required|mimes:jpeg,png,jpg,gif,svg,mp4,ogv,webm',
+        ]);
+
+        if ($file = $request->file('gallery')) {
+            $destinationPath = 'galleries'; // upload path
+            $galleryItem = date('YmdHis').'-'.strtolower(str_replace(' ', '-', $file->getClientOriginalName()));
+            $file->move($destinationPath, $galleryItem);
+            $response = [
+                'url' => '/galleries/'.$galleryItem,
+                'media' => $request->file(),
+                'name' => $galleryItem,
+                'type' => $request->type,
+            ];
+
+            return $response;
+        }
     }
 }

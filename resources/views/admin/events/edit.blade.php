@@ -2,31 +2,27 @@
 
 @section('title', 'Event Edit')
 
+<style>
+  .main-content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+</style>
+
+@include('components.navbar-event', [
+  'action_class' => 'publish-event',
+  'action_label' => 'Save & Publish Event',
+  'show_publish' => true
+])
+
+@include('components.confirm-delete', [
+  'message' => 'Deleted events are gone forever. Are you sure?',
+  'url' => '/api/events/delete/'.$event['id']
+])
+
+@include('components.media-library', ['user' => $admin])
+
 @section('content')
-
-  @include('components.confirm-delete', [
-    'message' => 'Deleted events are gone forever. Are you sure?',
-    'url' => '/api/events/delete/'.$event['id']
-  ])
-
-  <style>
-    .main-content {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-  </style>
-
-  @include('components.navbar-event', [
-    'action_class' => 'publish-event',
-    'action_label' => 'Save & Publish Event',
-    'show_publish' => true
-  ])
-
-  @include('components.confirm-delete', [
-    'message' => 'Deleted events are gone forever. Are you sure?',
-    'url' => '/api/events/delete/'.$event['id']
-  ])
-  @include('components.media-library', ['user' => $admin])
 
   @component('layouts.main-content', ['width' => 'narrow'])
 

@@ -29,7 +29,7 @@
 
   @include('components.confirm-delete', [
     'message' => 'Deleted articles are gone forever. Are you sure?',
-    'url' => '/api/events/delete/'.$article['id']
+    'url' => '/api/articles/delete/'.$article['id']
   ])
   @include('components.footer')
 

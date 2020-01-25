@@ -3,6 +3,20 @@ let content = $('.main-content')
 let navbar = $('.main-navbar')
 let footer = $('.main-footer')
 
+export function lockBodyScroll() {
+  body.addClass('lock-scroll')
+  content.addClass('lock-scroll')
+  navbar.addClass('lock-scroll')
+  footer.addClass('lock-scroll')
+}
+
+export function unlockBodyScroll() {
+  body.removeClass('lock-scroll')
+  content.removeClass('lock-scroll')
+  navbar.removeClass('lock-scroll')
+  footer.removeClass('lock-scroll')
+}
+
 export function generateBaseModal(data, previewPhoto, callback, remove) {
   let modalPreviewPhoto = `
     <div class="modal-secondary-area">
@@ -52,10 +66,8 @@ export function generateBaseModal(data, previewPhoto, callback, remove) {
   `
 
   body.bind('append', callback)
-  body.append(modal).addClass('lock-scroll')
-  content.addClass('lock-scroll')
-  navbar.addClass('lock-scroll')
-  footer.addClass('lock-scroll')
+  body.append(modal)
+  lockBodyScroll()
 }
 
 export function showModal(id) {
@@ -67,10 +79,7 @@ export function showModal(id) {
   }
   if (modal.length > 0) {
     modal.fadeIn(280)
-    body.addClass('lock-scroll')
-    content.addClass('lock-scroll')
-    navbar.addClass('lock-scroll')
-    footer.addClass('lock-scroll')
+    lockBodyScroll()
   }
 }
 
@@ -83,10 +92,7 @@ export function removeModal(id) {
   }
   body.off('append')
   modal.remove()
-  body.removeClass('lock-scroll')
-  content.removeClass('lock-scroll')
-  navbar.removeClass('lock-scroll')
-  footer.removeClass('lock-scroll')
+  unlockBodyScroll()
 }
 
 export function hideModal(id) {
@@ -103,11 +109,7 @@ export function hideModal(id) {
   showPrimaryModal()
   hideSecondaryModal()
   modal.hide()
-  // Remove lockscroll
-  body.removeClass('lock-scroll')
-  content.removeClass('lock-scroll')
-  navbar.removeClass('lock-scroll')
-  footer.removeClass('lock-scroll')
+  unlockBodyScroll()
 }
 
 export function hideSecondaryModal() {
