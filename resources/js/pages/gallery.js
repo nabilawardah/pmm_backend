@@ -2,11 +2,10 @@
 import LazyLoad from 'vanilla-lazyload'
 import { showModal } from '../components/modals/base-modal'
 import axios from 'axios'
-import { generateNewGalleryItem, generateTemporaryPlaceholder } from '../components/gallery'
+import { generateTemporaryPlaceholder } from '../components/gallery'
 
 $(function() {
   let lazyloadInstance = new LazyLoad({ elements_selector: '.lazy', threshold: 2000 })
-  generateThumbnail()
 
   $(document).on('click', '.add-new-gallery-item', showAddNewGalleryItem)
   $(document).on('click', '.add-new-album', showAddNewAlbum)
@@ -15,27 +14,9 @@ $(function() {
   $('input.upload-gallery-item-input').on('change', uploadGalleryItem)
 
   $(document).on('click', '.upload-gallery-item-remove', removeGalleryItem)
+
+  $(document).on('click', '.trigger-embed-gallery-item', handleEmbed)
 })
-
-function generateThumbnail() {
-  let canvases = document.querySelectorAll('canvas.gallery-item-video')
-
-  canvases.forEach(canvas => {
-    let container = canvas.parentNode
-    let video = canvas.parentNode.querySelector('video')
-    let img = document.createElement('IMG')
-
-    video.play()
-    setTimeout(() => {
-      video.pause()
-      canvas.getContext('2d').drawImage(video, 0, 0, video.videoWidth, video.videoHeight)
-      img.setAttribute('src', canvas.toDataURL())
-      img.classList.add('gallery-item-image')
-      img.onload = container.appendChild(img)
-      canvas.remove()
-    }, 200)
-  })
-}
 
 function showAddNewAlbum() {
   showModal('#add-new-album')
@@ -87,9 +68,12 @@ function uploadGalleryItem() {
               id: res.data.name,
               src: res.data.url,
               fileType: res.data.type,
-              title: res.data.name
+              title: res.data.name,
             })
-            container.prepend(gallerySection)
+            $(gallerySection)
+              .appendTo(container)
+              .hide()
+              .slideDown(500)
           })
           .catch(err => console.log('ERROR UPLOADING GALLERY ITEM: ', err))
       }, 3000)
@@ -99,6 +83,42 @@ function uploadGalleryItem() {
 
 function removeGalleryItem() {
   let el = $(this)
-  let container = el.parents('section.upload-gallery-item')
-  container.slideUp(200)
+  let container = el.parents('li.upload-gallery-item-container')
+  container.slideUp(300)
+  setTimeout(() => {
+    container.remove()
+  }, 300)
+}
+
+function handleEmbed() {
+  let input = $('input#embed-gallery-item-link')
+  let url = input.val()
+
+  let container = $('#upload-gallery-item-outer-wrapper')
+  let iframeSection = generateTemporaryPlaceholder({ src: url, external: true })
+  $(iframeSection)
+    .appendTo(container)
+    .hide()
+    .slideDown(500)
+  input.val('')
+}
+
+function generateThumbnail() {
+  let canvases = document.querySelectorAll('canvas.gallery-item-video')
+
+  canvases.forEach(canvas => {
+    let container = canvas.parentNode
+    let video = canvas.parentNode.querySelector('video')
+    let img = document.createElement('IMG')
+
+    video.play()
+    setTimeout(() => {
+      video.pause()
+      canvas.getContext('2d').drawImage(video, 0, 0, video.videoWidth, video.videoHeight)
+      img.setAttribute('src', canvas.toDataURL())
+      img.classList.add('gallery-item-image')
+      img.onload = container.appendChild(img)
+      canvas.remove()
+    }, 200)
+  })
 }
