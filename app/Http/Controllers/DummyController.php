@@ -661,7 +661,8 @@ class DummyController extends Controller
         $user = $request->user_id;
 
         request()->validate([
-            'gallery' => 'required|mimes:jpeg,png,jpg,gif,svg,mp4,ogv,webm',
+            'gallery' => 'mimes:jpeg,png,jpg,gif,svg,mp4,ogv,webm',
+            'thumbnail' => 'mimes:jpeg,png,jpg,gif,svg,mp4,ogv,webm',
         ]);
 
         if ($file = $request->file('gallery')) {
@@ -673,6 +674,19 @@ class DummyController extends Controller
                 'media' => $request->file(),
                 'name' => $file->getClientOriginalName(),
                 'type' => $request->type,
+            ];
+
+            return $response;
+        }
+
+        if ($file = $request->file('thumbnail')) {
+            $destinationPath = 'galleries'; // upload path
+            $galleryItem = date('YmdHis').'-thumbnail.png';
+            $file->move($destinationPath, $galleryItem);
+            $response = [
+                'url' => '/galleries/'.$galleryItem,
+                'name' => $galleryItem,
+                'type' => 'image/png',
             ];
 
             return $response;

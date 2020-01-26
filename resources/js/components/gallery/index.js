@@ -1,7 +1,9 @@
-export { generateTemporaryPlaceholder } from './generate-temporary-placeholder'
-
-const VALID_IMAGES = ['image/gif', 'image/jpeg', 'image/png']
-const VALID_VIDEOS = ['video/webm', 'video/mp4', 'video/ogg']
+export {
+  generateTemporaryPlaceholder,
+  generateThumbnail,
+  VALID_IMAGES,
+  VALID_VIDEOS,
+} from './generate-temporary-placeholder'
 
 export function generateNewGalleryItem({ file, id, src, fileType, external = false }) {
   let preview

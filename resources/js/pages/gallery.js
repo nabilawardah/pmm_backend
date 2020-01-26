@@ -2,7 +2,7 @@
 import LazyLoad from 'vanilla-lazyload'
 import { showModal } from '../components/modals/base-modal'
 import axios from 'axios'
-import { generateTemporaryPlaceholder } from '../components/gallery'
+import { generateTemporaryPlaceholder, VALID_VIDEOS, generateThumbnail } from '../components/gallery'
 
 $(function() {
   let lazyloadInstance = new LazyLoad({ elements_selector: '.lazy', threshold: 2000 })
@@ -74,6 +74,9 @@ function uploadGalleryItem() {
               .appendTo(container)
               .hide()
               .slideDown(500)
+            if ($.inArray(res.data.type, VALID_VIDEOS) >= 0) {
+              generateThumbnail()
+            }
           })
           .catch(err => console.log('ERROR UPLOADING GALLERY ITEM: ', err))
       }, 3000)
@@ -101,24 +104,4 @@ function handleEmbed() {
     .hide()
     .slideDown(500)
   input.val('')
-}
-
-function generateThumbnail() {
-  let canvases = document.querySelectorAll('canvas.gallery-item-video')
-
-  canvases.forEach(canvas => {
-    let container = canvas.parentNode
-    let video = canvas.parentNode.querySelector('video')
-    let img = document.createElement('IMG')
-
-    video.play()
-    setTimeout(() => {
-      video.pause()
-      canvas.getContext('2d').drawImage(video, 0, 0, video.videoWidth, video.videoHeight)
-      img.setAttribute('src', canvas.toDataURL())
-      img.classList.add('gallery-item-image')
-      img.onload = container.appendChild(img)
-      canvas.remove()
-    }, 200)
-  })
 }
