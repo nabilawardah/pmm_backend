@@ -16,6 +16,7 @@ $(function() {
   $(document).on('click', '.upload-gallery-item-remove', removeGalleryItem)
 
   $(document).on('click', '.trigger-embed-gallery-item', handleEmbed)
+  $(document).on('click', '.publish-photos-videos', handlePublishGalleryItem)
 })
 
 function showAddNewAlbum() {
@@ -65,15 +66,16 @@ function uploadGalleryItem() {
             console.log('RES: ', res.data)
             let gallerySection = generateTemporaryPlaceholder({
               file,
-              id: res.data.name,
+              name: res.data.name,
               src: res.data.url,
               fileType: res.data.type,
-              title: res.data.name,
             })
             $(gallerySection)
               .appendTo(container)
               .hide()
               .slideDown(500)
+
+            // If the file is video
             if ($.inArray(res.data.type, VALID_VIDEOS) >= 0) {
               generateThumbnail()
             }
@@ -104,4 +106,47 @@ function handleEmbed() {
     .hide()
     .slideDown(500)
   input.val('')
+}
+
+function handlePublishGalleryItem() {
+  let galleryItems = []
+  let items = document
+    .querySelector('#upload-gallery-item-outer-wrapper')
+    .querySelectorAll('.upload-gallery-item-container')
+  let userId = $('#user-id').val()
+
+  items.forEach(item => {
+    let data = {
+      attribute: {},
+    }
+    let el = $(item)
+    let thumbnailContainer = el.find('.gallery-item-video-thumbnail')
+    let thumbnail
+    if (thumbnailContainer.length > 0) {
+      thumbnail = JSON.parse($(thumbnailContainer[0]).val()).name
+    } else {
+      thumbnail = ''
+    }
+
+    data.author = userId
+    data.caption = el.find('input-gallery-caption').val()
+    data.attribute.type = el.data('type')
+    data.attribute.origin = el.data('origin')
+    data.attribute.filetype = el.data('filetype')
+    data.attribute.src = el.data('src')
+    data.attribute.thumbnail = thumbnail
+
+    galleryItems.push(data)
+  })
+
+  if (galleryItems.length > 0) {
+    console.log('ITEMS: ', galleryItems)
+    axios
+      .post(`/api/gallery/post/${userId}`, { data: galleryItems })
+      .then(res => {
+        console.log(res.data)
+        window.location.reload()
+      })
+      .catch(err => console.log('ERR POST:', err))
+  }
 }

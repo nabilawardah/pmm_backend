@@ -4,13 +4,15 @@ import { processVideoUrl } from '../media-library/media-helper'
 export const VALID_IMAGES = ['image/gif', 'image/svg+xml', 'image/jpeg', 'image/png']
 export const VALID_VIDEOS = ['video/webm', 'video/mp4', 'video/ogg']
 
-export function generateTemporaryPlaceholder({ file, src, fileType, external = false }) {
-  let preview, input, placeholder
-
-  let videoUrl = processVideoUrl(src)
+export function generateTemporaryPlaceholder({ file, name, src, fileType, external = false }) {
+  let preview, input, placeholder, type, source, origin
 
   if (external) {
     console.log('IFRAME')
+    let videoUrl = processVideoUrl(src)
+    source = videoUrl.url
+    origin = 'external'
+    type = 'video'
     preview = /*html*/ `
       <iframe
         class="gallery-item-preview gallery-item-preview--video"
@@ -24,15 +26,19 @@ export function generateTemporaryPlaceholder({ file, src, fileType, external = f
     input = /*html*/ `<input class="upload-gallery-item-input" hidden class="hidden" type="file" value="${src}" />`
   } else {
     input = /*html*/ `<input class="upload-gallery-item-input" hidden class="hidden" type="file" value="${file}" />`
-
+    origin = 'local'
     if ($.inArray(fileType, VALID_IMAGES) >= 0) {
       console.log('PHOTO')
+      type = 'image'
+      source = name
       preview = /*html*/ `
         <img class="gallery-item-preview gallery-item-preview--image" src="${src}" />
       `
       placeholder = 'Describe this photo (optional)...'
     } else if ($.inArray(fileType, VALID_VIDEOS) >= 0) {
       console.log('VIDEO')
+      type = 'video'
+      source = name
       preview = /*html*/ `
         <video class="gallery-item-preview gallery-item-preview--video" loop="true" controls="true">
           <source src="${src}" type="${fileType}" />
@@ -43,7 +49,7 @@ export function generateTemporaryPlaceholder({ file, src, fileType, external = f
   }
 
   let markup = /*html*/ `
-    <li class="upload-gallery-item-container">
+    <li class="upload-gallery-item-container" data-type="${type}" data-name="${name}" data-filetype="${fileType}" data-src="${source}" data-origin="${origin}">
       <section class="upload-gallery-item">
         <div class="upload-gallery-item-preview-outer-wrapper--filled">
           <picture class="upload-gallery-item-preview-wrapper--filled">

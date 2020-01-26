@@ -81,6 +81,17 @@ class DummyController extends Controller
         file_put_contents(base_path('public/data/events.json'), $newJsonString);
     }
 
+    public function save_gallery_to_file($gallery = null)
+    {
+        if (isset($gallery)) {
+            array_push($this->gallery, $gallery);
+            $this->jsonGallery['data'] = $this->gallery;
+        }
+
+        $newJsonString = json_encode($this->jsonGallery, JSON_PRETTY_PRINT);
+        file_put_contents(base_path('public/data/gallery.json'), $newJsonString);
+    }
+
     public function save_user(Request $request)
     {
         sleep(2);
@@ -643,7 +654,7 @@ class DummyController extends Controller
     public function gallery_page(Request $request)
     {
         return view('web.gallery.index', [
-            'gallery' => $this->gallery,
+            'gallery' => array_reverse($this->gallery),
             'active_page' => 'Gallery',
         ]);
     }
@@ -651,7 +662,7 @@ class DummyController extends Controller
     public function admin_gallery_page(Request $request)
     {
         return view('admin.gallery.index', [
-            'gallery' => $this->gallery,
+            'gallery' => array_reverse($this->gallery),
             'active_page' => 'Gallery',
         ]);
     }
@@ -672,7 +683,7 @@ class DummyController extends Controller
             $response = [
                 'url' => '/galleries/'.$galleryItem,
                 'media' => $request->file(),
-                'name' => $file->getClientOriginalName(),
+                'name' => $galleryItem,
                 'type' => $request->type,
             ];
 
@@ -691,5 +702,25 @@ class DummyController extends Controller
 
             return $response;
         }
+    }
+
+    public function post_gallery(Request $request)
+    {
+        $user = $request->user_id;
+        $data = $request->data;
+        $placeholder = $this->gallery;
+        $i = 1;
+
+        foreach ($data as $item) {
+            $item['id'] = count($this->gallery) + 1;
+            $item['published_date'] = Carbon::now();
+            array_push($placeholder, $item);
+            $i = $i + 1;
+        }
+
+        $this->jsonGallery['data'] = $placeholder;
+        $this->save_gallery_to_file();
+
+        return $placeholder;
     }
 }

@@ -17,7 +17,7 @@
 
     <div style="flex: auto; display: flex; justify-content: flex-end;">
       <button style="margin-right: 8px;" class="button button--medium primary add-new-gallery-item">Add Photo/Video</button>
-      <button class="button button--medium primary add-new-album add-new-album">Add Album</button>
+      {{-- <button class="button button--medium primary add-new-album add-new-album">Add Album</button> --}}
     </div>
 
   </header>
@@ -27,30 +27,30 @@
       @if ($item['attribute']['type'] === 'image' && $item['attribute']['origin'] === 'local')
         <li class="gallery-item item-image-wrapper">
           <picture class="gallery-item-image-outer">
-            <img class="lazy gallery-item-image" data-src="{{ '/galleries/'.$item['attribute']['src'] }}" alt="{{ $item['caption'] }}">
+            <img class="lazy gallery-item-image" data-src="{{ '/galleries/'.$item['attribute']['src'] }}" alt="{{ $item['caption'] ?? '' }}">
             <div class="gallery-item-caption">
-              <p class="heading5" style="color: #FFFFFF;">{{ $item['name'] }}</p>
-              <span style="color: rgba(255,255,255,.80)" class="small">{{ $item['caption'] }}</span>
+              {{-- <p class="heading5" style="color: #FFFFFF;">{{ $item['name'] }}</p> --}}
+              <span style="color: rgba(255,255,255,.80)" class="small">{{ $item['caption'] ?? '' }}</span>
             </div>
           </picture>
         </li>
       @elseif( $item['attribute']['type'] === 'image' && $item['attribute']['origin'] === 'external' )
         <li class="gallery-item item-image-wrapper">
           <picture class="gallery-item-image-outer">
-            <img class="lazy gallery-item-image" data-src="{{ $item['attribute']['src'] }}" alt="{{ $item['caption'] }}">
+            <img class="lazy gallery-item-image" data-src="{{ $item['attribute']['src'] }}" alt="{{ $item['caption'] ?? '' }}">
             <div class="gallery-item-caption">
-              <p class="heading5" style="color: #FFFFFF; margin-bottom: 4px;">{{ $item['name'] }}</p>
-              <span style="color: rgba(255,255,255,.80);" class="small">{{ $item['caption'] }}</span>
+              {{-- <p class="heading5" style="color: #FFFFFF; margin-bottom: 4px;">{{ $item['name'] }}</p> --}}
+              <span style="color: rgba(255,255,255,.80);" class="small">{{ $item['caption'] ?? '' }}</span>
             </div>
           </picture>
         </li>
       @elseif( $item['attribute']['type'] === 'video' && $item['attribute']['origin'] === 'local' )
         <li class="gallery-item item-video-wrapper">
-          <picture class="gallery-item-image-outer" data-alt="{{ $item['caption'] }}">
-            <img class="lazy gallery-item-image" data-src="{{ '/galleries/'.$item['attribute']['thumbnail'] }}" alt="{{ $item['caption'] }}">
+          <picture class="gallery-item-image-outer" data-alt="{{ $item['caption'] ?? '' }}">
+            <img class="lazy gallery-item-image" data-src="{{ '/galleries/'.$item['attribute']['thumbnail'] }}" alt="{{ $item['caption'] ?? '' }}">
             <div class="gallery-item-caption">
-              <p class="heading5" style="color: #FFFFFF;">{{ $item['name'] }}</p>
-              <span style="color: rgba(255,255,255,.80);" class="small">{{ $item['caption'] }}</span>
+              {{-- <p class="heading5" style="color: #FFFFFF;">{{ $item['name'] }}</p> --}}
+              <span style="color: rgba(255,255,255,.80);" class="small">{{ $item['caption'] ?? '' }}</span>
             </div>
             <div class="gallery-item-play-icon-container">
               <svg class="gallery-item-play-icon" viewBox="0 0 496 496" xmlns="http://www.w3.org/2000/svg" role="img">

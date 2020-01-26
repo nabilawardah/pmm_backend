@@ -69,3 +69,4 @@ Route::post('/api/events/cancel_registration/{event_id}', 'DummyController@cance
 Route::get('/api/events/delete/{event_id}', 'DummyController@delete_event');
 
 Route::post('/api/gallery/{user_id}', 'DummyController@post_gallery_item');
+Route::post('/api/gallery/post/{user_id}', 'DummyController@post_gallery');

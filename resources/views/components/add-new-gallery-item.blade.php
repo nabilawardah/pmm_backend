@@ -9,7 +9,7 @@
       <nav class="modal-top-nav container-narrow">
         <h1 class="heading4" style="padding-top: 12px; padding-bottom: 12px;">Add Photos/Videos</h1>
         <div>
-          <button class="button button--small primary" style="margin-right: 12px;">Publish</button>
+          <button class="button button--small primary publish-photos-videos" style="margin-right: 12px;">Publish</button>
           <button class="button button--small secondary close-modal">Exit and Discard</button>
         </div>
       </nav>
