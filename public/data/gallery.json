@@ -61,19 +61,6 @@
       }
     },
     {
-      "id": 6,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "small.mp4",
-        "type": "video",
-        "origin": "local",
-        "filetype": "video/mp4",
-        "thumbnail": "default.png"
-      }
-    },
-    {
       "id": 7,
       "author": 1,
       "caption": "Add some caption here, a long one. So we can see how it's done.",
@@ -181,19 +168,6 @@
         "type": "image",
         "origin": "local",
         "filetype": ""
-      }
-    },
-    {
-      "id": 6,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "small.mp4",
-        "type": "video",
-        "origin": "local",
-        "filetype": "video/mp4",
-        "thumbnail": "default.png"
       }
     },
     {
@@ -307,19 +281,6 @@
       }
     },
     {
-      "id": 6,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "small.mp4",
-        "type": "video",
-        "origin": "local",
-        "filetype": "video/mp4",
-        "thumbnail": "default.png"
-      }
-    },
-    {
       "id": 7,
       "author": 1,
       "caption": "Add some caption here, a long one. So we can see how it's done.",
@@ -427,19 +388,6 @@
         "type": "image",
         "origin": "local",
         "filetype": ""
-      }
-    },
-    {
-      "id": 6,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "small.mp4",
-        "type": "video",
-        "origin": "local",
-        "filetype": "video/mp4",
-        "thumbnail": "default.png"
       }
     },
     {
@@ -553,19 +501,6 @@
       }
     },
     {
-      "id": 6,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "small.mp4",
-        "type": "video",
-        "origin": "local",
-        "filetype": "video/mp4",
-        "thumbnail": "default.png"
-      }
-    },
-    {
       "id": 7,
       "author": 1,
       "caption": "Add some caption here, a long one. So we can see how it's done.",
@@ -673,19 +608,6 @@
         "type": "image",
         "origin": "local",
         "filetype": ""
-      }
-    },
-    {
-      "id": 6,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "small.mp4",
-        "type": "video",
-        "origin": "local",
-        "filetype": "video/mp4",
-        "thumbnail": "default.png"
       }
     },
     {

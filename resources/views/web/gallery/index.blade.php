@@ -39,7 +39,7 @@
           <picture class="gallery-item-image-outer">
             <img class="lazy gallery-item-image" data-src="{{ '/galleries/'.$item['attribute']['src'] }}" alt="{{ $item['caption'] ?? '' }}">
             <div class="gallery-item-caption">
-              <p class="heading5" style="color: #FFFFFF;">{{ $item['name'] }}</p>
+              {{-- <p class="heading5" style="color: #FFFFFF;">{{ $item['name'] }}</p> --}}
               <span style="color: rgba(255,255,255,.80)" class="small">{{ $item['caption'] ?? '' }}</span>
             </div>
           </picture>
@@ -49,7 +49,7 @@
           <picture class="gallery-item-image-outer">
             <img class="lazy gallery-item-image" data-src="{{ $item['attribute']['src'] }}" alt="{{ $item['caption'] ?? '' }}">
             <div class="gallery-item-caption">
-              <p class="heading5" style="color: #FFFFFF; margin-bottom: 4px;">{{ $item['name'] }}</p>
+              {{-- <p class="heading5" style="color: #FFFFFF; margin-bottom: 4px;">{{ $item['name'] }}</p> --}}
               <span style="color: rgba(255,255,255,.80);" class="small">{{ $item['caption'] ?? '' }}</span>
             </div>
           </picture>
@@ -59,7 +59,7 @@
           <picture class="gallery-item-image-outer" data-alt="{{ $item['caption'] ?? '' }}">
             <img class="lazy gallery-item-image" data-src="{{ '/galleries/'.$item['attribute']['thumbnail'] }}" alt="{{ $item['caption'] ?? '' }}">
             <div class="gallery-item-caption">
-              <p class="heading5" style="color: #FFFFFF;">{{ $item['name'] }}</p>
+              {{-- <p class="heading5" style="color: #FFFFFF;">{{ $item['name'] }}</p> --}}
               <span style="color: rgba(255,255,255,.80);" class="small">{{ $item['caption'] ?? '' }}</span>
             </div>
             <div class="gallery-item-play-icon-container">

@@ -129,7 +129,7 @@ function handlePublishGalleryItem() {
     }
 
     data.author = userId
-    data.caption = el.find('input-gallery-caption').val()
+    data.caption = el.find('.input-gallery-caption').val()
     data.attribute.type = el.data('type')
     data.attribute.origin = el.data('origin')
     data.attribute.filetype = el.data('filetype')
