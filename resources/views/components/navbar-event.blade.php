@@ -13,7 +13,7 @@
       <div style="display: inline-flex; align-items: center; justify-content: flex-start;">
         @isset($show_publish)
           @if($show_publish)
-            <button class="button button--small primary publish-event" style="margin-right: 8px;">Save & Publish</button>
+            <button class="button button--small primary publish-event">Save & Publish</button>
           @endif
         @endisset
         @isset($show_edit)
@@ -21,7 +21,7 @@
             <a href="/admin/events/{{ $event['admin'] }}/edit/{{ $event['id'] }}" class="no-pre button button--small default edit-event">Edit</a>
           @endif
         @endisset
-        <button class="button button--small secondary ghost confirm-delete">Delete</button>
+        <button style="margin-left: 24px;" class="button button--small secondary ghost confirm-delete">Delete</button>
       </div>
     </section>
     <div class="navbar-profile">

@@ -63,21 +63,23 @@ function uploadGalleryItem() {
         axios
           .post(`/api/gallery/${userId}`, data, config)
           .then(res => {
-            console.log('RES: ', res.data)
-            let gallerySection = generateTemporaryPlaceholder({
-              file,
-              name: res.data.name,
-              src: res.data.url,
-              fileType: res.data.type,
-            })
-            $(gallerySection)
-              .appendTo(container)
-              .hide()
-              .slideDown(500)
+            if (res.status === 200) {
+              console.log('RES: ', res.data)
+              let gallerySection = generateTemporaryPlaceholder({
+                file,
+                name: res.data.name,
+                src: res.data.url,
+                fileType: res.data.type,
+              })
+              $(gallerySection)
+                .appendTo(container)
+                .hide()
+                .slideDown(500)
 
-            // If the file is video
-            if ($.inArray(res.data.type, VALID_VIDEOS) >= 0) {
-              generateThumbnail()
+              // If the file is video
+              if ($.inArray(res.data.type, VALID_VIDEOS) >= 0) {
+                generateThumbnail()
+              }
             }
           })
           .catch(err => console.log('ERROR UPLOADING GALLERY ITEM: ', err))
@@ -144,8 +146,10 @@ function handlePublishGalleryItem() {
     axios
       .post(`/api/gallery/post/${userId}`, { data: galleryItems })
       .then(res => {
-        console.log(res.data)
-        window.location.reload()
+        if (res.status === 200) {
+          console.log(res.data)
+          window.location.reload()
+        }
       })
       .catch(err => console.log('ERR POST:', err))
   }
