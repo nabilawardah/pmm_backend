@@ -45,7 +45,7 @@ if (eventsTableContainer.length > 0) {
           } else {
             return `
             <a href="/events/${full.id}" class="article-info table-main-info">
-              <div class="profile-thumbnail lazyload-bg" style="margin-right: 16px; border-radius: 0; width: 64px; height: 88px; min-width: 64px; min-height: 88px; background-image: url('${cover}'), linear-gradient(to top, #008384, #008384);"></div>
+              <div class="profile-thumbnail lazyload-bg" style="margin-right: 16px; border-radius: 0; width: 64px; height: 88px; min-width: 64px; min-height: 88px; background-image: url('${cover}'), linear-gradient(to top, rgba(0, 153, 204, 1), rgba(0, 153, 204, 1));"></div>
               <textarea class="hidden">${fullData}</textarea>
               <span class="user-data">
                 <h3 class="user-main-info">
@@ -114,7 +114,7 @@ if (eventsTableContainer.length > 0) {
             } else {
               return `
             <div class="user-info">
-              <div class="profile-thumbnail lazyload-bg" style="width: 32px; height: 32px; min-width: 32px; min-height: 32px; background-image: url('/images/users/${profilePicture}'), linear-gradient(to top, #008384, #008384);"></div>
+              <div class="profile-thumbnail lazyload-bg" style="width: 32px; height: 32px; min-width: 32px; min-height: 32px; background-image: url('/images/users/${profilePicture}'), linear-gradient(to top, rgba(0, 153, 204, 1), rgba(0, 153, 204, 1));"></div>
               <span class="medium" style="color: #484848; display: block; width: fit-content; min-width: 200px;">${data.name}</span>
             </div>
           `

@@ -2,6 +2,7 @@
   display: flex;
   background: $light-alpha-100;
   box-shadow: 0px 4px 12px $dark-alpha-20;
+  position: relative;
 
   &.navbar-focus {
     box-shadow: none;
@@ -13,22 +14,48 @@
 }
 
 .navbar-wrapper {
-  @include container;
+  &.navbar-web {
+    @include container-narrow;
+  }
+  &.navbar-admin {
+    @include container;
+  }
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .brand-wrapper {
   padding-top: 8px;
   padding-bottom: 8px;
+  position: absolute;
+  left: 24px;
+  display: block;
+
+  &.brand-admin {
+    position: static;
+  }
 }
 
 .brand {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   display: block;
-  color: $brand-primary-200;
+}
+
+.brand-text {
+  color: unset;
+  height: 40px;
+  display: block;
+
+  > .cls-1{
+    fill:#484848;
+    transform: translateY(-8px);
+  }
+  > .cls-2{fill:#09c;}
+  > .cls-2,.cls-3{fill-rule:evenodd;}
+  > .cls-3{fill:#069;}
 }
 
 .navbar-primary {
@@ -38,7 +65,13 @@
 
 .navbar-secondary {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
+  position: absolute;
+  right: 24px;
+  &.navbar-admin {
+    position: static;
+  }
 }
 
 .primary-menu-wrapper {
@@ -56,21 +89,21 @@
   padding-bottom: $space-m;
 
   &.active {
-    box-shadow: inset 0px -3px 0px $brand-primary-200;
+    box-shadow: inset 0px -3px 0px $brand-primary-300;
   }
 
   &:hover {
-    box-shadow: inset 0px -3px 0px $brand-primary-200;
+    box-shadow: inset 0px -3px 0px $brand-primary-300;
     transition: all 0.28s;
   }
 
   &.admin {
     &.active {
-      box-shadow: inset 0px -3px 0px $brand-primary-200;
+      box-shadow: inset 0px -3px 0px $brand-primary-300;
     }
 
     &:hover {
-      box-shadow: inset 0px -3px 0px $brand-primary-200;
+      box-shadow: inset 0px -3px 0px $brand-primary-300;
       transition: all 0.28s;
     }
   }
@@ -85,7 +118,7 @@
   width: 32px;
   height: 32px;
   border-radius: 9999px;
-  background-color: $brand-primary-200;
+  background-color: $brand-primary-300;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

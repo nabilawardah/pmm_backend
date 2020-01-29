@@ -20,7 +20,7 @@
             <picture class="event-list-poster-wrapper">
               <img class="event-list-poster" width="100%" src="/media/user-{{ $event['admin'] }}/{{ $event['poster'] }}" alt="{{ $event['title'] }}">
             </picture>
-            <p class="heading5 event-list-info" style="color: #008384;">{{ date('F d, Y', strtotime($event['date']['start_date'])) }}, {{ $event['date']['start_time'] }}</p>
+            <p class="heading5 event-list-info" style="color: rgba(0, 153, 204, 1);">{{ date('F d, Y', strtotime($event['date']['start_date'])) }}, {{ $event['date']['start_time'] }}</p>
             <h1 class="heading3 event-list-title">{{ $event['title'] }}</h1>
             <p class="small event-list-subtitle">{{ $event['subtitle'] }}</p>
             <footer class="event-list-footer heading6">

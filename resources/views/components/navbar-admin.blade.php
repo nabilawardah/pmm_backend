@@ -31,9 +31,9 @@
 @endphp
 
 <nav class="main-navbar navbar">
-  <div class="navbar-wrapper">
+  <div class="navbar-wrapper navbar-admin">
     <ul class="navbar-primary inline--ll">
-      <li class="brand-wrapper">
+      <li class="brand-wrapper brand-admin">
         <a href="/">
           @include('icons.pmm')
         </a>
@@ -43,9 +43,9 @@
         @endcomponent
       @endforeach
     </ul>
-    <ul class="navbar-secondary inline--ll">
+    <ul class="navbar-secondary inline--ll navbar-admin">
       @foreach ($secondary_menus as $menu)
-          @component('components.menu-admin', ['name' => $menu->name, 'to' => $menu->to, 'active' => $active_page])
+        @component('components.menu-admin', ['name' => $menu->name, 'to' => $menu->to, 'active' => $active_page])
         @endcomponent
       @endforeach
     </ul>

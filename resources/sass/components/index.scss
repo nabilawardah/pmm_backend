@@ -39,7 +39,7 @@
   transition: filter 400ms, -webkit-filter 400ms;
 }
 
-.blur-up.lazyloaded {
+.blur-up.loaded {
   -webkit-filter: blur(0);
   filter: blur(0);
 }

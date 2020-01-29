@@ -16,7 +16,7 @@
         {{ json_encode($user) }}
       </textarea>
       <div class="profile-info-photo-container">
-        <img class="profile-photo lazyload blur-up" src="{{ asset('/images/lqip.jpg')}}" data-src="{{asset('/images/users/ongki.jpg')}}" alt="Ongki Herlambang">
+        <img class="profile-photo lazy blur-up" src="{{ asset('/images/lqip.jpg')}}" data-src="{{asset('/images/users/ongki.jpg')}}" alt="Ongki Herlambang">
         @if ($user->role === 'admin')
           <span class="profile-badge">admin</span>
         @endif

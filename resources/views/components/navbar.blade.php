@@ -35,28 +35,26 @@
 @endphp
 
 <nav class="main-navbar navbar">
-  <div class="navbar-wrapper">
+  <a href="/" class="brand-wrapper" style="margin-right: 64px;">
+    @include('icons.pmm')
+  </a>
+  <div class="navbar-wrapper navbar-web">
     <ul class="navbar-primary inline--ll">
-      <li class="brand-wrapper">
-        <a href="/">
-          @include('icons.pmm')
-        </a>
-      </li>
       @foreach ($primary_menus as $menu)
         @component('components.menu-web', ['name' => $menu->name, 'to' => $menu->to, 'active' => $active_page])
         @endcomponent
       @endforeach
     </ul>
-    <ul class="navbar-secondary inline--ll">
-      <li class="primary-menu-wrapper">
-        <a href="/articles/create/1" class="button button--small primary no-pre">
-          Add Points
-        </a>
-      </li>
-      @foreach ($secondary_menus as $menu)
-          @component('components.menu-web', ['name' => $menu->name, 'to' => $menu->to, 'active' => $active_page])
-        @endcomponent
-      @endforeach
-    </ul>
   </div>
+  <ul class="navbar-secondary inline--ll">
+    <li class="primary-menu-wrapper">
+      <a href="/articles/create/1" class="button button--small primary no-pre">
+        Add Points
+      </a>
+    </li>
+    @foreach ($secondary_menus as $menu)
+      @component('components.menu-web', ['name' => $menu->name, 'to' => $menu->to, 'active' => $active_page])
+      @endcomponent
+    @endforeach
+  </ul>
 </nav>

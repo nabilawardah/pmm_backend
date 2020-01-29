@@ -48,7 +48,7 @@ let usersTable = $('#users-table').DataTable({
           return `
             <div class="user-info">
               <textarea class="hidden">${fullData}</textarea>
-              <div class="profile-thumbnail lazyload-bg" style="background-image: url('/images/users/${profilePicture}'), linear-gradient(to top, #008384, #008384);"></div>
+              <div class="profile-thumbnail lazyload-bg" style="background-image: url('/images/users/${profilePicture}'), linear-gradient(to top, rgba(0, 153, 204, 1), rgba(0, 153, 204, 1));"></div>
               <span class="user-data">
                 <div class="heading4 user-main-info">
                   ${full.name} <span class="user-info-id">(<span class="id-pound">#</span>${full.id})</span>
