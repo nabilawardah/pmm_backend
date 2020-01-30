@@ -3,17 +3,20 @@ import {
   addMonths,
   formatRFC3339,
   subMonths,
-  isSameDay,
-  isSameYear,
+  // isSameDay,
+  // isSameYear,
   isPast,
-  isSameMonth,
+  // isSameMonth,
   format,
   getMonth,
   getYear,
   isBefore,
   endOfMonth,
 } from 'date-fns'
-import { generateCalendarMatrix, generateCalendar } from './calendar-matrix'
+import {
+  // generateCalendarMatrix,
+  generateCalendar,
+} from './calendar-matrix'
 
 export function selectDate() {
   let data = new Date($(this).data('date'))

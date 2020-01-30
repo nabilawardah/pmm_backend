@@ -44,6 +44,6 @@ if (mix.inProduction()) {
   mix.version()
 }
 
-// if (mix.inProduction()) {
-//   mix.bundleAnalyzer()
-// }
+if (mix.inProduction()) {
+  mix.bundleAnalyzer()
+}
