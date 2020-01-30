@@ -14,12 +14,7 @@
 }
 
 .navbar-wrapper {
-  &.navbar-web {
-    @include container-narrow;
-  }
-  &.navbar-admin {
-    @include container;
-  }
+  @include container;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,8 +24,8 @@
 .brand-wrapper {
   padding-top: 8px;
   padding-bottom: 8px;
-  position: absolute;
-  left: 24px;
+  // position: absolute;
+  // left: 24px;
   display: block;
 
   &.brand-admin {
@@ -49,13 +44,20 @@
   height: 40px;
   display: block;
 
-  > .cls-1{
-    fill:#484848;
+  > .cls-1 {
+    fill: #484848;
     transform: translateY(-8px);
   }
-  > .cls-2{fill:#09c;}
-  > .cls-2,.cls-3{fill-rule:evenodd;}
-  > .cls-3{fill:#069;}
+  > .cls-2 {
+    fill: #09c;
+  }
+  > .cls-2,
+  .cls-3 {
+    fill-rule: evenodd;
+  }
+  > .cls-3 {
+    fill: #069;
+  }
 }
 
 .navbar-primary {
@@ -67,11 +69,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  position: absolute;
-  right: 24px;
-  &.navbar-admin {
-    position: static;
-  }
+  position: static;
 }
 
 .primary-menu-wrapper {

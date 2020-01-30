@@ -35,6 +35,7 @@
   &.editor-cover-container--article {
     border-radius: 12px;
     @include section-inset;
+    background-color: $dark-alpha-10;
     padding-bottom: 30vh;
     margin-bottom: $space-ll;
   }

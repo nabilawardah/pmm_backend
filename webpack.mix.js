@@ -1,4 +1,5 @@
 const mix = require('laravel-mix')
+require('laravel-mix-bundle-analyzer')
 
 /*
  |--------------------------------------------------------------------------
@@ -16,7 +17,22 @@ mix
   .js('resources/js/app.js', 'public/js')
   .js('resources/js/helper/prefetch.js', 'public/js')
   .sass('resources/sass/app.scss', 'public/css')
-  .extract(['jquery', 'axios', 'pell', 'datatables.net-fixedcolumns-bs4'])
+  .extract([
+    'jquery',
+    'axios',
+    'pell',
+    'datatables.net-fixedcolumns-bs4',
+    'datatables.net-fixedcolumns-dt',
+    'datatables.net-fixedcolumns',
+    'datatables.net-dt',
+    'datatables.net',
+    'vanilla-lazyload',
+    // 'validator',
+    'dayjs',
+    'lodash.transform',
+    'lodash.isequal',
+    'lodash.isobject',
+  ])
   .sourceMaps()
 
 // ADJUST with your own setup
@@ -27,3 +43,7 @@ mix.browserSync('http://pmm.dushi')
 if (mix.inProduction()) {
   mix.version()
 }
+
+// if (mix.inProduction()) {
+//   mix.bundleAnalyzer()
+// }

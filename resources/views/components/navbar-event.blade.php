@@ -1,5 +1,5 @@
 <nav class="main-navbar navbar-focus navbar" style="box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,.12);">
-  <div class="navbar-wrapper">
+  <div class="navbar-wrapper navbar-web">
     <div class="brand-wrapper">
       <a href="/">
         @include('icons.pmm')

@@ -1,5 +1,8 @@
-import { isEqual, transform, isObject } from 'lodash'
-import validator from 'validator'
+// import { isEqual, transform, isObject } from 'lodash'
+import isEqual from 'lodash.isequal'
+import transform from 'lodash.transform'
+import isObject from 'lodash.isobject'
+import isEmail from 'validator/es/lib/isEmail'
 
 function difference(object, base) {
   function changes(object, base) {
@@ -37,6 +40,6 @@ export default class User {
   }
 
   isValidEmail = () => {
-    return validator.isEmail(this.data.email)
+    return isEmail(this.data.email)
   }
 }

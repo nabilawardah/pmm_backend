@@ -50,7 +50,7 @@ $(function() {
 
   if (articleDataContainer.length > 0) {
     let articleData = JSON.parse(articleDataContainer.val())
-    if (typeof articleData.html !== undefined) {
+    if (articleData.html) {
       // console.log('ARTICLE-DATA: ', articleData.html)
       pellEditor.content.innerHTML = articleData.html
     }

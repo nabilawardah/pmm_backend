@@ -6,7 +6,7 @@
 
 @include('components.navbar')
 
-@component('layouts.main-content', ['width' => 'default'])
+@component('layouts.main-content', ['width' => 'narrow'])
 
   <style>
     .lazy {

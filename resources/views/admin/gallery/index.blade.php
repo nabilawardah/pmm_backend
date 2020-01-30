@@ -9,7 +9,7 @@
 @include('components.add-new-album')
 @include('components.add-new-gallery-item')
 
-@component('layouts.main-content', ['width' => 'default'])
+@component('layouts.main-content', ['width' => 'narrow'])
 
   <header class="admin-table-header" style="z-index: 99;">
     <h1 class="heading1 page-title">Gallery</h1>

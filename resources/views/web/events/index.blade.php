@@ -6,11 +6,11 @@
 
 @include('components.navbar')
 
-@component('layouts.main-content', ['width' => 'default'])
+@component('layouts.main-content', ['width' => 'narrow'])
   <section class="event-list-outer-wrapper">
     <header class="event-list-outer-header">
       <h1 class="display3">Events</h1>
-      <p class="large">All the exciting and fun events available for you to join in!</p>
+      <p class="heading4" style="color: #767676;">All the exciting and fun events available for you to join in!</p>
     </header>
     <main class="event-list-outer-grid">
       <ul class="event-list-container">
