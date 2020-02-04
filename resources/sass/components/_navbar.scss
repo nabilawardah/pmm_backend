@@ -83,8 +83,8 @@
   font-size: 15px;
   line-height: 24px;
   transition: all 0.36s;
-  padding-top: $space-m;
-  padding-bottom: $space-m;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   &.active {
     box-shadow: inset 0px -3px 0px $brand-primary-300;
