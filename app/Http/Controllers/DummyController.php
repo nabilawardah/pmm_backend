@@ -129,20 +129,8 @@ class DummyController extends Controller
 
     public function show_user(Request $request)
     {
-        $user = (object) [
-            'id' => 1,
-            'name' => 'Ongki Herlambang',
-            'role' => 'admin',
-            'points' => 1,
-            'photo' => 'ongki.jpg',
-            'email' => 'ongki@herlambang.design',
-            'phone' => '082377296969',
-            'working_area' => 'OB',
-            'divisi' => 'Kebersihan',
-        ];
-
         return view('web.profile.index', [
-            'user' => $user,
+            'user' => (object) $this->users[0],
             'active_page' => 'Profile',
             'all_division' => $this->all_division,
             'all_working_area' => $this->all_working_area,

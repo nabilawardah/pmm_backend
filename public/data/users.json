@@ -6,7 +6,7 @@
             "name": "Ongki Herlambang",
             "points": 2,
             "email": "ongkiherlambang@gmail.com",
-            "role": "user",
+            "role": "admin",
             "photo": "ongki.jpg",
             "phone": "082377296969",
             "divisi": "Kebersihan",
@@ -26,7 +26,7 @@
             "id": 3,
             "name": "Su'ep",
             "points": 1,
-            "role": "user",
+            "role": "admin",
             "email": "suep@gmail.com",
             "phone": "082377296969",
             "divisi": "Kebersihan",
@@ -36,7 +36,7 @@
             "id": 4,
             "name": "Nugroho",
             "points": 0,
-            "role": "user",
+            "role": "admin",
             "email": "nugroho@gmail.com",
             "phone": "082377296969",
             "divisi": "Kebersihan",
@@ -46,7 +46,7 @@
             "id": 5,
             "name": "Mahmud",
             "points": 0,
-            "role": "user",
+            "role": "admin",
             "email": "mmahmud@gmail.com",
             "phone": "082377296969",
             "divisi": "Kebersihan",
@@ -56,7 +56,7 @@
             "id": 6,
             "name": "Zaenal",
             "points": 0,
-            "role": "user",
+            "role": "admin",
             "email": "jaenal@gmail.com",
             "phone": "082377296969",
             "divisi": "Kebersihan",
@@ -67,7 +67,7 @@
             "name": "Zulaehah",
             "points": 0,
             "email": "julaehah@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Operasional",
             "working_area": "OP"
@@ -77,7 +77,7 @@
             "name": "Zulkifli",
             "points": 0,
             "email": "julkifli@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Operasional",
             "working_area": "OP"
@@ -87,7 +87,7 @@
             "name": "Nanang",
             "points": 0,
             "email": "nanang@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Operasional",
             "working_area": "OP"
@@ -97,7 +97,7 @@
             "name": "Asep",
             "points": 0,
             "email": "asep@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Marketing",
             "working_area": "MK"
@@ -107,7 +107,7 @@
             "name": "Burhan",
             "points": 0,
             "email": "burhan@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Marketing",
             "working_area": "MK"
@@ -117,7 +117,7 @@
             "name": "Nana",
             "points": 0,
             "email": "nana@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Logistik",
             "working_area": "LG"
@@ -127,7 +127,7 @@
             "name": "Agung",
             "points": 0,
             "email": "agung@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Logistik",
             "working_area": "LG"
@@ -137,7 +137,7 @@
             "name": "Anton",
             "points": 0,
             "email": "anton@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Logistik",
             "working_area": "LG"
@@ -147,7 +147,7 @@
             "name": "Halsey",
             "points": 0,
             "email": "halsey@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Public Relation",
             "working_area": "PR"
@@ -157,7 +157,7 @@
             "name": "Taylor Swift",
             "points": 0,
             "email": "tswift@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Public Relation",
             "working_area": "PR"
@@ -167,7 +167,7 @@
             "name": "Zara Larsson",
             "points": 0,
             "email": "zara@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Public Relation",
             "working_area": "PR"
@@ -177,7 +177,7 @@
             "name": "Becky G",
             "points": 0,
             "email": "becky@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Public Relation",
             "working_area": "PR"
@@ -187,7 +187,7 @@
             "name": "Saiful",
             "points": 0,
             "email": "ipul@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Kebersihan",
             "working_area": "OB"
@@ -197,7 +197,7 @@
             "name": "Badrul",
             "points": 0,
             "email": "badrul@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Public Relation",
             "working_area": "PR"
@@ -207,7 +207,7 @@
             "name": "Geri Cokolatos",
             "points": 0,
             "email": "geri@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Konsumsi",
             "working_area": "KS"
@@ -217,7 +217,7 @@
             "name": "Biskuat Bolu",
             "points": 0,
             "email": "bolu@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Konsumsi",
             "working_area": "KS"
@@ -227,7 +227,7 @@
             "name": "Tao Kae Noi",
             "points": 0,
             "email": "taokaenoi@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Konsumsi",
             "working_area": "KS"
@@ -237,7 +237,7 @@
             "name": "Oreo Celup",
             "points": 0,
             "email": "oreo@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Konsumsi",
             "working_area": "KS"
@@ -247,7 +247,7 @@
             "name": "Masako Ayam",
             "points": 0,
             "email": "masako@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Konsumsi",
             "working_area": "KS"
@@ -257,7 +257,7 @@
             "name": "Royco Krim Sup",
             "points": 0,
             "email": "royco@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Konsumsi",
             "working_area": "KS"
@@ -267,7 +267,7 @@
             "name": "Telor Asin",
             "points": 0,
             "email": "endoggg@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Konsumsi",
             "working_area": "KS"
@@ -277,7 +277,7 @@
             "name": "Justin Timber",
             "points": 0,
             "email": "justin@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Logistik",
             "working_area": "LG"
@@ -287,7 +287,7 @@
             "name": "Timber Justin",
             "points": 0,
             "email": "timber@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Logistik",
             "working_area": "LG"
@@ -297,7 +297,7 @@
             "name": "Yogi Mangontang",
             "points": 0,
             "email": "mangontang@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Logistik",
             "working_area": "LG"
@@ -307,7 +307,7 @@
             "name": "Masbul Simba",
             "points": 0,
             "email": "masbul@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Public Relation",
             "working_area": "PR"
@@ -317,7 +317,7 @@
             "name": "Lenka",
             "points": 0,
             "email": "lenka@gmail.com",
-            "role": "user",
+            "role": "admin",
             "phone": "085382916648",
             "divisi": "Public Relation",
             "working_area": "PR"
