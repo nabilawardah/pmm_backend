@@ -159,6 +159,28 @@ $(
       working_areaField.attr('data-initial', working_area)
     }
 
+    function changeUserRole(userData) {
+      let container = $('.edit-profile-role')
+
+      let id = userData.data('id')
+      let currentRole = userData.data('current')
+      axios
+        .post(`/api/role/${id}`, { current: currentRole })
+        .then(res => {
+          container.children().remove()
+          let markup
+          if (res.data.role === 'admin') {
+            markup = generateAdminRole(res.data.id)
+          } else {
+            markup = generateUserRole(res.data.id)
+          }
+          container.append(markup)
+          userData.children('.loading').remove()
+          userData.removeProp('disabled')
+        })
+        .catch(err => console.log('ERR: ', err))
+    }
+
     // Trigger user detail modal
     $(document).on('click', '.user-info', function() {
       let info = JSON.parse(
@@ -263,28 +285,10 @@ $(
 
     // Update user role
     $(document).on('click', '.change-user-role', function(e) {
-      let el = $(this)
-      el.prop('disabled', true)
-      el.append(generateButtonSpinner())
-      let container = $('.edit-profile-role')
-
-      let id = el.data('id')
-      let currentRole = el.data('current')
-      axios
-        .post(`/api/role/${id}`, { current: currentRole })
-        .then(res => {
-          container.children().remove()
-          let markup
-          if (res.data.role === 'admin') {
-            markup = generateAdminRole(res.data.id)
-          } else {
-            markup = generateUserRole(res.data.id)
-          }
-          container.append(markup)
-          el.children('.loading').remove()
-          el.removeProp('disabled')
-        })
-        .catch(err => console.log('ERR: ', err))
+      let triggerButton = $(this)
+      triggerButton.prop('disabled', true)
+      triggerButton.append(generateButtonSpinner())
+      changeUserRole(triggerButton)
     })
   })()
 )

@@ -148,7 +148,7 @@
       border-radius: 50%;
       content: '';
       display: block;
-      background-color: $brand-primary-200;
+      background-color: $brand-primary-300;
 
       width: 5px;
       height: 5px;
@@ -160,7 +160,7 @@
       top: 0;
 
       left: calc(50% - 3px);
-      box-shadow: -7.5px 7.5px 0px 0px $brand-primary-200;
+      box-shadow: -7.5px 7.5px 0px 0px $brand-primary-300;
     }
 
     &::after {
@@ -168,7 +168,7 @@
       bottom: 0;
 
       left: calc(50% - 3px);
-      box-shadow: 7.5px -7.5px 0px 0px $brand-primary-200;
+      box-shadow: 7.5px -7.5px 0px 0px $brand-primary-300;
     }
   }
 }

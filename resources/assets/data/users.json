@@ -1,9 +1,10 @@
 {
+  "total_points": 3,
   "data": [
     {
       "id": 1,
       "name": "Ongki Herlambang",
-      "points": 0,
+      "points": 2,
       "email": "ongkiherlambang@gmail.com",
       "role": "admin",
       "photo": "ongki.jpg",
@@ -18,7 +19,7 @@
     {
       "id": 3,
       "name": "Su'ep",
-      "points": 0,
+      "points": 1,
       "role": "admin",
       "email": "suep@gmail.com",
       "phone": "082377296969",

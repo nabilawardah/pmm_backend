@@ -122,6 +122,7 @@ class DummyController extends Controller
             'id' => 1,
             'name' => 'Ongki Herlambang',
             'role' => 'admin',
+            'points' => 1,
             'photo' => 'ongki.jpg',
             'email' => 'ongki@herlambang.design',
             'phone' => '082377296969',
@@ -137,6 +138,7 @@ class DummyController extends Controller
         ]);
     }
 
+    // Update user role
     public function change_role(Request $request)
     {
         if ($request->current === 'admin') {

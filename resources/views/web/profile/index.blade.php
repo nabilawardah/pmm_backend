@@ -49,7 +49,7 @@
     </section>
     <section class="profile-achievment">
       <h2 class="heading4 profile-user-achievment">
-        You've achieved <span class="point-counts">24</span> points.
+        You've achieved <span class="point-counts">{{ $user->points ?? 0 }}</span> points.
       </h2>
       <span class="profile-all-achievment">out of total 120 points achieved by all PMM users.</span>
       <a href="/articles/create/1" class="button button--large primary no-pre">Add Points</a>
@@ -170,7 +170,7 @@
               <p class="medium" style="margin-bottom: 12px;">
                 An admin can manage all contents (articles, events, and galleries) and change users role.
               </p>
-              <button data-id="{{ $user->id }}" data-current="admin" class="button button--medium primary change-user-role">Downgrade to Regular User</button>
+              <button data-id="{{ $user->id }}" data-current="{{ $user->role }}" class="button button--medium primary change-user-role">Downgrade to Regular User</button>
             @else
               <div class="edit-profile-role-icon">
                 <img src="/icons/user.svg" />
@@ -181,7 +181,7 @@
               <p class="medium" style="margin-bottom: 12px;">
                 A regular account can only publish and manage it's own articles and profile info.
               </p>
-              <button data-id="{{ $user->id }}" data-current="user" class="button button--medium primary change-user-role">Upgrade to Admin</button>
+              <button data-id="{{ $user->id }}" data-current="{{ $user->role }}" class="button button--medium primary change-user-role">Upgrade to Admin</button>
             @endif
           </div>
         </section>
