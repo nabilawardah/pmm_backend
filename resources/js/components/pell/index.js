@@ -27,7 +27,11 @@ if (document.getElementById('pell-editor')) {
     event.preventDefault()
 
     const clipboardData = event.clipboardData || window.clipboardData
-    let sanitizedHTML = cleanupAttributes(clipboardData.getData('text/html'))
+    let pastedData = clipboardData.getData('text/html')
+    if (pastedData === '') {
+      pastedData = clipboardData.getData('text/plain').trim()
+    }
+    let sanitizedHTML = cleanupAttributes(pastedData)
 
     exec('insertHTML', sanitizedHTML)
   }
