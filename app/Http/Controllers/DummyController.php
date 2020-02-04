@@ -92,6 +92,17 @@ class DummyController extends Controller
         file_put_contents(base_path('public/data/gallery.json'), $newJsonString);
     }
 
+    public function save_user_to_file($user = null)
+    {
+        if (isset($user)) {
+            array_push($this->users, $user);
+            $this->jsonUsers['data'] = $this->users;
+        }
+
+        $newJsonString = json_encode($this->jsonUsers, JSON_PRETTY_PRINT);
+        file_put_contents(base_path('public/data/users.json'), $newJsonString);
+    }
+
     public function save_user(Request $request)
     {
         sleep(2);
@@ -141,15 +152,25 @@ class DummyController extends Controller
     // Update user role
     public function change_role(Request $request)
     {
-        if ($request->current === 'admin') {
-            $new_role = 'user';
-        } else {
-            $new_role = 'admin';
+        $data_placeholder = [];
+        $new_user = '';
+
+        foreach ($this->users as $user) {
+            if ($user['role'] === $request->current) {
+                if ($request->current === 'admin') {
+                    $user['role'] = 'user';
+                } else {
+                    $user['role'] = 'admin';
+                }
+                $new_user = $user;
+            }
+            array_push($data_placeholder, $user);
         }
 
-        sleep(2);
+        $this->jsonUsers['data'] = $data_placeholder;
+        $this->save_user_to_file();
 
-        return ['id' => $request->id, 'role' => $new_role];
+        return ['id' => $request->id, 'user' => $new_user, 'role' => $new_user['role']];
     }
 
     public function article_page(Request $request)
