@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "Meridian.id BWYL 2017",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "items": [1, 2, 3, 4]
+    },
+    {
+      "id": 2,
+      "title": "Daft Punk Instant Crush",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "items": [1, 2, 3, 4]
+    },
+    {
+      "id": 3,
+      "title": "Recruitment Batch-1 Meridian.id 2015",
+      "published_date": "2020-01-23T13:39:04.634775Z",
+      "items": [1, 2, 3, 4]
+    }
+  ]
+}

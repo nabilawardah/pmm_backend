@@ -1,0 +1,125 @@
+.input {
+  display: block;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: $space-ml;
+  }
+
+  &.error {
+    & .input-label {
+      color: $brand-secondary-100;
+    }
+
+    & .input-field {
+      // color: $brand-secondary-100;
+      background-color: $brand-secondary-10;
+      border-color: $brand-secondary-100;
+    }
+  }
+}
+
+.input-label {
+  display: block;
+  margin-bottom: $space-s;
+  font-size: $body-2;
+  line-height: 16px;
+  font-weight: $medium;
+  color: $dark-alpha-80;
+
+  &.label--event {
+    font-weight: $regular;
+  }
+}
+
+.input-field {
+  font-weight: 300;
+  width: 100%;
+  padding: 11px;
+  border: 1px solid $dark-hex-20;
+  border-radius: 4px;
+  color: $dark-alpha-70;
+  font-size: $body-3;
+  line-height: 24px;
+  transition: all 0.36s;
+  letter-spacing: normal;
+
+  &:focus,
+  &:active {
+    border-color: $brand-primary-200;
+    transition: all 0.28s;
+  }
+
+  &::placeholder {
+    color: $dark-hex-50;
+    font-weight: 300;
+  }
+}
+
+.input-hint {
+  display: block;
+  padding-top: $space-s;
+  font-size: $body-2;
+  line-height: 16px;
+  font-weight: $regular;
+  color: $dark-alpha-50;
+}
+
+.hint {
+  &--error {
+    color: $brand-secondary-100;
+  }
+}
+
+.input-dropdown {
+  padding-right: 48px;
+  z-index: 1;
+}
+
+.input-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  color: $dark-alpha-70;
+  right: 12px;
+  bottom: 12px;
+  z-index: -1;
+}
+
+.date-time-outer-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: $space-ml;
+}
+
+.date-picker-container {
+  margin-right: $space-sm;
+  min-width: 384px;
+  width: 384px;
+  max-width: 384px;
+}
+
+textarea.input-field {
+  resize: vertical;
+}
+
+.input-gallery-caption {
+  border: none;
+  padding: $space-m;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $dark-alpha-70;
+  outline: none;
+  width: 100%;
+  appearance: none;
+  resize: vertical;
+
+  &::placeholder {
+    color: $dark-alpha-50;
+    font-weight: 300;
+  }
+}

@@ -1,0 +1,94 @@
+.edit-profile-wrapper {
+  display: flex;
+  @include screen(smallPhone) {
+    flex-direction: column-reverse;
+  }
+  @include screen(phone) {
+    flex-direction: column-reverse;
+  }
+  @include screen(tablet) {
+    flex-direction: row;
+  }
+  @include screen(tabletLandscape) {
+    flex-direction: row;
+  }
+  @include screen(desktop) {
+    flex-direction: row;
+  }
+  @include screen(desktopWide) {
+    flex-direction: row;
+  }
+}
+
+.edit-profile-info {
+  @include screen(smallPhone) {
+    flex: 1;
+  }
+  @include screen(phone) {
+    flex: 1;
+  }
+  @include screen(tablet) {
+    flex: 2;
+    padding-right: $space-xl;
+  }
+  @include screen(tabletLandscape) {
+    flex: 2;
+    padding-right: $space-xl;
+  }
+  @include screen(desktop) {
+    flex: 2;
+    padding-right: $space-xl;
+  }
+  @include screen(desktopWide) {
+    flex: 2;
+    padding-right: $space-xl;
+  }
+}
+
+.edit-profile-side {
+  flex: 1;
+  @include screen(smallPhone) {
+    margin-bottom: $space-ll;
+  }
+  @include screen(phone) {
+    margin-bottom: $space-ll;
+  }
+  @include screen(tablet) {
+    margin-bottom: 0;
+  }
+  @include screen(tabletLandscape) {
+    margin-bottom: 0;
+  }
+  @include screen(desktop) {
+    margin-bottom: 0;
+  }
+  @include screen(desktopWide) {
+    margin-bottom: 0;
+  }
+}
+
+.edit-profile-photo {
+  width: 100%;
+  padding-bottom: 100%;
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 6px;
+}
+
+.edit-profile-role-wrapper {
+  margin-top: $space-l;
+}
+
+.edit-profile-role {
+  padding: $space-ml;
+  border-radius: 4px;
+  border: 1px solid $dark-alpha-20;
+}
+
+.edit-profile-role-icon {
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin-bottom: $space-m;
+}

@@ -1,0 +1,77 @@
+.editor-cover {
+  position: absolute;
+  visibility: hidden;
+  z-index: -999;
+  top: -100;
+}
+
+.editor-cover-container {
+  cursor: pointer;
+
+  &.editor-cover-container--article {
+    @include section-outset;
+    width: 100%;
+    margin-bottom: $space-ll;
+    // padding-bottom: 60vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+
+  &.editor-cover-container--event {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 152px);
+    overflow: hidden;
+  }
+}
+
+.cover-empty {
+  background-color: $dark-alpha-10;
+  border: dashed 4px $dark-alpha-30;
+
+  &.editor-cover-container--article {
+    border-radius: 12px;
+    @include section-inset;
+    background-color: $dark-alpha-10;
+    padding-bottom: 30vh;
+    margin-bottom: $space-ll;
+  }
+
+  &.editor-cover-container--event {
+    &::before {
+      content: 'Add event poster';
+      padding: 24px;
+      font-size: 21px;
+      line-height: 24px;
+      font-weight: 500;
+      color: $dark-alpha-50;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.editor-cover-image {
+  width: 100%;
+
+  &.editor-cover-image--event {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}

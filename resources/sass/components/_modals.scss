@@ -1,0 +1,218 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: $light-alpha-100;
+  z-index: $layer-top;
+  overflow-y: scroll;
+  max-width: 100vw;
+}
+
+.modal-main-area {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.modal-nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  @include screen(smallPhone) {
+    padding: $space-ml;
+  }
+  @include screen(phone) {
+    padding: $space-ml;
+  }
+  @include screen(tablet) {
+    padding: $space-l $space-xl;
+  }
+  @include screen(tabletLandscape) {
+    padding: $space-l $space-xl;
+  }
+  @include screen(desktop) {
+    padding: $space-l $space-xl;
+  }
+  @include screen(desktopWide) {
+    padding: $space-l $space-xl;
+  }
+}
+
+.button-close--rounded {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  min-height: 64px;
+  color: $dark-alpha-50;
+  border-radius: 9999px;
+  transition: all 0.36s;
+
+  &:hover {
+    background-color: $dark-alpha-20;
+    transition: all 0.28s;
+  }
+
+  & .modal-close-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+
+  & .modal-close-text {
+    display: block;
+    font-size: 15px;
+    line-height: 16px;
+    color: $dark-alpha-70;
+  }
+}
+
+.modal-wrapper {
+  padding-bottom: $space-mega-huge;
+  &.modal-confirmation {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.modal-secondary-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: $space-ml;
+  padding-bottom: $space-ml;
+}
+
+.modal-secondary-area {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  align-items: flex-start;
+  @include screen(smallPhone) {
+    flex-direction: column;
+  }
+  @include screen(phone) {
+    flex-direction: column;
+  }
+  @include screen(tablet) {
+    flex-direction: column;
+  }
+  @include screen(tabletLandscape) {
+    flex-direction: row;
+  }
+  @include screen(desktop) {
+    flex-direction: row;
+  }
+  @include screen(desktopWide) {
+    flex-direction: row;
+  }
+}
+
+.modal-secondary-main-wrapper {
+  width: 100%;
+  flex: 2;
+}
+
+.modal-secondary-sidebar {
+  width: 100%;
+  align-self: flex-start;
+
+  @include screen(smallPhone) {
+    padding-left: 0;
+    flex: 2;
+  }
+  @include screen(phone) {
+    padding-left: 0;
+    flex: 2;
+  }
+  @include screen(tablet) {
+    padding-left: 0;
+    flex: 2;
+  }
+  @include screen(tabletLandscape) {
+    padding-left: $space-ml;
+    flex: 1;
+  }
+  @include screen(desktop) {
+    padding-left: $space-ml;
+    flex: 1;
+  }
+  @include screen(desktopWide) {
+    padding-left: $space-ml;
+    flex: 1;
+  }
+}
+
+.modal-secondary-header {
+  margin-bottom: $space-ml;
+}
+
+.modal-action-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: $layer-s;
+}
+
+.modal-action-bar {
+  padding-top: $space-m;
+  padding-bottom: $space-m;
+  box-shadow: 0px -8px 20px -12px $dark-alpha-30;
+  background-color: $light-alpha-100;
+}
+
+.close-secondary-modal {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  color: $dark-alpha-60;
+  transition: all 0.36s;
+  padding: $space-sm 0;
+
+  &:hover {
+    color: $brand-primary-200;
+    transition: all 0.12s;
+    text-decoration: underline;
+  }
+
+  .modal-arrow-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-right: $space-sm;
+  }
+
+  span.modal-arrow-text {
+    font-size: $body-2;
+    line-height: 16px;
+    font-weight: $medium;
+  }
+}
+
+.modal-top-nav-wrapper {
+  width: 100%;
+  background: $light-alpha-100;
+  box-shadow: 0px 4px 12px $dark-alpha-20;
+  z-index: 99;
+  position: sticky;
+  top: 0;
+}
+
+.modal-top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}

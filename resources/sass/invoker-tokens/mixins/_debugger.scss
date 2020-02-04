@@ -1,0 +1,38 @@
+@mixin debugger {
+  * {
+    background: rgba(255, 0, 0, 0.06) !important;
+    outline: 1px solid rebeccapurple !important;
+  }
+  * * {
+    background: rgba(255, 0, 0, 0.06) !important;
+    outline: 1px solid rebeccapurple !important;
+  }
+  * * * {
+    background: rgba(255, 0, 0, 0.06) !important;
+    outline: 1px solid rebeccapurple !important;
+  }
+  * * * * {
+    background: rgba(255, 0, 0, 0.06) !important;
+    outline: 1px solid rebeccapurple !important;
+  }
+  * * * * * {
+    background: rgba(255, 0, 0, 0.06) !important;
+    outline: 1px solid rebeccapurple !important;
+  }
+  * * * * * * {
+    background: rgba(255, 0, 0, 0.06) !important;
+    outline: 1px solid rebeccapurple !important;
+  }
+  * * * * * * * {
+    background: rgba(255, 0, 0, 0.06) !important;
+    outline: 1px solid rebeccapurple !important;
+  }
+  * * * * * * * * {
+    background: rgba(255, 0, 0, 0.06) !important;
+    outline: 1px solid rebeccapurple !important;
+  }
+  * * * * * * * * * {
+    background: rgba(255, 0, 0, 0.06) !important;
+    outline: 1px solid rebeccapurple !important;
+  }
+}

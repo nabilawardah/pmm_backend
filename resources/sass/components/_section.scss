@@ -1,0 +1,19 @@
+.section--inset {
+  max-width: 740px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section--bleed {
+  width: 100%;
+}
+
+.section--outset {
+  max-width: 1032px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+}

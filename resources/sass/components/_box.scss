@@ -1,0 +1,161 @@
+.box {
+  display: block;
+  &--xs {
+    padding: $space-xs;
+  }
+  &--s {
+    padding: $space-s;
+  }
+  &--sm {
+    padding: $space-sm;
+  }
+  &--m {
+    padding: $space-m;
+  }
+  &--ml {
+    padding: $space-ml;
+  }
+  &--l {
+    padding: $space-l;
+  }
+  &--ll {
+    padding: $space-ll;
+  }
+  &--xl {
+    padding: $space-xl;
+  }
+}
+
+.inline {
+  &--xs {
+    > * {
+      &:not(:last-child) {
+        display: block;
+        margin-right: $space-xs;
+      }
+    }
+  }
+  &--s {
+    > * {
+      &:not(:last-child) {
+        display: block;
+        margin-right: $space-s;
+      }
+    }
+  }
+  &--sm {
+    > * {
+      &:not(:last-child) {
+        display: block;
+        margin-right: $space-sm;
+      }
+    }
+  }
+  &--m {
+    > * {
+      &:not(:last-child) {
+        display: block;
+        margin-right: $space-m;
+      }
+    }
+  }
+  &--ml {
+    > * {
+      &:not(:last-child) {
+        display: block;
+        margin-right: $space-ml;
+      }
+    }
+  }
+  &--l {
+    > * {
+      &:not(:last-child) {
+        display: block;
+        margin-right: $space-l;
+      }
+    }
+  }
+  &--ll {
+    > * {
+      &:not(:last-child) {
+        display: block;
+        margin-right: $space-ll;
+      }
+    }
+  }
+  &--xl {
+    > * {
+      &:not(:last-child) {
+        display: block;
+        margin-right: $space-xl;
+      }
+    }
+  }
+}
+
+.stack {
+  &--xs {
+    > * {
+      &:not(:last-child) {
+        display: block;
+        margin-bottom: $space-xs;
+      }
+    }
+  }
+  &--s {
+    > * {
+      &:not(:last-child) {
+        display: block;
+        margin-bottom: $space-s;
+      }
+    }
+  }
+  &--sm {
+    > * {
+      &:not(:last-child) {
+        display: block;
+        margin-bottom: $space-sm;
+      }
+    }
+  }
+  &--m {
+    > * {
+      &:not(:last-child) {
+        display: block;
+        margin-bottom: $space-m;
+      }
+    }
+  }
+  &--ml {
+    > * {
+      &:not(:last-child) {
+        display: block;
+        margin-bottom: $space-ml;
+      }
+    }
+  }
+  &--l {
+    > * {
+      &:not(:last-child) {
+        display: block;
+        margin-bottom: $space-l;
+      }
+    }
+  }
+  &--ll {
+    > * {
+      &:not(:last-child) {
+        display: block;
+        margin-bottom: $space-ll;
+      }
+    }
+  }
+  &--xl {
+    > * {
+      &:not(:last-child) {
+        display: block;
+        margin-bottom: $space-xl;
+      }
+    }
+  }
+}

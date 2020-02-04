@@ -1,0 +1,128 @@
+.navbar {
+  display: flex;
+  background: $light-alpha-100;
+  box-shadow: 0px 4px 12px $dark-alpha-20;
+  position: relative;
+
+  &.navbar-focus {
+    box-shadow: none;
+    position: sticky;
+    top: 0;
+    background: $light-alpha-100;
+    z-index: 2;
+  }
+}
+
+.navbar-wrapper {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.brand-wrapper {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  // position: absolute;
+  // left: 24px;
+  display: block;
+
+  &.brand-admin {
+    position: static;
+  }
+}
+
+.brand {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.brand-text {
+  color: unset;
+  height: 40px;
+  display: block;
+
+  > .cls-1 {
+    fill: #484848;
+    transform: translateY(-8px);
+  }
+  > .cls-2 {
+    fill: #09c;
+  }
+  > .cls-2,
+  .cls-3 {
+    fill-rule: evenodd;
+  }
+  > .cls-3 {
+    fill: #069;
+  }
+}
+
+.navbar-primary {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-secondary {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: static;
+}
+
+.primary-menu-wrapper {
+  display: inline-flex;
+}
+
+.primary-menu {
+  display: block;
+  color: $dark-alpha-70;
+  font-weight: $medium;
+  font-size: 15px;
+  line-height: 24px;
+  transition: all 0.36s;
+  padding-top: $space-m;
+  padding-bottom: $space-m;
+
+  &.active {
+    box-shadow: inset 0px -3px 0px $brand-primary-300;
+  }
+
+  &:hover {
+    box-shadow: inset 0px -3px 0px $brand-primary-300;
+    transition: all 0.28s;
+  }
+
+  &.admin {
+    &.active {
+      box-shadow: inset 0px -3px 0px $brand-primary-300;
+    }
+
+    &:hover {
+      box-shadow: inset 0px -3px 0px $brand-primary-300;
+      transition: all 0.28s;
+    }
+  }
+}
+
+.navbar-profile {
+  padding: 12px 0;
+  cursor: pointer;
+}
+
+.navbar-profile-photo {
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  background-color: $brand-primary-300;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.navbar-event-main {
+  display: flex;
+  justify-content: space-between;
+}
