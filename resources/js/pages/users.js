@@ -45,7 +45,7 @@ let usersTable = $('#users-table').DataTable({
         if (type === 'sort') {
           return data
         } else {
-          return `
+          return /*html*/ `
             <div class="user-info">
               <textarea class="hidden">${fullData}</textarea>
               <div class="profile-thumbnail lazyload-bg" style="background-image: url('/images/users/${profilePicture}'), linear-gradient(to top, rgba(0, 153, 204, 1), rgba(0, 153, 204, 1));"></div>

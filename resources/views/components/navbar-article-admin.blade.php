@@ -1,9 +1,11 @@
 <nav class="main-navbar navbar-focus navbar">
-  <a href="/" class="brand-wrapper">
-    @include('icons.pmm')
-  </a>
   <div class="navbar-wrapper navbar-web">
     <ul class="navbar-primary inline--ml">
+      <li class="brand-wrapper">
+        <a href="/" style="display: block;">
+          @include('icons.pmm')
+        </a>
+      </li>
       <li style="display: flex; align-items: center;">
         <img src="/icons/arrow-down-small.svg" alt="Back" style="width: 12px; height: 12px; margin-right: 8px; color: #767676; transform: rotate(90deg)">
         <a class="medium back-link" style="color: #767676; font-weight: 500;">Back to Articles</a>

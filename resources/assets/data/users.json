@@ -3,6 +3,7 @@
     {
       "id": 1,
       "name": "Ongki Herlambang",
+      "points": 0,
       "email": "ongkiherlambang@gmail.com",
       "role": "admin",
       "photo": "ongki.jpg",
@@ -17,6 +18,7 @@
     {
       "id": 3,
       "name": "Su'ep",
+      "points": 0,
       "role": "admin",
       "email": "suep@gmail.com",
       "phone": "082377296969",
@@ -26,6 +28,7 @@
     {
       "id": 4,
       "name": "Nugroho",
+      "points": 0,
       "role": "user",
       "email": "nugroho@gmail.com",
       "phone": "082377296969",
@@ -35,6 +38,7 @@
     {
       "id": 5,
       "name": "Mahmud",
+      "points": 0,
       "role": "user",
       "email": "mmahmud@gmail.com",
       "phone": "082377296969",
@@ -44,6 +48,7 @@
     {
       "id": 6,
       "name": "Zaenal",
+      "points": 0,
       "role": "user",
       "email": "jaenal@gmail.com",
       "phone": "082377296969",
@@ -53,6 +58,7 @@
     {
       "id": 7,
       "name": "Zulaehah",
+      "points": 0,
       "email": "julaehah@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -62,6 +68,7 @@
     {
       "id": 8,
       "name": "Zulkifli",
+      "points": 0,
       "email": "julkifli@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -71,6 +78,7 @@
     {
       "id": 9,
       "name": "Nanang",
+      "points": 0,
       "email": "nanang@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -80,6 +88,7 @@
     {
       "id": 10,
       "name": "Asep",
+      "points": 0,
       "email": "asep@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -89,6 +98,7 @@
     {
       "id": 11,
       "name": "Burhan",
+      "points": 0,
       "email": "burhan@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -98,6 +108,7 @@
     {
       "id": 12,
       "name": "Nana",
+      "points": 0,
       "email": "nana@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -107,6 +118,7 @@
     {
       "id": 13,
       "name": "Agung",
+      "points": 0,
       "email": "agung@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -116,6 +128,7 @@
     {
       "id": 14,
       "name": "Anton",
+      "points": 0,
       "email": "anton@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -125,6 +138,7 @@
     {
       "id": 15,
       "name": "Halsey",
+      "points": 0,
       "email": "halsey@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -134,6 +148,7 @@
     {
       "id": 16,
       "name": "Taylor Swift",
+      "points": 0,
       "email": "tswift@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -143,6 +158,7 @@
     {
       "id": 17,
       "name": "Zara Larsson",
+      "points": 0,
       "email": "zara@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -152,6 +168,7 @@
     {
       "id": 18,
       "name": "Becky G",
+      "points": 0,
       "email": "becky@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -161,6 +178,7 @@
     {
       "id": 19,
       "name": "Saiful",
+      "points": 0,
       "email": "ipul@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -170,6 +188,7 @@
     {
       "id": 20,
       "name": "Badrul",
+      "points": 0,
       "email": "badrul@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -179,6 +198,7 @@
     {
       "id": 21,
       "name": "Geri Cokolatos",
+      "points": 0,
       "email": "geri@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -188,6 +208,7 @@
     {
       "id": 22,
       "name": "Biskuat Bolu",
+      "points": 0,
       "email": "bolu@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -197,6 +218,7 @@
     {
       "id": 23,
       "name": "Tao Kae Noi",
+      "points": 0,
       "email": "taokaenoi@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -206,6 +228,7 @@
     {
       "id": 24,
       "name": "Oreo Celup",
+      "points": 0,
       "email": "oreo@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -215,6 +238,7 @@
     {
       "id": 25,
       "name": "Masako Ayam",
+      "points": 0,
       "email": "masako@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -224,6 +248,7 @@
     {
       "id": 26,
       "name": "Royco Krim Sup",
+      "points": 0,
       "email": "royco@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -233,6 +258,7 @@
     {
       "id": 27,
       "name": "Telor Asin",
+      "points": 0,
       "email": "endoggg@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -242,6 +268,7 @@
     {
       "id": 28,
       "name": "Justin Timber",
+      "points": 0,
       "email": "justin@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -251,6 +278,7 @@
     {
       "id": 29,
       "name": "Timber Justin",
+      "points": 0,
       "email": "timber@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -260,6 +288,7 @@
     {
       "id": 30,
       "name": "Yogi Mangontang",
+      "points": 0,
       "email": "mangontang@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -269,6 +298,7 @@
     {
       "id": 31,
       "name": "Masbul Simba",
+      "points": 0,
       "email": "masbul@gmail.com",
       "role": "user",
       "phone": "085382916648",
@@ -278,6 +308,7 @@
     {
       "id": 32,
       "name": "Lenka",
+      "points": 0,
       "email": "lenka@gmail.com",
       "role": "user",
       "phone": "085382916648",
