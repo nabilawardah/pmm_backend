@@ -131,6 +131,7 @@ class DummyController extends Controller
     {
         return view('web.profile.index', [
             'user' => (object) $this->users[0],
+            'total_points' => $this->jsonUsers['total_points'],
             'active_page' => 'Profile',
             'all_division' => $this->all_division,
             'all_working_area' => $this->all_working_area,

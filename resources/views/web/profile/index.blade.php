@@ -51,7 +51,7 @@
       <h2 class="heading4 profile-user-achievment">
         You've achieved <span class="point-counts">{{ $user->points ?? 0 }}</span> points.
       </h2>
-      <span class="profile-all-achievment">out of total 120 points achieved by all PMM users.</span>
+      <span class="profile-all-achievment">out of total {{ $total_points ?? 0 }} points achieved by all PMM users.</span>
       <a href="/articles/create/1" class="button button--large primary no-pre">Add Points</a>
     </section>
 

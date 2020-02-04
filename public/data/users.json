@@ -1,326 +1,320 @@
 {
-    "total_points": 3,
-    "data": [
-        {
-            "id": 1,
-            "name": "Ongki Herlambang",
-            "points": 2,
-            "email": "ongkiherlambang@gmail.com",
-            "role": "admin",
-            "photo": "ongki.jpg",
-            "phone": "082377296969",
-            "divisi": "Kebersihan",
-            "working_area": "OB",
-            "media": [
-                {
-                    "type": "image",
-                    "url": "20200109141050-app.png"
-                },
-                {
-                    "type": "image",
-                    "url": "io.png"
-                }
-            ]
-        },
-        {
-            "id": 3,
-            "name": "Su'ep",
-            "points": 1,
-            "role": "admin",
-            "email": "suep@gmail.com",
-            "phone": "082377296969",
-            "divisi": "Kebersihan",
-            "working_area": "OB"
-        },
-        {
-            "id": 4,
-            "name": "Nugroho",
-            "points": 0,
-            "role": "admin",
-            "email": "nugroho@gmail.com",
-            "phone": "082377296969",
-            "divisi": "Kebersihan",
-            "working_area": "OB"
-        },
-        {
-            "id": 5,
-            "name": "Mahmud",
-            "points": 0,
-            "role": "admin",
-            "email": "mmahmud@gmail.com",
-            "phone": "082377296969",
-            "divisi": "Kebersihan",
-            "working_area": "OB"
-        },
-        {
-            "id": 6,
-            "name": "Zaenal",
-            "points": 0,
-            "role": "admin",
-            "email": "jaenal@gmail.com",
-            "phone": "082377296969",
-            "divisi": "Kebersihan",
-            "working_area": "OB"
-        },
-        {
-            "id": 7,
-            "name": "Zulaehah",
-            "points": 0,
-            "email": "julaehah@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Operasional",
-            "working_area": "OP"
-        },
-        {
-            "id": 8,
-            "name": "Zulkifli",
-            "points": 0,
-            "email": "julkifli@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Operasional",
-            "working_area": "OP"
-        },
-        {
-            "id": 9,
-            "name": "Nanang",
-            "points": 0,
-            "email": "nanang@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Operasional",
-            "working_area": "OP"
-        },
-        {
-            "id": 10,
-            "name": "Asep",
-            "points": 0,
-            "email": "asep@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Marketing",
-            "working_area": "MK"
-        },
-        {
-            "id": 11,
-            "name": "Burhan",
-            "points": 0,
-            "email": "burhan@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Marketing",
-            "working_area": "MK"
-        },
-        {
-            "id": 12,
-            "name": "Nana",
-            "points": 0,
-            "email": "nana@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Logistik",
-            "working_area": "LG"
-        },
-        {
-            "id": 13,
-            "name": "Agung",
-            "points": 0,
-            "email": "agung@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Logistik",
-            "working_area": "LG"
-        },
-        {
-            "id": 14,
-            "name": "Anton",
-            "points": 0,
-            "email": "anton@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Logistik",
-            "working_area": "LG"
-        },
-        {
-            "id": 15,
-            "name": "Halsey",
-            "points": 0,
-            "email": "halsey@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Public Relation",
-            "working_area": "PR"
-        },
-        {
-            "id": 16,
-            "name": "Taylor Swift",
-            "points": 0,
-            "email": "tswift@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Public Relation",
-            "working_area": "PR"
-        },
-        {
-            "id": 17,
-            "name": "Zara Larsson",
-            "points": 0,
-            "email": "zara@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Public Relation",
-            "working_area": "PR"
-        },
-        {
-            "id": 18,
-            "name": "Becky G",
-            "points": 0,
-            "email": "becky@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Public Relation",
-            "working_area": "PR"
-        },
-        {
-            "id": 19,
-            "name": "Saiful",
-            "points": 0,
-            "email": "ipul@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Kebersihan",
-            "working_area": "OB"
-        },
-        {
-            "id": 20,
-            "name": "Badrul",
-            "points": 0,
-            "email": "badrul@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Public Relation",
-            "working_area": "PR"
-        },
-        {
-            "id": 21,
-            "name": "Geri Cokolatos",
-            "points": 0,
-            "email": "geri@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Konsumsi",
-            "working_area": "KS"
-        },
-        {
-            "id": 22,
-            "name": "Biskuat Bolu",
-            "points": 0,
-            "email": "bolu@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Konsumsi",
-            "working_area": "KS"
-        },
-        {
-            "id": 23,
-            "name": "Tao Kae Noi",
-            "points": 0,
-            "email": "taokaenoi@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Konsumsi",
-            "working_area": "KS"
-        },
-        {
-            "id": 24,
-            "name": "Oreo Celup",
-            "points": 0,
-            "email": "oreo@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Konsumsi",
-            "working_area": "KS"
-        },
-        {
-            "id": 25,
-            "name": "Masako Ayam",
-            "points": 0,
-            "email": "masako@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Konsumsi",
-            "working_area": "KS"
-        },
-        {
-            "id": 26,
-            "name": "Royco Krim Sup",
-            "points": 0,
-            "email": "royco@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Konsumsi",
-            "working_area": "KS"
-        },
-        {
-            "id": 27,
-            "name": "Telor Asin",
-            "points": 0,
-            "email": "endoggg@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Konsumsi",
-            "working_area": "KS"
-        },
-        {
-            "id": 28,
-            "name": "Justin Timber",
-            "points": 0,
-            "email": "justin@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Logistik",
-            "working_area": "LG"
-        },
-        {
-            "id": 29,
-            "name": "Timber Justin",
-            "points": 0,
-            "email": "timber@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Logistik",
-            "working_area": "LG"
-        },
-        {
-            "id": 30,
-            "name": "Yogi Mangontang",
-            "points": 0,
-            "email": "mangontang@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Logistik",
-            "working_area": "LG"
-        },
-        {
-            "id": 31,
-            "name": "Masbul Simba",
-            "points": 0,
-            "email": "masbul@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Public Relation",
-            "working_area": "PR"
-        },
-        {
-            "id": 32,
-            "name": "Lenka",
-            "points": 0,
-            "email": "lenka@gmail.com",
-            "role": "admin",
-            "phone": "085382916648",
-            "divisi": "Public Relation",
-            "working_area": "PR"
-        }
-    ]
+  "total_points": 3,
+  "data": [
+    {
+      "id": 1,
+      "name": "Ongki Herlambang",
+      "points": 2,
+      "email": "ongkiherlambang@gmail.com",
+      "role": "admin",
+      "photo": "ongki.jpg",
+      "phone": "082377296969",
+      "divisi": "Kebersihan",
+      "working_area": "OB",
+      "media": [
+        { "type": "image", "url": "20200109141050-app.png" },
+        { "type": "image", "url": "io.png" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Su'ep",
+      "points": 1,
+      "role": "admin",
+      "email": "suep@gmail.com",
+      "phone": "082377296969",
+      "divisi": "Kebersihan",
+      "working_area": "OB"
+    },
+    {
+      "id": 4,
+      "name": "Nugroho",
+      "points": 0,
+      "role": "user",
+      "email": "nugroho@gmail.com",
+      "phone": "082377296969",
+      "divisi": "Kebersihan",
+      "working_area": "OB"
+    },
+    {
+      "id": 5,
+      "name": "Mahmud",
+      "points": 0,
+      "role": "user",
+      "email": "mmahmud@gmail.com",
+      "phone": "082377296969",
+      "divisi": "Kebersihan",
+      "working_area": "OB"
+    },
+    {
+      "id": 6,
+      "name": "Zaenal",
+      "points": 0,
+      "role": "user",
+      "email": "jaenal@gmail.com",
+      "phone": "082377296969",
+      "divisi": "Kebersihan",
+      "working_area": "OB"
+    },
+    {
+      "id": 7,
+      "name": "Zulaehah",
+      "points": 0,
+      "email": "julaehah@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Operasional",
+      "working_area": "OP"
+    },
+    {
+      "id": 8,
+      "name": "Zulkifli",
+      "points": 0,
+      "email": "julkifli@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Operasional",
+      "working_area": "OP"
+    },
+    {
+      "id": 9,
+      "name": "Nanang",
+      "points": 0,
+      "email": "nanang@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Operasional",
+      "working_area": "OP"
+    },
+    {
+      "id": 10,
+      "name": "Asep",
+      "points": 0,
+      "email": "asep@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Marketing",
+      "working_area": "MK"
+    },
+    {
+      "id": 11,
+      "name": "Burhan",
+      "points": 0,
+      "email": "burhan@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Marketing",
+      "working_area": "MK"
+    },
+    {
+      "id": 12,
+      "name": "Nana",
+      "points": 0,
+      "email": "nana@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Logistik",
+      "working_area": "LG"
+    },
+    {
+      "id": 13,
+      "name": "Agung",
+      "points": 0,
+      "email": "agung@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Logistik",
+      "working_area": "LG"
+    },
+    {
+      "id": 14,
+      "name": "Anton",
+      "points": 0,
+      "email": "anton@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Logistik",
+      "working_area": "LG"
+    },
+    {
+      "id": 15,
+      "name": "Halsey",
+      "points": 0,
+      "email": "halsey@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Public Relation",
+      "working_area": "PR"
+    },
+    {
+      "id": 16,
+      "name": "Taylor Swift",
+      "points": 0,
+      "email": "tswift@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Public Relation",
+      "working_area": "PR"
+    },
+    {
+      "id": 17,
+      "name": "Zara Larsson",
+      "points": 0,
+      "email": "zara@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Public Relation",
+      "working_area": "PR"
+    },
+    {
+      "id": 18,
+      "name": "Becky G",
+      "points": 0,
+      "email": "becky@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Public Relation",
+      "working_area": "PR"
+    },
+    {
+      "id": 19,
+      "name": "Saiful",
+      "points": 0,
+      "email": "ipul@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Kebersihan",
+      "working_area": "OB"
+    },
+    {
+      "id": 20,
+      "name": "Badrul",
+      "points": 0,
+      "email": "badrul@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Public Relation",
+      "working_area": "PR"
+    },
+    {
+      "id": 21,
+      "name": "Geri Cokolatos",
+      "points": 0,
+      "email": "geri@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Konsumsi",
+      "working_area": "KS"
+    },
+    {
+      "id": 22,
+      "name": "Biskuat Bolu",
+      "points": 0,
+      "email": "bolu@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Konsumsi",
+      "working_area": "KS"
+    },
+    {
+      "id": 23,
+      "name": "Tao Kae Noi",
+      "points": 0,
+      "email": "taokaenoi@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Konsumsi",
+      "working_area": "KS"
+    },
+    {
+      "id": 24,
+      "name": "Oreo Celup",
+      "points": 0,
+      "email": "oreo@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Konsumsi",
+      "working_area": "KS"
+    },
+    {
+      "id": 25,
+      "name": "Masako Ayam",
+      "points": 0,
+      "email": "masako@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Konsumsi",
+      "working_area": "KS"
+    },
+    {
+      "id": 26,
+      "name": "Royco Krim Sup",
+      "points": 0,
+      "email": "royco@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Konsumsi",
+      "working_area": "KS"
+    },
+    {
+      "id": 27,
+      "name": "Telor Asin",
+      "points": 0,
+      "email": "endoggg@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Konsumsi",
+      "working_area": "KS"
+    },
+    {
+      "id": 28,
+      "name": "Justin Timber",
+      "points": 0,
+      "email": "justin@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Logistik",
+      "working_area": "LG"
+    },
+    {
+      "id": 29,
+      "name": "Timber Justin",
+      "points": 0,
+      "email": "timber@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Logistik",
+      "working_area": "LG"
+    },
+    {
+      "id": 30,
+      "name": "Yogi Mangontang",
+      "points": 0,
+      "email": "mangontang@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Logistik",
+      "working_area": "LG"
+    },
+    {
+      "id": 31,
+      "name": "Masbul Simba",
+      "points": 0,
+      "email": "masbul@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Public Relation",
+      "working_area": "PR"
+    },
+    {
+      "id": 32,
+      "name": "Lenka",
+      "points": 0,
+      "email": "lenka@gmail.com",
+      "role": "user",
+      "phone": "085382916648",
+      "divisi": "Public Relation",
+      "working_area": "PR"
+    }
+  ]
 }
