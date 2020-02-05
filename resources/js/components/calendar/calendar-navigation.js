@@ -195,7 +195,7 @@ export function blurDatePicker(e) {
         .addClass('hidden')
         .hide()
         .parents('.active-date-picker')
-        .removeClass('.active-date-picker')
+        .removeClass('active-date-picker')
     }
   }
 }

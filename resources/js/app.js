@@ -10,6 +10,7 @@ require('./pages/events')
 require('./pages/gallery')
 
 require('./components/media-library/cover')
+require('./components/custom-dropdown/index')
 require('./components/calendar/index')
 // require('./components/popout')
 require('./components/pell/index')

@@ -51,7 +51,7 @@
             <fieldset class="input date-picker-container" style="margin-bottom: 0;">
               <label class="input-label label--event" for="date-start">Start Date</label>
               <input class="input-field date-picker" type="text" id="date-start" placeholder="Start Date" data-value="{{ $event['date']['start_date'] ?? now() }}" value="{{ date('d F Y', strtotime($event['date']['start_date'] ?? now())) }}">
-              <div class="popout calendar-outer-container hidden" style="display: none;" id="popout-start-date"></div>
+              <div class="popout default calendar-outer-container hidden" style="display: none;" id="popout-start-date"></div>
             </fieldset>
             <fieldset class="input time-picker-container" style="margin-bottom: 0;">
               <label class="input-label label--event" for="time-start">Start time</label>

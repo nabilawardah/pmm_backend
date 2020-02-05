@@ -75,33 +75,33 @@
   margin: 0 auto;
 
   @include screen(smallPhone) {
-    max-width: $page-width + $container-gutter-mobile-small * 2;
     padding-left: $container-gutter-mobile-small;
     padding-right: $container-gutter-mobile-small;
+    max-width: $page-width + $container-gutter-mobile-small * 2;
   }
   @include screen(phone) {
+    padding-left: $container-gutter-mobile-small;
+    padding-right: $container-gutter-mobile-small;
     max-width: $page-width + $container-gutter-mobile * 2;
-    padding-left: $container-gutter-mobile;
-    padding-right: $container-gutter-mobile;
   }
   @include screen(tablet) {
-    padding-left: $container-gutter-tablet;
-    padding-right: $container-gutter-tablet;
+    padding-left: $container-gutter-mobile-small;
+    padding-right: $container-gutter-mobile-small;
     max-width: $page-width + $container-gutter-tablet * 2;
   }
   @include screen(tabletLandscape) {
-    padding-left: $container-gutter-tablet;
-    padding-right: $container-gutter-tablet;
+    padding-left: $container-gutter-mobile-small;
+    padding-right: $container-gutter-mobile-small;
     max-width: $page-width + $container-gutter-tablet * 2;
   }
   @include screen(desktop) {
-    padding-left: $container-gutter-desktop;
-    padding-right: $container-gutter-desktop;
+    padding-left: $container-gutter-mobile-small;
+    padding-right: $container-gutter-mobile-small;
     max-width: $page-post;
   }
   @include screen(desktopWide) {
-    padding-left: $container-gutter-desktop-wide;
-    padding-right: $container-gutter-desktop-wide;
+    padding-left: $container-gutter-mobile-small;
+    padding-right: $container-gutter-mobile-small;
     max-width: $page-post;
   }
 }

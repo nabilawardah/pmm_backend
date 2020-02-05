@@ -65,7 +65,7 @@
           <button class="custom-dropdown-trigger current-user-wrapper">
             <img class="current-user-profile-photo" src="/images/users/default.png" alt="user currently login">
           </button>
-          <ul class="custom-dropdown-menu-wrapper popout">
+          <ul class="hidden custom-dropdown-menu-wrapper popout" style="display: none;">
             @foreach ($secondary_menus as $menu)
               <li class="custom-dropdown-menu-item">
                 <a class="custom-dropdown-menu heading6 {{ $menu->class ?? '' }} " href="{{ $menu->to }}">{{ $menu->name }}</a>
