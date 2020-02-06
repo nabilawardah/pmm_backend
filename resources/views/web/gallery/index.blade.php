@@ -88,22 +88,22 @@
     <ul class="slick-fullscreen">
       @foreach ($gallery as $item)
         @if ($item['attribute']['type'] === 'image' && $item['attribute']['origin'] === 'local')
-          <li class="slick-item-container slick-image">
-            <img class="slick-item" width="100%" data-lazy="{{ '/galleries/'.$item['attribute']['src'] }}" alt="{{ $item['caption'] ?? '' }}">
+          <li class="slick-item-container">
+            <img class="slick-item slick-image" data-lazy="{{ '/galleries/'.$item['attribute']['src'] }}" alt="{{ $item['caption'] ?? '' }}">
           </li>
         @elseif( $item['attribute']['type'] === 'image' && $item['attribute']['origin'] === 'external' )
-          <li class="slick-item-container slick-image">
-            <img class="slick-item" width="100%" data-lazy="{{ $item['attribute']['src'] }}" alt="{{ $item['caption'] ?? '' }}">
+          <li class="slick-item-containe">
+            <img class="slick-item slick-image" data-lazy="{{ $item['attribute']['src'] }}" alt="{{ $item['caption'] ?? '' }}">
           </li>
         @elseif( $item['attribute']['type'] === 'video' && $item['attribute']['origin'] === 'local' )
-          <li class="slick-item-container slick-video">
-            <video class="slick-item" loop="true" data-poster="{{ '/galleries/'.$item['attribute']['thumbnail'] }}" controls="true" alt="{{ $item['caption'] ?? '' }}">
+          <li class="slick-item-container">
+            <video class="slick-item slick-video" loop="true" data-poster="{{ '/galleries/'.$item['attribute']['thumbnail'] }}" controls="true" alt="{{ $item['caption'] ?? '' }}">
               <source data-lazy="{{ '/galleries/'.$item['attribute']['src'] }}" type="{{ $item['attribute']['filetype'] }}" />
             </video>
           </li>
         @elseif( $item['attribute']['type'] === 'video' && $item['attribute']['origin'] === 'external' )
-          <li class="slick-item-container slick-iframe">
-            <iframe class="slick-item" width="100%" src="{{ $item['attribute']['src'] }}" frameborder="0" allowfullscreen="true" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          <li class="slick-item-container">
+            <iframe class="slick-item slick-iframe" width="100%" src="{{ $item['attribute']['src'] }}" frameborder="0" allowfullscreen="true" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
           </li>
         @endif
       @endforeach

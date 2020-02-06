@@ -242,11 +242,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  height: 80vh;
-
-  &.slick-iframe {
-    height: 100vh;
-  }
+  height: 100vh;
 }
 
 .slick-item {
@@ -258,7 +254,10 @@
   object-fit: contain;
   object-position: center center;
   width: 100%;
-  height: 100%;
+  height: 80%;
+  &.slick-iframe {
+    height: 100%;
+  }
 }
 
 .slick-arrow {

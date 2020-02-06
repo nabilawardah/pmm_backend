@@ -75,6 +75,11 @@ $(function() {
     }
 
     $('.slick-current iframe').attr('src', $('.slick-current iframe').attr('src'))
+
+    let player = $('.slick-current video')
+    if (player.length > 0) {
+      player[0].pause()
+    }
   })
 })
 
