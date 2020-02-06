@@ -235,11 +235,18 @@
   z-index: $layer-top;
 }
 
+.slick-fullscreen {
+}
+
 .slick-item-container {
   position: relative;
   width: 100%;
   overflow: hidden;
   height: 80vh;
+
+  &.slick-iframe {
+    height: 100vh;
+  }
 }
 
 .slick-item {
@@ -255,5 +262,49 @@
 }
 
 .slick-arrow {
-  color: $light-alpha-100;
+  position: absolute;
+  z-index: $layer-s;
+  top: 40vh;
+  transform: translateY(-50%);
+  user-select: all;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px 1px;
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  background-color: $light-alpha-80;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+
+  svg {
+    fill: $dark-hex-90;
+  }
+
+  &:hover {
+    background-color: $light-alpha-90;
+    transition: all 0.28s;
+
+    svg {
+      fill: $dark-hex-90;
+    }
+  }
+}
+
+.slick-prev {
+  margin-left: 24px;
+  left: 0;
+
+  svg {
+    transform: rotate(90deg);
+  }
+}
+
+.slick-next {
+  margin-right: 24px;
+  right: 0;
+  svg {
+    transform: rotate(-90deg);
+  }
 }

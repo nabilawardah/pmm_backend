@@ -78,29 +78,37 @@
     @endforeach
   </ul>
 
-  <ul class="slick-fullscreen-wrapper">
-    @foreach ($gallery as $item)
-      @if ($item['attribute']['type'] === 'image' && $item['attribute']['origin'] === 'local')
-        <li class="slick-item-container">
-          <img class="slick-item" width="100%" data-lazy="{{ '/galleries/'.$item['attribute']['src'] }}" alt="{{ $item['caption'] ?? '' }}">
-        </li>
-      @elseif( $item['attribute']['type'] === 'image' && $item['attribute']['origin'] === 'external' )
-        <li class="slick-item-container">
-          <img class="slick-item" width="100%" data-lazy="{{ $item['attribute']['src'] }}" alt="{{ $item['caption'] ?? '' }}">
-        </li>
-      @elseif( $item['attribute']['type'] === 'video' && $item['attribute']['origin'] === 'local' )
-        <li class="slick-item-container">
-          <video class="slick-item" loop="true" data-poster="{{ '/galleries/'.$item['attribute']['thumbnail'] }}" controls="true" alt="{{ $item['caption'] ?? '' }}">
-            <source data-lazy="{{ '/galleries/'.$item['attribute']['src'] }}" type="{{ $item['attribute']['filetype'] }}" />
-          </video>
-        </li>
-      @elseif( $item['attribute']['type'] === 'video' && $item['attribute']['origin'] === 'external' )
-        <li class="slick-item-container">
-          <iframe class="slick-item" width="100%" src="{{ $item['attribute']['src'] }}" frameborder="0" allowfullscreen="true" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
-        </li>
-      @endif
-    @endforeach
-  </ul>
+  <div class="slick-fullscreen-wrapper">
+    <button class="slick-prev slick-arrow" aria-label="Previous" type="button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="12" height="12" role="presentation" aria-hidden="true" focusable="false" style="display:block;"><path d="m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z" fill-rule="evenodd"></path></svg>
+    </button>
+    <button class="slick-next slick-arrow" aria-label="Next" type="button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="12" height="12" role="presentation" aria-hidden="true" focusable="false" style="display:block;"><path d="m16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z" fill-rule="evenodd"></path></svg>
+    </button>
+    <ul class="slick-fullscreen">
+      @foreach ($gallery as $item)
+        @if ($item['attribute']['type'] === 'image' && $item['attribute']['origin'] === 'local')
+          <li class="slick-item-container slick-image">
+            <img class="slick-item" width="100%" data-lazy="{{ '/galleries/'.$item['attribute']['src'] }}" alt="{{ $item['caption'] ?? '' }}">
+          </li>
+        @elseif( $item['attribute']['type'] === 'image' && $item['attribute']['origin'] === 'external' )
+          <li class="slick-item-container slick-image">
+            <img class="slick-item" width="100%" data-lazy="{{ $item['attribute']['src'] }}" alt="{{ $item['caption'] ?? '' }}">
+          </li>
+        @elseif( $item['attribute']['type'] === 'video' && $item['attribute']['origin'] === 'local' )
+          <li class="slick-item-container slick-video">
+            <video class="slick-item" loop="true" data-poster="{{ '/galleries/'.$item['attribute']['thumbnail'] }}" controls="true" alt="{{ $item['caption'] ?? '' }}">
+              <source data-lazy="{{ '/galleries/'.$item['attribute']['src'] }}" type="{{ $item['attribute']['filetype'] }}" />
+            </video>
+          </li>
+        @elseif( $item['attribute']['type'] === 'video' && $item['attribute']['origin'] === 'external' )
+          <li class="slick-item-container slick-iframe">
+            <iframe class="slick-item" width="100%" src="{{ $item['attribute']['src'] }}" frameborder="0" allowfullscreen="true" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          </li>
+        @endif
+      @endforeach
+    </ul>
+  </div>
 @endcomponent
 
 @include('components.footer')

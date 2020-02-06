@@ -19,6 +19,14 @@ $(function() {
   $(document).on('click', '.trigger-embed-gallery-item', handleEmbed)
   $(document).on('click', '.publish-photos-videos', handlePublishGalleryItem)
 
+  const slickConfig = {
+    lazyLoad: 'ondemand',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: $('.slick-prev'),
+    nextArrow: $('.slick-next'),
+  }
+
   $('[data-lazy],[data-poster]').each(function() {
     let $el = $(this)
 
@@ -35,8 +43,7 @@ $(function() {
       })
     }
   })
-
-  $('.slick-fullscreen-wrapper').on('init', function(event, slick) {
+  $('.slick-fullscreen').on('init', function(event, slick) {
     let slide = $.map(slick.$slides, function(slide, index) {
       if ($(slide).hasClass('slick-current')) return slide
     })
@@ -49,14 +56,8 @@ $(function() {
       $slide.get(0).play()
     }
   })
-
-  $('.slick-fullscreen-wrapper').slick({
-    lazyLoad: 'ondemand',
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  })
-
-  $('.slick-fullscreen-wrapper').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+  $('.slick-fullscreen').slick(slickConfig)
+  $('.slick-fullscreen').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
     let $elNext = $(slick.$slides[nextSlide])
         .children()
         .first(),
@@ -72,6 +73,8 @@ $(function() {
     if ($elCur.get(0).tagName.match(/video/gi)) {
       $elCur.get(0).pause()
     }
+
+    $('.slick-current iframe').attr('src', $('.slick-current iframe').attr('src'))
   })
 })
 
