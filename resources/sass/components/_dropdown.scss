@@ -1,14 +1,22 @@
 .custom-dropdown-wrapper {
   position: relative;
-  padding: $space-m 0px;
   &:hover {
+    box-shadow: inset 0px -3px 0px 0px $brand-primary-300;
+    transition: all 0.28s;
+  }
+
+  &.active-popout {
     box-shadow: inset 0px -3px 0px 0px $brand-primary-300;
     transition: all 0.28s;
   }
 }
 
 .custom-dropdown-trigger {
+  padding: $space-m 0px;
   cursor: pointer;
+}
+
+.current-user-wrapper {
   position: relative;
   display: block;
   width: 32px;

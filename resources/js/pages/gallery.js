@@ -3,6 +3,7 @@ import LazyLoad from 'vanilla-lazyload'
 import { showModal } from '../components/modals/base-modal'
 import axios from 'axios'
 import { generateTemporaryPlaceholder, VALID_VIDEOS, generateThumbnail } from '../components/gallery'
+import slick from 'slick-carousel'
 
 $(function() {
   let lazyloadInstance = new LazyLoad({ elements_selector: '.lazy', threshold: 2000 })
@@ -17,6 +18,61 @@ $(function() {
 
   $(document).on('click', '.trigger-embed-gallery-item', handleEmbed)
   $(document).on('click', '.publish-photos-videos', handlePublishGalleryItem)
+
+  $('[data-lazy],[data-poster]').each(function() {
+    let $el = $(this)
+
+    if (this.tagName.match(/img/gi)) {
+      $el.attr('src', $el.data('lazy'))
+    }
+
+    if (this.tagName.match(/video/gi)) {
+      let $videoSrc = $el.find('source')
+
+      $el.attr('poster', $el.data('poster'))
+      $videoSrc.each(function() {
+        $(this).attr('src', $(this).data('lazy'))
+      })
+    }
+  })
+
+  $('.slick-fullscreen-wrapper').on('init', function(event, slick) {
+    let slide = $.map(slick.$slides, function(slide, index) {
+      if ($(slide).hasClass('slick-current')) return slide
+    })
+    let $slide = $(slide)
+      .children()
+      .first()
+
+    if ($slide.get(0).tagName.match(/video/gi)) {
+      $slide.load()
+      $slide.get(0).play()
+    }
+  })
+
+  $('.slick-fullscreen-wrapper').slick({
+    lazyLoad: 'ondemand',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  })
+
+  $('.slick-fullscreen-wrapper').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    let $elNext = $(slick.$slides[nextSlide])
+        .children()
+        .first(),
+      $elCur = $(slick.$slides[currentSlide])
+        .children()
+        .first()
+
+    if ($elNext.get(0).tagName.match(/video/gi)) {
+      $elNext.load()
+      $elNext.get(0).play()
+    }
+
+    if ($elCur.get(0).tagName.match(/video/gi)) {
+      $elCur.get(0).pause()
+    }
+  })
 })
 
 function showAddNewAlbum() {

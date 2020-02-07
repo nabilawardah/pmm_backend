@@ -8,6 +8,7 @@
 
         <link rel="shortcut icon" type="image/png" href="{{ asset('/images/h-italics--dark.png') }}"/>
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
         <title>@yield('title') - {{ config('app.name', 'Paragon Meaningful Movement') }}</title>
         <script defer src="{{ mix('js/prefetch.js') }}"></script>
