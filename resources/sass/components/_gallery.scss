@@ -261,8 +261,15 @@
   object-position: center center;
   width: 100%;
   height: var(--media-height, 80%);
+  outline: none;
+
   &.slick-iframe {
     height: 100%;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
   }
 }
 
@@ -294,6 +301,24 @@
     svg {
       fill: $dark-hex-90;
     }
+  }
+}
+
+.slick-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background-color: $light-alpha-80;
+  color: $dark-alpha-80;
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  z-index: $layer-s;
+  transition: all 0.4s;
+
+  &:hover {
+    background-color: $light-alpha-90;
+    transition: all 0.28s;
   }
 }
 

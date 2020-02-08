@@ -19,7 +19,25 @@ $(function() {
   $(document).on('click', '.trigger-embed-gallery-item', handleEmbed)
   $(document).on('click', '.publish-photos-videos', handlePublishGalleryItem)
 
+  $(document).on('click', '.gallery-item', function() {
+    let el = $(this)
+    let index = el.data('index')
+    let slickContainer = $('.slick-fullscreen-wrapper')
+    slickContainer.fadeIn(250)
+    $('.slick-fullscreen').slick('slickGoTo', index, true)
+  })
+
+  $(document).on('click', '.slick-close', function() {
+    let slickContainer = $('.slick-fullscreen-wrapper')
+    let currentIndex = $('.slick-fullscreen').slick('slickCurrentSlide')
+    let el = $('.gallery-container').find(`[data-index=${currentIndex}]`)
+    el[0].focus()
+    el[0].scrollIntoView()
+    slickContainer.fadeOut(250)
+  })
+
   const slickConfig = {
+    infinite: false,
     lazyLoad: 'ondemand',
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -43,6 +61,7 @@ $(function() {
       })
     }
   })
+
   $('.slick-fullscreen').on('init', function(event, slick) {
     let slide = $.map(slick.$slides, function(slide, index) {
       if ($(slide).hasClass('slick-current')) return slide
@@ -51,12 +70,16 @@ $(function() {
       .children()
       .first()
 
-    if ($slide.get(0).tagName.match(/video/gi)) {
-      $slide.load()
-      $slide.get(0).play()
+    if ($slide.length > 0) {
+      if ($slide.get(0).tagName.match(/video/gi)) {
+        $slide.load()
+        $slide.get(0).play()
+      }
     }
   })
+
   $('.slick-fullscreen').slick(slickConfig)
+
   $('.slick-fullscreen').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
     let $elNext = $(slick.$slides[nextSlide])
         .children()
@@ -65,13 +88,17 @@ $(function() {
         .children()
         .first()
 
-    if ($elNext.get(0).tagName.match(/video/gi)) {
-      $elNext.load()
-      $elNext.get(0).play()
+    if ($elNext.length > 0) {
+      if ($elNext.get(0).tagName.match(/video/gi)) {
+        $elNext.load()
+        $elNext.get(0).play()
+      }
     }
 
-    if ($elCur.get(0).tagName.match(/video/gi)) {
-      $elCur.get(0).pause()
+    if ($elCur.length > 0) {
+      if ($elCur.get(0).tagName.match(/video/gi)) {
+        $elCur.get(0).pause()
+      }
     }
 
     $('.slick-current iframe').attr('src', $('.slick-current iframe').attr('src'))
