@@ -3,7 +3,7 @@ import LazyLoad from 'vanilla-lazyload'
 import { showModal } from '../components/modals/base-modal'
 import axios from 'axios'
 import { generateTemporaryPlaceholder, VALID_VIDEOS, generateThumbnail } from '../components/gallery'
-import slick from 'slick-carousel'
+import 'slick-carousel'
 
 $(function() {
   let lazyloadInstance = new LazyLoad({ elements_selector: '.lazy', threshold: 2000 })

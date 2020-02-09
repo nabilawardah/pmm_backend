@@ -26,6 +26,7 @@ mix
     'datatables.net-fixedcolumns',
     'datatables.net-dt',
     'datatables.net',
+    'slick-carousel',
     'vanilla-lazyload',
     // 'validator',
     'dayjs',
