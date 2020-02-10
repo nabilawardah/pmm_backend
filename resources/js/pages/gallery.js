@@ -32,8 +32,12 @@ $(function() {
     let currentIndex = $('.slick-fullscreen').slick('slickCurrentSlide')
     let el = $('.gallery-container').find(`[data-index=${currentIndex}]`)
     el[0].focus()
-    el[0].scrollIntoView()
-    slickContainer.fadeOut(250)
+    el[0].scrollIntoView({
+      behavior: 'auto',
+      block: 'center',
+      inline: 'center',
+    })
+    slickContainer.fadeOut()
   })
 
   const slickConfig = {

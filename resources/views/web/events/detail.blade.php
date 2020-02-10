@@ -53,7 +53,7 @@
         @if($registered)
           <p class="small event-registered">
             <svg viewBox="0 0 18 18" role="presentation" aria-hidden="true" focusable="false" style="margin-right: 12px; height: 16px; width: 16px; display: block; fill: currentColor;"><path d="m17 9c0-4.42-3.58-8-8-8s-8 3.58-8 8 3.58 8 8 8 8-3.58 8-8m1 0c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9m-9-5.25c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25m0 4.25c.55 0 1 .45 1 1v5c0 .55-.45 1-1 1s-1-.45-1-1v-5c0-.55.45-1 1-1" fill-rule="evenodd"></path></svg>
-            You're already registered to this event.
+            You're registered to this event.
           </p>
           <button class="button button--large secondary stretch cancel-event-registration" data-user="1">Cancel Registration</button>
         @else
@@ -122,7 +122,7 @@
             <button class="button secondary button--large cancel-event-registration" data-user="1" style="margin-right: 24px;">Cancel Registration</button>
             <p class="small event-registered event-registered--desktop">
               <svg viewBox="0 0 18 18" role="presentation" aria-hidden="true" focusable="false" style="margin-right: 8px; height: 16px; width: 16px; display: block; fill: currentColor;"><path d="m17 9c0-4.42-3.58-8-8-8s-8 3.58-8 8 3.58 8 8 8 8-3.58 8-8m1 0c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9m-9-5.25c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25m0 4.25c.55 0 1 .45 1 1v5c0 .55-.45 1-1 1s-1-.45-1-1v-5c0-.55.45-1 1-1" fill-rule="evenodd"></path></svg>
-              You're already registered to this event.
+              You're registered to this event.
             </p>
             @else
             <button class="button primary button--large join-event" data-user="1" style="margin-right: 24px;">Join Event</button>

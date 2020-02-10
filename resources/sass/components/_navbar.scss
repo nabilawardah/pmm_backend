@@ -13,8 +13,15 @@
   }
 }
 
-.navbar-wrapper {
+.navbar-web {
+  @include container-narrow;
+}
+
+.navbar-admin {
   @include container;
+}
+
+.navbar-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;

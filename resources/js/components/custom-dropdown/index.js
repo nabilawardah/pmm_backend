@@ -5,9 +5,9 @@ function toggleDropdown() {
   if (area.hasClass('hidden')) {
     wrapper.addClass('active-popout')
     area.removeClass('hidden')
-    area.slideDown(250)
+    area.slideDown(100)
   } else {
-    area.slideUp(250)
+    area.slideUp(100)
     area.addClass('hidden')
     wrapper.removeClass('active-popout')
   }
