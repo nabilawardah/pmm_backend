@@ -1,664 +1,690 @@
 {
-  "data": [
-    {
-      "id": 1,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "default.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 2,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "io.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 3,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "launch.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 4,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "https://www.youtube.com/embed/mPkBdEysvtI",
-        "type": "video",
-        "origin": "external",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 5,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "poster-1.jpg",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 7,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "https://www.youtube.com/embed/9W44NWYwa1g",
-        "type": "video",
-        "origin": "external",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 8,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "poster-5.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 9,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "teaser.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 10,
-      "author": 1,
-      "name": "This is some long title for the gallery item0 and it should be clamped on the view.",
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "small.mp4",
-        "type": "video",
-        "origin": "local",
-        "filetype": "video/mp4",
-        "thumbnail": "default.png"
-      }
-    },
-    {
-      "id": 1,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "default.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 2,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "io.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 3,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "launch.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 4,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "https://www.youtube.com/embed/-r-uKi8zLNU",
-        "type": "video",
-        "origin": "external",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 5,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "poster-1.jpg",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 7,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "https://www.youtube.com/embed/NdkgIXtKMW0",
-        "type": "video",
-        "origin": "external",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 8,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "poster-5.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 9,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "teaser.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 10,
-      "author": 1,
-      "name": "This is some long title for the gallery item0 and it should be clamped on the view.",
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "small.mp4",
-        "type": "video",
-        "origin": "local",
-        "filetype": "video/mp4",
-        "thumbnail": "default.png"
-      }
-    },
-    {
-      "id": 1,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "default.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 2,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "io.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 3,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "launch.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 4,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "https://www.youtube.com/embed/EQIyuDDWiHc",
-        "type": "video",
-        "origin": "external",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 5,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "poster-1.jpg",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 7,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "https://www.youtube.com/embed/8FETTwHNsTA",
-        "type": "video",
-        "origin": "external",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 8,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "poster-5.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 9,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "teaser.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 10,
-      "author": 1,
-      "name": "This is some long title for the gallery item0 and it should be clamped on the view.",
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "small.mp4",
-        "type": "video",
-        "origin": "local",
-        "filetype": "video/mp4",
-        "thumbnail": "default.png"
-      }
-    },
-    {
-      "id": 1,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "default.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 2,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "io.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 3,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "launch.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 4,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "https://www.youtube.com/embed/nyp_PczrqFE",
-        "type": "video",
-        "origin": "external",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 5,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "poster-1.jpg",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 7,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "https://www.youtube.com/embed/7Glc2mHLPRM",
-        "type": "video",
-        "origin": "external",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 8,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "poster-5.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 9,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "teaser.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 10,
-      "author": 1,
-      "name": "This is some long title for the gallery item0 and it should be clamped on the view.",
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "small.mp4",
-        "type": "video",
-        "origin": "local",
-        "filetype": "video/mp4",
-        "thumbnail": "default.png"
-      }
-    },
-    {
-      "id": 1,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "default.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 2,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "io.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 3,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "launch.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 4,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "https://www.youtube.com/embed/5bvcyIV4yzo",
-        "type": "video",
-        "origin": "external",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 5,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "poster-1.jpg",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 7,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "https://www.youtube.com/embed/Gl9GtO_vQxw",
-        "type": "video",
-        "origin": "external",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 8,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "poster-5.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 9,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "teaser.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 10,
-      "author": 1,
-      "name": "This is some long title for the gallery item0 and it should be clamped on the view.",
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "small.mp4",
-        "type": "video",
-        "origin": "local",
-        "filetype": "video/mp4",
-        "thumbnail": "default.png"
-      }
-    },
-    {
-      "id": 1,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "dummy-1.jpg",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 2,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "dummy-2.jpg",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 3,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "dummy-3.jpg",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 4,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "https://www.youtube.com/embed/G7iI7YmIr30",
-        "type": "video",
-        "origin": "external",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 5,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "dummy-4.jpg",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 7,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "https://www.youtube.com/embed/hbs-esZeCsI",
-        "type": "video",
-        "origin": "external",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 8,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "dummy-5.jpg",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 9,
-      "author": 1,
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "dummy-6.png",
-        "type": "image",
-        "origin": "local",
-        "filetype": ""
-      }
-    },
-    {
-      "id": 10,
-      "author": 1,
-      "name": "This is some long title for the gallery item0 and it should be clamped on the view.",
-      "caption": "Add some caption here, a long one. So we can see how it's done.",
-      "published_date": "2020-01-23T13:39:04.634775Z",
-      "attribute": {
-        "src": "small.mp4",
-        "type": "video",
-        "origin": "local",
-        "filetype": "video/mp4",
-        "thumbnail": "default.png"
-      }
-    }
-  ]
+    "data": [
+        {
+            "id": 1,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "default.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 2,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "io.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 3,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "launch.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 4,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "https:\/\/www.youtube.com\/embed\/mPkBdEysvtI",
+                "type": "video",
+                "origin": "external",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 5,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "poster-1.jpg",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 7,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "https:\/\/www.youtube.com\/embed\/9W44NWYwa1g",
+                "type": "video",
+                "origin": "external",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 8,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "poster-5.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 9,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "teaser.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 10,
+            "author": 1,
+            "name": "This is some long title for the gallery item0 and it should be clamped on the view.",
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "small.mp4",
+                "type": "video",
+                "origin": "local",
+                "filetype": "video\/mp4",
+                "thumbnail": "default.png"
+            }
+        },
+        {
+            "id": 1,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "default.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 2,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "io.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 3,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "launch.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 4,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "https:\/\/www.youtube.com\/embed\/-r-uKi8zLNU",
+                "type": "video",
+                "origin": "external",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 5,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "poster-1.jpg",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 7,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "https:\/\/www.youtube.com\/embed\/NdkgIXtKMW0",
+                "type": "video",
+                "origin": "external",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 8,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "poster-5.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 9,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "teaser.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 10,
+            "author": 1,
+            "name": "This is some long title for the gallery item0 and it should be clamped on the view.",
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "small.mp4",
+                "type": "video",
+                "origin": "local",
+                "filetype": "video\/mp4",
+                "thumbnail": "default.png"
+            }
+        },
+        {
+            "id": 1,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "default.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 2,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "io.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 3,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "launch.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 4,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "https:\/\/www.youtube.com\/embed\/EQIyuDDWiHc",
+                "type": "video",
+                "origin": "external",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 5,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "poster-1.jpg",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 7,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "https:\/\/www.youtube.com\/embed\/8FETTwHNsTA",
+                "type": "video",
+                "origin": "external",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 8,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "poster-5.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 9,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "teaser.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 10,
+            "author": 1,
+            "name": "This is some long title for the gallery item0 and it should be clamped on the view.",
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "small.mp4",
+                "type": "video",
+                "origin": "local",
+                "filetype": "video\/mp4",
+                "thumbnail": "default.png"
+            }
+        },
+        {
+            "id": 1,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "default.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 2,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "io.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 3,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "launch.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 4,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "https:\/\/www.youtube.com\/embed\/nyp_PczrqFE",
+                "type": "video",
+                "origin": "external",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 5,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "poster-1.jpg",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 7,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "https:\/\/www.youtube.com\/embed\/7Glc2mHLPRM",
+                "type": "video",
+                "origin": "external",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 8,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "poster-5.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 9,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "teaser.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 10,
+            "author": 1,
+            "name": "This is some long title for the gallery item0 and it should be clamped on the view.",
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "small.mp4",
+                "type": "video",
+                "origin": "local",
+                "filetype": "video\/mp4",
+                "thumbnail": "default.png"
+            }
+        },
+        {
+            "id": 1,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "default.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 2,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "io.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 3,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "launch.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 4,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "https:\/\/www.youtube.com\/embed\/5bvcyIV4yzo",
+                "type": "video",
+                "origin": "external",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 5,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "poster-1.jpg",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 7,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "https:\/\/www.youtube.com\/embed\/Gl9GtO_vQxw",
+                "type": "video",
+                "origin": "external",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 8,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "poster-5.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 9,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "teaser.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 10,
+            "author": 1,
+            "name": "This is some long title for the gallery item0 and it should be clamped on the view.",
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "small.mp4",
+                "type": "video",
+                "origin": "local",
+                "filetype": "video\/mp4",
+                "thumbnail": "default.png"
+            }
+        },
+        {
+            "id": 1,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "dummy-1.jpg",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 2,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "dummy-2.jpg",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 3,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "dummy-3.jpg",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 4,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "https:\/\/www.youtube.com\/embed\/G7iI7YmIr30",
+                "type": "video",
+                "origin": "external",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 5,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "dummy-4.jpg",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 7,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "https:\/\/www.youtube.com\/embed\/hbs-esZeCsI",
+                "type": "video",
+                "origin": "external",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 8,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "dummy-5.jpg",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 9,
+            "author": 1,
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "dummy-6.png",
+                "type": "image",
+                "origin": "local",
+                "filetype": ""
+            }
+        },
+        {
+            "id": 10,
+            "author": 1,
+            "name": "This is some long title for the gallery item0 and it should be clamped on the view.",
+            "caption": "Add some caption here, a long one. So we can see how it's done.",
+            "published_date": "2020-01-23T13:39:04.634775Z",
+            "attribute": {
+                "src": "small.mp4",
+                "type": "video",
+                "origin": "local",
+                "filetype": "video\/mp4",
+                "thumbnail": "default.png"
+            }
+        },
+        {
+            "attribute": {
+                "type": "image",
+                "origin": "local",
+                "filetype": "image\/jpeg",
+                "src": "20200211001626-cn.jpg",
+                "thumbnail": null
+            },
+            "author": "1",
+            "caption": null,
+            "id": 55,
+            "published_date": "2020-02-10T17:16:29.039036Z"
+        },
+        {
+            "attribute": {
+                "type": "image",
+                "origin": "local",
+                "filetype": "image\/png",
+                "src": "20200211001735-drawkit-folder-man-colour-thumbnail.png",
+                "thumbnail": null
+            },
+            "author": "1",
+            "caption": null,
+            "id": 56,
+            "published_date": "2020-02-10T17:17:38.403339Z"
+        }
+    ]
 }

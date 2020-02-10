@@ -11,10 +11,10 @@
     <header class="section--inset" style="margin-bottom: 64px">
       <h1 class="heading1" style="margin-bottom: 32px">{{ html_entity_decode($article['title'], ENT_HTML5) }}</h1>
       <footer class="article-author-wrapper" style="margin-bottom: 32px;">
-        <img class="article-author-thumbnail larger" src="/images/users/default.png" alt="Ongki Herlambang">
+        <img class="article-author-thumbnail larger" src="{{ "/images/users/".$author['photo'] }}" alt="{{ $author['name'] }}">
         <div class="article-author-info">
           <p class="heading5" style="color: #484848; margin-bottom: 2px;">{{ $author['name'] }}</p>
-          <p class="medium article-published-date" style="color: #767676;">Published on {{ date('M d, Y', strtotime($article['submitted_at'])) }}</p>
+          <p class="small article-published-date" style="color: #767676;">Published on {{ date('M d, Y', strtotime($article['submitted_at'])) }}</p>
         </div>
       </footer>
     </header>
