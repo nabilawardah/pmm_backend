@@ -331,9 +331,9 @@
 
 .article-list-divider {
   width: 100%;
-  height: 1px;
-  background-color: $dark-alpha-20;
-  margin-top: $space-xl;
+  height: 2px;
+  background-color: $dark-alpha-30;
+  margin-top: $space-sm;
   margin-bottom: $space-l;
 }
 
@@ -343,37 +343,11 @@
 
 .article-main-wrapper {
   display: block;
+  margin-bottom: $space-xl;
 }
 
 .article-main-text {
   color: $dark-alpha-70;
-  padding-left: 0;
-  margin-left: 0;
-
-  @include screen(smallPhone) {
-    max-width: $page-width + $container-gutter-mobile-small * 2;
-    padding-right: 0;
-  }
-  @include screen(phone) {
-    max-width: $page-width + $container-gutter-mobile * 2;
-    padding-right: 0;
-  }
-  @include screen(tablet) {
-    max-width: $page-width + $container-gutter-tablet * 2;
-    padding-right: 0;
-  }
-  @include screen(tabletLandscape) {
-    max-width: $page-width + $container-gutter-tablet * 2;
-    padding-right: 0;
-  }
-  @include screen(desktop) {
-    max-width: $page-post;
-    padding-right: $container-gutter-desktop * 2;
-  }
-  @include screen(desktopWide) {
-    max-width: $page-post;
-    padding-right: $container-gutter-desktop-wide * 2;
-  }
 }
 
 .article {

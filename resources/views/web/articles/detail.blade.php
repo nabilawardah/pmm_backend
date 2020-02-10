@@ -18,7 +18,9 @@
         </div>
       </footer>
     </header>
-    <img class="editor-cover-image" src="/media/user-{{ $author['id'] }}/{{ $article['cover']['src'] }}" alt="">
+    <div class="container-narrow">
+      <img class="editor-cover-image" src="/media/user-{{ $author['id'] }}/{{ $article['cover']['src'] }}" alt="">
+    </div>
 
     <article class="pell-content section--inset" style="display: block; margin-bottom: 64px;">
       {!! html_entity_decode($article['html'])  !!}
