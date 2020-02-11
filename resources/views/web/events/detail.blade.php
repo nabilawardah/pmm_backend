@@ -116,7 +116,7 @@
       </article>
 
       <div class="modal-action-wrapper">
-        <footer class="modal-action-bar section--outset action--inline">
+        <footer class="modal-action-bar container-narrow action--inline">
           <div class="event-action-container">
             @if($registered)
             <button class="button secondary button--large cancel-event-registration" data-user="1" style="margin-right: 24px;">Cancel Registration</button>

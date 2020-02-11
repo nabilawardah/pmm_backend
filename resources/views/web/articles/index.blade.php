@@ -12,12 +12,12 @@
   {{-- <div class="container-post" aria-hidden="true" style="margin-bottom: 24px;">
     <p class="heading3" style="font-weight: 400;">Featured Article</p>
   </div> --}}
-  <main class="container-post">
+  <main class="">
     <a class="article-main-wrapper" href="/articles/{{ $featured_article['id'] }}">
       <article class="article-main">
-        <header class="article-main-thumbnail" style="background-image: url('{{ asset('/media/user-'.$featured_article['author']['id'].'/'.$featured_article['cover']['src'] ) }}')">
+        <header class="article-main-thumbnail section--outset" style="margin-bottom: 48px; background-image: url('{{ asset('/media/user-'.$featured_article['author']['id'].'/'.$featured_article['cover']['src'] ) }}')">
         </header>
-        <main class="article-main-text">
+        <main class="article-main-text container-post">
           <h1 class="heading2 article-main-text-title" style="margin-bottom: 12px">{{ $featured_article['title'] }}</h1>
           <p class="medium article-main-text-subtitle">{{ $featured_article['subtitle'] }}</p>
           <footer class="article-author-wrapper" style="margin-top: 16px;">

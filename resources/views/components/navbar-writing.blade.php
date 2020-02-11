@@ -18,17 +18,19 @@
 @endphp
 
 <nav class="main-navbar navbar-focus navbar">
-  <div class="navbar-wrapper navbar-web">
-    <ul class="navbar-primary inline--ll">
+  <div class="navbar-wrapper navbar-admin">
+    <ul class="navbar-primary inline--ml">
       <li class="brand-wrapper">
         <a href="/">
           @include('icons.pmm')
         </a>
       </li>
+      <div class="separator-vertical"></div>
       <p class="heading6" style="padding-top: 16px; padding-bottom: 16px; line-height: 24px;">{{ $title ?? '' }}</p>
     </ul>
-    <ul class="navbar-secondary inline--l">
+    <ul class="navbar-secondary inline--ml">
       <button class="button button--small primary {{ $action_class ?? '' }}">{{ $action_label ?? 'Publish' }}</button>
+      <div class="separator-vertical"></div>
       <div class="custom-dropdown-wrapper">
         <button class="custom-dropdown-trigger">
           <div class="current-user-wrapper">

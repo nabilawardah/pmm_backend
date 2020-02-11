@@ -19,20 +19,21 @@
 
 <nav class="main-navbar navbar-focus navbar">
   <div class="navbar-wrapper navbar-web">
-    <ul class="navbar-primary inline--ll">
-      {{-- <li class="brand-wrapper">
+    <ul class="navbar-primary inline--ml">
+      <li class="brand-wrapper">
         <a href="/" style="display: block;">
           @include('icons.pmm')
         </a>
-      </li> --}}
-      <a href="/articles" style="display: inline-flex; align-items: center; justify-content: flex-start;">
+      </li>
+      <div class="separator-vertical"></div>
+      <a href="{{ $to ?? '/articles' }}" style="display: inline-flex; align-items: center; justify-content: flex-start;">
         <svg viewBox="0 0 18 18" role="presentation" aria-hidden="true" focusable="false" style="margin-right: 8px; height: 1em; width: 1em; display: block; fill: currentcolor;"><path d="m13.7 16.29a1 1 0 1 1 -1.42 1.41l-8-8a1 1 0 0 1 0-1.41l8-8a1 1 0 1 1 1.42 1.41l-7.29 7.29z" fill-rule="evenodd"></path></svg>
-        Back to Articles
+        {{ $text ?? 'Back to Articles'}}
       </a>
     </ul>
     <ul class="navbar-secondary">
       <a href="/admin/articles/{{ $author['id'] }}/edit/{{ $article['id'] }}" class="no-pre button button--small default edit-article" style="margin-right:12px;">Edit Article</a>
-      <div class="custom-dropdown-wrapper">
+      <div class="custom-dropdown-wrapper" style="margin-right: 24px;">
         <button class="custom-dropdown-trigger">
           <div class="menu-more">
             <svg style="display: block; width: 25px; height: 25px; margin-left: -2px;">
@@ -57,7 +58,8 @@
           </li>
         </ul>
       </div>
-      <div class="primary-menu-wrapper" style="padding-left: 14px; padding-right: 14px;">
+      <div class="separator-vertical" style="margin-right: 8px;"></div>
+      <div class="primary-menu-wrapper" style="padding-left: 16px; padding-right: 16px;">
         <div class="custom-dropdown-wrapper">
           <button class="custom-dropdown-trigger">
             <div class="current-user-wrapper">

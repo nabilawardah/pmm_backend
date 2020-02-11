@@ -19,12 +19,13 @@
 
 <nav class="main-navbar navbar-focus navbar" style="box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,.12);">
   <div class="navbar-wrapper navbar-web">
-    <ul class="navbar-primary inline--ll">
-      {{-- <li class="brand-wrapper">
+    <ul class="navbar-primary inline--ml">
+      <li class="brand-wrapper">
         <a href="/" style="display: block;">
           @include('icons.pmm')
         </a>
-      </li> --}}
+      </li>
+      <div class="separator-vertical"></div>
       <a href="/events" style="display: inline-flex; align-items: center; justify-content: flex-start;">
         <svg viewBox="0 0 18 18" role="presentation" aria-hidden="true" focusable="false" style="margin-right: 8px; height: 1em; width: 1em; display: block; fill: currentcolor;"><path d="m13.7 16.29a1 1 0 1 1 -1.42 1.41l-8-8a1 1 0 0 1 0-1.41l8-8a1 1 0 1 1 1.42 1.41l-7.29 7.29z" fill-rule="evenodd"></path></svg>
         Back to Events
@@ -40,12 +41,13 @@
       @endisset
       @isset($show_edit)
         @if($show_edit)
-          <a href="/admin/events/{{ $event['admin'] }}/edit/{{ $event['id'] }}" class="no-pre button button--small default edit-event" style="margin-right:20px;">Edit</a>
+          <a href="/admin/events/{{ $event['admin'] }}/edit/{{ $event['id'] }}" class="no-pre button button--small default edit-event" style="margin-right:20px;">Edit Event</a>
         @endif
       @endisset
 
       <button style="margin-right:24px;" class="button button--small secondary ghost confirm-delete">Delete</button>
 
+      <div class="separator-vertical" style="margin-right: 8px;"></div>
       <div class="primary-menu-wrapper" style="padding-left: 14px; padding-right: 14px;">
         <div class="custom-dropdown-wrapper">
           <button class="custom-dropdown-trigger">

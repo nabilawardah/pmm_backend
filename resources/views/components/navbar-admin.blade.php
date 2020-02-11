@@ -46,7 +46,7 @@
       @endforeach
     </ul>
     <ul class="navbar-secondary inline--ml">
-      @component('components.menu-admin', ['name' => 'Back to PMM', 'to' => '/', 'active' => false])
+      @component('components.menu-admin', ['name' => 'Go to PMM', 'to' => '/', 'active' => false])
       @endcomponent
       <li class="primary-menu-wrapper" style="padding-left: 14px; padding-right: 14px;">
         <div class="custom-dropdown-wrapper">

@@ -4,7 +4,7 @@
 
 @section('content')
 
-  @include('components.navbar-article-admin')
+  @include('components.navbar-article', ['to' => '/articles', 'text' => 'Back to Articles'])
 
   @component('layouts.main-content', ['width' => 'default'])
     <textarea class="hidden" id="single-article-data">{{ json_encode($article) }}</textarea>

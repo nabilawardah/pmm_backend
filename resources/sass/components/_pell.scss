@@ -26,8 +26,8 @@ $pell-font-size: 17px !default;
 .pell-actionbar {
   background-color: $pell-actionbar-color;
   box-shadow: inset 0px -1px 0px 0px $dark-hex-10, 0px 16px 20px -16px rgba(0, 0, 0, 0.16);
-  padding-top: $space-sm;
-  padding-bottom: $space-sm;
+  padding-top: $space-m;
+  padding-bottom: $space-m;
   position: sticky;
   top: 0;
   z-index: $layer-s;
