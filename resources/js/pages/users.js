@@ -1,5 +1,6 @@
 import 'datatables.net-fixedcolumns-bs4'
 import axios from 'axios'
+import lottie from 'lottie-web'
 
 import User from '../class/User'
 import { generateCustomSearch } from '../components/datatable-searchbox'
@@ -12,6 +13,38 @@ import { generateAdminRole, generateUserRole } from '../components/role'
 $(function() {
   // Add custom search field to page header
   generateCustomSearch('#users-table_filter')
+
+  // Plants Animation
+  let path
+  let pointCounter = Number($('#user-points-counts').val())
+  switch (pointCounter) {
+    case 1:
+      path = '/plants-data/1.json'
+      break
+    case 2:
+      path = '/plants-data/2.json'
+      break
+    case 3:
+      path = '/plants-data/3.json'
+      break
+    case 4:
+      path = '/plants-data/4.json'
+      break
+    case 5:
+      path = '/plants-data/5.json'
+      break
+    default:
+      path = '/plants-data/0.json'
+      break
+  }
+
+  lottie.loadAnimation({
+    container: document.getElementById('plant-container'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: path,
+  })
 })
 
 // Generate Datatables

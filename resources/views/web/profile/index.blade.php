@@ -48,6 +48,9 @@
       <button class="button button--medium default edit-profile">Edit Profile</button>
     </section>
     <section class="profile-achievment">
+      {{-- PLANT ANIMATION CONTAINER --}}
+      <div id="plant-container" style="width: 320px; height: 320px;"></div>
+      <input id="user-points-counts" type="hidden" value="{{ $user->points ?? 0 }}">
       <h2 class="heading4 profile-user-achievment">
         You've achieved <span class="point-counts">{{ $user->points ?? 0 }}</span> points.
       </h2>

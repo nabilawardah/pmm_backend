@@ -37,6 +37,7 @@
     "lodash.isequal": "^4.5.0",
     "lodash.isobject": "^3.0.2",
     "lodash.transform": "^4.6.0",
+    "lottie-web": "^5.6.4",
     "lqip": "^2.1.0",
     "parchment": "^1.1.4",
     "pell": "^1.0.6",
