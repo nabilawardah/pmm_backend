@@ -309,13 +309,16 @@
   position: absolute;
   top: 24px;
   right: 24px;
-  background-color: $light-alpha-80;
+  background-color: $light-alpha-60;
   color: $dark-alpha-80;
   width: 40px;
   height: 40px;
   border-radius: 9999px;
   z-index: $layer-s;
   transition: all 0.4s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     background-color: $light-alpha-90;

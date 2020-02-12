@@ -26,7 +26,7 @@
         <div class="upload-gallery-item-preview-outer-wrapper">
           <div class="upload-gallery-item-preview-wrapper">
             @include('icons.photos')
-            <button class="button button--large primary trigger-upload-gallery-item" style="margin-bottom: 32px; padding-left: 48px; padding-right: 48px;">Upload Photos/Videos</button>
+            <button class="button button--large default trigger-upload-gallery-item" style="margin-bottom: 32px; padding-left: 48px; padding-right: 48px;">Upload Photos/Videos</button>
             <span class="small" style="color: #767676; text-align: center;">You can add <strong>.mp4</strong>, <strong>.webm</strong>, <strong>.ogv</strong> for videos, and <strong>.jpg</strong>, <strong>.jpeg</strong>, <strong>.png</strong>, <strong>.svg</strong>, <strong>.gif</strong> for images.</span>
           </div>
           <input multiple class="upload-gallery-item-input" hidden class="hidden" type="file" accept="image/png, image/gif, image/svg+xml, image/jpeg, image/bmp, video/ogg, video/mp4, video/webm" />
@@ -35,7 +35,7 @@
       <label for="embed-gallery-item-link" style="padding-top: 32px; width: 100%; text-align: left;" class="input-label">or Add video from a link (Youtube, Vimeo, or a direct link to the video)</label>
       <div class="add-embed-gallery-item">
         <input style="flex: 1; margin-right: 8px;" id="embed-gallery-item-link" class="input-field" type="text" name="embed-gallery-item-link" placeholder="Paste the link to your video here...">
-        <button style="min-width: fit-content; padding-left: 32px; padding-right: 32px;" class="button button--large primary trigger-embed-gallery-item">+ Add Video</button>
+        <button style="min-width: fit-content; padding-left: 32px; padding-right: 32px;" class="button button--large default trigger-embed-gallery-item">+ Add Video</button>
       </div>
     </footer>
 

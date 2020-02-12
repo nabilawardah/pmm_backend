@@ -1,17 +1,6 @@
 const mix = require('laravel-mix')
 require('laravel-mix-bundle-analyzer')
 
-/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
- | file for the application as well as bundling up all the JS files.
- |
- */
-
 mix
   .copyDirectory('resources/assets', 'public')
   .js('resources/js/app.js', 'public/js')
@@ -34,7 +23,6 @@ mix
     'lodash.isequal',
     'lodash.isobject',
   ])
-  .sourceMaps()
 
 // ADJUST with your own setup
 // Change to your own proxy if you're using Laravel Valet,
@@ -42,7 +30,9 @@ mix
 mix.browserSync('http://pmm.dushi')
 
 if (mix.inProduction()) {
-  mix.version()
+  mix.version().options({ processCssUrls: true })
+} else {
+  mix.sourceMaps().options({ processCssUrls: false })
 }
 
 if (mix.inProduction()) {
