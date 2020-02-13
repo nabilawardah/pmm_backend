@@ -14,7 +14,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
+        'guard' => 'web', //defaultnya:web
         'passwords' => 'users',
     ],
 
@@ -34,7 +34,7 @@ return [
     | Supported: "session", "token"
     |
     */
-
+ 
     'guards' => [
         'web' => [
             'driver' => 'session',
@@ -44,6 +44,28 @@ return [
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
+            'hash' => false,
+        ],
+
+        'tb_user' => [
+            'driver' => 'session',
+            'provider' => 'tb_user',
+        ],
+
+        'apitb_user' => [
+            'driver' => 'token',
+            'provider' => 'tb_user',
+            'hash' => false,
+        ],
+
+        'login_tb_user' => [
+            'driver' => 'session',
+            'provider' => 'login_tb_user',
+        ],
+
+        'apilogin_tb_user' => [
+            'driver' => 'token',
+            'provider' => 'login_tb_user',
             'hash' => false,
         ],
     ],
@@ -67,8 +89,18 @@ return [
 
     'providers' => [
         'users' => [
-            'driver' => 'eloquent',
-            'model' => App\User::class,
+            'driver' => 'eloquent', //eloquent atau ldap
+            'model' => App\User::class, //App\nama_model && default:User
+        ],
+
+        'tb_user' => [
+            'driver' => 'eloquent', //eloquent atau ldap
+            'model' => App\tb_user::class, //App\nama_model && default:User
+        ],
+
+        'login_tb_user' => [
+            'driver' => 'eloquent', //eloquent atau ldap
+            'model' => App\login_tb_user::class, //App\nama_model && default:User
         ],
 
         // 'users' => [

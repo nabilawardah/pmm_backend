@@ -1,5 +1,5 @@
 @extends('layouts.web-provider')
-
+ 
 @section('title', 'Events')
 
 @section('content')
@@ -15,7 +15,7 @@
     <main class="event-list-outer-grid">
       <ul class="event-list-container">
         @foreach ($events as $event)
-        <a class="event-list-item-wrapper" href="/events/{{ $event['id'] }}">
+        <a class="event-list-item-wrapsper" href="/events/{{ $event['id'] }}">
           <article class="event-list-item">
             <picture class="event-list-poster-wrapper">
               <img class="event-list-poster" width="100%" src="/media/user-{{ $event['admin'] }}/{{ $event['poster'] }}" alt="{{ $event['title'] }}">

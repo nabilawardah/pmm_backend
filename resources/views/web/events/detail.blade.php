@@ -1,5 +1,5 @@
 @extends('layouts.web-provider')
-
+ 
 <style>
   div#main-content {
     padding: 0;

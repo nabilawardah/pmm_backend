@@ -1,13 +1,16 @@
 <?php
+ 
+// Route::get('/sign-in', function () {
+//     return view('sign-in', ['active_page' => 'Sign in']);
+// });
+// Route::post('/sign-in', function () {
+//     sleep(2); //Give delay in seconds
 
-Route::get('/sign-in', function () {
-    return view('sign-in', ['active_page' => 'Sign in']);
-});
-Route::post('/sign-in', function () {
-    sleep(2);
+//     return view('web.home', ['active_page' => 'Home']);
+// });
 
-    return view('web.home', ['active_page' => 'Home']);
-});
+Route::get('/sign-in', array('uses' => 'LoginController@showlogin'));
+Route::post('/sign-in', array('uses' => 'LoginController@login'));
 
 // Web
 Route::get('/', function () {
