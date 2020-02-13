@@ -1,0 +1,28 @@
+.csr-grid-container {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 400px;
+  color: $light-alpha-100;
+}
+
+.csr-item {
+  background-color: $brand-primary-300;
+  background-size: cover;
+  background-position: center center;
+  padding: $space-ml;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  border-radius: 8px;
+}
+
+.csr-item-title {
+  margin-bottom: $space-sm;
+  font-weight: 500;
+}
+
+.csr-item-description {
+  line-height: 1.5;
+}
