@@ -5,6 +5,7 @@
 @section('content')
 
 <div class="background-wrapper">
+  <div aria-hidden="true" class="background-area"></div>
   <div class="login-container">
     <div class="login-brand">
       <a href="/">
