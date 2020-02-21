@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use File;
 use Carbon\Carbon;
+use DB;
 
 class DummyController extends Controller
 {
@@ -129,15 +130,49 @@ class DummyController extends Controller
 
     public function show_user(Request $request)
     {
+         $user = \App\Tb_user::all()->first();
+
         return view('web.profile.index', [
-            'user' => (object) $this->users[0],
-            'total_points' => $this->jsonUsers['total_points'],
+            'user' => $user,
+            //'user' => (object) $this->users[0],
+            //'total_points' => $this->jsonUsers['total_points'],
             'active_page' => 'Profile',
             'all_division' => $this->all_division,
             'all_working_area' => $this->all_working_area,
         ]);
     }
 
+    public function edit_user(Request $request)
+    {   
+        $user = \App\Tb_user::all()->first();
+        //ditambahin first karena baru pertama kali login, isi cellnya null
+        //$emails = $request->session()->get('emails');
+        
+        return view('web.profile.edit', [
+            //'email' => $emails,
+            'user' => $user,
+            'active_page' => 'Profile',
+           // 'all_division' => $this->all_division,
+           // 'all_working_area' => $this->all_working_area,
+        ]);
+    }
+
+     public function update_user(Request $request)
+    {
+
+        DB::table('tb_user')->where('email',$request->email)->update([
+        'name' => $request->name,
+        'phone' => $request->phone,
+            ]);
+
+         $user = \App\Tb_user::all()->first();
+
+        return view('web.profile.edit', [
+            //'email' => $emails,
+            'user' => $user,
+            'active_page' => 'Profile',
+        ]);
+    } 
     // Update user role
     public function change_role(Request $request)
     {

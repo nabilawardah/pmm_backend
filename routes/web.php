@@ -1,50 +1,63 @@
 <?php
 
-Route::get('/sign-in', function () {
-    return view('sign-in', ['active_page' => 'Sign in']);
-});
-Route::post('/sign-in', function () {
-    sleep(2);
+// Route::get('/sign-in', function () {
+//     return view('sign-in', ['active_page' => 'Sign in']);
+// });
+// Route::post('/sign-in', function () {
+//     sleep(2);
 
-    return view('web.home', ['active_page' => 'Home']);
-});
+//     return view('web.home', ['active_page' => 'Home']);
+// });
+
+Route::get('/sign-in', array('uses' => 'LoginController@showlogin'));
+Route::post('/sign-in', array('uses' => 'LoginController@login'));
+Route::get('/sign-out', array('uses' => 'LoginController@logout'));
 
 // Web
+
 Route::get('/', function () {
     return view('web.home', ['active_page' => 'Home']);
-});
-Route::get('/profile/{id}', 'DummyController@show_user');
+})->middleware('userrole');
 
-Route::get('/articles', 'DummyController@article_page');
-Route::get('/articles/{id}', 'DummyController@show_article');
+Route::get('/profile/{id}', 'DummyController@show_user')->middleware('userrole');
 
-Route::get('/events', 'DummyController@events_page');
-Route::get('/events/{id}', 'DummyController@show_event');
+Route::get('/profile/edit/{id}', 'DummyController@edit_user')->name('profile.edit')->middleware('userrole');
 
-Route::get('/gallery', 'DummyController@gallery_page');
+Route::post('/profile/update', 'DummyController@update_user')->name('profile.update');
+
+Route::get('/articles', 'DummyController@article_page')->middleware('userrole');
+Route::get('/articles/{id}', 'DummyController@show_article')->middleware('userrole');
+
+Route::get('/events', 'DummyController@events_page')->middleware('userrole');
+Route::get('/events/{id}', 'DummyController@show_event')->middleware('userrole');
+
+Route::get('/gallery', 'DummyController@gallery_page')->middleware('userrole');
 
 Route::get('/admin/articles', function () {
     return view('admin.articles.index', ['active_page' => 'Articles']);
-});
-Route::get('/admin/articles/{user_id}/edit/{id}', 'DummyController@edit_article');
-Route::get('/admin/articles/{id}', 'DummyController@show_article_admin');
+})->middleware('adminrole');
+
+Route::get('/admin/articles/{user_id}/edit/{id}', 'DummyController@edit_article')->middleware('adminrole');
+
+Route::get('/admin/articles/{id}', 'DummyController@show_article_admin')->middleware('adminrole');
 
 Route::get('/admin/events', function () {
     return view('admin.events.index', ['active_page' => 'Events']);
-});
+})->middleware('adminrole');
+
 Route::get('/admin/events/{id}', function () {
-    return view('admin.events.detail', ['active_page' => 'Events']);
+    return view('admin.events.detail', ['active_page' => 'Events'])->middleware('adminrole');
 });
-Route::get('/admin/events/create/{user_id}', 'DummyController@create_event');
-Route::get('/admin/events/{user_id}/edit/{id}', 'DummyController@edit_event');
+Route::get('/admin/events/create/{user_id}', 'DummyController@create_event')->middleware('adminrole');
+Route::get('/admin/events/{user_id}/edit/{id}', 'DummyController@edit_event')->middleware('adminrole');
 
 Route::get('/admin/users', function () {
     return view('admin.users.index', ['active_page' => 'Users']);
-});
+})->middleware('adminrole');
 Route::get('/admin/users/{id}', function () {
     return view('admin.users.detail', ['active_page' => 'Users']);
-});
-Route::get('/admin/gallery', 'DummyController@admin_gallery_page');
+})->middleware('adminrole');
+Route::get('/admin/gallery', 'DummyController@admin_gallery_page')->middleware('adminrole');
 
 Route::post('/api/role/{id}', 'DummyController@change_role');
 Route::post('/api/profile/{id}', 'DummyController@save_user');
